@@ -10,3 +10,12 @@ desktop.ini
 node_modules/
 graphify-out/
 *.log
+
+# Python (venv & bytecode)
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Local backups (git bundles etc.)
+*.bundle
