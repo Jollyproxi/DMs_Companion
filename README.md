@@ -94,10 +94,36 @@ Edit translations on `main` inside `locales/<lang>/`, then synchronise the orpha
 
 **DMs_Companion is still a work in progress.** The core skills and the Archivist persona are functional and usable today, but expect rough edges, evolving conventions, and occasional restructuring as the toolkit matures.
 
-Contributions are very welcome — whether that's bug reports, translation fixes, new harness compatibility notes, or improvements to the skills themselves. That said, this is a solo-maintained project, and **reviews may take a while**: I want to give each contribution proper attention to preserve the project's principles, so please be patient if responses aren't immediate. A slow "yes, carefully reviewed" is worth more than a fast "merged and broken".
+Contributions are very welcome — whether that's bug reports, translation fixes, new harness compatibility notes, or improvements to the skills themselves. That said, this is a solo-maintained project, and **reviews may take a while**: I want to give each contribution proper attention to preserve the project's principles, so please be patient if responses aren't immediate. A slow "yes, carefully reviewed" is worth more than a fast "merged and broken". See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines and contribution terms.
+
+### Contributions & Licence
+
+By submitting a contribution (pull request, patch, or translation), you agree that:
+
+1. your contribution is licensed under the [CC BY-NC-SA 4.0 Licence](LICENSE), like the rest of the project; and
+2. you grant the project maintainer the right to **relicense** your contribution as part of future versions of DMs_Companion under a different licence (e.g. a dual-licensing model).
+
+You retain the copyright of your work. This keeps a future licence change possible without having to track down every past contributor.
+
+---
+
+## Support the Project
+
+DMs_Companion is and will remain **free to use and share**. If it saves you prep time at your table, you can support its development with an optional donation:
+
+* **[GitHub Sponsors](https://github.com/sponsors/Jollyproxi)** — one-off or recurring sponsorships.
+* **[Buy Me a Coffee](https://buymeacoffee.com/jollyproxi)** — one-off tips.
+
+Donations are entirely optional. Using the toolkit, reporting issues, and telling other DMs about it is support too.
 
 ---
 
 ## Licence
 
-Released under the [CC BY-NC-SA 4.0 Licence](LICENSE).
+DMs_Companion is licensed under [CC BY-NC-SA 4.0](LICENSE). You are free to **use, copy, share, and adapt** it, as long as you:
+
+* give appropriate credit;
+* **don't use it commercially** — selling the toolkit, repackaging its skills for paid marketplaces, or distributing it as part of a paid product is not permitted;
+* share any derivative work under the same licence.
+
+Using the toolkit to run your own campaigns is always fine — **even paid campaigns, streams, or actual plays**. The non-commercial restriction applies to selling the toolkit itself, not to the games you run with it.
