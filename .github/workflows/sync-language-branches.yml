@@ -1,0 +1,57 @@
+name: Sync Language Branches
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'locales/**'
+      - '.github/workflows/sync-language-branches.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-branches:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Publish each locale directory to its orphan branch
+        run: |
+          set -euo pipefail
+          for lang in it en-gb fr de; do
+            if [ ! -d "locales/${lang}" ]; then
+              echo "Skipping missing locales/${lang}"
+              continue
+            fi
+
+            tree=$(git rev-parse "HEAD:locales/${lang}")
+            msg="chore(${lang}): sync ${lang} package from main ($(git rev-parse --short HEAD))"
+
+            if git ls-remote --exit-code --heads origin "${lang}" >/dev/null 2>&1; then
+              git fetch origin "${lang}:refs/remotes/origin/${lang}"
+              parent=$(git rev-parse "refs/remotes/origin/${lang}")
+              parent_tree=$(git rev-parse "${parent}^{tree}")
+              if [ "${tree}" = "${parent_tree}" ]; then
+                echo "Branch '${lang}' is already up to date."
+                continue
+              fi
+              commit=$(git commit-tree "${tree}" -p "${parent}" -m "${msg}")
+            else
+              commit=$(git commit-tree "${tree}" -m "${msg}")
+            fi
+
+            git update-ref "refs/heads/${lang}" "${commit}"
+            git push origin "refs/heads/${lang}:refs/heads/${lang}"
+            echo "Published '${lang}' at ${commit}."
+          done
