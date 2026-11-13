@@ -105,7 +105,7 @@ Chaque section validée adopte le badge visible standard :
 ## 6. Matrice des Sous-Compétences Modulaires
 
 1. **`init-monde`** : Entretien et génération de l'architecture en dix tomes pour de nouveaux univers.
-2. **`valider-structure`** : Diagnostic technique (conformité des dossiers, `README.md` manquants, liens rompus, fichiers orphelins).
+2. **`valider-structure`** : Diagnostic technique (conformité des dossiers, `README.md` manquants, liens rompus, noms propres non liés, fichiers orphelins).
 3. **`compte-rendu-session`** : Entretien guidé, rédaction du compte rendu avec diagramme Mermaid et mise à jour de l'index de campagne.
 4. **`dossier-personnage`** : Création et maintenance des 5 modules PJ et des fiches PNJ.
 5. **`objet-magique`** : Catalogage des artefacts, résonances et statut juridique.
@@ -115,12 +115,17 @@ Chaque section validée adopte le badge visible standard :
 9. **`synchroniser-bible-structure`** : Compilation complète et alignement incrémental de la Bible maîtresse et de `structure_univers.json` (`generer-Bible`, `generer-structure-json`, `mettre-a-jour-bible`, `mettre-a-jour-structure-json`).
 10. **`coutume-fete-evenement`** : Création et maintenance des fiches de coutumes, fêtes/occurrences et événements ponctuels dans `03_societe_et_politique/coutumes_fetes_et_evenements/`, avec mise à jour de la chronologie historique et du registre des occurrences dans `10_chronologie/`.
 11. **`timeline-markwhen`** : Création, mise à jour incrémentale, validation syntaxique/croisée et exportation des sources de la frise graphique Markwhen (`.mw`) dans `10_chronologie/markwhen/` et `exportations/` (`creer-mw`, `mettre-a-jour-mw`, `valider-mw`, `exporter-mw`).
+12. **`lier-noms-propres`** : Analyse, vérification et conversion des noms propres de personnes, lieux, objets et événements en liens Markdown vers les fichiers canoniques des entités (règle des noms propres liés).
 
 ---
 
-## 7. Liens Croisés & Intégration dans l'Espace de Travail
+## 7. Noms Propres Liés (Règle Obligatoire) & Intégration dans l'Espace de Travail
 
-- Lorsque des noms de PJ, PNJ, factions, guildes, cités ou objets magiques recensés apparaissent, localisez le fichier correspondant et créez des liens Markdown relatifs sans guillemets inversés (ex. `[Nom](dossier/fichier.md)`).
+- **Règle du Nom Lié** : tout nom propre d'entité de l'univers — PJ, PNJ, maisons, factions, guildes, cités, lieux, régions, plans, objets magiques, coutumes, fêtes, événements, époques, lois, institutions — apparaissant dans le texte produit doit être un **lien Markdown** vers le fichier `.md` canonique de l'entité, le nom propre servant de texte du lien (ex. `[Nom](dossier/fichier.md)`), jamais un simple texte ni une entrée entre guillemets inversés.
+- **Chemins Valides** : le lien utilise un chemin relatif au fichier rédigé et doit pointer vers un fichier réellement présent sur le disque.
+- **Exceptions** (noms admis sans lien) : titres et noms de fichiers ; frontmatter YAML, blocs de code et chemins ; étiquettes des diagrammes Mermaid et des sources Markwhen `.mw` ; désignations génériques ne renvoyant à aucune entité recensée.
+- **Entité Sans Fiche** : n'inventez pas la fiche — utilisez le marqueur `[A_DEFINIR_MJ: fiche manquante pour <Nom>]`, demandez au MJ s'il faut la recenser avec la compétence pertinente et signalez la lacune dans la liste des fichiers impactés.
+- **Vérification** : analysez et convertissez avec la compétence `lier-noms-propres` (pilier E de `valider-structure`).
 - Respectez la modularité du dépôt local en vous adaptant automatiquement aux dossiers existants.
 
 ---

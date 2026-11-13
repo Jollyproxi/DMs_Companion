@@ -54,7 +54,7 @@ Chaque section ou fiche validée reçoit le badge standard :
 Chaque procédure opérationnelle est décrite dans les compétences modulaires sous `.agents/skills/` :
 
 1. **`init-monde`** : Entretien initial et génération de l'arborescence en dix tomes.
-2. **`valider-structure`** : Diagnostic des dossiers, des `README.md` manquants, des liens brisés et des fichiers mal placés.
+2. **`valider-structure`** : Diagnostic des dossiers, des `README.md` manquants, des liens brisés, des noms propres non liés et des fichiers mal placés.
 3. **`compte-rendu-session`** : Entretien guidé ou mise en forme de notes brutes, compte rendu avec diagramme Mermaid et mise à jour de l'index de campagne.
 4. **`dossier-personnage`** : Création et maintenance des dossiers PJ en 5 modules et des fiches PNJ.
 5. **`objet-magique`** : Catalogage d'artefacts, reliques, mécaniques et cadre juridique.
@@ -64,12 +64,21 @@ Chaque procédure opérationnelle est décrite dans les compétences modulaires 
 9. **`synchroniser-bible-structure`** : Compilation complète et synchronisation incrémentale de `BIBLE_DE_L_UNIVERS.md` et `structure_univers.json`.
 10. **`coutume-fete-evenement`** : Fiches de coutumes, fêtes/occurrences et événements ponctuels alignées avec `10_chronologie/`.
 11. **`timeline-markwhen`** : Cycle complet des sources Markwhen `.mw` (`creer-mw`, `mettre-a-jour-mw`, `valider-mw`, `exporter-mw`).
+12. **`lier-noms-propres`** : Analyse, vérification et conversion des noms propres en liens Markdown vers les fichiers canoniques des entités (règle des noms propres liés).
 
 ---
 
-## 5. Liens Croisés et Propagation
+## 5. Noms Propres Liés (Règle Obligatoire) & Propagation
 
-- Dès que des entités recensées apparaissent (PJ, PNJ, factions, lieux, objets, coutumes/événements), créez des liens Markdown relatifs sans guillemets inversés (ex. `[Nom](chemin/fichier.md)`).
+- **Règle du Nom Lié** : tout **nom propre** d'entité de l'univers — personnes (PJ, PNJ), maisons, factions, guildes, cités, lieux, régions, plans, objets magiques, coutumes, fêtes, événements, époques, lois, institutions — apparaissant dans le texte produit doit être rédigé sous forme de **lien Markdown** vers le fichier `.md` canonique de cette entité, le nom propre servant de texte du lien : `[Nom](chemin/relatif/fichier.md)`. Jamais un simple texte ni une entrée entre guillemets inversés.
+- **Chemins Valides** : le lien utilise un chemin relatif au fichier rédigé et doit pointer vers un fichier réellement présent sur le disque.
+- **Exceptions** (noms admis sans lien) :
+  1. Titres et noms de fichiers.
+  2. Frontmatter YAML, blocs de code, commandes et chemins.
+  3. Étiquettes des diagrammes Mermaid et des sources Markwhen `.mw` (les liens Markdown n'y sont pas rendus).
+  4. Désignations génériques ne renvoyant à aucune entité recensée.
+- **Entité Sans Fiche** : si un nom propre désigne une entité dépourvue de fichier `.md` canonique, **n'inventez pas la fiche** : insérez le marqueur `[A_DEFINIR_MJ: fiche manquante pour <Nom>]` (en mode interactif, demandez au MJ s'il faut la recenser avec la compétence pertinente) et signalez la lacune dans la liste des fichiers impactés.
+- **Vérification de Conformité** : analysez et convertissez les noms non liés avec la compétence `lier-noms-propres` ; contrôle diagnostique de surface comme pilier E de `valider-structure`.
 - Après chaque ajout ou compte rendu :
   1. Enregistrez le fichier principal et mettez à jour les `README.md` de liaison.
   2. Listez tous les fichiers impactés (dossiers, PNJ, objets, chronologie) et proposez les ébauches de mise à jour avant de les appliquer.

@@ -10,6 +10,8 @@ disable-model-invocation: false
 
 Cette compétence gère la sous-série `03_societe_et_politique/coutumes_fetes_et_evenements/` et son lien avec le tome `10_chronologie/` : elle recense les particularités de la vie quotidienne, les fêtes et occurrences récurrentes, ainsi que les événements singuliers ponctuels avec le même niveau de fidélité notariale que le reste de l'archive.
 
+> **📌 Règle des Noms Propres Liés** : tout nom propre d'entité de l'univers (PJ, PNJ, factions, maisons, cités, lieux, objets magiques, coutumes, fêtes, événements…) apparaissant dans le texte produit doit être un **lien Markdown** vers le fichier `.md` canonique de l'entité (ex. `[Nom](chemin/relatif/fichier.md)`), jamais un simple texte brut. Exceptions : titres, noms de fichiers, frontmatter, blocs de code, nœuds Mermaid et sources `.mw`. Entité sans fiche : ne l'inventez pas — utilisez `[A_DEFINIR_MJ: fiche manquante pour <Nom>]` et signalez la lacune. Vérification et conversion : compétence `lier-noms-propres`.
+
 ---
 
 ## 1. Règle d'Or (Zéro Hallucination)

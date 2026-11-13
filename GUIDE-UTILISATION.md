@@ -1,6 +1,6 @@
 # Archiviste de Campagne — Guide d'utilisation
 
-Tout ce qu'il faut pour mettre l'**Archiviste de Campagne** au travail à votre table : installation, premiers pas, référence complète des **11 compétences**, flux de travail typiques, dépannage et FAQ.
+Tout ce qu'il faut pour mettre l'**Archiviste de Campagne** au travail à votre table : installation, premiers pas, référence complète des **12 compétences**, flux de travail typiques, dépannage et FAQ.
 
 * Copies localisées de ce guide : [Italiano](https://github.com/<owner>/DMs_Companion/blob/main/locales/it/GUIDA-UTILIZZO.md) · [British English](https://github.com/<owner>/DMs_Companion/blob/main/locales/en-gb/USAGE.md) · [Deutsch](https://github.com/<owner>/DMs_Companion/blob/main/locales/de/NUTZUNGSANLEITUNG.md) — voir aussi le [USAGE.md](https://github.com/<owner>/DMs_Companion/blob/main/USAGE.md) du projet sur la branche `main`.
 
@@ -38,7 +38,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/fr/.ag
 | `AGENTS.md` | Règles et flux universels, lus par tous les environnements. |
 | `CLAUDE.md` | Point d'entrée pour Claude Code ; importe `AGENTS.md`. |
 | `.github/agents/archiviste-de-campagne.agent.md` | La persona *Archiviste de Campagne* (entrée dans le sélecteur d'agents de VS Code). |
-| `.agents/skills/<competence>/SKILL.md` | Les 11 compétences modulaires (plus les modèles dans `references/`). |
+| `.agents/skills/<competence>/SKILL.md` | Les 12 compétences modulaires (plus les modèles dans `references/`). |
 | `GUIDE-UTILISATION.md` | Ce guide. |
 
 ### Notes par environnement
@@ -119,6 +119,7 @@ Invoquez les compétences avec leur commande slash quand elle est disponible (VS
 | 9 | `synchroniser-bible-structure` | Bible de l'Univers maître + JSON lisible par machine. |
 | 10 | `coutume-fete-evenement` | Coutumes, fêtes/occurrences, événements ponctuels. |
 | 11 | `timeline-markwhen` | Chronologies graphiques Markwhen (`.mw`). |
+| 12 | `lier-noms-propres` | Noms propres toujours liés aux fiches canoniques. |
 
 ### 4.1 `init-monde` — Arborescence de l'univers
 
@@ -186,6 +187,12 @@ Invoquez les compétences avec leur commande slash quand elle est disponible (VS
 * **Comment** : `/timeline-markwhen` avec une opération — `creer-mw`, `mettre-a-jour-mw`, `valider-mw` ou `exporter-mw` (ex. *« creer-mw epoque : Premier Âge »*, *« mettre-a-jour-mw campagne : Chroniques du Nord »*).
 * **Résultat** : les sources `.mw` dans `10_chronologie/markwhen/` (`chronologie_generale.mw`, `epoques/`, `campagnes/`) maintenues en synchronie avec chronologie, registre des occurrences et comptes rendus ; exportations rendues dans `10_chronologie/exportations/`.
 
+### 4.12 `lier-noms-propres` — Noms Propres Liés
+
+* **Quand** : vous voulez vérifier ou rétablir la règle selon laquelle tout nom propre est un lien vers le fichier `.md` canonique de l'entité.
+* **Comment** : `/lier-noms-propres` — *« Chemin du fichier ou du dossier à analyser (ou 'dépôt entier'). »*
+* **Résultat** : un tableau des noms non liés avec conversion en lien proposée ou appliquée, et signalement des entités dépourvues de fiche.
+
 ---
 
 ## 5. Flux de travail typiques
@@ -228,7 +235,7 @@ PJ/PNJ → `dossier-personnage` · Artefact → `objet-magique` · Coutume/fête
 
 ## 7. FAQ
 
-* **Faut-il les 11 compétences ?** Non. Installez-les toutes (elles sont autonomes) et n'utilisez que ce dont vous avez besoin.
+* **Faut-il les 12 compétences ?** Non. Installez-les toutes (elles sont autonomes) et n'utilisez que ce dont vous avez besoin.
 * **Puis-je gérer plusieurs campagnes dans un univers ?** Oui — `09_chroniques/campagnes/<nom>/` garde les comptes rendus de chaque campagne séparés ; la lore partagée vit dans les autres tomes.
 * **Puis-je l'utiliser pour des campagnes payantes, des streams ou des actual plays ?** Oui. La clause non commerciale porte sur la vente de la boîte à outils elle-même, jamais sur les jeux que vous menez avec.
 * **Puis-je reconditionner ou vendre les compétences ?** Non — CC BY-NC-SA 4.0 (voir `LICENSE` sur la branche `main`).
