@@ -105,7 +105,7 @@ Ogni sezione convalidata adotta un badge visibile standard:
 ## 6. Matrice delle Sotto-Skill Modulari
 
 1. **`init-mondo`**: Intervista e scaffolding della struttura a dieci tomi per nuove ambientazioni.
-2. **`valida-struttura`**: Diagnostica tecnica (conformità cartelle, `README.md` assenti, link rotti, file orfani).
+2. **`valida-struttura`**: Diagnostica tecnica (conformità cartelle, `README.md` assenti, link rotti, nomi propri non collegati, file orfani).
 3. **`verbale-sessione`**: Intervista guidata, redazione verbale con diagramma Mermaid e aggiornamento indice campagna.
 4. **`dossier-personaggio`**: Creazione e manutenzione dei 5 moduli PG e delle schede PNG.
 5. **`oggetto-magico`**: Catalogazione manufatti, risonanze e inquadramento giuridico.
@@ -115,12 +115,17 @@ Ogni sezione convalidata adotta un badge visibile standard:
 9. **`sincronizza-bibbia-struttura`**: Compilazione integrale e allineamento incrementale di Bibbia master e `struttura_ambientazione.json` (`genera-Bibbia`, `genera-struttura-json`, `aggiorna-bibbia`, `aggiorna-struttura-json`).
 10. **`usanza-festa-evento`**: Creazione e manutenzione delle schede di usanze, festival/occorrenze ed eventi una tantum in `03_societa_e_politica/usi_costumi_ed_eventi/`, con aggiornamento di cronologia storica e registro occorrenze in `10_timeline/`.
 11. **`timeline-markwhen`**: Creazione, aggiornamento incrementale, validazione sintattica/incrociata ed esportazione dei sorgenti della timeline grafica Markwhen (`.mw`) in `10_timeline/markwhen/` ed `esportazioni/` (`crea-mw`, `aggiorna-mw`, `valida-mw`, `esporta-mw`).
+12. **`collega-nomi-propri`**: Scansione, verifica e conversione dei nomi propri di persone, luoghi, oggetti ed eventi in collegamenti Markdown ai file canonici delle entità (regola dei nomi-propri-collegati).
 
 ---
 
-## 7. Cross-Linking e Integrazione nel Workspace
+## 7. Nomi Propri Collegati (Regola Obbligatoria) & Integrazione nel Workspace
 
-- Quando compaiono nomi di PG, PNG, fazioni, gilde, città o oggetti magici censiti, cerca il file corrispondente e genera link Markdown relativi senza backtick (es. `[Nome](cartella/file.md)`).
+- **Regola del Nome Collegato**: ogni nome proprio di entità dell'ambientazione — PG, PNG, casate, fazioni, gilde, città, luoghi, regioni, piani, oggetti magici, usanze, festival, eventi, epoche, leggi, istituzioni — che compare nel testo prodotto deve essere un **collegamento Markdown** al file `.md` canonico dell'entità, con il nome proprio come testo del link (es. `[Nome](cartella/file.md)`), mai semplice testo nudo né voce tra backtick.
+- **Percorsi Validi**: il link usa un percorso relativo al file in cui si scrive e deve puntare a un file realmente esistente su disco.
+- **Eccezioni** (nomi ammessi senza link): intestazioni e nomi di file; frontmatter YAML, blocchi di codice e percorsi; etichette dei diagrammi Mermaid e dei sorgenti Markwhen `.mw`; designazioni generiche non riferite a entità censite.
+- **Entità senza Scheda**: non inventare la scheda — usa il segnaposto `[DA_DEFINIRE_MASTER: scheda mancante per <Nome>]`, chiedi al Master se censirla con la skill pertinente e segnala la lacuna nell'elenco dei file impattati.
+- **Verifica**: scansione e conversione con la skill `collega-nomi-propri` (pilastro E di `valida-struttura`).
 - Rispetta la modularità della repository locale adattandosi automaticamente alle cartelle esistenti (inclusi eventuali nomi legacy come `06_location/`, `07_factions/`, `08_oggetti magici peculiari/` o `cornici/`).
 
 ---

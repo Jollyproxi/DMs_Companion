@@ -54,7 +54,7 @@ Ogni sezione o scheda convalidata adotta il badge standard:
 Ogni procedura operativa è definita nelle skill modulari dentro `.agents/skills/`:
 
 1. **`init-mondo`**: Intervista iniziale e scaffolding dell'architettura a dieci tomi.
-2. **`valida-struttura`**: Diagnostica cartelle, `README.md` mancanti, link rotti e file fuori posto.
+2. **`valida-struttura`**: Diagnostica cartelle, `README.md` mancanti, link rotti, nomi propri non collegati e file fuori posto.
 3. **`verbale-sessione`**: Intervista guidata o rielaborazione appunti, verbale con diagramma Mermaid e aggiornamento indice campagna.
 4. **`dossier-personaggio`**: Creazione e manutenzione dei dossier PG a 5 moduli e delle schede PNG.
 5. **`oggetto-magico`**: Catalogazione di artefatti, reliquie, meccaniche e inquadramento normativo.
@@ -64,12 +64,21 @@ Ogni procedura operativa è definita nelle skill modulari dentro `.agents/skills
 9. **`sincronizza-bibbia-struttura`**: Compilazione e sincronizzazione incrementale di `BIBBIA DELL'AMBIENTAZIONE.md` e `struttura_ambientazione.json`.
 10. **`usanza-festa-evento`**: Schede di usanze, festival/occorrenze ed eventi una tantum con allineamento a `10_timeline/`.
 11. **`timeline-markwhen`**: Ciclo completo dei sorgenti Markwhen `.mw` (`crea-mw`, `aggiorna-mw`, `valida-mw`, `esporta-mw`).
+12. **`collega-nomi-propri`**: Scansione, verifica e conversione dei nomi propri in collegamenti Markdown ai file canonici delle entità (regola dei nomi-propri-collegati).
 
 ---
 
-## 5. Cross-Linking e Propagazione Incrociata
+## 5. Nomi Propri Collegati (Regola Obbligatoria) & Propagazione Incrociata
 
-- Quando compaiono entità censite (PG, PNG, fazioni, luoghi, oggetti, usi/eventi), crea link Markdown relativi senza backtick (es. `[Nome](percorso/file.md)`).
+- **Regola del Nome Collegato**: ogni **nome proprio** di entità dell'ambientazione — persone (PG, PNG), casate, fazioni, gilde, città, luoghi, regioni, piani, oggetti magici, usanze, festival, eventi, epoche, leggi, istituzioni — che compare nel testo prodotto deve essere scritto come **collegamento Markdown** al file `.md` canonico di quell'entità, con il nome proprio come testo del link: `[Nome](percorso/relativo/file.md)`. Mai semplice testo nudo né voce tra backtick.
+- **Percorsi Validi**: il collegamento usa un percorso relativo al file in cui si scrive e deve puntare a un file realmente esistente su disco.
+- **Eccezioni** (nomi ammessi senza link):
+  1. Intestazioni (heading) e nomi di file.
+  2. Frontmatter YAML, blocchi di codice, comandi e percorsi.
+  3. Etichette dei diagrammi Mermaid e dei sorgenti Markwhen `.mw` (dove i link Markdown non sono renderizzabili).
+  4. Designazioni generiche non riferite a entità censite.
+- **Entità Priva di Scheda**: se un nome proprio designa un'entità priva di file `.md` canonico, **non inventare la scheda**: lascia il segnaposto `[DA_DEFINIRE_MASTER: scheda mancante per <Nome>]` (in modalità interattiva chiedi al Master se censirla con la skill pertinente) e segnala la lacuna nell'elenco dei file impattati.
+- **Verifica della Conformità**: scansione e conversione dei nomi non collegati con la skill `collega-nomi-propri`; controllo diagnostico di superficie come pilastro E di `valida-struttura`.
 - Al termine di ogni inserimento o verbalizzazione:
   1. Salva il file primario e aggiorna i `README.md` di raccordo.
   2. Elenca tutti i file impattati (dossier, PNG, oggetti, cronologia) e proponi le bozze di aggiornamento prima di applicarle.

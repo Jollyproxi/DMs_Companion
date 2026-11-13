@@ -10,6 +10,8 @@ disable-model-invocation: false
 
 Questa skill guida la raccolta, strutturazione e formattazione dei verbali di sessione di gioco per qualsiasi campagna D&D, garantendo conformità al modello standard documentato in [template-verbale](./references/template-verbale.md).
 
+> **📌 Regola Nomi Propri Collegati**: ogni nome proprio di entità dell'ambientazione (PG, PNG, fazioni, casate, città, luoghi, oggetti magici, usanze, festival, eventi…) che compare nel testo prodotto deve essere un **collegamento Markdown** al file `.md` canonico dell'entità (es. `[Nome](percorso/relativo/file.md)`), mai semplice testo nudo. Eccezioni: intestazioni, nomi di file, frontmatter, blocchi di codice, nodi Mermaid e sorgenti `.mw`. Entità priva di scheda: non inventarla — usa `[DA_DEFINIRE_MASTER: scheda mancante per <Nome>]` e segnala la lacuna. Verifica e conversione: skill `collega-nomi-propri`.
+
 ---
 
 ## 1. Regola Aurea (Zero Allucinazioni)

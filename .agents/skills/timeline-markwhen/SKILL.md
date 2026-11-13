@@ -14,6 +14,8 @@ Consulta i riferimenti tecnici allegati:
 - [sintassi-e-template-mw](./references/sintassi-e-template-mw.md): sintassi Markwhen canonica, header YAML, tassonomia tag e template per `timeline_generale.mw`, `epoche/<epoca>.mw` e `campagne/<campagna>.mw`.
 - [sincronizzazione-ed-esportazione](./references/sincronizzazione-ed-esportazione.md): regole di mappatura bidirezionale col Tomo 10, indicizzazione in `struttura_ambientazione.json`, checklist di validazione e pipeline di esportazione in `10_timeline/esportazioni/`.
 
+> **📌 Regola Nomi Propri Collegati**: ogni nome proprio di entità dell'ambientazione (PG, PNG, fazioni, casate, città, luoghi, oggetti magici, usanze, festival, eventi…) che compare nel testo prodotto deve essere un **collegamento Markdown** al file `.md` canonico dell'entità (es. `[Nome](percorso/relativo/file.md)`), mai semplice testo nudo. Eccezioni: intestazioni, nomi di file, frontmatter, blocchi di codice, nodi Mermaid e sorgenti `.mw`. Entità priva di scheda: non inventarla — usa `[DA_DEFINIRE_MASTER: scheda mancante per <Nome>]` e segnala la lacuna. Verifica e conversione: skill `collega-nomi-propri`.
+
 ---
 
 ## 1. Regola Aurea: Fedeltà Notarile (Zero Allucinazioni)

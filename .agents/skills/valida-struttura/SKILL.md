@@ -1,6 +1,6 @@
 ---
 name: valida-struttura
-description: "Use when: verificare l'integrità strutturale della repository di un mondo D&D, rilevare cartelle mancanti, indici README assenti, collegamenti Markdown rotti e file fuori posto."
+description: "Use when: verificare l'integrità strutturale della repository di un mondo D&D, rilevare cartelle mancanti, indici README assenti, collegamenti Markdown rotti, nomi propri non collegati e file fuori posto."
 argument-hint: "Esegue il controllo di conformità strutturale dell'archivio"
 user-invocable: true
 disable-model-invocation: false
@@ -10,11 +10,13 @@ disable-model-invocation: false
 
 Questa skill esegue un audit diagnostico approfondito dell'alberatura dei file della repository, assicurando che rispetti la conformità dell'architettura standard D&D e identificando tempestivamente anomalie tecniche.
 
+> **📌 Regola Nomi Propri Collegati**: ogni nome proprio di entità dell'ambientazione (PG, PNG, fazioni, casate, città, luoghi, oggetti magici, usanze, festival, eventi…) che compare nel testo prodotto deve essere un **collegamento Markdown** al file `.md` canonico dell'entità (es. `[Nome](percorso/relativo/file.md)`), mai semplice testo nudo. Eccezioni: intestazioni, nomi di file, frontmatter, blocchi di codice, nodi Mermaid e sorgenti `.mw`. Entità priva di scheda: non inventarla — usa `[DA_DEFINIRE_MASTER: scheda mancante per <Nome>]` e segnala la lacuna. Verifica e conversione: skill `collega-nomi-propri`.
+
 ---
 
 ## 1. Criteri di Verifica Diagnostica
 
-La skill controlla i quattro pilastri dell'integrità strutturale:
+La skill controlla i cinque pilastri dell'integrità strutturale:
 
 ### A. Conformità dei Dieci Tomi
 Verifica la presenza delle directory canoniche (accettando eventuali varianti già in uso nel repository come `06_location`, `07_factions`, `08_oggetti magici peculiari` o `cornici/`):
@@ -38,22 +40,27 @@ Scansiona i collegamenti relativi nei file `.md` (es. `[Nome](../../05_personagg
 ### D. File Orfani o Fuori Posto
 Individua file `.md` salvati nella radice del progetto o in percorsi non canonici che dovrebbero essere collocati all'interno di uno dei dieci tomi specifici (escludendo i file master radice canonici come `README.md`, `AGENTS.md`, `CLAUDE.md`, `BIBBIA DELL'AMBIENTAZIONE.md`, `STATO_REVISIONE.md`). Per la validazione sintattica e incrociata dei sorgenti `.mw` in `10_timeline/markwhen/`, si integra con la skill `timeline-markwhen` (`valida-mw`).
 
+### E. Copertura dei Nomi Propri Collegati
+Verifica che ogni nome proprio di entità censita (PG, PNG, fazioni, casate, città, luoghi, oggetti magici, usanze, festival, eventi…) compaia nel testo come **collegamento Markdown** al file `.md` canonico dell'entità e non come semplice testo nudo (regola dei nomi-propri-collegati, con le eccezioni previste). La scansione analitica e la conversione dei nomi sono demandate alla skill `collega-nomi-propri`, di cui questo pilastro costituisce il controllo diagnostico di superficie.
+
 ---
 
 ## 2. Procedura Operativa
 
 1. **Scansione del File System**:
    - Esegui una ricognizione delle cartelle e dei file `.md` presenti nel workspace escludendo directory tecniche (`.git`, `.agents`, `.github`, `.claude`, `node_modules`, `graphify-out`).
-2. **Esecuzione dei Test A-B-C-D**:
+2. **Esecuzione dei Test A-B-C-D-E**:
    - Valida le cartelle dei 10 tomi (incluse le sottocartelle `usi_costumi_ed_eventi/` e `10_timeline/`).
    - Controlla i `README.md` mancanti.
    - Analizza le stringhe di link `[Testo](percorso)` e verifica l'esistenza del file tramite path relativo.
    - Ispeziona la radice per rilevare file orfani.
+   - Controlla che i nomi propri di entità censite compaiano come collegamenti e non come testo nudo (per l'analisi approfondita delega a `collega-nomi-propri`).
 3. **Produzione del Report Diagnostico**:
    - Mostra al Master un riepilogo sintetico:
      - 🟢 **Conformità Alberatura**: [OK / Segnalazioni Tomi Mancanti]
      - 🟢 **Copertura Indici README**: [OK / Elenco cartelle sprovviste]
      - 🔗 **Integrità Collegamenti**: [OK / Elenco link rotti con riga e file]
+     - 🏷️ **Nomi Propri Collegati**: [OK / Elenco nomi non collegati con file e riga]
      - 📂 **Posizionamento File**: [OK / File orfani suggeriti per lo spostamento]
 4. **Proposta di Riparazione Automatica**:
    - Se vengono rilevate anomalie, chiedi al Master (usando lo strumento di domande strutturate dell'ambiente come `vscode_askQuestions` / `AskUserQuestion` se disponibile, altrimenti in chat) come procedere:

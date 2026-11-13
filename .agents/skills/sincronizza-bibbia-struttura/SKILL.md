@@ -29,6 +29,8 @@ Consultare i documenti di supporto:
 | **`aggiorna-bibbia`** | `BIBBIA DELL'AMBIENTAZIONE.md` | Incrementale / Delta | Aggiorna nella Bibbia solo le sezioni corrispondenti ai moduli modificati. |
 | **`aggiorna-struttura-json`** | `struttura_ambientazione.json` | Incrementale / Delta | Sincronizza il JSON con i moduli aggiunti, ridenominati o aggiornati. |
 
+> **📌 Regola Nomi Propri Collegati**: ogni nome proprio di entità dell'ambientazione (PG, PNG, fazioni, casate, città, luoghi, oggetti magici, usanze, festival, eventi…) che compare nel testo prodotto deve essere un **collegamento Markdown** al file `.md` canonico dell'entità (es. `[Nome](percorso/relativo/file.md)`), mai semplice testo nudo. Eccezioni: intestazioni, nomi di file, frontmatter, blocchi di codice, nodi Mermaid e sorgenti `.mw`. Entità priva di scheda: non inventarla — usa `[DA_DEFINIRE_MASTER: scheda mancante per <Nome>]` e segnala la lacuna. Verifica e conversione: skill `collega-nomi-propri`.
+
 ---
 
 ## 1. Procedura: `genera-Bibbia` (Compilazione Master)
