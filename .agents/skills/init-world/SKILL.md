@@ -44,7 +44,7 @@ Once the DM's answers are received, generate the modular structure using file-wr
    - `01_cosmology/README.md`
    - `02_geography/README.md` (with optional `regions/` subfolder or chosen macro-area naming)
    - `03_society_and_politics/README.md` (with `customs_festivals_and_events/` subfolder containing `customs/`, `festivals_and_occurrences/`, `events/`, each with `README.md`)
-   - `04_law_and_succession/README.md`
+   - `04_law_and_statutes/README.md` (with subfolders `01_legal_order_and_sources/`, `02_civil_rights_and_status/`, `03_dynastic_law_and_succession/`, `04_contracts_and_pacts/`, `05_treaties_and_diplomacy/`, `06_criminal_law_and_offences/`, `07_courts_and_procedure/`, `08_arcane_and_religious_law/`, `09_property_trade_and_taxation/`, `10_law_of_war_and_adventurers/`, each with `README.md`)
    - `05_characters/README.md` (with `Player_Characters/` and `Non_Player_Characters/` subfolders, each with `README.md`)
    - `06_locations/README.md`
    - `07_factions/README.md`

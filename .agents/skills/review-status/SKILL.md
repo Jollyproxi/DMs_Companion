@@ -16,7 +16,7 @@ This skill generates, updates, and maintains the tracking and monitoring file `R
 
 ## 1. Status Classification Criteria
 
-The skill scans the Markdown files inside the canonical world folders (`01_cosmology`, `02_geography`, `03_society_and_politics` including the `customs_festivals_and_events/` sub-series, `04_law_and_succession`, `05_characters`, `06_locations`, `07_factions`, `08_unique_magic_items`, `09_chronicles`, `10_timeline`) and inspects the badges:
+The skill scans the Markdown files inside the canonical world folders (`01_cosmology`, `02_geography`, `03_society_and_politics` including the `customs_festivals_and_events/` sub-series, `04_law_and_statutes` or legacy `04_law_and_succession`, `05_characters`, `06_locations`, `07_factions`, `08_unique_magic_items`, `09_chronicles`, `10_timeline`) and inspects the badges:
 
 ```markdown
 > 🛡️ *Verified: [DATE_V] | Modified: [DATE_M]*
@@ -52,7 +52,7 @@ This register tracks the progress of the formal lore audit, logging sections val
 | **02 Geography** | X | A | B | C | D | [Icon] |
 | **03 Society & Politics** | X | A | B | C | D | [Icon] |
 | **03· Customs, Festivals & Events** | X | A | B | C | D | [Icon] |
-| **04 Law & Succession** | X | A | B | C | D | [Icon] |
+| **04 Law & Statutes** | X | A | B | C | D | [Icon] |
 | **05 Characters (PCs & NPCs)** | X | A | B | C | D | [Icon] |
 | **06 Locations** | X | A | B | C | D | [Icon] |
 | **07 Factions** | X | A | B | C | D | [Icon] |

@@ -2,7 +2,7 @@
 
 This document defines the standard folder and file structure for encyclopaedic archiving of a D&D setting and its campaigns.
 
-> **Adaptation Note**: If the workspace already holds an existing setting with equivalent folder names, respect and preserve the existing structure without forcibly renaming established files.
+> **Adaptation Note**: If the workspace already holds an existing setting with equivalent folder names (e.g. `04_law_and_succession/`), respect and preserve the existing structure without forcibly renaming established files.
 
 ```text
 ├── README.md                                               # General world index and navigation guidelines
@@ -28,7 +28,7 @@ This document defines the standard folder and file structure for encyclopaedic a
 │   ├── 01_social_philosophy_and_customs.md                 # Social values, ethics, and conventions
 │   ├── 02_power_monopoly_and_economy.md                    # Military, trade, currency, and taxation
 │   ├── 03_social_classes_and_roles.md                      # Civic stratification, guilds, and aesthetics
-│   ├── 04_criminal_law_and_justice.md                      # Ordinary courts, penalties, and civil laws
+│   ├── 04_public_order_and_law_enforcement.md              # Town watch, militias, civic order, and social perception (laws and trials in Tome IV)
 │   └── customs_festivals_and_events/                       # Sub-series: customs, recurring festivals, and one-off events
 │       ├── README.md                                       # Sub-series index by type
 │       ├── customs/                                        # Everyday-life peculiarities (structures and manner)
@@ -41,11 +41,21 @@ This document defines the standard folder and file structure for encyclopaedic a
 │           ├── README.md
 │           └── 01_<entry_slug>.md                          # Event sheet (historical or ongoing)
 │
-├── 04_law_and_succession/                                  # Tome IV: Fundamental laws, dynastic law, pacts, and treaties
-│   ├── README.md                                           # Legal-institutional overview
-│   ├── 01_contracts_pacts_and_treaties.md                  # Norms, formal alliances, and blood pacts
-│   ├── 02_hierarchy_and_succession.md                      # Orders of succession, offices, and inheritance
-│   └── 03_courts_and_disputes.md                           # Resolution of legal or hereditary disputes and rulings
+├── 04_law_and_statutes/                                    # Tome IV: Law, fundamental statutes, civil rights, pacts, offences, and jurisdictions (each subfolder 01–10 contains README.md, 01_general_framework.md, 02_<entry_slug>.md…)
+│   ├── README.md                                           # Legal-institutional overview and branch index
+│   ├── 01_legal_order_and_sources/                         # Sources of law, sovereign edicts, charters, customs, legislative bodies, and hierarchy of norms
+│   │   ├── README.md                                       # Branch index
+│   │   ├── 01_general_framework.md                         # General principles and framework of the branch
+│   │   └── 02_<entry_slug>.md                              # Individual statutes, codes, charters, or edicts (sequential numbering)
+│   ├── 02_civil_rights_and_status/                         # Citizenship, rights by estate or species, servitude/manumission, statelessness, asylum, and safe-conducts
+│   ├── 03_dynastic_law_and_succession/                     # Orders of succession (hereditary, elective, merit), regencies, inheritance, fiefs, and transfer of offices
+│   ├── 04_contracts_and_pacts/                             # Civil and mercantile contracts, obligations, binding oaths, and blood pacts
+│   ├── 05_treaties_and_diplomacy/                          # International treaties, alliances between realms or factions, peace accords, and borders
+│   ├── 06_criminal_law_and_offences/                       # Classification of crimes, treason, penalties, wergild, bounties, confiscations, exile, and pardons
+│   ├── 07_courts_and_procedure/                            # Court jurisdictions, trials, magical evidence (Zone of Truth), ordeals, judicial duels, and appeals
+│   ├── 08_arcane_and_religious_law/                        # Forbidden schools and spells, spellcaster licences, artefact status, heresies, and ecclesiastical courts
+│   ├── 09_property_trade_and_taxation/                     # Land tenure and crown estate, guild monopolies, tariffs and taxation, loans, bankruptcy, and maritime law
+│   └── 10_law_of_war_and_adventurers/                      # Declarations of war, truces, prisoners and ransoms, mercenaries, adventuring guilds, and ruin charters
 │
 ├── 05_characters/                                          # Tome V: Player and Non-Player Character Roster
 │   ├── README.md                                           # General character index and relationship matrix

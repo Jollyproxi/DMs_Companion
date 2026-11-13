@@ -19,11 +19,11 @@ This skill performs a thorough diagnostic audit of the repository's file tree, e
 The skill checks the five pillars of structural integrity:
 
 ### A. Compliance of the Ten Tomes
-Verifies the presence of the canonical directories (accepting equivalent legacy naming already established in an existing repository):
+Verifies the presence of the canonical directories (accepting equivalent legacy naming already established in an existing repository, such as `04_law_and_succession`):
 1. `01_cosmology`
 2. `02_geography`
 3. `03_society_and_politics` (with `customs_festivals_and_events/` subfolder containing `customs/`, `festivals_and_occurrences/`, `events/`)
-4. `04_law_and_succession`
+4. `04_law_and_statutes` *(or legacy `04_law_and_succession`; with subfolders `01_legal_order_and_sources/` … `10_law_of_war_and_adventurers/`)*
 5. `05_characters` (with `Player_Characters/` and `Non_Player_Characters/` subfolders)
 6. `06_locations`
 7. `07_factions`
@@ -50,7 +50,7 @@ Verifies that every proper name of a registered entity (PCs, NPCs, factions, hou
 1. **Filesystem Scan**:
    - Inspect folders and `.md` files in the workspace, excluding technical directories (`.git`, `.agents`, `.github`, `.claude`, `node_modules`, `graphify-out`).
 2. **Execute Tests A–E**:
-   - Validate the 10-tome directories (including `customs_festivals_and_events/` and `10_timeline/` subfolders).
+   - Validate the 10-tome directories (including `customs_festivals_and_events/`, `04_law_and_statutes/`, and `10_timeline/` subfolders).
    - Check for missing `README.md` files.
    - Parse `[Text](path)` link strings and verify target existence via relative path.
    - Inspect the root directory for orphan files.
