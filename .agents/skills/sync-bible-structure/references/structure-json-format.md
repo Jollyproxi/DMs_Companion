@@ -94,8 +94,8 @@ Each element of the `modules` array describes an atomic `.md` file:
 
 For tomes containing canonical subdirectories:
 
-### A. Tome 02 (Geography — `regions/` Subfolder)
-If a regional subdirectory exists:
+### A. Tome 02 (Geography — `regions/` or Custom Subfolder)
+If a regional or macro-area subdirectory exists:
 ```json
 "regions_folder": "02_geography/regions",
 "regions_index": "02_geography/regions/README.md",
@@ -108,16 +108,18 @@ If a regional subdirectory exists:
   }
 ]
 ```
+*(Both the subfolder name and keys are customisable: any macro-area folder name chosen in the workspace, e.g. `provinces/`, `continents/`, `realms/`, may use the standard `regions_folder` / `regions_index` / `region_modules` keys or matching `<name>_folder` / `<name>_index` / `<name>_modules` keys.)*
 
-### B. Tome 05 (Characters — `Player_Characters/` and `Non_Player_Characters/`)
+### B. Tome 05 (Characters — `<Player_Characters>/` and `<Non_Player_Characters>/`)
 ```json
 "subfolders": {
   "player_characters": "05_characters/Player_Characters",
   "non_player_characters": "05_characters/Non_Player_Characters"
 }
 ```
+*(If the DM customises folder names — e.g. `PCs/`, `NPCs/`, `Heroes/`, NPC grouping subfolders, or `<Campaign_or_Party>/` — paths record the actual directories on disk.)*
 
-### C. Tome 09 (Chronicles — `campaigns/` Subfolder)
+### C. Tome 09 (Chronicles — `<campaigns>/` Subfolder)
 ```json
 "campaigns_folder": "09_chronicles/campaigns",
 "active_campaigns": [
@@ -128,9 +130,19 @@ If a regional subdirectory exists:
   }
 ]
 ```
+*(If `campaigns/` or `sessions/` use custom names — e.g. `expeditions/`, `adventures/`, `one_shots/`, `logs/` — keys record the actual paths on disk.)*
 
-### D. Tome 03 (Society & Politics — `customs_festivals_and_events/` Sub-series)
+### D. Tome 03 (Society & Politics — `customs_festivals_and_events/` Sub-series and optional `peoples/`)
 ```json
+"peoples_folder": "03_society_and_politics/peoples",
+"peoples_modules": [
+  {
+    "id": "example_people",
+    "code": "3.8.1",
+    "title": "Name of the People / Species",
+    "file": "03_society_and_politics/peoples/01_example_people.md"
+  }
+],
 "customs_festivals_events_folder": "03_society_and_politics/customs_festivals_and_events",
 "customs_festivals_events_index": "03_society_and_politics/customs_festivals_and_events/README.md",
 "custom_modules": [
@@ -194,7 +206,10 @@ If a regional subdirectory exists:
   ]
 }
 ```
-*(In existing settings using a flat `04_law_and_succession/` folder, those files are indexed under `"modules"`, retaining `"id": "law_and_succession"` if applicable.)*
+*(Any extra branches `11_<branch>/` use codes `4.11.x`…; any jurisdictional subfolders inside a branch are nested under `"subfolders"` or `"jurisdictions"`.)*
+
+### D3. Optional Subfolders (Tomes I, VI, VII, VIII)
+When optional custom subfolders exist inside Tomes `01_cosmology/` (`<planes>/`, `<pantheon>/`), `06_locations/` (`<location_groups>/`), `07_factions/` (`<faction_groups>/`), or `<08_unique_magic_items>/` (`<categories>/`), each tome records its actual `"folder"` and `"index"` and exposes a `"subfolders"` (or `"groups"`) array with `{ "id", "title", "folder", "index", "modules": [...] }`.
 
 ### E. Tome 10 (Timeline)
 ```json
@@ -257,5 +272,5 @@ When running `generate-structure-json` or `update-structure-json`:
 3. **Tables**: Detected via column separator rows `| :--- | :--- |` preceded by a `## Table...` heading or caption.
 4. **DM Notes**: Detected via `**NOTE FOR THE DUNGEON MASTER:**` or `> ⚠️ **DM Note:**` markers.
 5. **Numerical Code**: If a file is named `03_flow_of_magic.md` inside `01_cosmology`, its code is `"1.3"`.
-6. **Sub-series Codes**: Sheets inside `customs_festivals_and_events/` use third-level codes per subfolder (`3.5.x` customs, `3.6.x` festivals/occurrences, `3.7.x` events; sequential numbering per subfolder). Branches inside `04_law_and_statutes/` use `4.1.x` … `4.10.x` (`4.Y.1` for `01_general_framework.md`, `4.Y.2+` for individual acts `02_<entry_slug>.md`). Files in `10_timeline/` use `10.1.x` (historical chronology), `10.2.x` (occurrence register), `10.3.x` (calendar).
+6. **Sub-series Codes**: Sheets inside `customs_festivals_and_events/` use third-level codes per subfolder (`3.5.x` customs, `3.6.x` festivals/occurrences, `3.7.x` events; `3.8.x` for optional `peoples/` or custom-named folder). Branches inside `04_law_and_statutes/` use `4.1.x` … `4.10.x` (and `4.11.x+` for extra custom branches; `4.Y.1` for `01_general_framework.md`, `4.Y.2+` for individual acts `02_<entry_slug>.md`). Files in `10_timeline/` use `10.1.x` (historical chronology), `10.2.x` (occurrence register), `10.3.x` (calendar).
 7. **Typological Fields**: For festivals/occurrences extract `periodicity` and `trigger` from their template sections; for one-off events extract `occurrence_status`.

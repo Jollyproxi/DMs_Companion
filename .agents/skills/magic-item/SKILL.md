@@ -8,7 +8,7 @@ disable-model-invocation: false
 
 # Skill: Unique Magic Items Management (`magic-item`)
 
-This skill governs the formal cataloguing of artefacts, relics, and arcane focuses inside Tome `08_unique_magic_items/`, adhering to the structural template defined in [item-template](./references/item-template.md).
+This skill governs the formal cataloguing of artefacts, relics, and arcane focuses inside Tome VIII (`08_unique_magic_items/` or custom Tome VIII folder name in the workspace), adhering to the structural template defined in [item-template](./references/item-template.md).
 
 > **📌 Linked Proper Names Rule**: every proper name of a setting entity (PCs, NPCs, factions, houses, cities, locations, magic items, customs, festivals, events…) appearing in produced text must be a **Markdown link** to the entity's canonical `.md` file (e.g. `[Name](relative/path/file.md)`), never plain text. Exceptions: headings, file names, frontmatter, code blocks, Mermaid nodes, and `.mw` sources. Entity without a sheet: never invent it — use `[TO_BE_DEFINED_BY_DM: missing sheet for <Name>]` and flag the gap. Checking and conversion: `link-proper-names` skill.
 
@@ -33,10 +33,10 @@ This skill governs the formal cataloguing of artefacts, relics, and arcane focus
    - **`mechanical_powers`**: D&D 5e mechanical properties and sensory resonances (free text).
 
 2. **Create the File**:
-   Save the sheet to `08_unique_magic_items/<Item_Name>.md` using the standard template.
+   Save the sheet to `<08_unique_magic_items>/[<category>/]<Item_Name>.md` (respecting any custom Tome VIII name and optional category subfolders) using the standard template.
 
 3. **Update the Tome Index**:
-   Add the entry with its category, resonance, and bearer to the table or list in `08_unique_magic_items/README.md`.
+   Add the entry with its category, resonance, and bearer to the table or list in `<08_unique_magic_items>/README.md` (and any category `README.md`).
 
 4. **Cross-Link with Bearer**:
    If the item belongs to a PC, update the `04_equipment_and_abilities.md` module of that PC's dossier by linking to the new item sheet.

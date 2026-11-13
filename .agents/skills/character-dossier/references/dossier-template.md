@@ -2,7 +2,7 @@
 
 ## 1. Modular Player Character (PC) Dossier
 
-Each PC has a dedicated folder under `05_characters/Player_Characters/<Campaign>/<PC_Name>/` with a connecting `README.md` and five thematic modules:
+Each PC has a dedicated folder under `05_characters/<Player_Characters>/<Campaign_or_Party>/<PC_Name>/` (default: `05_characters/Player_Characters/<Campaign>/<PC_Name>/`) with a connecting `README.md` and five thematic modules:
 
 ### `README.md` (Character Hub)
 ```markdown
@@ -98,7 +98,7 @@ Each PC has a dedicated folder under `05_characters/Player_Characters/<Campaign>
 
 ## 2. Non-Player Character (NPC) Sheet
 
-Each NPC resides as a single file in `05_characters/Non_Player_Characters/[NPC_Name].md`:
+Each NPC resides as a single file in `05_characters/<Non_Player_Characters>/[<npc_group>/][NPC_Name].md` (default: `05_characters/Non_Player_Characters/[NPC_Name].md`):
 
 ```markdown
 # [NPC Name] — [Title or Role]

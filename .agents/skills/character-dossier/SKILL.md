@@ -31,9 +31,9 @@ Full templates are available in [dossier-template](./references/dossier-template
 
 When the DM introduces or documents a new Player Character:
 
-1. **Guided Acquisition (if needed)**: Confirm exact name, class, level, and campaign with the DM.
+1. **Guided Acquisition (if needed)**: Confirm exact name, class, level, and campaign/party with the DM.
 2. **Create Directory**:
-   `05_characters/Player_Characters/<Campaign>/<PC_Name>/`
+   `05_characters/<Player_Characters>/<Campaign_or_Party>/<PC_Name>/` *(default: `05_characters/Player_Characters/<Campaign>/<PC_Name>/`, respecting custom folder names in the workspace)*
 3. **Generate Modular Files**:
    - `README.md`: Character hub with role, moral traits, and index of the 5 files.
    - `01_profile_and_traits.md`: Biographical data, class, level, traits, and appearance.
@@ -42,7 +42,7 @@ When the DM introduces or documents a new Player Character:
    - `04_equipment_and_abilities.md`: Signature items, weapons, focuses, and unique abilities.
    - `05_dm_hooks_and_secrets.md`: Hooks reserved for the DM, mysteries, and revelations.
 4. **Update Campaign & Party Hubs**:
-   Add the new PC to `README.md` in `05_characters/Player_Characters/<Campaign>/README.md` and to the general index `05_characters/README.md`.
+   Add the new PC to `README.md` in `05_characters/<Player_Characters>/<Campaign_or_Party>/README.md` and to the general index `05_characters/README.md`.
 
 ---
 
@@ -52,12 +52,12 @@ When the DM introduces a notable Non-Player Character:
 
 1. **Guided Acquisition**: If essential details are missing, clarify faction affiliation, living status, and whereabouts with the DM.
 2. **Path**:
-   `05_characters/Non_Player_Characters/<NPC_Name>.md`
+   `05_characters/<Non_Player_Characters>/[<npc_group>/]<NPC_Name>.md` *(default: `05_characters/Non_Player_Characters/<NPC_Name>.md`; respect any optional grouping subfolders by faction, region, or alignment)*
 3. **Structure**:
-   - Header with role, faction (linked to `07_factions/`), residence (linked to `06_locations/`), alignment, and status.
+   - Header with role, faction (linked to Tome VII `07_factions/`), residence (linked to Tome VI `06_locations/`), alignment, and status.
    - Sections for Appearance & Temperament, Narrative Role, and DM Secrets & Hooks.
 4. **Update NPC Index**:
-   Add the entry to the relationship table in `05_characters/Non_Player_Characters/README.md`.
+   Add the entry to the relationship table in `05_characters/<Non_Player_Characters>/README.md` (and any subgroup `README.md`).
 
 ---
 

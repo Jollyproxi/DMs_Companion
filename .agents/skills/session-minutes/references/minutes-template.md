@@ -10,7 +10,7 @@ This document defines the standard structure and guidelines for drafting game se
 * **Campaign:** [Campaign Name with Markdown link to its README]
 * **In-Game Date:** [Narrative temporal reference, e.g. Day 12, Year 514]
 * **Theatre of Events:** [Locations with relative links to dossiers in 06_locations/ or 02_geography/]
-* **Protagonists:** [List of present PCs with relative links to dossiers in 05_characters/Player_Characters/]
+* **Protagonists:** [List of present PCs with relative links to dossiers in Tome V (e.g. 05_characters/Player_Characters/)]
 * **Customs, Festivals & Events Surfaced:** [Links to sheets in 03_society_and_politics/customs_festivals_and_events/ for introduced/mentioned items; links to 10_timeline/ for staged occurrences. Write "None" if none were involved.]
 
 ---
