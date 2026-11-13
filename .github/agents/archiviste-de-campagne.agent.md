@@ -29,9 +29,9 @@ Votre mission consiste à coordonner l'archivage de l'univers fantastique, trans
 L'univers est réparti selon l'architecture standard en dix tomes :
 * `01_cosmologie/` : Plans, mécaniques célestes, flux de la magie et éthique cosmique.
 * `02_geographie/` : Cartographie, territoires, régions souterraines et dossiers sous `regions/`.
-* `03_societe_et_politique/` : Ordre civil, économie, classes sociales et justice.
+* `03_societe_et_politique/` : Ordre civil, économie, classes sociales, ordre public et forces de l'ordre.
   * `coutumes_fetes_et_evenements/` : Sous-série dédiée avec trois sous-dossiers : `coutumes/` (particularités de la vie quotidienne, ex. cérémonies de salutation et d'adieu), `fetes_et_occurrences/` (fêtes et événements institutionnels ou rituels récurrents à périodicité fixe ou variable, ex. fête du solstice, tournoi de sélection de la garde) et `evenements/` (événements ponctuels par nature — révoltes, cataclysmes, bouleversements historiques — passés ou en cours).
-* `04_droit_et_succession/` : Lois fondamentales, droit dynastique, pactes, traités et tribunaux.
+* `04_droit_et_lois/` : Droit, lois fondamentales et actes recensés répartis en 10 branches granulaires (`01_ordre_juridique_et_sources/`, `02_droits_civils_et_statuts/`, `03_droit_dynastique_et_succession/`, `04_contrats_et_pactes/`, `05_traites_et_diplomatie/`, `06_droit_penal_et_infractions/`, `07_tribunaux_et_procedure/`, `08_droit_arcanique_et_religieux/`, `09_propriete_commerce_et_fiscalite/`, `10_droit_de_la_guerre_et_aventuriers/`), chacune dotée de `01_cadre_general.md` et de fiches numérotées `02_<slug_entree>.md` (rétrocompatible avec `04_droit_et_succession/`).
 * `05_personnages/` : Dossiers modulaires PJ (`Joueurs/<Campagne>/<Nom_PJ>/`) et fiches PNJ (`Non_Joueurs/`).
 * `06_lieux/` : Nœuds d'aventure, cités, forteresses et dangers de zone.
 * `07_factions/` : Maisons nobles, congrégations, guildes, ordres et hiérarchies de pouvoir.

@@ -31,7 +31,7 @@ Cette compétence fait respecter la règle universelle selon laquelle tout nom p
 Avant l'analyse, construisez la table `nom → chemin du fichier canonique` :
 
 1. **Source privilégiée** : si `structure_univers.json` est présent à la racine de l'espace de travail, utilisez-le comme index (noms des modules et chemins associés).
-2. **Balayage direct** : à défaut (ou en complément) parcourez les dix tomes — `05_personnages/` (PJ et PNJ), `06_lieux/`, `07_factions/`, `08_objets_magiques_singuliers/`, `03_societe_et_politique/coutumes_fetes_et_evenements/`, `02_geographie/` (régions), `01_cosmologie/` (plans), `04_droit_et_succession/` (lois, traités), `10_chronologie/chronologie_historique/` (époques, événements historiques) — en collectant les titres H1 et les noms de fichiers.
+2. **Balayage direct** : à défaut (ou en complément) parcourez les dix tomes — `05_personnages/` (PJ et PNJ), `06_lieux/`, `07_factions/`, `08_objets_magiques_singuliers/`, `03_societe_et_politique/coutumes_fetes_et_evenements/`, `02_geographie/` (régions), `01_cosmologie/` (plans), `04_droit_et_lois/` (ou `04_droit_et_succession/`, lois, traités, pactes, juridictions), `10_chronologie/chronologie_historique/` (époques, événements historiques) — en collectant les titres H1 et les noms de fichiers.
 3. **Noms canoniques** : pour chaque fiche, le nom propre est le titre du document (H1) ou le nom du fichier sans extension ; consignez également les variantes ou alias explicitement documentés dans la fiche.
 4. **Homonymes** : si deux entités partagent le même nom, marquez l'ambiguïté et demandez au MJ quelle fiche lier.
 

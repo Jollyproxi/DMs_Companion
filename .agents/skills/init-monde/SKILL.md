@@ -44,7 +44,7 @@ Une fois les réponses du MJ reçues, générez la structure modulaire à l'aide
    - `01_cosmologie/README.md`
    - `02_geographie/README.md` (avec éventuel sous-dossier `regions/` ou dénomination choisie pour les macro-zones)
    - `03_societe_et_politique/README.md` (avec sous-dossier `coutumes_fetes_et_evenements/` contenant `coutumes/`, `fetes_et_occurrences/`, `evenements/`, chacun avec `README.md`)
-   - `04_droit_et_succession/README.md`
+   - `04_droit_et_lois/README.md` (avec sous-dossiers `01_ordre_juridique_et_sources/`, `02_droits_civils_et_statuts/`, `03_droit_dynastique_et_succession/`, `04_contrats_et_pactes/`, `05_traites_et_diplomatie/`, `06_droit_penal_et_infractions/`, `07_tribunaux_et_procedure/`, `08_droit_arcanique_et_religieux/`, `09_propriete_commerce_et_fiscalite/`, `10_droit_de_la_guerre_et_aventuriers/`, chacun avec `README.md`)
    - `05_personnages/README.md` (avec sous-dossiers `Joueurs/` et `Non_Joueurs/`, chacun avec `README.md`)
    - `06_lieux/README.md`
    - `07_factions/README.md`
