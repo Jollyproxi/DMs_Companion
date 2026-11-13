@@ -1,6 +1,6 @@
 # Modèle de Référence : Objet Magique Singulier
 
-Ce document définit la structure standard pour enregistrer un objet magique, artefact ou relique dans `08_objets_magiques_singuliers/`.
+Ce document définit la structure standard pour enregistrer un objet magique, artefact ou relique dans le Tome VIII (`08_objets_magiques_singuliers/` ou nom personnalisé configuré dans l'espace de travail).
 
 ```markdown
 # Objet Magique : [Nom de l'Objet]

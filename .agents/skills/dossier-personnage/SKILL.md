@@ -31,9 +31,9 @@ Les modèles complets sont consultables dans [modele-dossier](./references/model
 
 Lorsque le MJ introduit ou documente un nouveau Personnage Joueur :
 
-1. **Acquisition Guidée (si nécessaire)** : Confirmez avec le MJ le nom exact, la classe, le niveau et la campagne d'appartenance.
+1. **Acquisition Guidée (si nécessaire)** : Confirmez avec le MJ le nom exact, la classe, le niveau et la campagne/groupe d'appartenance.
 2. **Création du Dossier** :
-   `05_personnages/Joueurs/<Campagne>/<Nom_PJ>/`
+   `05_personnages/<Joueurs>/<Campagne_ou_Groupe>/<Nom_PJ>/` *(défaut : `05_personnages/Joueurs/<Campagne>/<Nom_PJ>/`, en respectant les noms personnalisés de l'espace de travail)*
 3. **Génération des Fichiers Modulaires** :
    - `README.md` : Portail du personnage avec rôle, traits moraux et index des 5 fichiers.
    - `01_etat_civil_et_traits.md` : Données d'identité, classe, niveau, traits et apparence.
@@ -42,7 +42,7 @@ Lorsque le MJ introduit ou documente un nouveau Personnage Joueur :
    - `04_equipement_et_capacites.md` : Objets marquants, armes, focaliseurs et capacités uniques.
    - `05_accroches_et_secrets_mj.md` : Pistes réservées au MJ, mystères et révélations.
 4. **Mise à Jour des Portails Campagne et Groupe** :
-   Ajoutez le nouveau PJ au `README.md` dans `05_personnages/Joueurs/<Campagne>/README.md` et à l'index général `05_personnages/README.md`.
+   Ajoutez le nouveau PJ au `README.md` dans `05_personnages/<Joueurs>/<Campagne_ou_Groupe>/README.md` et à l'index général `05_personnages/README.md`.
 
 ---
 
@@ -52,12 +52,12 @@ Lorsque le MJ introduit un Personnage Non-Joueur notable :
 
 1. **Acquisition Guidée** : S'il manque des éléments essentiels, clarifiez avec le MJ la faction d'appartenance, le statut vital et la localisation.
 2. **Chemin** :
-   `05_personnages/Non_Joueurs/<Nom_PNJ>.md`
+   `05_personnages/<Non_Joueurs>/[<groupe_pnj>/]<Nom_PNJ>.md` *(défaut : `05_personnages/Non_Joueurs/<Nom_PNJ>.md` ; respectez les éventuels sous-dossiers de regroupement optionnels par faction, région ou camp)*
 3. **Structure** :
-   - En-tête avec rôle, faction (lien vers `07_factions/`), résidence (lien vers `06_lieux/`), alignement et statut vital.
+   - En-tête avec rôle, faction (lien vers le Tome VII `07_factions/`), résidence (lien vers le Tome VI `06_lieux/`), alignement et statut vital.
    - Sections Apparence & Tempérament, Rôle Narratif et Secrets & Accroches MJ.
 4. **Mise à Jour de l'Index PNJ** :
-   Ajoutez l'entrée au tableau des relations dans `05_personnages/Non_Joueurs/README.md`.
+   Ajoutez l'entrée au tableau des relations dans `05_personnages/<Non_Joueurs>/README.md` (et l'éventuel `README.md` du sous-groupe).
 
 ---
 

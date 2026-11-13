@@ -77,15 +77,15 @@ L'Archiviste organise **uniquement** ce que vous fournissez ou que vous avez dé
 
 | Tome | Contenu |
 | :--- | :--- |
-| `01_cosmologie/` | Plans, mécaniques célestes, flux de la magie, éthique cosmique. |
-| `02_geographie/` | Cartographie, territoires, régions souterraines, dossiers régionaux (`regions/`). |
-| `03_societe_et_politique/` | Ordre civil, économie, classes sociales, ordre public ; sous-série `coutumes_fetes_et_evenements/` (`coutumes/`, `fetes_et_occurrences/`, `evenements/`). |
-| `04_droit_et_lois/` | 10 branches juridiques (`01_ordre_juridique_et_sources/` … `10_droit_de_la_guerre_et_aventuriers/`) : sources, droits civils, succession, contrats, traités, pénal, tribunaux, arcanique/religieux, fiscalité, guerre. |
-| `05_personnages/` | Dossiers modulaires PJ (`Joueurs/<Campagne>/<Nom_PJ>/`) et fiches PNJ (`Non_Joueurs/`). |
-| `06_lieux/` | Nœuds d'aventure, cités, forteresses, dangers locaux. |
-| `07_factions/` | Maisons nobles, congrégations, guildes, ordres, hiérarchies de pouvoir. |
-| `08_objets_magiques_singuliers/` | Artefacts uniques, reliques, registres juridiques, propriétés. |
-| `09_chroniques/` | Portail des campagnes : tableau synoptique + comptes rendus progressifs (`campagnes/<nom>/sessions/`). |
+| `01_cosmologie/` | Plans, mécaniques célestes, flux de la magie, éthique cosmique (`<plans>/`, `<pantheon>/` optionnels). |
+| `02_geographie/` | Cartographie, territoires, régions souterraines, dossiers régionaux (`regions/` ou nom personnalisé, ex. `provinces/`, `domaines/`). |
+| `03_societe_et_politique/` | Ordre civil, économie, classes sociales, ordre public ; `peuples/` optionnel (ou nom personnalisé) et sous-série `coutumes_fetes_et_evenements/` (`coutumes/`, `fetes_et_occurrences/`, `evenements/`). |
+| `04_droit_et_lois/` | 10 branches juridiques (`01_ordre_juridique_et_sources/` … `10_droit_de_la_guerre_et_aventuriers/`), plus éventuelles branches supplémentaires `11_+` ou juridictions. |
+| `05_personnages/` | Dossiers modulaires PJ (`<Joueurs>/<Campagne_ou_Groupe>/<Nom_PJ>/`, défaut `Joueurs/<Campagne>/`) et fiches PNJ (`<Non_Joueurs>/[<groupe_pnj>/]`, défaut `Non_Joueurs/`). |
+| `06_lieux/` | Nœuds d'aventure, cités, forteresses, dangers locaux (`<groupes_lieux>/` optionnels). |
+| `07_factions/` | Maisons nobles, congrégations, guildes, ordres, hiérarchies de pouvoir (`<groupes_factions>/` optionnels). |
+| `<08_objets_magiques_singuliers>/` | Artefacts uniques, reliques, registres juridiques, propriétés (nom du tome personnalisable et `<categories>/` optionnelles). |
+| `09_chroniques/` | Portail des campagnes : tableau synoptique + comptes rendus progressifs (`<campagnes>/<nom>/<sessions>/`, défaut `campagnes/` et `sessions/`). |
 | `10_chronologie/` | Chronologie transversale : `chronologie_historique/`, `registre_occurrences/`, `markwhen/` (`chronologie_generale.mw`, `epoques/`, `campagnes/`), `calendrier/`, `exportations/`. |
 
 ### Badges de vérification

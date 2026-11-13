@@ -94,8 +94,8 @@ Chaque élément du tableau `modules` décrit un fichier `.md` atomique :
 
 Pour les tomes dotés de sous-dossiers canoniques :
 
-### A. Tome 02 (Géographie — Sous-dossier `regions/`)
-Si un sous-répertoire régional existe :
+### A. Tome 02 (Géographie — Sous-dossier `regions/` ou nom personnalisé)
+Si un sous-répertoire régional ou de macro-zones existe :
 ```json
 "dossier_regions": "02_geographie/regions",
 "index_regions": "02_geographie/regions/README.md",
@@ -108,16 +108,18 @@ Si un sous-répertoire régional existe :
   }
 ]
 ```
+*(Le nom du sous-dossier et des clés associées est personnalisable : tout dossier choisi pour les macro-zones — ex. `provinces/`, `continents/`, `domaines/` — peut utiliser les clés standard `dossier_regions` / `index_regions` / `modules_regions` ou des clés correspondantes `dossier_<nom>` / `index_<nom>` / `modules_<nom>`.)*
 
-### B. Tome 05 (Personnages — Sous-dossiers `Joueurs/` et `Non_Joueurs/`)
+### B. Tome 05 (Personnages — Sous-dossiers `<Joueurs>/` et `<Non_Joueurs>/`)
 ```json
 "sous_dossiers": {
   "joueurs": "05_personnages/Joueurs",
   "non_joueurs": "05_personnages/Non_Joueurs"
 }
 ```
+*(Si le MJ personnalise les noms de dossiers — ex. `PJ/`, `PNJ/`, `Heros/`, sous-dossiers de regroupement PNJ ou `<Campagne_ou_Groupe>/` — les chemins consignent les répertoires réels sur disque.)*
 
-### C. Tome 09 (Chroniques — Sous-dossier `campagnes/`)
+### C. Tome 09 (Chroniques — Sous-dossier `<campagnes>/`)
 ```json
 "dossier_campagnes": "09_chroniques/campagnes",
 "campagnes_actives": [
@@ -128,9 +130,19 @@ Si un sous-répertoire régional existe :
   }
 ]
 ```
+*(Si `campagnes/` ou `sessions/` utilisent des noms personnalisés — ex. `expeditions/`, `aventures/`, `one_shots/`, `journaux/` — les clés reflètent les chemins réels sur disque.)*
 
-### D. Tome 03 (Société & Politique — Sous-série `coutumes_fetes_et_evenements/`)
+### D. Tome 03 (Société & Politique — Sous-série `coutumes_fetes_et_evenements/` et optionnel `peuples/`)
 ```json
+"dossier_peuples": "03_societe_et_politique/peuples",
+"modules_peuples": [
+  {
+    "id": "peuple_exemple",
+    "code": "3.8.1",
+    "titre": "Nom du Peuple / Espèce",
+    "fichier": "03_societe_et_politique/peuples/01_peuple_exemple.md"
+  }
+],
 "dossier_coutumes_fetes_evenements": "03_societe_et_politique/coutumes_fetes_et_evenements",
 "index_coutumes_fetes_evenements": "03_societe_et_politique/coutumes_fetes_et_evenements/README.md",
 "modules_coutumes": [
@@ -194,7 +206,10 @@ Si un sous-répertoire régional existe :
   ]
 }
 ```
-*(Dans les univers existants utilisant un dossier `04_droit_et_succession/` à modules plats, ceux-ci sont indexés dans `"modules"` en conservant éventuellement `"id": "droit_et_succession"`.)*
+*(Les éventuelles branches supplémentaires `11_<branche>/` utilisent les codes `4.11.x`… ; les éventuels sous-dossiers par juridiction interne sont imbriqués dans la branche correspondante sous `"sous_dossiers"` ou `"juridictions"`.)*
+
+### D3. Sous-dossiers Optionnels (Tomes I, VI, VII, VIII)
+Lorsque des sous-dossiers optionnels personnalisés existent dans les Tomes `01_cosmologie/` (`<plans>/`, `<pantheon>/`), `06_lieux/` (`<groupes_lieux>/`), `07_factions/` (`<groupes_factions>/`) ou `<08_objets_magiques_singuliers>/` (`<categories>/`), chaque tome conserve son chemin effectif (`"dossier"`, `"index"`) et expose un tableau `"sous_dossiers"` (ou `"groupes"`) avec `{ "id", "titre", "dossier", "index", "modules": [...] }`.
 
 ### E. Tome 10 (Chronologie)
 ```json
@@ -257,5 +272,5 @@ Lors de l'exécution de `generer-structure-json` ou `mettre-a-jour-structure-jso
 3. **Tableaux** : Détectés par les lignes de séparation `| :--- | :--- |` précédées d'un titre `## Tableau...` ou d'une légende.
 4. **Notes MJ** : Détectées via les balises `**NOTE POUR LE MAÎTRE DU JEU :**` ou `> ⚠️ **Note MJ :**`.
 5. **Code Numérique** : Si le fichier se nomme `03_flux_de_la_magie.md` dans `01_cosmologie`, son code est `"1.3"`.
-6. **Codes des Sous-séries** : Les fiches de `coutumes_fetes_et_evenements/` utilisent des codes à trois niveaux par sous-dossier (`3.5.x` coutumes, `3.6.x` fêtes/occurrences, `3.7.x` événements ; numérotation progressive par sous-dossier). Les branches de `04_droit_et_lois/` utilisent `4.1.x` … `4.10.x` (`4.Y.1` pour `01_cadre_general.md`, `4.Y.2+` pour les actes `02_<slug_entree>.md`). Les fichiers de `10_chronologie/` utilisent `10.1.x` (chronologie historique), `10.2.x` (registre des occurrences), `10.3.x` (calendrier).
+6. **Codes des Sous-séries** : Les fiches de `coutumes_fetes_et_evenements/` utilisent des codes à trois niveaux par sous-dossier (`3.5.x` coutumes, `3.6.x` fêtes/occurrences, `3.7.x` événements ; `3.8.x` pour l'éventuel dossier `peuples/` ou nom personnalisé). Les branches de `04_droit_et_lois/` utilisent `4.1.x` … `4.10.x` (et `4.11.x+` pour d'éventuelles branches personnalisées ; `4.Y.1` pour `01_cadre_general.md`, `4.Y.2+` pour les actes `02_<slug_entree>.md`). Les fichiers de `10_chronologie/` utilisent `10.1.x` (chronologie historique), `10.2.x` (registre des occurrences), `10.3.x` (calendrier).
 7. **Champs Typologiques** : Pour les fêtes/occurrences extrayez `periodicite` et `declencheur` depuis leurs sections du modèle ; pour les événements ponctuels extrayez `statut_occurrence`.

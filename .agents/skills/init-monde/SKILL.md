@@ -28,6 +28,12 @@ Avant de créer des fichiers ou des dossiers, posez au MJ les questions suivante
 5. **`coutumes_fetes_evenements`**: *Existe-t-il déjà des coutumes du quotidien, des fêtes récurrentes ou des événements historiques à recenser tout de suite ?*
    - Options à sélection multiple : *Coutumes (ex. rituels de salutation/d'adieu)*, *Fêtes/événements récurrents*, *Événements ponctuels (historiques ou en cours)*, *Aucun pour le moment (structure uniquement)*.
    - Les entrées collectées sont cataloguées via la compétence `coutume-fete-evenement` sous `03_societe_et_politique/coutumes_fetes_et_evenements/` et inscrites dans `10_chronologie/`.
+6. **`dossier_macro_zones`**: *Comment souhaitez-vous nommer le sous-dossier des régions/macro-zones dans `02_geographie/` ?*
+   - Options suggérées ou nom personnalisé (ex. *`regions/`* par défaut, *`provinces/`*, *`continents/`*, *`domaines/`*, *`marches/`*, *Autre — préciser le nom du dossier*).
+7. **`sous_dossier_peuples`**: *Souhaitez-vous inclure dans `03_societe_et_politique/` le sous-dossier optionnel dédié aux peuples/espèces ?*
+   - Options : *Oui, utiliser le défaut `peuples/`*, *Oui, avec un nom personnalisé (ex. `especes/`, `races/`, `lignees/`, `cultures/`)*, *Non (uniquement si utile plus tard)*.
+8. **`personnalisation_avancee`**: *Pour les autres tomes, souhaitez-vous conserver les noms standard ou personnaliser des dossiers / activer des sous-dossiers optionnels ?*
+   - Options : *Utiliser les noms et la structure standard* (recommandé), *Personnaliser sur demande* — le cas échéant, demandez au MJ les choix souhaités (parmi : `<plans>/` et `<pantheon>/` dans `01_cosmologie/` ; branches supplémentaires `11_+` ou juridictions dans `04_droit_et_lois/` ; noms `Joueurs/`/`Non_Joueurs/`, regroupement PJ par campagne ou groupe et `<groupes_pnj>/` dans `05_personnages/` ; `<groupes_lieux>/` dans `06_lieux/` ; `<groupes_factions>/` dans `07_factions/` ; nom du Tome VIII `08_...` et `<categories>/` ; `<campagnes>/` et `<sessions>/` dans `09_chroniques/`).
 
 ---
 
@@ -41,15 +47,15 @@ Une fois les réponses du MJ reçues, générez la structure modulaire à l'aide
    - `BIBLE_DE_L_UNIVERS.md` : Document source maître contenant la prémisse convenue.
 
 2. **Les Dix Tomes Fondateurs** :
-   - `01_cosmologie/README.md`
-   - `02_geographie/README.md` (avec éventuel sous-dossier `regions/` ou dénomination choisie pour les macro-zones)
-   - `03_societe_et_politique/README.md` (avec sous-dossier `coutumes_fetes_et_evenements/` contenant `coutumes/`, `fetes_et_occurrences/`, `evenements/`, chacun avec `README.md`)
-   - `04_droit_et_lois/README.md` (avec sous-dossiers `01_ordre_juridique_et_sources/`, `02_droits_civils_et_statuts/`, `03_droit_dynastique_et_succession/`, `04_contrats_et_pactes/`, `05_traites_et_diplomatie/`, `06_droit_penal_et_infractions/`, `07_tribunaux_et_procedure/`, `08_droit_arcanique_et_religieux/`, `09_propriete_commerce_et_fiscalite/`, `10_droit_de_la_guerre_et_aventuriers/`, chacun avec `README.md`)
-   - `05_personnages/README.md` (avec sous-dossiers `Joueurs/` et `Non_Joueurs/`, chacun avec `README.md`)
-   - `06_lieux/README.md`
-   - `07_factions/README.md`
-   - `08_objets_magiques_singuliers/README.md`
-   - `09_chroniques/README.md` (avec sous-dossiers `campagnes/<nom_campagne>/sessions/`, chacun avec `README.md`)
+   - `01_cosmologie/README.md` (avec éventuels sous-dossiers optionnels `<plans>/`, `<pantheon>/`, chacun avec `README.md`)
+   - `02_geographie/README.md` (avec sous-dossier des macro-zones : `regions/` ou le nom personnalisé choisi par le MJ, doté de son `README.md`)
+   - `03_societe_et_politique/README.md` (avec éventuel sous-dossier optionnel `peuples/` ou nom personnalisé, et sous-dossier `coutumes_fetes_et_evenements/` contenant `coutumes/`, `fetes_et_occurrences/`, `evenements/`, chacun avec `README.md`)
+   - `04_droit_et_lois/README.md` (avec sous-dossiers `01_ordre_juridique_et_sources/`, `02_droits_civils_et_statuts/`, `03_droit_dynastique_et_succession/`, `04_contrats_et_pactes/`, `05_traites_et_diplomatie/`, `06_droit_penal_et_infractions/`, `07_tribunaux_et_procedure/`, `08_droit_arcanique_et_religieux/`, `09_propriete_commerce_et_fiscalite/`, `10_droit_de_la_guerre_et_aventuriers/`, plus éventuelles branches supplémentaires `11_+` ou sous-dossiers par juridiction, chacun avec `README.md`)
+   - `05_personnages/README.md` (avec sous-dossiers `<Joueurs>/` [défaut `Joueurs/`] et `<Non_Joueurs>/` [défaut `Non_Joueurs/`], ainsi que `<groupes_pnj>/` optionnel, chacun avec `README.md`)
+   - `06_lieux/README.md` (avec éventuels sous-dossiers optionnels `<groupes_lieux>/`, chacun avec `README.md`)
+   - `07_factions/README.md` (avec éventuels sous-dossiers optionnels `<groupes_factions>/`, chacun avec `README.md`)
+   - `<08_objets_magiques_singuliers>/README.md` (défaut `08_objets_magiques_singuliers/` ou nom personnalisé, avec éventuels sous-dossiers optionnels `<categories>/`, chacun avec `README.md`)
+   - `09_chroniques/README.md` (avec sous-dossiers `<campagnes>/<nom_campagne>/<sessions>/` — défaut `campagnes/` et `sessions/` — chacun avec `README.md`)
    - `10_chronologie/README.md` (avec sous-dossiers `chronologie_historique/`, `registre_occurrences/`, `markwhen/` — contenant `README.md`, `chronologie_generale.mw`, `epoques/`, `campagnes/` —, `calendrier/`, `exportations/README.md`)
 
 3. **Initialisation des Fichiers README** :

@@ -44,25 +44,27 @@ La compilation suit strictement la séquence numérique canonique :
    - `02_cycles_saisons_et_mecaniques_celestes.md`
    - `03_flux_de_la_magie_et_ordre_divin.md`
    - `04_systeme_moral_ou_philosophique.md`
+   - Éventuels sous-dossiers optionnels personnalisés (`<plans>/`, `<pantheon>/`).
 2. **##### 2. Géographie Physique, Territoriale et Environnementale** (`02_geographie/`)
    - Modules principaux de géographie, carte, souterrains et plans liminaux.
-   - Traitement des régions/provinces dans `regions/`, classées par numéro croissant.
+   - Traitement des régions ou macro-zones dans leur sous-dossier dédié (`regions/` ou nom personnalisé choisi dans l'espace de travail), classées par numéro croissant.
 3. **##### 3. Ordre Social, Politique et Économique** (`03_societe_et_politique/`)
    - Modèles sociaux, économie, classes, ordre public et forces de l'ordre.
+   - Éventuel sous-dossier optionnel `peuples/` (ou nom personnalisé pour espèces/races/lignées/cultures, codes `3.8.x`).
    - Sous-série `coutumes_fetes_et_evenements/` : coutumes (`3.5.x`), fêtes/occurrences (`3.6.x`), événements ponctuels (`3.7.x`), dans l'ordre numérique croissant par sous-dossier.
-4. **##### 4. Droit et Lois** (`04_droit_et_lois/` ou variante historique `04_droit_et_succession/`)
-   - Ordre juridique et sources (`4.1.x`), droits civils et statuts (`4.2.x`), droit dynastique et succession (`4.3.x`), contrats et pactes (`4.4.x`), traités et diplomatie (`4.5.x`), droit pénal et infractions (`4.6.x`), tribunaux et procédure (`4.7.x`), droit arcanique et religieux (`4.8.x`), propriété, commerce et fiscalité (`4.9.x`), droit de la guerre et aventuriers (`4.10.x`), chacune avec cadre général (`4.Y.1`) et actes recensés (`4.Y.2+`) dans l'ordre numérique croissant.
+4. **##### 4. Droit et Lois** (`04_droit_et_lois/`)
+   - Ordre juridique et sources (`4.1.x`), droits civils et statuts (`4.2.x`), droit dynastique et succession (`4.3.x`), contrats et pactes (`4.4.x`), traités et diplomatie (`4.5.x`), droit pénal et infractions (`4.6.x`), tribunaux et procédure (`4.7.x`), droit arcanique et religieux (`4.8.x`), propriété, commerce et fiscalité (`4.9.x`), droit de la guerre et aventuriers (`4.10.x`), plus d'éventuelles branches supplémentaires (`4.11.x+`) ou sous-dossiers par juridiction, chacune avec cadre général (`4.Y.1`) et actes recensés (`4.Y.2+`) dans l'ordre numérique croissant.
 5. **##### 5. Répertoire des Personnages du Monde** (`05_personnages/`)
-   - Répertoire des PNJ notables (`Non_Joueurs/`), regroupés par faction ou région.
-   - Synthèse des liens du groupe si une campagne canonique est présente.
+   - Répertoire des PNJ notables (`<Non_Joueurs>/`, avec éventuels sous-dossiers de regroupement personnalisés), regroupés par faction ou région.
+   - Synthèse des liens du groupe si une campagne/équipe canonique est présente.
 6. **##### 6. Atlas des Lieux & Nœuds d'Aventure** (`06_lieux/`)
-   - Lieux notables, forteresses, cités et portails.
+   - Lieux notables, forteresses, cités et portails (également regroupés dans d'éventuels sous-dossiers optionnels `<groupes_lieux>/`).
 7. **##### 7. Registre Géopolitique des Factions & Maisons** (`07_factions/`)
-   - Chartes, hiérarchies et rivalités des puissances dominantes.
-8. **##### 8. Registre des Objets Magiques Singuliers & Reliques** (`08_objets_magiques_singuliers/`)
-   - Artefacts uniques, histoire, statut juridique et mécaniques propres.
+   - Chartes, hiérarchies et rivalités des puissances dominantes (également regroupées dans d'éventuels sous-dossiers optionnels `<groupes_factions>/`).
+8. **##### 8. Registre des Objets Magiques Singuliers & Reliques** (`<08_objets_magiques_singuliers>/` ou nom personnalisé du tome)
+   - Artefacts uniques, histoire, statut juridique et mécaniques propres (également classés dans d'éventuels sous-dossiers optionnels `<categories>/`).
 9. **##### 9. Chroniques Historiques & Compendium des Campagnes** (`09_chroniques/`)
-   - Compendium des campagnes actives et comptes rendus progressifs de séance.
+   - Compendium des campagnes/expéditions actives (`<campagnes>/`) et comptes rendus progressifs (`<sessions>/`).
 10. **##### 10. Frise et Chronologie du Monde** (`10_chronologie/`)
     - Chronologie historique (`10.1.x`, fichiers par époque/période), registre des occurrences (`10.2.x`, fichiers par époque/période) et calendrier (`10.3.x`).
     - Les sources Markwhen (`markwhen/*.mw`) et exportations graphiques (`exportations/`) sont **exclues** de la Bible : elles demeurent indexées uniquement dans `structure_univers.json`.

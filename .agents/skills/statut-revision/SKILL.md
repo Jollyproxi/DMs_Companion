@@ -16,7 +16,7 @@ Cette compétence génère, actualise et maintient le fichier de suivi `STATUT_R
 
 ## 1. Critères de Classification des Statuts
 
-La compétence analyse les fichiers Markdown des dossiers canoniques de l'univers (`01_cosmologie`, `02_geographie`, `03_societe_et_politique` y compris la sous-série `coutumes_fetes_et_evenements/`, `04_droit_et_lois` ou variante historique `04_droit_et_succession`, `05_personnages`, `06_lieux`, `07_factions`, `08_objets_magiques_singuliers`, `09_chroniques`, `10_chronologie`) et inspecte les badges :
+La compétence analyse les fichiers Markdown des dossiers canoniques de l'univers (`01_cosmologie`, `02_geographie`, `03_societe_et_politique` y compris `peuples/` optionnel et la sous-série `coutumes_fetes_et_evenements/`, `04_droit_et_lois`, `05_personnages`, `06_lieux`, `07_factions`, `08_objets_magiques_singuliers` ou nom personnalisé du tome, `09_chroniques`, `10_chronologie` — récursivement jusque dans les éventuels sous-dossiers optionnels ou personnalisés) et inspecte les badges :
 
 ```markdown
 > 🛡️ *Vérifié : [DATE_V] | Modifié : [DATE_M]*
