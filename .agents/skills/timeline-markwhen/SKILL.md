@@ -14,6 +14,8 @@ Consult the attached technical references:
 - [mw-syntax-and-templates](./references/mw-syntax-and-templates.md): canonical Markwhen syntax, YAML header, tag taxonomy, and templates for `general_timeline.mw`, `epochs/<epoch>.mw`, and `campaigns/<campaign>.mw`.
 - [sync-and-export](./references/sync-and-export.md): bidirectional mapping rules with Tome 10, indexing in `setting_structure.json`, validation checklist, and export pipeline for `10_timeline/exports/`.
 
+> **📌 Linked Proper Names Rule**: every proper name of a setting entity (PCs, NPCs, factions, houses, cities, locations, magic items, customs, festivals, events…) appearing in produced text must be a **Markdown link** to the entity's canonical `.md` file (e.g. `[Name](relative/path/file.md)`), never plain text. Exceptions: headings, file names, frontmatter, code blocks, Mermaid nodes, and `.mw` sources. Entity without a sheet: never invent it — use `[TO_BE_DEFINED_BY_DM: missing sheet for <Name>]` and flag the gap. Checking and conversion: `link-proper-names` skill.
+
 ---
 
 ## 1. Golden Rule: Notarial Fidelity (Zero Hallucinations)

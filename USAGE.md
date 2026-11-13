@@ -1,6 +1,6 @@
 # Campaign Archivist — Usage Guide (British English)
 
-Everything you need to put the **Campaign Archivist** to work at your table: installation, first steps, a complete reference of all **11 skills**, typical workflows, troubleshooting, and FAQ.
+Everything you need to put the **Campaign Archivist** to work at your table: installation, first steps, a complete reference of all **12 skills**, typical workflows, troubleshooting, and FAQ.
 
 * Localised copies of this guide: [Italiano](https://github.com/<owner>/DMs_Companion/blob/main/locales/it/GUIDA-UTILIZZO.md) · [Français](https://github.com/<owner>/DMs_Companion/blob/main/locales/fr/GUIDE-UTILISATION.md) · [Deutsch](https://github.com/<owner>/DMs_Companion/blob/main/locales/de/NUTZUNGSANLEITUNG.md) — see also the project-level [USAGE.md](https://github.com/<owner>/DMs_Companion/blob/main/USAGE.md) on the `main` branch.
 
@@ -38,7 +38,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/en-gb/
 | `AGENTS.md` | Universal rules and workflows, read by every harness. |
 | `CLAUDE.md` | Claude Code entry point; imports `AGENTS.md`. |
 | `.github/agents/campaign-archivist.agent.md` | The *Campaign Archivist* persona (agent picker entry in VS Code). |
-| `.agents/skills/<skill>/SKILL.md` | The 11 modular skills (plus `references/` templates). |
+| `.agents/skills/<skill>/SKILL.md` | The 12 modular skills (plus `references/` templates). |
 | `USAGE.md` | This guide. |
 
 ### Harness Notes
@@ -119,6 +119,7 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 | 9 | `sync-bible-structure` | Master Setting Bible + machine-readable JSON. |
 | 10 | `custom-festival-event` | Customs, festivals/occurrences, one-off events. |
 | 11 | `timeline-markwhen` | Graphical Markwhen timelines (`.mw`). |
+| 12 | `link-proper-names` | Proper names always linked to canonical sheets. |
 
 ### 4.1 `init-world` — World Scaffolding
 
@@ -186,6 +187,12 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 * **How**: `/timeline-markwhen` with an operation — `create-mw`, `update-mw`, `validate-mw`, or `export-mw` (e.g. *“create-mw epoch: First Age”*, *“update-mw campaign: Chronicles of the North”*).
 * **Result**: `.mw` sources under `10_timeline/markwhen/` (`general_timeline.mw`, `epochs/`, `campaigns/`) kept in sync with chronology, occurrence register, and minutes; rendered exports in `10_timeline/exports/`.
 
+### 4.12 `link-proper-names` — Linked Proper Names
+
+* **When**: you want to check or restore the rule that every proper name is a link to the entity's canonical `.md` file.
+* **How**: `/link-proper-names` — *“Path of the file or folder to scan (or 'entire archive').”*
+* **Result**: a table of unlinked names with proposed/applied link conversion, plus reporting of entities lacking a sheet.
+
 ---
 
 ## 5. Typical Workflows
@@ -227,7 +234,7 @@ PC/NPC → `character-dossier` · Artefact → `magic-item` · Custom/festival/e
 
 ## 7. FAQ
 
-* **Do I need all 11 skills?** No. Install them all (they are self-contained) and use only what you need.
+* **Do I need all 12 skills?** No. Install them all (they are self-contained) and use only what you need.
 * **Can I run several campaigns in one world?** Yes — `09_chronicles/campaigns/<name>/` keeps each campaign's minutes separate; shared lore lives in the other tomes.
 * **Can I use it for paid campaigns, streams, or actual plays?** Yes. The non-commercial clause applies to selling the toolkit itself, never to the games you run with it.
 * **Can I repackage or sell the skills?** No — CC BY-NC-SA 4.0 (see `LICENSE` on the `main` branch).

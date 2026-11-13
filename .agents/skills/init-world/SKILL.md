@@ -10,6 +10,8 @@ disable-model-invocation: false
 
 This skill guides the Dungeon Master through interactive configuration and generation of the folder scaffolding for a fantasy setting following the standard ten-tome architecture described in [world-architecture](./references/world-architecture.md).
 
+> **📌 Linked Proper Names Rule**: every proper name of a setting entity (PCs, NPCs, factions, houses, cities, locations, magic items, customs, festivals, events…) appearing in produced text must be a **Markdown link** to the entity's canonical `.md` file (e.g. `[Name](relative/path/file.md)`), never plain text. Exceptions: headings, file names, frontmatter, code blocks, Mermaid nodes, and `.mw` sources. Entity without a sheet: never invent it — use `[TO_BE_DEFINED_BY_DM: missing sheet for <Name>]` and flag the gap. Checking and conversion: `link-proper-names` skill.
+
 ---
 
 ## 1. Guided Procedure (Initial Interview)
