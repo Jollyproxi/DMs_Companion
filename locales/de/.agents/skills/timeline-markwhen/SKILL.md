@@ -68,7 +68,7 @@ Nutze dieses Verfahren, um `10_zeitlinie/markwhen/` einzurichten oder eine neue 
    - Lies `10_zeitlinie/README.md`, `10_zeitlinie/kalender/` und `10_zeitlinie/markwhen/README.md`.
    - Prüfe je nach gewünschtem Ziel (`allgemein`, `epoche`, `kampagne` oder `alle`) die relevanten Quellen:
      - Für eine **Epoche**: `10_zeitlinie/historische_chronologie/`, `10_zeitlinie/vorkommnisregister/` und Bögen unter `03_gesellschaft_und_politik/braeuche_feste_und_ereignisse/`.
-     - Für eine **Kampagne**: `09_chroniken/kampagnen/<kampagnenname>/README.md`, Protokolle in `sitzungen/`, SC-Dossiers (`05_charaktere/Spielercharaktere/<kampagnenname>/`) sowie verknüpfte historische/laufende Ereignisse.
+     - Für eine **Kampagne**: `09_chroniken/<kampagnen>/<kampagnenname>/README.md`, Protokolle in `<sitzungen>/`, SC-Dossiers (`05_charaktere/<Spielercharaktere>/<Kampagne_oder_Gruppe>/`) sowie verknüpfte historische/laufende Ereignisse.
 2. **Vorab-Interview**:
    - Fehlen wesentliche Eckdaten (z. B. Epochenname/-slug, Start-/Endjahr, aktuelles Kampagnenjahr), frage vor dem Erzeugen beim SL nach (über das strukturierte Fragewerkzeug falls verfügbar, sonst im Chat).
 3. **Dateien aus Vorlagen erzeugen**:

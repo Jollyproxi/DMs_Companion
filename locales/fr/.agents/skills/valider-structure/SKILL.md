@@ -19,16 +19,16 @@ Cette compétence réalise un audit diagnostique approfondi de l'arborescence de
 La compétence contrôle les cinq piliers de l'intégrité structurelle :
 
 ### A. Conformité des Dix Tomes
-Vérifie la présence des répertoires canoniques (en acceptant les variantes équivalentes déjà établies dans un dépôt existant, telles que `04_droit_et_succession`) :
-1. `01_cosmologie`
-2. `02_geographie`
-3. `03_societe_et_politique` (avec sous-dossier `coutumes_fetes_et_evenements/` contenant `coutumes/`, `fetes_et_occurrences/`, `evenements/`)
-4. `04_droit_et_lois` *(ou variante historique `04_droit_et_succession` ; avec sous-dossiers `01_ordre_juridique_et_sources/` … `10_droit_de_la_guerre_et_aventuriers/`)*
-5. `05_personnages` (avec sous-dossiers `Joueurs/` et `Non_Joueurs/`)
-6. `06_lieux`
-7. `07_factions`
-8. `08_objets_magiques_singuliers`
-9. `09_chroniques` (avec sous-dossier `campagnes/`)
+Vérifie la présence des répertoires canoniques (en acceptant les variantes équivalentes ou les noms personnalisés choisis par le MJ dans le dépôt) :
+1. `01_cosmologie` *(avec éventuels sous-dossiers optionnels personnalisés pour plans/sphères et panthéon/divinités)*
+2. `02_geographie` *(avec éventuel sous-dossier `regions/` ou nom personnalisé choisi pour les macro-zones, ex. `provinces/`, `continents/`, `domaines/`)*
+3. `03_societe_et_politique` *(avec éventuel sous-dossier optionnel `peuples/` ou nom personnalisé, et sous-dossier obligatoire `coutumes_fetes_et_evenements/` contenant `coutumes/`, `fetes_et_occurrences/`, `evenements/`)*
+4. `04_droit_et_lois` *(avec sous-dossiers `01_ordre_juridique_et_sources/` … `10_droit_de_la_guerre_et_aventuriers/`, plus éventuelles branches supplémentaires `11_+` ou sous-dossiers par juridiction)*
+5. `05_personnages` *(avec sous-dossiers `<Joueurs>/` [défaut `Joueurs/`, ex. `PJ/`, `Heros/`] organisés par `<Campagne_ou_Groupe>/`, et `<Non_Joueurs>/` [défaut `Non_Joueurs/`, ex. `PNJ/`] avec éventuels sous-dossiers de regroupement optionnels)*
+6. `06_lieux` *(avec éventuels sous-dossiers optionnels personnalisés `<groupes_lieux>/` par type ou macro-zone)*
+7. `07_factions` *(avec éventuels sous-dossiers optionnels personnalisés `<groupes_factions>/` par type)*
+8. `08_objets_magiques_singuliers` *(ou nom personnalisé du Tome VIII, ex. `08_objets_magiques/`, `08_artefacts_et_reliques/`, avec éventuels sous-dossiers optionnels `<categories>/`)*
+9. `09_chroniques` *(avec sous-dossier `<campagnes>/` [défaut `campagnes/`, ex. `expeditions/`, `aventures/`, `one_shots/`] et `<sessions>/` [défaut `sessions/`, ex. `journaux/`, `chapitres/`])*
 10. `10_chronologie` (avec sous-dossiers `chronologie_historique/`, `registre_occurrences/`, `markwhen/`, `calendrier/`, `exportations/`)
 
 ### B. Présence et Validité des Index (`README.md`)
@@ -50,7 +50,7 @@ Vérifie que tout nom propre d'entité recensée (PJ, PNJ, factions, maisons, ci
 1. **Analyse du Système de Fichiers** :
    - Inspectez les dossiers et les fichiers `.md` présents dans l'espace de travail en excluant les répertoires techniques (`.git`, `.agents`, `.github`, `.claude`, `node_modules`, `graphify-out`).
 2. **Exécution des Tests A–E** :
-   - Validez les dossiers des 10 tomes (y compris les sous-dossiers de `coutumes_fetes_et_evenements/`, `04_droit_et_lois/` et `10_chronologie/`).
+   - Validez les dossiers des 10 tomes et leurs sous-dossiers canoniques, optionnels ou personnalisés (`<plans>/`, `<pantheon>/`, `<regions>/`, `peuples/`, `coutumes_fetes_et_evenements/`, `04_droit_et_lois/`, `05_personnages/`, `<groupes_lieux>/`, `<groupes_factions>/`, `<categories>/`, `<campagnes>/<sessions>/` et `10_chronologie/`).
    - Repérez les `README.md` manquants.
    - Analysez les liens `[Texte](chemin)` et vérifiez l'existence du fichier cible via le chemin relatif.
    - Inspectez la racine pour détecter d'éventuels fichiers orphelins.

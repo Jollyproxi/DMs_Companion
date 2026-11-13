@@ -44,25 +44,27 @@ La compilazione procede rigorosamente secondo la sequenza numerica canonica:
    - `02_ciclo_stagioni_e_meccaniche_celesti.md`
    - `03_flusso_della_magia_e_ordine_divino.md`
    - `04_sistema_morale_o_filosofico.md`
+   - Eventuali sottocartelle opzionali custom (`<piani>/`, `<pantheon>/`).
 2. **##### 2. Geografia Fisica, Territoriale e Ambientale** (`02_geografia/`)
    - Moduli principali di geografia, mappe, sottosuolo e piani liminali.
-   - Trattazione delle singole regioni/province/cornici in `regioni/` (o `cornici/`), ordinate per numero crescente.
+   - Trattazione delle singole regioni o macro-aree nella sottocartella dedicata (`regioni/` o nome custom scelto nel workspace), ordinate per numero crescente.
 3. **##### 3. Ordinamento Sociale, Politico ed Economico** (`03_societa_e_politica/`)
    - Modelli sociali, economia, classi, ordine pubblico e forze dell'ordine.
+   - Eventuale sottocartella opzionale `popoli/` (o nome custom per specie/razze/stirpi/culture, codici `3.8.x`).
    - Sottoserie `usi_costumi_ed_eventi/`: usanze (`3.5.x`), festival/occorrenze (`3.6.x`), eventi una tantum (`3.7.x`), in ordine numerico progressivo per sottocartella.
-4. **##### 4. Diritto e Leggi** (`04_diritto_e_leggi/` o variante legacy `04_diritto_e_successione/`)
-   - Ordinamento e fonti (`4.1.x`), diritti civili e status (`4.2.x`), diritto dinastico e successione (`4.3.x`), contratti e patti (`4.4.x`), trattati e diplomazia (`4.5.x`), diritto penale e reati (`4.6.x`), tribunali e procedura (`4.7.x`), diritto arcano e religioso (`4.8.x`), proprietà, commercio e fisco (`4.9.x`), diritto bellico e avventurieri (`4.10.x`), ciascuna con quadro generale (`4.Y.1`) e atti censiti (`4.Y.2+`) in ordine numerico progressivo.
+4. **##### 4. Diritto e Leggi** (`04_diritto_e_leggi/`)
+   - Ordinamento e fonti (`4.1.x`), diritti civili e status (`4.2.x`), diritto dinastico e successione (`4.3.x`), contratti e patti (`4.4.x`), trattati e diplomazia (`4.5.x`), diritto penale e reati (`4.6.x`), tribunali e procedura (`4.7.x`), diritto arcano e religioso (`4.8.x`), proprietà, commercio e fisco (`4.9.x`), diritto bellico e avventurieri (`4.10.x`), più eventuali branche extra (`4.11.x+`) o sottocartelle per giurisdizione, ciascuna con quadro generale (`4.Y.1`) e atti censiti (`4.Y.2+`) in ordine numerico progressivo.
 5. **##### 5. Anagrafica dei Personaggi del Mondo** (`05_personaggi/`)
-   - Roster PNG significativi (`Non-Giocanti/`), raggruppati per fazione o regione.
-   - Sintesi dei legami del party se presente una campagna canonica.
+   - Roster PNG significativi (`<Non-Giocanti>/`, con eventuali sottocartelle custom), raggruppati per fazione o regione.
+   - Sintesi dei legami del party se presente una campagna/gruppo canonico.
 6. **##### 6. Atlante dei Luoghi e Nodi d'Avventura** (`06_luoghi/` o `06_location/`)
-   - Luoghi salienti, fortezze, città e varchi.
+   - Luoghi salienti, fortezze, città e varchi (anche raggruppati in sottocartelle opzionali `<gruppi_luoghi>/`).
 7. **##### 7. Registro Geopolitico delle Fazioni e Casate** (`07_fazioni/` o `07_factions/`)
-   - Statuti, gerarchie e rivalità delle potenze dominanti.
-8. **##### 8. Registro degli Oggetti Magici Peculiari e Reliquie** (`08_oggetti_magici_peculiari/` o `08_oggetti magici peculiari/`)
-   - Manufatti unici, storia, inquadramento giuridico e meccaniche peculiari.
+   - Statuti, gerarchie e rivalità delle potenze dominanti (anche raggruppati in sottocartelle opzionali `<gruppi_fazioni>/`).
+8. **##### 8. Registro degli Oggetti Magici Peculiari e Reliquie** (`<08_oggetti_magici_peculiari>/` o variante/nome custom)
+   - Manufatti unici, storia, inquadramento giuridico e meccaniche peculiari (anche divisi in sottocartelle opzionali `<categorie>/`).
 9. **##### 9. Cronache Storiche e Compendio Campagne** (`09_cronache/`)
-   - Compendio delle campagne attive e verbali progressivi di sessione.
+   - Compendio delle campagne/spedizioni attive (`<campagne>/`) e verbali progressivi (`<sessioni>/`).
 10. **##### 10. Timeline e Cronologia del Mondo** (`10_timeline/`)
     - Cronologia storica (`10.1.x`, file per epoca/periodo), registro occorrenze (`10.2.x`, file per epoca/periodo) e calendario (`10.3.x`).
     - I sorgenti Markwhen (`markwhen/*.mw`) e le esportazioni grafiche (`esportazioni/`) sono **esclusi** dalla Bibbia: restano indicizzati solo in `struttura_ambientazione.json`.

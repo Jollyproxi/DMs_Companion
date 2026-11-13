@@ -27,7 +27,7 @@ Questa skill guida la raccolta, strutturazione e formattazione dei verbali di se
 Attivabile con *"inizia intervista"* o a sessione appena conclusa. Poni al Master le domande in modo strutturato (usando lo strumento interattivo dell'ambiente come `vscode_askQuestions` o `AskUserQuestion` se disponibile, altrimenti direttamente in chat):
 1. **`coordinate_sessione`**: *Numero della sessione, data in-game e teatro geografico degli eventi?* (Campo libero con prompt sintetico).
 2. **`pg_presenti`**: *Quali Personaggi Giocanti erano presenti?*
-   - Opzioni a selezione multipla ricavate dai dossier censiti in `05_personaggi/Giocanti/<nome_campagna>/` (con possibilità di aggiungere nomi liberi per PG nuovi o PNG di spicco).
+   - Opzioni a selezione multipla ricavate dai dossier censiti in `05_personaggi/<Giocanti>/<Campagna_o_Party>/` (con possibilità di aggiungere nomi liberi per PG nuovi o PNG di spicco).
 3. **`cronologia_eventi`**: *Cosa è accaduto in sequenza (inizio, snodi centrali, scontri/trattative, epilogo)?* (Campo libero).
 4. **`ganci_rivelazioni`**: *Quali scoperte, indizi o svolte hanno toccato specificamente i singoli PG?* (Campo libero per generare il diagramma Mermaid).
 5. **`dati_meccanici`**: *Ci sono risorse meccaniche da registrare?*
@@ -54,10 +54,10 @@ Il verbale viene compilato secondo le sezioni canoniche:
 ## 4. Archiviazione e Propagazione
 
 1. **Salvataggio File**:
-   Salva in `09_cronache/campagne/<nome_campagna>/sessioni/XX_titolo_sessione.md`.
+   Salva in `09_cronache/<campagne>/<nome_campagna>/<sessioni>/XX_titolo_sessione.md` *(default: `09_cronache/campagne/<nome_campagna>/sessioni/...`, rispettando eventuali nomi custom configurati come `spedizioni/`, `avventure/`, `diari/`)*.
 2. **Aggiornamento Indice Campagna**:
-   Inserisci la nuova riga nella tabella sinottica di `09_cronache/campagne/<nome_campagna>/README.md`:
-   `| **XX** | [Titolo] | [Data] | [Luogo] | [Focus Principale] | [Verbale](sessioni/XX_titolo.md) |`
+   Inserisci la nuova riga nella tabella sinottica di `09_cronache/<campagne>/<nome_campagna>/README.md`:
+   `| **XX** | [Titolo] | [Data] | [Luogo] | [Focus Principale] | [Verbale](<sessioni>/XX_titolo.md) |`
 3. **Proposta Aggiornamenti Incrociati (A + B)**:
    - Elenca a fine risposta quali file della repository risultano impattati (nuovi PNG, oggetti magici trovati, ganci da aggiornare nei dossier PG con la skill `dossier-personaggio`).
    - **Usi, costumi ed eventi**: se la sessione introduce o menziona una nuova usanza, un nuovo festival/occorrenza o un nuovo evento, **proponi sempre** la creazione della scheda relativa in `03_societa_e_politica/usi_costumi_ed_eventi/` con la skill `usanza-festa-evento`.

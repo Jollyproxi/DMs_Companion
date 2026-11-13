@@ -8,7 +8,7 @@ disable-model-invocation: false
 
 # Compétence : Gestion des Objets Magiques Singuliers (`objet-magique`)
 
-Cette compétence régit le catalogage officiel des artefacts, reliques et focaliseurs arcaniques dans le tome `08_objets_magiques_singuliers/`, en respectant le modèle structurel défini dans [modele-objet](./references/modele-objet.md).
+Cette compétence régit le catalogage officiel des artefacts, reliques et focaliseurs arcaniques dans le Tome VIII (`08_objets_magiques_singuliers/` ou nom personnalisé du tome dans l'espace de travail), en respectant le modèle structurel défini dans [modele-objet](./references/modele-objet.md).
 
 > **📌 Règle des Noms Propres Liés** : tout nom propre d'entité de l'univers (PJ, PNJ, factions, maisons, cités, lieux, objets magiques, coutumes, fêtes, événements…) apparaissant dans le texte produit doit être un **lien Markdown** vers le fichier `.md` canonique de l'entité (ex. `[Nom](chemin/relatif/fichier.md)`), jamais un simple texte brut. Exceptions : titres, noms de fichiers, frontmatter, blocs de code, nœuds Mermaid et sources `.mw`. Entité sans fiche : ne l'inventez pas — utilisez `[A_DEFINIR_MJ: fiche manquante pour <Nom>]` et signalez la lacune. Vérification et conversion : compétence `lier-noms-propres`.
 
@@ -33,10 +33,10 @@ Cette compétence régit le catalogage officiel des artefacts, reliques et focal
    - **`pouvoirs_mecaniques`** : Propriétés mécaniques D&D 5e et résonances sensorielles (champ libre).
 
 2. **Création du Fichier** :
-   Enregistrez la fiche dans `08_objets_magiques_singuliers/<Nom_Objet>.md` selon le modèle standard.
+   Enregistrez la fiche dans `<08_objets_magiques_singuliers>/[<categorie>/]<Nom_Objet>.md` (en respectant tout nom personnalisé du Tome VIII et les éventuels sous-dossiers de catégorie) selon le modèle standard.
 
 3. **Mise à Jour de l'Index du Tome** :
-   Ajoutez l'entrée avec catégorie, résonance et détenteur dans le tableau ou la liste de `08_objets_magiques_singuliers/README.md`.
+   Ajoutez l'entrée avec catégorie, résonance et détenteur dans le tableau ou la liste de `<08_objets_magiques_singuliers>/README.md` (et l'éventuel `README.md` de catégorie).
 
 4. **Lien Croisé avec le Détenteur** :
    Si l'objet appartient à un PJ, actualisez le module `04_equipement_et_capacites.md` du dossier de ce PJ en ajoutant le lien vers la nouvelle fiche.

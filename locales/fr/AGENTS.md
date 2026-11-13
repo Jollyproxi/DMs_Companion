@@ -20,17 +20,17 @@ Ces instructions sont compatibles avec n'importe quel environnement ou assistant
 
 ## 2. Architecture du Monde en Dix Tomes
 
-L'univers suit l'architecture modulaire standard en dix tomes (en s'adaptant automatiquement aux éventuels dossiers équivalents déjà présents dans des dépôts existants, tels que `04_droit_et_succession/`) :
+L'univers suit l'architecture modulaire standard en dix tomes (en s'adaptant automatiquement aux éventuels dossiers équivalents déjà présents dans des dépôts existants) :
 
-* `01_cosmologie/` : Plans, mécaniques célestes, flux de la magie et éthique cosmique.
-* `02_geographie/` : Cartographie, territoires, régions souterraines et dossiers dans `regions/`.
-* `03_societe_et_politique/` : Ordre civil, économie, classes sociales, ordre public et sous-série `coutumes_fetes_et_evenements/` (`coutumes/`, `fetes_et_occurrences/`, `evenements/`).
-* `04_droit_et_lois/` : 10 sous-dossiers juridiques (`01_ordre_juridique_et_sources/`, `02_droits_civils_et_statuts/`, `03_droit_dynastique_et_succession/`, `04_contrats_et_pactes/`, `05_traites_et_diplomatie/`, `06_droit_penal_et_infractions/`, `07_tribunaux_et_procedure/`, `08_droit_arcanique_et_religieux/`, `09_propriete_commerce_et_fiscalite/`, `10_droit_de_la_guerre_et_aventuriers/`), chacun contenant `01_cadre_general.md` et des fiches numérotées `02_<slug_entree>.md`.
-* `05_personnages/` : Dossiers modulaires PJ (`Joueurs/<Campagne>/<Nom_PJ>/`) et fiches PNJ (`Non_Joueurs/`).
-* `06_lieux/` : Nœuds d'aventure, cités, forteresses et dangers locaux.
-* `07_factions/` : Maisons nobles, ordres, guildes, congrégations et hiérarchies de pouvoir.
-* `08_objets_magiques_singuliers/` : Artefacts uniques, reliques, registres juridiques et propriétés.
-* `09_chroniques/` : Portail des campagnes avec tableau synoptique et comptes rendus progressifs (`campagnes/<nom>/sessions/`).
+* `01_cosmologie/` : Plans, mécaniques célestes, flux de la magie et éthique cosmique (avec éventuels sous-dossiers optionnels `<plans>/` et `<pantheon>/`).
+* `02_geographie/` : Cartographie, territoires, régions souterraines et dossiers des macro-zones dans `regions/` ou un nom de sous-dossier personnalisé (ex. `provinces/`, `continents/`, `domaines/`).
+* `03_societe_et_politique/` : Ordre civil, économie, classes sociales, ordre public ; éventuel sous-dossier optionnel `peuples/` (ou `especes/`, `races/`, `lignees/`, `cultures/`) et sous-série `coutumes_fetes_et_evenements/` (`coutumes/`, `fetes_et_occurrences/`, `evenements/`).
+* `04_droit_et_lois/` : 10 sous-dossiers juridiques (`01_ordre_juridique_et_sources/`, `02_droits_civils_et_statuts/`, `03_droit_dynastique_et_succession/`, `04_contrats_et_pactes/`, `05_traites_et_diplomatie/`, `06_droit_penal_et_infractions/`, `07_tribunaux_et_procedure/`, `08_droit_arcanique_et_religieux/`, `09_propriete_commerce_et_fiscalite/`, `10_droit_de_la_guerre_et_aventuriers/`), chacun contenant `01_cadre_general.md` et des fiches numérotées `02_<slug_entree>.md`, plus éventuelles branches supplémentaires `11_+` ou juridictions.
+* `05_personnages/` : Dossiers modulaires PJ (`<Joueurs>/<Campagne_ou_Groupe>/<Nom_PJ>/`, défaut `Joueurs/<Campagne>/`) et fiches PNJ (`<Non_Joueurs>/[<groupe_pnj>/]`, défaut `Non_Joueurs/`).
+* `06_lieux/` : Nœuds d'aventure, cités, forteresses et dangers locaux (avec éventuels sous-dossiers optionnels `<groupes_lieux>/`).
+* `07_factions/` : Maisons nobles, ordres, guildes, congrégations et hiérarchies de pouvoir (avec éventuels sous-dossiers optionnels `<groupes_factions>/`).
+* `<08_objets_magiques_singuliers>/` : Artefacts uniques, reliques, registres juridiques et propriétés (nom du tome personnalisable, ex. `08_objets_magiques/`, `08_artefacts_et_reliques/`, avec éventuels sous-dossiers optionnels `<categories>/`).
+* `09_chroniques/` : Portail des campagnes avec tableau synoptique et comptes rendus progressifs (`<campagnes>/<nom>/<sessions>/`, défaut `campagnes/` et `sessions/`).
 * `10_chronologie/` : Tome chronologique transversal comprenant `chronologie_historique/`, `registre_occurrences/`, `markwhen/` (`chronologie_generale.mw`, `epoques/`, `campagnes/`), `calendrier/` et `exportations/`.
 
 ---

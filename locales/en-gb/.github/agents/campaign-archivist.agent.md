@@ -27,16 +27,16 @@ Your purpose is to coordinate the archiving of the fantasy world, turn play note
 ## 2. Ten-Tome World Architecture
 
 The setting is organised according to the standard ten-tome architecture:
-* `01_cosmology/`: Planes, celestial mechanics, flow of magic, and cosmic ethics.
-* `02_geography/`: Cartography, territories, subterranean regions, and dossiers under `regions/`.
-* `03_society_and_politics/`: Civil order, economy, social classes, public order, and law enforcement.
+* `01_cosmology/`: Planes, celestial mechanics, flow of magic, and cosmic ethics (with optional `<planes>/` and `<pantheon>/` subfolders).
+* `02_geography/`: Cartography, territories, subterranean regions, and macro-area dossiers under `regions/` or a custom subfolder name (e.g. `provinces/`, `continents/`, `realms/`).
+* `03_society_and_politics/`: Civil order, economy, social classes, public order, and law enforcement; optional `peoples/` subfolder (customisable to `species/`, `races/`, `lineages/`, `cultures/`).
   * `customs_festivals_and_events/`: Dedicated sub-series with three subfolders: `customs/` (everyday-life peculiarities, e.g. greeting and farewell ceremonies), `festivals_and_occurrences/` (recurring institutional or ritual feasts and events with fixed or variable periodicity, e.g. solstice feast, guard selection tournament), and `events/` (inherently one-off events — rebellions, cataclysms, historical upheavals — past or ongoing).
-* `04_law_and_statutes/`: Law, fundamental statutes, and registered acts across 10 granular branches (`01_legal_order_and_sources/`, `02_civil_rights_and_status/`, `03_dynastic_law_and_succession/`, `04_contracts_and_pacts/`, `05_treaties_and_diplomacy/`, `06_criminal_law_and_offences/`, `07_courts_and_procedure/`, `08_arcane_and_religious_law/`, `09_property_trade_and_taxation/`, `10_law_of_war_and_adventurers/`), each with `01_general_framework.md` and numbered sheets `02_<entry_slug>.md` (backward-compatible with `04_law_and_succession/`).
-* `05_characters/`: Modular PC dossiers (`Player_Characters/<Campaign>/<PC_Name>/`) and NPC sheets (`Non_Player_Characters/`).
-* `06_locations/`: Adventure hubs, cities, strongholds, and area hazards.
-* `07_factions/`: Noble houses, covens, guilds, orders, and power hierarchies.
-* `08_unique_magic_items/`: Unique artefacts, relics, legal registers, and resonances.
-* `09_chronicles/`: Campaign hub with summary table and progressive session minutes (`campaigns/<name>/sessions/`).
+* `04_law_and_statutes/`: Law, fundamental statutes, and registered acts across 10 granular branches (`01_legal_order_and_sources/`, `02_civil_rights_and_status/`, `03_dynastic_law_and_succession/`, `04_contracts_and_pacts/`, `05_treaties_and_diplomacy/`, `06_criminal_law_and_offences/`, `07_courts_and_procedure/`, `08_arcane_and_religious_law/`, `09_property_trade_and_taxation/`, `10_law_of_war_and_adventurers/`, plus any extra branches `11_+` or jurisdictional subfolders), each with `01_general_framework.md` and numbered sheets `02_<entry_slug>.md`.
+* `05_characters/`: Modular PC dossiers (`<Player_Characters>/<Campaign_or_Party>/<PC_Name>/`, default `Player_Characters/<Campaign>/`, e.g. `PCs/`, `Heroes/`) and NPC sheets (`<Non_Player_Characters>/[<npc_group>/]`, default `Non_Player_Characters/`, e.g. `NPCs/`).
+* `06_locations/`: Adventure hubs, cities, strongholds, and area hazards (with optional `<location_groups>/` subfolders).
+* `07_factions/`: Noble houses, covens, guilds, orders, and power hierarchies (with optional `<faction_groups>/` subfolders).
+* `<08_unique_magic_items>/`: Unique artefacts, relics, legal registers, and resonances (customisable tome name, e.g. `08_magic_items/`, `08_artefacts_and_relics/`, with optional `<categories>/` subfolders).
+* `09_chronicles/`: Campaign hub with summary table and progressive session minutes (`<campaigns>/<name>/<sessions>/`, default `campaigns/` and `sessions/`, e.g. `expeditions/`, `adventures/`, `logs/`).
 * `10_timeline/`: Cross-cutting chronological tome with `historical_chronology/` (files per epoch/period), `occurrence_register/` (festival and event occurrences per epoch/period), `markwhen/` (graphical timeline: `general_timeline.mw` as index/legend, `.mw` files per epoch and per campaign), `calendar/` (world calendar and date mapping), and `exports/` (derived graphical renders).
 
 ---

@@ -10,7 +10,7 @@ Ce document définit la structure standard et les recommandations pour rédiger 
 * **Campagne :** [Nom de la Campagne avec lien Markdown vers son README]
 * **Date en jeu :** [Repère temporel narratif, ex. Jour 12, An 514]
 * **Théâtre des Événements :** [Lieux géographiques avec liens relatifs vers 06_lieux/ ou 02_geographie/]
-* **Protagonistes :** [Liste des PJ présents avec liens relatifs vers leurs dossiers dans 05_personnages/Joueurs/]
+* **Protagonistes :** [Liste des PJ présents avec liens relatifs vers leurs dossiers dans le Tome V (ex. 05_personnages/Joueurs/)]
 * **Coutumes, fêtes & événements apparus :** [Liens vers les fiches dans 03_societe_et_politique/coutumes_fetes_et_evenements/ ; liens vers 10_chronologie/ pour les occurrences jouées. Écrire « Aucun » le cas échéant.]
 
 ---

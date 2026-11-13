@@ -2,7 +2,7 @@
 
 Questo documento definisce la struttura a cartelle e file standard per l'archiviazione enciclopedica di un'ambientazione e delle relative campagne di D&D.
 
-> **Nota di adattamento**: Se il workspace ospita già un'ambientazione esistente con nomi di cartelle equivalenti (es. `04_diritto_e_successione/`, `06_location/`, `07_factions/`, `08_oggetti magici peculiari/`, `cornici/` o `Readme.md`), rispetta e mantieni la struttura già adottata senza rinominare forzatamente i file esistenti.
+> **Nota di adattamento**: Se il workspace ospita già un'ambientazione esistente con nomi di cartelle equivalenti (es. `06_location/`, `07_factions/`, `08_oggetti magici peculiari/`, `cornici/` o `Readme.md`), rispetta e mantieni la struttura già adottata senza rinominare forzatamente i file esistenti.
 
 ```text
 ├── README.md                                               # Indice generale del mondo e linee guida di navigazione
@@ -14,14 +14,16 @@ Questo documento definisce la struttura a cartelle e file standard per l'archivi
 │   ├── 01_struttura_verticale.md                          # Piani, sfere celesti, infernali o abissali
 │   ├── 02_ciclo_stagioni_e_meccaniche_celesti.md          # Dinamiche temporali, cicli astronomici e transiti planari
 │   ├── 03_flusso_della_magia_e_ordine_divino.md           # Natura dell'arcano, teurgia, monopoli e limitazioni
-│   └── 04_sistema_morale_o_filosofico.md                  # Valori, virtù, vizi o codice etico del cosmo
+│   ├── 04_sistema_morale_o_filosofico.md                  # Valori, virtù, vizi o codice etico del cosmo
+│   ├── [<piani>/]                                         # Opzionale, nome custom (es. piani/, sfere/, reami/, dimensioni/ — con README.md)
+│   └── [<pantheon>/]                                      # Opzionale, nome custom (es. divinita/, pantheon/, patronati/ — con README.md)
 │
 ├── 02_geografia/                                          # Tomo II: Geografia fisica, cartografia e regioni
 │   ├── README.md                                          # Quadro geografico generale e spaccati territoriali
 │   ├── 01_mappa_principale_e_biomi.md                     # Territori, climi e confini
 │   ├── 02_regioni_sotterranee_o_abissi.md                 # Sottosuolo, faglie e caverne
 │   ├── 03_domini_speciali_o_piani_connessi.md             # Reami sospesi, varchi e terre liminali
-│   └── regioni/                                           # Dossier per singola regione/regno/cornice (con README.md)
+│   └── <regioni>/                                         # Dossier per singola regione/macro-area (nome personalizzabile: es. regioni/, province/, cornici/, domini/ — con README.md)
 │
 ├── 03_societa_e_politica/                                 # Tomo III: Modello sociale, economico e culturale
 │   ├── README.md                                          # Panoramica dell'ordinamento sociale
@@ -29,6 +31,7 @@ Questo documento definisce la struttura a cartelle e file standard per l'archivi
 │   ├── 02_monopolio_del_potere_ed_economia.md             # Esercito, commercio, valute e tributi
 │   ├── 03_classi_sociali_e_ruoli.md                       # Stratificazione civica, corporazioni ed estetica
 │   ├── 04_ordine_pubblico_e_forze_dell_ordine.md          # Guardie, milizie, sicurezza urbana e percezione sociale (norme e processi nel Tomo IV)
+│   ├── [popoli/]                                          # Opzionale (default: popoli/; personalizzabile in specie/, razze/, stirpi/, lignaggi/, culture/ — con README.md)
 │   └── usi_costumi_ed_eventi/                             # Sottoserie: usanze, festival ricorrenti ed eventi una tantum
 │       ├── README.md                                      # Indice della sottoserie per tipologia
 │       ├── usanze/                                        # Peculiarità della vita quotidiana (strutture e modi)
@@ -55,13 +58,14 @@ Questo documento definisce la struttura a cartelle e file standard per l'archivi
 │   ├── 07_tribunali_e_procedura/                          # Competenze dei fori, processi, prove magiche (Zona di Verità), ordalie, duelli giudiziari e appelli
 │   ├── 08_diritto_arcano_e_religioso/                     # Scuole/incantesimi proibiti, licenze per incantatori, statuto artefatti, eresie e foro ecclesiastico
 │   ├── 09_proprieta_commercio_e_fisco/                    # Proprietà terriera e demanio, monopoli di gilda, dazi e fisco, prestiti, bancarotta e diritto marittimo
-│   └── 10_diritto_bellico_e_avventurieri/                 # Dichiarazioni di guerra, tregue, prigionieri e riscatti, mercenari, gilde di avventurieri e brevetti rovine
+│   ├── 10_diritto_bellico_e_avventurieri/                 # Dichiarazioni di guerra, tregue, prigionieri e riscatti, mercenari, gilde di avventurieri e brevetti rovine
+│   └── [11_<branca_custom>/]                              # Opzionale: branche giuridiche extra o sottocartelle per giurisdizione/regno dentro una branca
 │
 ├── 05_personaggi/                                         # Tomo V: Roster Personaggi Giocanti e Non-Giocanti
 │   ├── README.md                                          # Indice generale dei personaggi e matrice relazioni
-│   ├── Giocanti/                                          # Archivio dei PG
+│   ├── <Giocanti>/                                        # Archivio PG (default: Giocanti/; personalizzabile in PG/, Eroi/, ecc.)
 │   │   ├── README.md                                      # Quadro d'insieme dei gruppi/party
-│   │   └── [Nome_Campagna]/                               # Cartella del gruppo/party specifico
+│   │   └── [<Campagna_o_Party>]/                          # Cartella per campagna o gruppo/party specifico
 │   │       ├── README.md                                  # Hub delle relazioni del gruppo
 │   │       └── [Nome_PG]/                                 # Dossier modulare del PG:
 │   │           ├── README.md                              # Indice e sintesi del personaggio
@@ -70,28 +74,32 @@ Questo documento definisce la struttura a cartelle e file standard per l'archivi
 │   │           ├── 03_relazioni_e_dinamiche.md            # Legami con gli altri PG e PNG
 │   │           ├── 04_equipaggiamento_e_capacita.md       # Oggetti chiave, talenti e capacità
 │   │           └── 05_ganci_e_segreti_dm.md               # Spunti narrativi riservati al Master
-│   └── Non-Giocanti/                                      # Archivio PNG dell'ambientazione
+│   └── <Non-Giocanti>/                                    # Archivio PNG (default: Non-Giocanti/; personalizzabile in PNG/, Comprimari/, ecc.)
 │       ├── README.md                                      # Indice e raggruppamento per fazione
+│       ├── [<gruppi_png>/]                                # Opzionale: sottocartelle custom (per fazione/, regione/, alleati/, antagonisti/)
 │       └── [Nome_PNG].md                                  # Scheda con ruolo, indole, segreti e ganci
 │
 ├── 06_luoghi/                                             # Tomo VI: Luoghi rilevanti e snodi d'avventura
 │   ├── README.md                                          # Elenco dei luoghi d'interesse e collegamenti
+│   ├── [<gruppi_luoghi>/]                                 # Opzionale, nome custom (es. citta/, dungeon/, rovine/ o per macro-area — con README.md)
 │   └── [XX_nome_luogo].md                                 # Scheda del luogo (atmosfera, pericoli, PNG, agganci)
 │
 ├── 07_fazioni/                                            # Tomo VII: Fazioni, casate, congreghe e gilde
 │   ├── README.md                                          # Mappa geopolitica del potere e conflitti
+│   ├── [<gruppi_fazioni>/]                                # Opzionale, nome custom (es. casate/, gilde/, chiese_e_culti/, ordini/ — con README.md)
 │   └── [XX_nome_fazione].md                               # Statuto, gerarchia, alleanze, risorse e obiettivi
 │
-├── 08_oggetti_magici_peculiari/                           # Tomo VIII: Artefatti, reliquie e congegni unici
+├── <08_oggetti_magici_peculiari>/                         # Tomo VIII: Artefatti, reliquie e congegni (default: 08_oggetti_magici_peculiari/; personalizzabile in 08_oggetti_magici/, 08_artefatti_e_reliquie/, 08_dispositivi/)
 │   ├── README.md                                          # Registro normativo del magico e indice oggetti
+│   ├── [<categorie>/]                                     # Opzionale, nome custom (es. artefatti/, reliquie/, grimori/, congegni/ — con README.md)
 │   └── [Nome_Oggetto].md                                  # Scheda tecnica, provenienza, poteri e ganci DM
 │
 ├── 09_cronache/                                           # Tomo IX: Cronache e verbali di campagna
 │   ├── README.md                                          # Indice cronologico di tutte le campagne attive
-│   └── campagne/
-│       └── [nome_campagna]/                               # Cartella della singola campagna
+│   └── <campagne>/                                        # Archivio campagne/filoni (default: campagne/; personalizzabile in spedizioni/, avventure/, one_shot/)
+│       └── [nome_campagna]/                               # Cartella della singola campagna o spedizione
 │           ├── README.md                                  # Hub: composizione party, obiettivo, tabella sinottica sessioni
-│           └── sessioni/                                  # Verbali progressivi numerati:
+│           └── <sessioni>/                                # Verbali progressivi (default: sessioni/; personalizzabile in diari/, capitoli/):
 │               ├── README.md                              # Indice dei verbali
 │               ├── 01_titolo_sessione.md                  # Verbale Sessione 1
 │               └── 02_titolo_sessione.md                  # Verbale Sessione 2...

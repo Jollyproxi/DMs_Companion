@@ -27,16 +27,16 @@ Il tuo scopo è coordinare l'archiviazione del mondo fantasy, trasformare gli ap
 ## 2. Architettura del Mondo a Dieci Tomi
 
 L'ambientazione è ripartita secondo l'architettura standard a dieci tomi:
-* `01_cosmologia/`: Piani, meccaniche celesti, flusso magico ed etica cosmica.
-* `02_geografia/`: Cartografia, territori, regioni sotterranee e dossier in `regioni/` (o `cornici/`).
-* `03_societa_e_politica/`: Ordinamento civile, economia, classi sociali, ordine pubblico e forze dell'ordine.
+* `01_cosmologia/`: Piani, meccaniche celesti, flusso magico ed etica cosmica (con eventuali sottocartelle opzionali `<piani>/` e `<pantheon>/`).
+* `02_geografia/`: Cartografia, territori, regioni sotterranee e dossier delle macro-aree in `regioni/` o nome personalizzato (es. `province/`, `continenti/`, `domini/`, `cornici/`).
+* `03_societa_e_politica/`: Ordinamento civile, economia, classi sociali, ordine pubblico e forze dell'ordine; eventuale sottocartella opzionale `popoli/` (personalizzabile in `specie/`, `razze/`, `stirpi/`, `culture/`).
   * `usi_costumi_ed_eventi/`: Sottoserie dedicata con tre sottocartelle: `usanze/` (peculiarità della vita quotidiana, es. cerimonie di saluto e commiato), `festival_ed_occorrenze/` (feste ed eventi istituzionali/rituali ricorrenti a periodicità fissa o variabile, es. festa del solstizio, torneo di selezione) ed `eventi/` (eventi una tantum per natura — rivolte, cataclismi, sconvolgimenti storici — passati o in svolgimento).
-* `04_diritto_e_leggi/`: Diritto, leggi fondamentali e atti censiti ripartiti in 10 branche granulari (`01_ordinamento_e_fonti/`, `02_diritti_civili_e_status/`, `03_diritto_dinastico_e_successione/`, `04_contratti_e_patti/`, `05_trattati_e_diplomazia/`, `06_diritto_penale_e_reati/`, `07_tribunali_e_procedura/`, `08_diritto_arcano_e_religioso/`, `09_proprieta_commercio_e_fisco/`, `10_diritto_bellico_e_avventurieri/`), ciascuna con `01_quadro_generale.md` e schede numerate `02_<slug_atto>.md` (retrocompatibile con `04_diritto_e_successione/`).
-* `05_personaggi/`: Dossier modulari PG (`Giocanti/<Campagna>/<Nome_PG>/`) e schede PNG (`Non-Giocanti/`).
-* `06_luoghi/`: Nodi d'avventura, città, roccaforti e pericoli d'area.
-* `07_fazioni/`: Casate nobiliari, congreghe, corporazioni e gerarchie di potere.
-* `08_oggetti_magici_peculiari/`: Manufatti unici, reliquie, registri normativi e risonanze.
-* `09_cronache/`: Hub di campagna con tabella sinottica e verbali progressivi (`campagne/<nome>/sessioni/`).
+* `04_diritto_e_leggi/`: Diritto, leggi fondamentali e atti censiti ripartiti in 10 branche granulari (`01_ordinamento_e_fonti/`, `02_diritti_civili_e_status/`, `03_diritto_dinastico_e_successione/`, `04_contratti_e_patti/`, `05_trattati_e_diplomazia/`, `06_diritto_penale_e_reati/`, `07_tribunali_e_procedura/`, `08_diritto_arcano_e_religioso/`, `09_proprieta_commercio_e_fisco/`, `10_diritto_bellico_e_avventurieri/`, più eventuali branche custom `11_+` o sottocartelle giurisdizionali), ciascuna con `01_quadro_generale.md` e schede numerate `02_<slug_atto>.md`.
+* `05_personaggi/`: Dossier modulari PG (`<Giocanti>/<Campagna_o_Party>/<Nome_PG>/`, default `Giocanti/<Campagna>/`, es. `PG/`, `Eroi/`) e schede PNG (`<Non-Giocanti>/[<gruppo_png>/]`, default `Non-Giocanti/`, es. `PNG/`).
+* `06_luoghi/`: Nodi d'avventura, città, roccaforti e pericoli d'area (con eventuali sottocartelle opzionali `<gruppi_luoghi>/`).
+* `07_fazioni/`: Casate nobiliari, congreghe, corporazioni e gerarchie di potere (con eventuali sottocartelle opzionali `<gruppi_fazioni>/`).
+* `<08_oggetti_magici_peculiari>/`: Manufatti unici, reliquie, registri normativi e risonanze (nome tomo personalizzabile, es. `08_oggetti_magici/`, `08_artefatti_e_reliquie/`, con eventuali sottocartelle opzionali `<categorie>/`).
+* `09_cronache/`: Hub di campagna con tabella sinottica e verbali progressivi (`<campagne>/<nome>/<sessioni>/`, default `campagne/` e `sessioni/`, es. `spedizioni/`, `avventure/`, `diari/`).
 * `10_timeline/`: Tomo cronologico trasversale con `cronologia_storica/` (file per epoca/periodo), `registro_occorrenze/` (occorrenze di feste ed eventi per epoca/periodo), `markwhen/` (timeline grafica: `timeline_generale.mw` come indice/legenda, file `.mw` per epoca e per campagna), `calendario/` (calendario del mondo e mapping delle date) ed `esportazioni/` (render grafici derivati).
 
 ---
@@ -126,7 +126,7 @@ Ogni sezione convalidata adotta un badge visibile standard:
 - **Eccezioni** (nomi ammessi senza link): intestazioni e nomi di file; frontmatter YAML, blocchi di codice e percorsi; etichette dei diagrammi Mermaid e dei sorgenti Markwhen `.mw`; designazioni generiche non riferite a entità censite.
 - **Entità senza Scheda**: non inventare la scheda — usa il segnaposto `[DA_DEFINIRE_MASTER: scheda mancante per <Nome>]`, chiedi al Master se censirla con la skill pertinente e segnala la lacuna nell'elenco dei file impattati.
 - **Verifica**: scansione e conversione con la skill `collega-nomi-propri` (pilastro E di `valida-struttura`).
-- Rispetta la modularità della repository locale adattandosi automaticamente alle cartelle esistenti (inclusi eventuali nomi legacy come `04_diritto_e_successione/`, `06_location/`, `07_factions/`, `08_oggetti magici peculiari/` o `cornici/`).
+- Rispetta la modularità della repository locale adattandosi automaticamente alle cartelle esistenti (inclusi eventuali nomi legacy come `06_location/`, `07_factions/`, `08_oggetti magici peculiari/` o `cornici/`).
 
 ---
 

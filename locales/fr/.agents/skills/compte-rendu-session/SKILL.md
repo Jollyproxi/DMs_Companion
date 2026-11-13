@@ -27,7 +27,7 @@ Cette compétence encadre la collecte, la structuration et la mise en forme des 
 Déclenché par *« démarrer entretien »* ou juste après une partie. Posez les questions de manière structurée (en utilisant l'outil interactif de l'environnement tel que `vscode_askQuestions` ou `AskUserQuestion` s'il est disponible, sinon directement dans le chat) :
 1. **`coordonnees_session`** : *Numéro de la séance, date en jeu et théâtre géographique des événements ?* (Champ libre avec invite concise).
 2. **`pj_presents`** : *Quels Personnages Joueurs étaient présents ?*
-   - Options à sélection multiple issues des dossiers recensés dans `05_personnages/Joueurs/<nom_campagne>/` (avec champ libre pour nouveaux PJ ou PNJ majeurs).
+   - Options à sélection multiple issues des dossiers recensés dans `05_personnages/<Joueurs>/<Campagne_ou_Groupe>/` (avec champ libre pour nouveaux PJ ou PNJ majeurs).
 3. **`chronologie_evenements`** : *Que s'est-il passé dans l'ordre (ouverture, temps forts, affrontements/négociations, épilogue) ?* (Champ libre).
 4. **`accroches_revelations`** : *Quelles découvertes, indices ou tournants ont touché plus particulièrement chaque PJ ?* (Champ libre servant à générer le diagramme Mermaid).
 5. **`donnees_mecaniques`** : *Y a-t-il des éléments mécaniques ou ressources à consigner ?*
@@ -54,10 +54,10 @@ Le compte rendu est structuré selon les sections canoniques :
 ## 4. Archivage et Propagation
 
 1. **Enregistrement du Fichier** :
-   Enregistrez sous `09_chroniques/campagnes/<nom_campagne>/sessions/XX_titre_session.md`.
+   Enregistrez sous `09_chroniques/<campagnes>/<nom_campagne>/<sessions>/XX_titre_session.md` *(défaut : `09_chroniques/campagnes/<nom_campagne>/sessions/...`, en respectant d'éventuels noms personnalisés comme `expeditions/`, `aventures/`, `journaux/`)*.
 2. **Mise à Jour de l'Index de Campagne** :
-   Ajoutez la nouvelle ligne au tableau synoptique dans `09_chroniques/campagnes/<nom_campagne>/README.md` :
-   `| **XX** | [Titre] | [Date] | [Lieu] | [Axe Principal] | [Compte rendu](sessions/XX_titre.md) |`
+   Ajoutez la nouvelle ligne au tableau synoptique dans `09_chroniques/<campagnes>/<nom_campagne>/README.md` :
+   `| **XX** | [Titre] | [Date] | [Lieu] | [Axe Principal] | [Compte rendu](<sessions>/XX_titre.md) |`
 3. **Propositions de Mises à Jour Croisées (A + B)** :
    - Listez en fin de réponse tous les fichiers du dépôt impactés (nouveaux PNJ, objets magiques découverts, accroches à actualiser dans les dossiers PJ via `dossier-personnage`).
    - **Coutumes, fêtes et événements** : si la séance introduit ou mentionne une nouvelle coutume, fête/occurrence récurrente ou événement ponctuel, **proposez systématiquement** la création de sa fiche dans `03_societe_et_politique/coutumes_fetes_et_evenements/` via `coutume-fete-evenement`.

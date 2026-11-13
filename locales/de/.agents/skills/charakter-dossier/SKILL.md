@@ -31,9 +31,9 @@ Die vollständigen Vorlagen sind in [dossier-vorlage](./references/dossier-vorla
 
 Wenn der SL einen neuen Spielercharakter einführt oder dokumentiert:
 
-1. **Geführte Erfassung (bei Bedarf)**: Bestätige mit dem SL den genauen Namen, die Klasse, Stufe und zugehörige Kampagne.
+1. **Geführte Erfassung (bei Bedarf)**: Bestätige mit dem SL den genauen Namen, die Klasse, Stufe und zugehörige Kampagne/Gruppe.
 2. **Ordneranlage**:
-   `05_charaktere/Spielercharaktere/<Kampagne>/<SC_Name>/`
+   `05_charaktere/<Spielercharaktere>/<Kampagne_oder_Gruppe>/<SC_Name>/` *(Standard: `05_charaktere/Spielercharaktere/<Kampagne>/<SC_Name>/`, unter Wahrung benutzerdefinierter Ordnernamen im Workspace)*
 3. **Erzeugung der modularen Dateien**:
    - `README.md`: Charakter-Hub mit Rolle, moralischen Zügen und Index der 5 Dateien.
    - `01_stammdaten_und_merkmale.md`: Stammdaten, Klasse, Stufe, Merkmale und Erscheinungsbild.
@@ -42,7 +42,7 @@ Wenn der SL einen neuen Spielercharakter einführt oder dokumentiert:
    - `04_ausruestung_und_faehigkeiten.md`: Charakteristische Gegenstände, Waffen, Fokusse und besondere Fähigkeiten.
    - `05_sl_aufhaenger_und_geheimnisse.md`: Dem SL vorbehaltene Aufhänger, Rätsel und Enthüllungen.
 4. **Aktualisierung von Kampagnen- und Gruppen-Hub**:
-   Füge den neuen SC der `README.md` in `05_charaktere/Spielercharaktere/<Kampagne>/README.md` sowie dem Gesamtindex `05_charaktere/README.md` hinzu.
+   Füge den neuen SC der `README.md` in `05_charaktere/<Spielercharaktere>/<Kampagne_oder_Gruppe>/README.md` sowie dem Gesamtindex `05_charaktere/README.md` hinzu.
 
 ---
 
@@ -52,12 +52,12 @@ Wenn der SL einen bedeutsamen Nichtspielercharakter einführt:
 
 1. **Geführte Erfassung**: Fehlen zentrale Angaben, kläre mit dem SL Fraktionszugehörigkeit, Lebensstatus und Aufenthaltsort.
 2. **Pfad**:
-   `05_charaktere/Nichtspielercharaktere/<NSC_Name>.md`
+   `05_charaktere/<Nichtspielercharaktere>/[<nsc_gruppe>/]<NSC_Name>.md` *(Standard: `05_charaktere/Nichtspielercharaktere/<NSC_Name>.md`; respektiere optionale Gruppierungs-Unterordner nach Fraktion, Region oder Gesinnung)*
 3. **Aufbau**:
-   - Kopfbereich mit Rolle, Fraktion (Link zu `07_fraktionen/`), Wohnort (Link zu `06_orte/`), Gesinnung und Lebensstatus.
+   - Kopfbereich mit Rolle, Fraktion (Link zu Band VII `07_fraktionen/`), Wohnort (Link zu Band VI `06_orte/`), Gesinnung und Lebensstatus.
    - Abschnitte zu Erscheinung & Wesen, Narrativer Rolle und Geheimnissen & SL-Aufhängern.
 4. **Aktualisierung des NSC-Index**:
-   Füge den Eintrag in die Beziehungstabelle unter `05_charaktere/Nichtspielercharaktere/README.md` ein.
+   Füge den Eintrag in die Beziehungstabelle unter `05_charaktere/<Nichtspielercharaktere>/README.md` (sowie einer etwaigen Untergruppen-`README.md`) ein.
 
 ---
 

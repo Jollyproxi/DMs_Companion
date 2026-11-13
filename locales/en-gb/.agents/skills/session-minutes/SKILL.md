@@ -27,7 +27,7 @@ This skill guides the collection, structuring, and formatting of session minutes
 Triggered with *"start interview"* or right after a session ends. Ask the DM the following questions in a structured way (using the environment's interactive question tool such as `vscode_askQuestions` or `AskUserQuestion` if available, otherwise directly in chat):
 1. **`session_coordinates`**: *Session number, in-game date, and geographical theatre of events?* (Free text with brief prompt).
 2. **`present_pcs`**: *Which Player Characters were present?*
-   - Multi-select options derived from dossiers registered in `05_characters/Player_Characters/<campaign_name>/` (with free-text option for new PCs or prominent NPCs).
+   - Multi-select options derived from dossiers registered in `05_characters/<Player_Characters>/<Campaign_or_Party>/` (with free-text option for new PCs or prominent NPCs).
 3. **`event_chronology`**: *What happened in sequence (opening, central turning points, clashes/negotiations, epilogue)?* (Free text).
 4. **`hooks_revelations`**: *Which discoveries, clues, or turning points specifically affected individual PCs?* (Free text used to generate the Mermaid diagram).
 5. **`mechanical_data`**: *Are there mechanical resources to log?*
@@ -54,10 +54,10 @@ The minutes are compiled across the canonical sections:
 ## 4. Archiving & Propagation
 
 1. **Save File**:
-   Save to `09_chronicles/campaigns/<campaign_name>/sessions/XX_session_title.md`.
+   Save to `09_chronicles/<campaigns>/<campaign_name>/<sessions>/XX_session_title.md` *(default: `09_chronicles/campaigns/<campaign_name>/sessions/...`, respecting any custom folder names such as `expeditions/`, `adventures/`, `logs/`)*.
 2. **Update Campaign Index**:
-   Insert the new row in the summary table of `09_chronicles/campaigns/<campaign_name>/README.md`:
-   `| **XX** | [Title] | [Date] | [Location] | [Main Focus] | [Minutes](sessions/XX_title.md) |`
+   Insert the new row in the summary table of `09_chronicles/<campaigns>/<campaign_name>/README.md`:
+   `| **XX** | [Title] | [Date] | [Location] | [Main Focus] | [Minutes](<sessions>/XX_title.md) |`
 3. **Cross-Update Proposals (A + B)**:
    - List at the end of your response which repository files are affected (new NPCs, magic items found, hooks to update in PC dossiers via `character-dossier`).
    - **Customs, festivals, and events**: if the session introduces or mentions a new custom, recurring festival/occurrence, or one-off event, **always propose** creating the corresponding sheet in `03_society_and_politics/customs_festivals_and_events/` via `custom-festival-event`.

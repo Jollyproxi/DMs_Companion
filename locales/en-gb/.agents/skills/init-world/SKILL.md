@@ -28,6 +28,12 @@ Before creating files or directories, ask the DM the following questions (using 
 5. **`customs_festivals_events`**: *Are there any everyday-life customs, recurring festivals, or historical events to register straight away?*
    - Multi-select options: *Customs (e.g. greeting/farewell rituals)*, *Recurring festivals/events*, *One-off events (historical or ongoing)*, *None for now (structure only)*.
    - Collected entries are catalogued using the `custom-festival-event` skill under `03_society_and_politics/customs_festivals_and_events/` and recorded in `10_timeline/`.
+6. **`macro_areas_folder`**: *What would you like to name the regions/macro-areas subfolder inside `02_geography/`?*
+   - Suggested options or custom name (e.g. *`regions/`* default, *`provinces/`*, *`continents/`*, *`realms/`*, *`marches/`*, *Other — specify folder name*).
+7. **`peoples_subfolder`**: *Would you like to include the optional peoples/species subfolder inside `03_society_and_politics/`?*
+   - Options: *Yes, use default `peoples/`*, *Yes, with a custom name (e.g. `species/`, `races/`, `lineages/`, `cultures/`)*, *No (only if needed later)*.
+8. **`advanced_customisation`**: *For the remaining tomes, would you like to use the standard names or customise folders / enable optional subfolders?*
+   - Options: *Use standard names and layout* (recommended), *Customise on request* — if selected, ask the DM which customisations they want (from: `<planes>/` and `<pantheon>/` in `01_cosmology/`; extra branches `11_+` or jurisdictions in `04_law_and_statutes/`; `Player_Characters/`/`Non_Player_Characters/` names, PC grouping by campaign or party, and `<npc_groups>/` in `05_characters/`; `<location_groups>/` in `06_locations/`; `<faction_groups>/` in `07_factions/`; Tome VIII name `08_...` and `<categories>/`; `<campaigns>/` and `<sessions>/` in `09_chronicles/`).
 
 ---
 
@@ -41,15 +47,15 @@ Once the DM's answers are received, generate the modular structure using file-wr
    - `SETTING_BIBLE.md`: Master source document containing the agreed premise.
 
 2. **The Ten Founding Tomes**:
-   - `01_cosmology/README.md`
-   - `02_geography/README.md` (with optional `regions/` subfolder or chosen macro-area naming)
-   - `03_society_and_politics/README.md` (with `customs_festivals_and_events/` subfolder containing `customs/`, `festivals_and_occurrences/`, `events/`, each with `README.md`)
-   - `04_law_and_statutes/README.md` (with subfolders `01_legal_order_and_sources/`, `02_civil_rights_and_status/`, `03_dynastic_law_and_succession/`, `04_contracts_and_pacts/`, `05_treaties_and_diplomacy/`, `06_criminal_law_and_offences/`, `07_courts_and_procedure/`, `08_arcane_and_religious_law/`, `09_property_trade_and_taxation/`, `10_law_of_war_and_adventurers/`, each with `README.md`)
-   - `05_characters/README.md` (with `Player_Characters/` and `Non_Player_Characters/` subfolders, each with `README.md`)
-   - `06_locations/README.md`
-   - `07_factions/README.md`
-   - `08_unique_magic_items/README.md`
-   - `09_chronicles/README.md` (with `campaigns/<campaign_name>/sessions/` subfolders, each with `README.md`)
+   - `01_cosmology/README.md` (with optional `<planes>/`, `<pantheon>/` subfolders if selected, each with `README.md`)
+   - `02_geography/README.md` (with macro-areas subfolder: `regions/` or the custom name chosen by the DM, with its own `README.md`)
+   - `03_society_and_politics/README.md` (with optional `peoples/` or custom-named subfolder if selected, and `customs_festivals_and_events/` subfolder containing `customs/`, `festivals_and_occurrences/`, `events/`, each with `README.md`)
+   - `04_law_and_statutes/README.md` (with subfolders `01_legal_order_and_sources/`, `02_civil_rights_and_status/`, `03_dynastic_law_and_succession/`, `04_contracts_and_pacts/`, `05_treaties_and_diplomacy/`, `06_criminal_law_and_offences/`, `07_courts_and_procedure/`, `08_arcane_and_religious_law/`, `09_property_trade_and_taxation/`, `10_law_of_war_and_adventurers/`, plus any custom branches `11_+` or jurisdictional subfolders, each with `README.md`)
+   - `05_characters/README.md` (with `<Player_Characters>/` [default `Player_Characters/`] and `<Non_Player_Characters>/` [default `Non_Player_Characters/`], plus optional `<npc_groups>/`, each with `README.md`)
+   - `06_locations/README.md` (with optional `<location_groups>/` subfolders if selected, each with `README.md`)
+   - `07_factions/README.md` (with optional `<faction_groups>/` subfolders if selected, each with `README.md`)
+   - `<08_unique_magic_items>/README.md` (default `08_unique_magic_items/` or custom name, with optional `<categories>/` subfolders if selected, each with `README.md`)
+   - `09_chronicles/README.md` (with `<campaigns>/<campaign_name>/<sessions>/` subfolders — default `campaigns/` and `sessions/` — each with `README.md`)
    - `10_timeline/README.md` (with `historical_chronology/`, `occurrence_register/`, `markwhen/` — containing `README.md`, `general_timeline.mw`, `epochs/`, `campaigns/` —, `calendar/`, `exports/README.md`)
 
 3. **Initialising README Files**:

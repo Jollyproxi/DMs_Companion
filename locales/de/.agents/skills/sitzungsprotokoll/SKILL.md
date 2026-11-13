@@ -27,7 +27,7 @@ Dieser Skill leitet die Erfassung, Strukturierung und Formatierung von Spielsitz
 Aktivierbar mit *„Interview starten“* oder direkt nach einer Sitzung. Stelle dem SL die Fragen strukturiert (über das interaktive Fragewerkzeug der Umgebung wie `vscode_askQuestions` oder `AskUserQuestion`, falls verfügbar; sonst direkt im Chat):
 1. **`sitzungskoordinaten`**: *Sitzungsnummer, Ingame-Datum und geografischer Schauplatz der Ereignisse?* (Freitext mit kurzem Hinweis).
 2. **`anwesende_scs`**: *Welche Spielercharaktere waren anwesend?*
-   - Mehrfachauswahl basierend auf den in `05_charaktere/Spielercharaktere/<kampagnenname>/` erfassten Dossiers (mit Freitextmöglichkeit für neue SCs oder bedeutende NSCs).
+   - Mehrfachauswahl basierend auf den in `05_charaktere/<Spielercharaktere>/<Kampagne_oder_Gruppe>/` erfassten Dossiers (mit Freitextmöglichkeit für neue SCs oder bedeutende NSCs).
 3. **`ereignischronologie`**: *Was ist der Reihe nach geschehen (Auftakt, zentrale Wendepunkte, Kämpfe/Verhandlungen, Ausklang)?* (Freitext).
 4. **`aufhaenger_enthuellungen`**: *Welche Entdeckungen, Hinweise oder Wendepunkte haben gezielt einzelne SCs betroffen?* (Freitext zur Erstellung des Mermaid-Diagramms).
 5. **`regeldaten`**: *Gibt es regeltechnische Ressourcen oder Ereignisse festzuhalten?*
@@ -54,10 +54,10 @@ Das Protokoll wird in den kanonischen Abschnitten erstellt:
 ## 4. Archivierung & Fortschreibung
 
 1. **Datei speichern**:
-   Speichere unter `09_chroniken/kampagnen/<kampagnenname>/sitzungen/XX_sitzungstitel.md`.
+   Speichere unter `09_chroniken/<kampagnen>/<kampagnenname>/<sitzungen>/XX_sitzungstitel.md` *(Standard: `09_chroniken/kampagnen/<kampagnenname>/sitzungen/...`, unter Wahrung benutzerdefinierter Ordnernamen wie `expeditionen/`, `abenteuer/`, `tagebuecher/`)*.
 2. **Kampagnenindex aktualisieren**:
-   Füge die neue Zeile in die Übersichtstabelle unter `09_chroniken/kampagnen/<kampagnenname>/README.md` ein:
-   `| **XX** | [Titel] | [Datum] | [Ort] | [Hauptfokus] | [Protokoll](sitzungen/XX_titel.md) |`
+   Füge die neue Zeile in die Übersichtstabelle unter `09_chroniken/<kampagnen>/<kampagnenname>/README.md` ein:
+   `| **XX** | [Titel] | [Datum] | [Ort] | [Hauptfokus] | [Protokoll](<sitzungen>/XX_titel.md) |`
 3. **Vorschläge für Querverknüpfte Aktualisierungen (A + B)**:
    - Liste am Ende der Antwort alle betroffenen Repository-Dateien auf (neue NSCs, gefundene magische Gegenstände, in SC-Dossiers per `charakter-dossier` nachzutragende Aufhänger).
    - **Bräuche, Feste und Ereignisse**: Führt die Sitzung einen neuen Brauch, ein neues Fest/Vorkommnis oder ein neues Ereignis ein bzw. erwähnt es, **schlage stets die Anlage des zugehörigen Bogens** in `03_gesellschaft_und_politik/braeuche_feste_und_ereignisse/` über `brauch-fest-ereignis` vor.

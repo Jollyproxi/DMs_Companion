@@ -104,15 +104,15 @@ Every world is organised in ten numbered tomes (folder names are localised per p
 
 | Tome | Contents |
 | :--- | :--- |
-| `01_cosmology/` | Planes, celestial mechanics, flow of magic, cosmic ethics. |
-| `02_geography/` | Cartography, territories, subterranean regions, regional dossiers. |
-| `03_society_and_politics/` | Civil order, economy, social classes, public order; `customs_festivals_and_events/` sub-series. |
-| `04_law_and_statutes/` | 10 legal branches (`01_legal_order_and_sources/` … `10_law_of_war_and_adventurers/`): sources, civil rights, succession, contracts, treaties, criminal law, courts, arcane/religious law, taxation, war. |
-| `05_characters/` | Modular PC dossiers and NPC sheets. |
-| `06_locations/` | Adventure hubs, cities, strongholds, area hazards. |
-| `07_factions/` | Noble houses, covens, guilds, orders, power hierarchies. |
-| `08_unique_magic_items/` | Unique artefacts, relics, legal registers, properties. |
-| `09_chronicles/` | Campaign hub: summary table + progressive session minutes. |
+| `01_cosmology/` | Planes, celestial mechanics, flow of magic, cosmic ethics (optional `<planes>/`, `<pantheon>/`). |
+| `02_geography/` | Cartography, territories, subterranean regions, regional dossiers (`regions/` or custom subfolder name). |
+| `03_society_and_politics/` | Civil order, economy, social classes, public order; optional `peoples/` (or custom name) and `customs_festivals_and_events/` sub-series. |
+| `04_law_and_statutes/` | 10 legal branches (`01_legal_order_and_sources/` … `10_law_of_war_and_adventurers/`), plus optional extra branches `11_+` or jurisdictions. |
+| `05_characters/` | Modular PC dossiers (`<Player_Characters>/<Campaign_or_Party>/`) and NPC sheets (`<Non_Player_Characters>/[<group>/]`). |
+| `06_locations/` | Adventure hubs, cities, strongholds, area hazards (optional `<location_groups>/`). |
+| `07_factions/` | Noble houses, covens, guilds, orders, power hierarchies (optional `<faction_groups>/`). |
+| `<08_unique_magic_items>/` | Unique artefacts, relics, legal registers, properties (customisable tome name and optional `<categories>/`). |
+| `09_chronicles/` | Campaign hub: summary table + progressive session minutes (`<campaigns>/<name>/<sessions>/`). |
 | `10_timeline/` | Cross-cutting chronology: historical chronology, occurrence register, Markwhen sources, calendar, exports. |
 
 ### Verification Badges

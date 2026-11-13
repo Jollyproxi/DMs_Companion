@@ -2,7 +2,7 @@
 
 ## 1. Dossier Modulare Personaggio Giocante (PG)
 
-Ogni PG possiede una cartella dedicata in `05_personaggi/Giocanti/<Campagna>/<Nome_PG>/` con un `README.md` di raccordo e cinque moduli tematici:
+Ogni PG possiede una cartella dedicata in `05_personaggi/<Giocanti>/<Campagna_o_Party>/<Nome_PG>/` (default: `05_personaggi/Giocanti/<Campagna>/<Nome_PG>/`) con un `README.md` di raccordo e cinque moduli tematici:
 
 ### `README.md` (Hub del Personaggio)
 ```markdown
@@ -98,7 +98,7 @@ Ogni PG possiede una cartella dedicata in `05_personaggi/Giocanti/<Campagna>/<No
 
 ## 2. Scheda Personaggio Non Giocante (PNG)
 
-Ogni PNG risiede come singolo file in `05_personaggi/Non-Giocanti/[Nome_PNG].md`:
+Ogni PNG risiede come singolo file in `05_personaggi/<Non-Giocanti>/[<gruppo_png>/][Nome_PNG].md` (default: `05_personaggi/Non-Giocanti/[Nome_PNG].md`):
 
 ```markdown
 # [Nome PNG] — [Titolo o Ruolo]

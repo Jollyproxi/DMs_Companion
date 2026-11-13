@@ -68,7 +68,7 @@ Utilisez cette procédure pour initialiser `10_chronologie/markwhen/` ou créer 
    - Lisez `10_chronologie/README.md`, `10_chronologie/calendrier/` et `10_chronologie/markwhen/README.md`.
    - Selon la cible demandée (`generale`, `epoque`, `campagne`, ou `tout`), examinez les sources pertinentes :
      - Pour une **époque** : `10_chronologie/chronologie_historique/`, `10_chronologie/registre_occurrences/` et les fiches de `03_societe_et_politique/coutumes_fetes_et_evenements/`.
-     - Pour une **campagne** : `09_chroniques/campagnes/<nom_campagne>/README.md`, les comptes rendus dans `sessions/`, les dossiers PJ (`05_personnages/Joueurs/<nom_campagne>/`) et les événements historiques/en cours associés.
+     - Pour une **campagne** : `09_chroniques/<campagnes>/<nom_campagne>/README.md`, les comptes rendus dans `<sessions>/`, les dossiers PJ (`05_personnages/<Joueurs>/<Campagne_ou_Groupe>/`) et les événements historiques/en cours associés.
 2. **Entretien Préliminaire** :
    - Si des coordonnées essentielles manquent (ex. nom/slug de l'époque, année de début/fin, année courante de la campagne), demandez-les au MJ avant de générer le fichier (via l'outil de questions structurées si disponible, sinon dans le chat).
 3. **Génération des Fichiers d'après les Modèles** :

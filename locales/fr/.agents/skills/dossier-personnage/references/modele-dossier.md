@@ -2,7 +2,7 @@
 
 ## 1. Dossier Modulaire de Personnage Joueur (PJ)
 
-Chaque PJ possède un dossier dédié dans `05_personnages/Joueurs/<Campagne>/<Nom_PJ>/` accompagné d'un `README.md` de liaison et de cinq modules thématiques :
+Chaque PJ possède un dossier dédié dans `05_personnages/<Joueurs>/<Campagne_ou_Groupe>/<Nom_PJ>/` (défaut : `05_personnages/Joueurs/<Campagne>/<Nom_PJ>/`) accompagné d'un `README.md` de liaison et de cinq modules thématiques :
 
 ### `README.md` (Portail du Personnage)
 ```markdown
@@ -98,7 +98,7 @@ Chaque PJ possède un dossier dédié dans `05_personnages/Joueurs/<Campagne>/<N
 
 ## 2. Fiche de Personnage Non-Joueur (PNJ)
 
-Chaque PNJ réside sous la forme d'un fichier unique dans `05_personnages/Non_Joueurs/[Nom_PNJ].md` :
+Chaque PNJ réside sous la forme d'un fichier unique dans `05_personnages/<Non_Joueurs>/[<groupe_pnj>/][Nom_PNJ].md` (défaut : `05_personnages/Non_Joueurs/[Nom_PNJ].md`) :
 
 ```markdown
 # [Nom PNJ] — [Titre ou Rôle]

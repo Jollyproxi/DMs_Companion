@@ -10,7 +10,7 @@ Dieses Dokument legt die Standardstruktur und Leitlinien für das Verfassen eine
 * **Kampagne:** [Kampagnenname mit Markdown-Link zur zugehörigen README]
 * **Ingame-Datum:** [Narrativer Zeitbezug, z. B. Tag 12, Jahr 514]
 * **Schauplatz der Ereignisse:** [Orte mit relativen Links zu Dossiers in 06_orte/ oder 02_geografie/]
-* **Protagonisten:** [Liste anwesender SCs mit relativen Links zu ihren Dossiers in 05_charaktere/Spielercharaktere/]
+* **Protagonisten:** [Liste anwesender SCs mit relativen Links zu ihren Dossiers in Band V (z. B. 05_charaktere/Spielercharaktere/)]
 * **Aufgetretene Bräuche, Feste & Ereignisse:** [Links zu Bögen in 03_gesellschaft_und_politik/braeuche_feste_und_ereignisse/ für eingeführte/erwähnte Einträge; Links zu 10_zeitlinie/ für gespielte Vorkommnisse. „Keine“ angeben, falls nicht betroffen.]
 
 ---

@@ -1,6 +1,6 @@
 # Reference Template: Unique Magic Item
 
-This document defines the standard structure for registering a magic item, artefact, or relic in `08_unique_magic_items/`.
+This document defines the standard structure for registering a magic item, artefact, or relic in Tome VIII (`08_unique_magic_items/` or custom name configured in the workspace).
 
 ```markdown
 # Magic Item: [Item Name]

@@ -77,15 +77,15 @@ L'Archivista organizza **solo** ciò che fornisci o che hai già canonizzato. No
 
 | Tomo | Contenuto |
 | :--- | :--- |
-| `01_cosmologia/` | Piani, meccaniche celesti, flusso magico ed etica cosmica. |
-| `02_geografia/` | Cartografia, territori, regioni sotterranee, dossier regionali (`regioni/` o `cornici/`). |
-| `03_societa_e_politica/` | Ordinamento civile, economia, classi sociali, ordine pubblico; sottoserie `usi_costumi_ed_eventi/` (`usanze/`, `festival_ed_occorrenze/`, `eventi/`). |
-| `04_diritto_e_leggi/` | 10 branche giuridiche (`01_ordinamento_e_fonti/` … `10_diritto_bellico_e_avventurieri/`): fonti, diritti civili, successione, contratti, trattati, penale, tribunali, arcano/religioso, fisco, guerra. |
-| `05_personaggi/` | Dossier modulari PG (`Giocanti/<Campagna>/<Nome_PG>/`) e schede PNG (`Non-Giocanti/`). |
-| `06_luoghi/` | Nodi d'avventura, città, roccaforti, pericoli d'area. |
-| `07_fazioni/` | Casate, congreghe, corporazioni, ordini, gerarchie di potere. |
-| `08_oggetti_magici_peculiari/` | Manufatti unici, reliquie, registri normativi, proprietà. |
-| `09_cronache/` | Hub di campagna: tabella sinottica + verbali progressivi (`campagne/<nome>/sessioni/`). |
+| `01_cosmologia/` | Piani, meccaniche celesti, flusso magico ed etica cosmica (sottocartelle opzionali `<piani>/`, `<pantheon>/`). |
+| `02_geografia/` | Cartografia, territori, regioni sotterranee, dossier regionali (`regioni/` o nome custom, es. `province/`, `cornici/`). |
+| `03_societa_e_politica/` | Ordinamento civile, economia, classi sociali, ordine pubblico; `popoli/` opzionale (o nome custom) e sottoserie `usi_costumi_ed_eventi/` (`usanze/`, `festival_ed_occorrenze/`, `eventi/`). |
+| `04_diritto_e_leggi/` | 10 branche giuridiche (`01_ordinamento_e_fonti/` … `10_diritto_bellico_e_avventurieri/`), più eventuali branche extra `11_+` o giurisdizioni. |
+| `05_personaggi/` | Dossier modulari PG (`<Giocanti>/<Campagna_o_Party>/<Nome_PG>/`, default `Giocanti/<Campagna>/`) e schede PNG (`<Non-Giocanti>/[<gruppo_png>/]`, default `Non-Giocanti/`). |
+| `06_luoghi/` | Nodi d'avventura, città, roccaforti, pericoli d'area (sottocartelle opzionali `<gruppi_luoghi>/`). |
+| `07_fazioni/` | Casate, congreghe, corporazioni, ordini, gerarchie di potere (sottocartelle opzionali `<gruppi_fazioni>/`). |
+| `<08_oggetti_magici_peculiari>/` | Manufatti unici, reliquie, registri normativi, proprietà (nome tomo personalizzabile e sottocartelle opzionali `<categorie>/`). |
+| `09_cronache/` | Hub di campagna: tabella sinottica + verbali progressivi (`<campagne>/<nome>/<sessioni>/`, default `campagne/` e `sessioni/`). |
 | `10_timeline/` | Cronologia trasversale: `cronologia_storica/`, `registro_occorrenze/`, `markwhen/` (`timeline_generale.mw`, `epoche/`, `campagne/`), `calendario/`, `esportazioni/`. |
 
 ### Badge di Verifica

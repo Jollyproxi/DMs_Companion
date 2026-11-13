@@ -68,7 +68,7 @@ Use this procedure to initialise `10_timeline/markwhen/` or create a new `.mw` f
    - Read `10_timeline/README.md`, `10_timeline/calendar/`, and `10_timeline/markwhen/README.md`.
    - Based on the requested target (`general`, `epoch`, `campaign`, or `all`), inspect the pertinent sources:
      - For an **epoch**: `10_timeline/historical_chronology/`, `10_timeline/occurrence_register/`, and sheets in `03_society_and_politics/customs_festivals_and_events/`.
-     - For a **campaign**: `09_chronicles/campaigns/<campaign_name>/README.md`, minutes in `sessions/`, PC dossiers (`05_characters/Player_Characters/<campaign_name>/`), and related historical/ongoing events.
+     - For a **campaign**: `09_chronicles/<campaigns>/<campaign_name>/README.md`, minutes in `<sessions>/`, PC dossiers (`05_characters/<Player_Characters>/<Campaign_or_Party>/`), and related historical/ongoing events.
 2. **Preliminary Interview**:
    - If essential coordinates are missing (e.g. epoch name/slug, start/end year, current campaign year), ask the DM before generating the file (via the environment's structured question tool if available, otherwise in chat).
 3. **Generate Files from Templates**:

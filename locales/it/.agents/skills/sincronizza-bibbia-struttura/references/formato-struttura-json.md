@@ -94,8 +94,8 @@ Ciascun elemento dell'array `moduli` descrive un file `.md` atomico:
 
 Per tomi che contengono sottocartelle canoniche:
 
-### A. Tomo 02 (Geografia - Sottocartella `regioni/` o `cornici/`)
-Se presente una sottodirectory regionale:
+### A. Tomo 02 (Geografia - Sottocartella `regioni/` o nome custom)
+Se presente una sottodirectory regionale o per macro-aree:
 ```json
 "cartella_regioni": "02_geografia/regioni",
 "indice_regioni": "02_geografia/regioni/README.md",
@@ -108,17 +108,18 @@ Se presente una sottodirectory regionale:
   }
 ]
 ```
-*(In ambientazioni esistenti con cartelle `cornici/`, è ammesso mantenere i nomi chiave `cartella_cornici` / `moduli_cornici`.)*
+*(Il nome della sottocartella e delle relative chiavi è personalizzabile: qualsiasi nome scelto per le macro-aree — ad es. `province/`, `continenti/`, `domini/`, `cornici/` — può usare le chiavi standard `cartella_regioni` / `indice_regioni` / `moduli_regioni` oppure chiavi corrispondenti `cartella_<nome>` / `indice_<nome>` / `moduli_<nome>`.)*
 
-### B. Tomo 05 (Personaggi - Sottocartelle `Giocanti/` e `Non-Giocanti/`)
+### B. Tomo 05 (Personaggi - Sottocartelle `<Giocanti>/` e `<Non-Giocanti>/`)
 ```json
 "sottocartelle": {
   "giocanti": "05_personaggi/Giocanti",
   "non_giocanti": "05_personaggi/Non-Giocanti"
 }
 ```
+*(Se il Master personalizza i nomi delle cartelle — es. `PG/`, `PNG/`, `Eroi/`, sottogruppi PNG o organizzazione per `<Campagna_o_Party>/` — i percorsi registrano i nomi reali su disco.)*
 
-### C. Tomo 09 (Cronache - Sottocartella `campagne/`)
+### C. Tomo 09 (Cronache - Sottocartella `<campagne>/`)
 ```json
 "cartella_campagne": "09_cronache/campagne",
 "campagne_attive": [
@@ -129,9 +130,19 @@ Se presente una sottodirectory regionale:
   }
 ]
 ```
+*(Se `campagne/` o `sessioni/` usano un nome custom — es. `spedizioni/`, `avventure/`, `one_shot/`, `diari/` — le chiavi riportano i percorsi effettivi su disco.)*
 
-### D. Tomo 03 (Società e Politica - Sottoserie `usi_costumi_ed_eventi/`)
+### D. Tomo 03 (Società e Politica - Sottoserie `usi_costumi_ed_eventi/` e opzionale `popoli/`)
 ```json
+"cartella_popoli": "03_societa_e_politica/popoli",
+"moduli_popoli": [
+  {
+    "id": "popolo_esempio",
+    "codice": "3.8.1",
+    "titolo": "Nome del Popolo / Specie",
+    "file": "03_societa_e_politica/popoli/01_popolo_esempio.md"
+  }
+],
 "cartella_usi_costumi_ed_eventi": "03_societa_e_politica/usi_costumi_ed_eventi",
 "indice_usi_costumi_ed_eventi": "03_societa_e_politica/usi_costumi_ed_eventi/README.md",
 "moduli_usanze": [
@@ -195,7 +206,10 @@ Se presente una sottodirectory regionale:
   ]
 }
 ```
-*(In ambientazioni esistenti con cartella `04_diritto_e_successione/` a moduli piatti, questi vengono indicizzati in `"moduli"` mantenendo eventuale `"id": "diritto_successione"`.)*
+*(Eventuali branche extra `11_<branca>/` usano codici `4.11.x`…; eventuali sottocartelle per giurisdizione interna vengono annidate nella rispettiva branca sotto `"sottocartelle"` o `"giurisdizioni"`.)*
+
+### D3. Sottocartelle Opzionali (Tomi I, VI, VII, VIII)
+Quando nei Tomi `01_cosmologia/` (`<piani>/`, `<pantheon>/`), `06_luoghi/` (`<gruppi_luoghi>/`), `07_fazioni/` (`<gruppi_fazioni>/`) o `<08_oggetti_magici_peculiari>/` (`<categorie>/`) sono presenti sottocartelle opzionali custom, ogni tomo conserva il suo percorso effettivo (`"cartella"`, `"indice"`) ed espone un array `"sottocartelle"` (o `"gruppi"`) con `{ "id", "titolo", "cartella", "indice", "moduli": [...] }`.
 
 ### E. Tomo 10 (Timeline)
 ```json
@@ -258,5 +272,5 @@ Quando si esegue `genera-struttura-json` o `aggiorna-struttura-json`:
 3. **Tabelle**: Rilevate tramite righe con separatori di colonna `| :--- | :--- |` precedute da un titolo `## Tabella...` o didascalia.
 4. **Note DM**: Rilevate tramite marcatori `**NOTA PER IL DUNGEON MASTER:**` o `> ⚠️ **Nota DM:**`.
 5. **Codice Numerico**: Se il file si chiama `03_flusso_della_magia.md` dentro `01_cosmologia`, il codice è `"1.3"`.
-6. **Codici Sottoserie**: Le schede di `usi_costumi_ed_eventi/` usano codici di terzo livello per sottocartella (`3.5.x` usanze, `3.6.x` festival/occorrenze, `3.7.x` eventi; numerazione progressiva per sottocartella). Le branche di `04_diritto_e_leggi/` usano `4.1.x` … `4.10.x` (`4.Y.1` per `01_quadro_generale.md`, `4.Y.2+` per gli atti `02_<slug_atto>.md`). I file della `10_timeline/` usano `10.1.x` (cronologia storica), `10.2.x` (registro occorrenze), `10.3.x` (calendario).
+6. **Codici Sottoserie**: Le schede di `usi_costumi_ed_eventi/` usano codici di terzo livello per sottocartella (`3.5.x` usanze, `3.6.x` festival/occorrenze, `3.7.x` eventi; `3.8.x` eventuale cartella `popoli/` o nome custom). Le branche di `04_diritto_e_leggi/` usano `4.1.x` … `4.10.x` (e `4.11.x+` per eventuali branche custom; `4.Y.1` per `01_quadro_generale.md`, `4.Y.2+` per gli atti `02_<slug_atto>.md`). I file della `10_timeline/` usano `10.1.x` (cronologia storica), `10.2.x` (registro occorrenze), `10.3.x` (calendario).
 7. **Campi Tipologici**: Per i festival/occorrenze estrarre `periodicita` e `scaturiggine` dalle rispettive sezioni del template; per gli eventi una tantum estrarre `stato_occorrenza`.

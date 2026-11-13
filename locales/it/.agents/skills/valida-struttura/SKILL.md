@@ -19,16 +19,16 @@ Questa skill esegue un audit diagnostico approfondito dell'alberatura dei file d
 La skill controlla i cinque pilastri dell'integrità strutturale:
 
 ### A. Conformità dei Dieci Tomi
-Verifica la presenza delle directory canoniche (accettando eventuali varianti già in uso nel repository come `04_diritto_e_successione`, `06_location`, `07_factions`, `08_oggetti magici peculiari` o `cornici/`):
-1. `01_cosmologia`
-2. `02_geografia`
-3. `03_societa_e_politica` (con sottocartella `usi_costumi_ed_eventi/` contenente `usanze/`, `festival_ed_occorrenze/`, `eventi/`)
-4. `04_diritto_e_leggi` *(o variante legacy `04_diritto_e_successione`; con sottocartelle `01_ordinamento_e_fonti/` … `10_diritto_bellico_e_avventurieri/`)*
-5. `05_personaggi` (con sottocartelle `Giocanti/` e `Non-Giocanti/`)
-6. `06_luoghi` *(o variante `06_location`)*
-7. `07_fazioni` *(o variante `07_factions`)*
-8. `08_oggetti_magici_peculiari` *(o variante `08_oggetti magici peculiari`)*
-9. `09_cronache` (con sottocartella `campagne/`)
+Verifica la presenza delle directory canoniche (accettando eventuali varianti già in uso o personalizzate dal Master nel repository come `06_location`, `07_factions`, `08_oggetti magici peculiari` o nomi custom):
+1. `01_cosmologia` *(con eventuali sottocartelle opzionali custom per piani/sfere e pantheon/divinità)*
+2. `02_geografia` *(con eventuale sottocartella `regioni/` o nome custom scelto per le macro-aree, es. `province/`, `continenti/`, `domini/`, `cornici/`)*
+3. `03_societa_e_politica` *(con eventuale sottocartella opzionale `popoli/` o nome custom, e sottocartella obbligatoria `usi_costumi_ed_eventi/` contenente `usanze/`, `festival_ed_occorrenze/`, `eventi/`)*
+4. `04_diritto_e_leggi` *(con sottocartelle `01_ordinamento_e_fonti/` … `10_diritto_bellico_e_avventurieri/`, più eventuali branche custom `11_+` o sottocartelle per giurisdizione)*
+5. `05_personaggi` *(con sottocartelle `<Giocanti>/` [default `Giocanti/`, es. `PG/`, `Eroi/`], organizzate per `<Campagna_o_Party>/`, e `<Non-Giocanti>/` [default `Non-Giocanti/`, es. `PNG/`] con eventuali sottocartelle di raggruppamento opzionali)*
+6. `06_luoghi` *(o variante `06_location`; con eventuali sottocartelle opzionali custom per tipologia o macro-area)*
+7. `07_fazioni` *(o variante `07_factions`; con eventuali sottocartelle opzionali custom per tipologia)*
+8. `08_oggetti_magici_peculiari` *(o variante `08_oggetti magici peculiari` o nome custom es. `08_oggetti_magici/`, `08_artefatti_e_reliquie/`; con eventuali sottocartelle opzionali per categoria)*
+9. `09_cronache` *(con sottocartella `<campagne>/` [default `campagne/`, es. `spedizioni/`, `avventure/`, `one_shot/`] e `<sessioni>/` [default `sessioni/`, es. `diari/`, `capitoli/`])*
 10. `10_timeline` (con sottocartelle `cronologia_storica/`, `registro_occorrenze/`, `markwhen/`, `calendario/`, `esportazioni/`)
 
 ### B. Presenza e Validità degli Indici (`README.md`)
@@ -50,7 +50,7 @@ Verifica che ogni nome proprio di entità censita (PG, PNG, fazioni, casate, cit
 1. **Scansione del File System**:
    - Esegui una ricognizione delle cartelle e dei file `.md` presenti nel workspace escludendo directory tecniche (`.git`, `.agents`, `.github`, `.claude`, `node_modules`, `graphify-out`).
 2. **Esecuzione dei Test A-B-C-D-E**:
-   - Valida le cartelle dei 10 tomi (incluse le sottocartelle `usi_costumi_ed_eventi/`, `04_diritto_e_leggi/` e `10_timeline/`).
+   - Valida le cartelle dei 10 tomi e le rispettive sottocartelle canoniche, opzionali o personalizzate (`<piani>/`, `<pantheon>/`, `<regioni>/`, `popoli/`, `usi_costumi_ed_eventi/`, `04_diritto_e_leggi/`, `05_personaggi/`, `<gruppi_luoghi>/`, `<gruppi_fazioni>/`, `<categorie>/`, `<campagne>/<sessioni>/`, `10_timeline/`).
    - Controlla i `README.md` mancanti.
    - Analizza le stringhe di link `[Testo](percorso)` e verifica l'esistenza del file tramite path relativo.
    - Ispeziona la radice per rilevare file orfani.

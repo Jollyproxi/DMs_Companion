@@ -2,7 +2,7 @@
 
 This document defines the standard folder and file structure for encyclopaedic archiving of a D&D setting and its campaigns.
 
-> **Adaptation Note**: If the workspace already holds an existing setting with equivalent folder names (e.g. `04_law_and_succession/`), respect and preserve the existing structure without forcibly renaming established files.
+> **Adaptation Note**: If the workspace already holds an existing setting with equivalent folder names, respect and preserve the existing structure without forcibly renaming established files.
 
 ```text
 ├── README.md                                               # General world index and navigation guidelines
@@ -14,14 +14,16 @@ This document defines the standard folder and file structure for encyclopaedic a
 │   ├── 01_planar_structure.md                              # Planes, celestial spheres, infernal or abyssal realms
 │   ├── 02_seasons_and_celestial_mechanics.md               # Temporal dynamics, astronomical cycles, and planar transits
 │   ├── 03_flow_of_magic_and_divine_order.md                # Nature of the arcane, theurgy, monopolies, and limitations
-│   └── 04_moral_or_philosophical_system.md                 # Values, virtues, vices, or cosmic ethical code
+│   ├── 04_moral_or_philosophical_system.md                 # Values, virtues, vices, or cosmic ethical code
+│   ├── [<planes>/]                                         # Optional, custom name (e.g. planes/, spheres/, realms/, dimensions/ — with README.md)
+│   └── [<pantheon>/]                                       # Optional, custom name (e.g. deities/, pantheon/, cosmic_entities/, patrons/ — with README.md)
 │
 ├── 02_geography/                                           # Tome II: Physical geography, cartography, and regions
 │   ├── README.md                                           # General geographical overview and territorial cross-sections
 │   ├── 01_main_map_and_biomes.md                           # Territories, climates, and borders
 │   ├── 02_subterranean_regions_and_abysses.md              # Underdark, rifts, and caverns
 │   ├── 03_special_domains_and_connected_planes.md          # Suspended realms, gates, and liminal lands
-│   └── regions/                                            # Dossiers per region/kingdom/province (with README.md)
+│   └── <regions>/                                          # Dossiers per region/macro-area (customisable name: e.g. regions/, provinces/, realms/, marches/ — with README.md)
 │
 ├── 03_society_and_politics/                                # Tome III: Social, economic, and cultural model
 │   ├── README.md                                           # Overview of the social order
@@ -29,6 +31,7 @@ This document defines the standard folder and file structure for encyclopaedic a
 │   ├── 02_power_monopoly_and_economy.md                    # Military, trade, currency, and taxation
 │   ├── 03_social_classes_and_roles.md                      # Civic stratification, guilds, and aesthetics
 │   ├── 04_public_order_and_law_enforcement.md              # Town watch, militias, civic order, and social perception (laws and trials in Tome IV)
+│   ├── [peoples/]                                          # Optional (default: peoples/; customisable to species/, races/, lineages/, cultures/ — with README.md)
 │   └── customs_festivals_and_events/                       # Sub-series: customs, recurring festivals, and one-off events
 │       ├── README.md                                       # Sub-series index by type
 │       ├── customs/                                        # Everyday-life peculiarities (structures and manner)
@@ -55,13 +58,14 @@ This document defines the standard folder and file structure for encyclopaedic a
 │   ├── 07_courts_and_procedure/                            # Court jurisdictions, trials, magical evidence (Zone of Truth), ordeals, judicial duels, and appeals
 │   ├── 08_arcane_and_religious_law/                        # Forbidden schools and spells, spellcaster licences, artefact status, heresies, and ecclesiastical courts
 │   ├── 09_property_trade_and_taxation/                     # Land tenure and crown estate, guild monopolies, tariffs and taxation, loans, bankruptcy, and maritime law
-│   └── 10_law_of_war_and_adventurers/                      # Declarations of war, truces, prisoners and ransoms, mercenaries, adventuring guilds, and ruin charters
+│   ├── 10_law_of_war_and_adventurers/                      # Declarations of war, truces, prisoners and ransoms, mercenaries, adventuring guilds, and ruin charters
+│   └── [11_<custom_branch>/]                               # Optional: extra legal branches or subfolders by jurisdiction/realm inside a branch
 │
 ├── 05_characters/                                          # Tome V: Player and Non-Player Character Roster
 │   ├── README.md                                           # General character index and relationship matrix
-│   ├── Player_Characters/                                  # PC Archive
+│   ├── <Player_Characters>/                                # PC Archive (default: Player_Characters/; customisable to PCs/, Heroes/, etc.)
 │   │   ├── README.md                                       # Party overview and synergies
-│   │   └── [Campaign_Name]/                                # Specific party/campaign folder
+│   │   └── [<Campaign_or_Party>]/                          # Specific campaign or party/squad folder
 │   │       ├── README.md                                   # Party relationship hub
 │   │       └── [PC_Name]/                                  # Modular PC dossier:
 │   │           ├── README.md                               # Character summary and index
@@ -70,28 +74,32 @@ This document defines the standard folder and file structure for encyclopaedic a
 │   │           ├── 03_relationships_and_dynamics.md        # Bonds with other PCs and NPCs
 │   │           ├── 04_equipment_and_abilities.md           # Key items, feats, and abilities
 │   │           └── 05_dm_hooks_and_secrets.md              # Narrative hooks reserved for the DM
-│   └── Non_Player_Characters/                              # Setting NPC Archive
+│   └── <Non_Player_Characters>/                            # Setting NPC Archive (default: Non_Player_Characters/; customisable to NPCs/, Supporting/, etc.)
 │       ├── README.md                                       # Index grouped by faction
+│       ├── [<npc_groups>/]                                 # Optional: custom subfolders (by faction/, region/, allies/, antagonists/)
 │       └── [NPC_Name].md                                   # Sheet with role, temperament, secrets, and hooks
 │
 ├── 06_locations/                                           # Tome VI: Notable locations and adventure hubs
 │   ├── README.md                                           # List of points of interest and connections
+│   ├── [<location_groups>/]                                # Optional, custom name (e.g. cities/, dungeons/, ruins/, or per macro-area — with README.md)
 │   └── [XX_location_name].md                               # Location sheet (atmosphere, hazards, NPCs, hooks)
 │
 ├── 07_factions/                                            # Tome VII: Factions, noble houses, covens, and guilds
 │   ├── README.md                                           # Geopolitical power map and conflicts
+│   ├── [<faction_groups>/]                                 # Optional, custom name (e.g. houses/, guilds/, churches_and_cults/, orders/ — with README.md)
 │   └── [XX_faction_name].md                                # Charter, hierarchy, alliances, resources, and aims
 │
-├── 08_unique_magic_items/                                  # Tome VIII: Artefacts, relics, and unique devices
+├── <08_unique_magic_items>/                                # Tome VIII: Artefacts, relics, and devices (default: 08_unique_magic_items/; customisable to 08_magic_items/, 08_artefacts_and_relics/, 08_devices/)
 │   ├── README.md                                           # Legal magic register and item index
+│   ├── [<categories>/]                                     # Optional, custom name (e.g. artefacts/, relics/, grimoires/, contraptions/ — with README.md)
 │   └── [Item_Name].md                                      # Technical sheet, provenance, powers, and DM hooks
 │
 ├── 09_chronicles/                                          # Tome IX: Chronicles and campaign minutes
 │   ├── README.md                                           # Chronological index of all active campaigns
-│   └── campaigns/
-│       └── [campaign_name]/                                # Individual campaign folder
+│   └── <campaigns>/                                        # Chronicles archive (default: campaigns/; customisable to expeditions/, adventures/, one_shots/)
+│       └── [campaign_name]/                                # Individual campaign or expedition folder
 │           ├── README.md                                   # Hub: party roster, aim, session summary table
-│           └── sessions/                                   # Numbered progressive minutes:
+│           └── <sessions>/                                 # Numbered progressive minutes (default: sessions/; customisable to logs/, chapters/):
 │               ├── README.md                               # Minutes index
 │               ├── 01_session_title.md                     # Session 1 Minutes
 │               └── 02_session_title.md                     # Session 2 Minutes...

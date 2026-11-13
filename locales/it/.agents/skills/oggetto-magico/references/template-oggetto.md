@@ -1,6 +1,6 @@
 # Template di Riferimento: Oggetto Magico Peculiare
 
-Questo documento definisce la struttura standard per registrare un oggetto magico, artefatto o reliquia in `08_oggetti_magici_peculiari/`.
+Questo documento definisce la struttura standard per registrare un oggetto magico, artefatto o reliquia nel Tomo VIII (`08_oggetti_magici_peculiari/` o nome custom configurato nel workspace).
 
 ```markdown
 # Oggetto Magico: [Nome Oggetto]

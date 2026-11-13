@@ -16,7 +16,7 @@ Questa skill genera, aggiorna e mantiene il file di controllo e monitoraggio `ST
 
 ## 1. Criteri di Classificazione dello Stato
 
-La skill analizza i file markdown delle cartelle canoniche del mondo (`01_cosmologia`, `02_geografia`, `03_societa_e_politica` inclusa la sottoserie `usi_costumi_ed_eventi/`, `04_diritto_e_leggi` o variante legacy `04_diritto_e_successione`, `05_personaggi`, `06_luoghi` o `06_location`, `07_fazioni` o `07_factions`, `08_oggetti_magici_peculiari` o `08_oggetti magici peculiari`, `09_cronache`, `10_timeline`) e individua i badge:
+La skill analizza i file markdown delle cartelle canoniche del mondo (`01_cosmologia`, `02_geografia`, `03_societa_e_politica` incluse l'eventuale `popoli/` e la sottoserie `usi_costumi_ed_eventi/`, `04_diritto_e_leggi`, `05_personaggi`, `06_luoghi` o `06_location`, `07_fazioni` o `07_factions`, `08_oggetti_magici_peculiari` o variante/nome custom, `09_cronache`, `10_timeline` — ricorsivamente anche in eventuali sottocartelle opzionali o personalizzate) e individua i badge:
 
 ```markdown
 > 🛡️ *Verificato: [DATA_V] | Modificato: [DATA_M]*

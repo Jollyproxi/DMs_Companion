@@ -44,25 +44,27 @@ Die Kompilierung folgt streng der kanonischen Nummerierung:
    - `02_jahreszeiten_und_himmelsmechanik.md`
    - `03_magiefluss_und_goettliche_ordnung.md`
    - `04_moralisches_oder_philosophisches_system.md`
+   - Optionale benutzerdefinierte Unterordner (`<ebenen>/`, `<pantheon>/`).
 2. **##### 2. Physische, Territoriale & Umweltbezogene Geografie** (`02_geografie/`)
    - Hauptmodule zu Geografie, Karte, Unterreich und Schwellenebenen.
-   - Einzelne Regionen/Provinzen unter `regionen/` in aufsteigender Reihenfolge.
+   - Einzelne Regionen oder Großgebiete im zugehörigen Unterordner (`regionen/` oder benutzerdefinierter Ordnername im Workspace) in aufsteigender Reihenfolge.
 3. **##### 3. Gesellschafts-, Politik- & Wirtschaftsordnung** (`03_gesellschaft_und_politik/`)
    - Gesellschaftsmodelle, Wirtschaft, Schichten, öffentliche Ordnung und Sicherheitskräfte.
+   - Optionaler Unterordner `voelker/` (oder eigener Name für Spezies/Rassen/Abstammungen/Kulturen, Codes `3.8.x`).
    - Unterserie `braeuche_feste_und_ereignisse/`: Bräuche (`3.5.x`), Feste/Vorkommnisse (`3.6.x`), einmalige Ereignisse (`3.7.x`), jeweils aufsteigend nummeriert.
-4. **##### 4. Recht & Gesetze** (`04_recht_und_gesetze/` oder Bestandsname `04_recht_und_erbfolge/`)
-   - Rechtsordnung und Quellen (`4.1.x`), Bürgerrechte und Status (`4.2.x`), dynastisches Recht und Erbfolge (`4.3.x`), Verträge und Pakte (`4.4.x`), Abkommen und Diplomatie (`4.5.x`), Strafrecht und Delikte (`4.6.x`), Gerichte und Verfahren (`4.7.x`), arkanes und religiöses Recht (`4.8.x`), Eigentum, Handel und Steuern (`4.9.x`), Kriegsrecht und Abenteurer (`4.10.x`), jeweils mit allgemeinem Rahmen (`4.Y.1`) und erfassten Rechtsakten (`4.Y.2+`) in aufsteigender Reihenfolge.
+4. **##### 4. Recht & Gesetze** (`04_recht_und_gesetze/`)
+   - Rechtsordnung und Quellen (`4.1.x`), Bürgerrechte und Status (`4.2.x`), dynastisches Recht und Erbfolge (`4.3.x`), Verträge und Pakte (`4.4.x`), Abkommen und Diplomatie (`4.5.x`), Strafrecht und Delikte (`4.6.x`), Gerichte und Verfahren (`4.7.x`), arkanes und religiöses Recht (`4.8.x`), Eigentum, Handel und Steuern (`4.9.x`), Kriegsrecht und Abenteurer (`4.10.x`), plus etwaige Zusatzgebiete (`4.11.x+`) oder Unterordner nach Gerichtsbarkeit, jeweils mit allgemeinem Rahmen (`4.Y.1`) und erfassten Rechtsakten (`4.Y.2+`) in aufsteigender Reihenfolge.
 5. **##### 5. Charakterverzeichnis der Welt** (`05_charaktere/`)
-   - Bedeutsame NSCs (`Nichtspielercharaktere/`), gruppiert nach Fraktion oder Region.
-   - Zusammenfassung der Gruppenbindungen, falls eine kanonische Kampagne existiert.
+   - Bedeutsame NSCs (`<Nichtspielercharaktere>/`, mit etwaigen angepassten Gruppierungs-Unterordnern), gruppiert nach Fraktion oder Region.
+   - Zusammenfassung der Gruppenbindungen, falls eine kanonische Kampagne/Gruppe existiert.
 6. **##### 6. Atlas der Orte & Abenteuerknoten** (`06_orte/`)
-   - Bedeutende Orte, Festungen, Städte und Portale.
+   - Bedeutende Orte, Festungen, Städte und Portale (auch gruppiert in optionalen Unterordnern `<ortsgruppen>/`).
 7. **##### 7. Geopolitisches Register der Fraktionen & Häuser** (`07_fraktionen/`)
-   - Satzungen, Hierarchien und Rivalitäten herrschender Mächte.
-8. **##### 8. Register besonderer magischer Gegenstände & Relikte** (`08_besondere_magische_gegenstaende/`)
-   - Einzigartige Artefakte, Geschichte, Rechtsstatus und besondere Mechaniken.
+   - Satzungen, Hierarchien und Rivalitäten herrschender Mächte (auch gruppiert in optionalen Unterordnern `<fraktionsgruppen>/`).
+8. **##### 8. Register besonderer magischer Gegenstände & Relikte** (`<08_besondere_magische_gegenstaende>/` oder angepasster Bandname)
+   - Einzigartige Artefakte, Geschichte, Rechtsstatus und besondere Mechaniken (auch unterteilt in optionale Unterordner `<kategorien>/`).
 9. **##### 9. Historische Chroniken & Kampagnen-Kompendium** (`09_chroniken/`)
-   - Übersicht aktiver Kampagnen und fortlaufende Sitzungsprotokolle.
+   - Übersicht aktiver Kampagnen/Expeditionen (`<kampagnen>/`) und fortlaufende Sitzungsprotokolle (`<sitzungen>/`).
 10. **##### 10. Zeitlinie & Weltchronologie** (`10_zeitlinie/`)
     - Historische Chronologie (`10.1.x`, Dateien nach Epoche/Zeitraum), Vorkommnisregister (`10.2.x`, Dateien nach Epoche/Zeitraum) und Kalender (`10.3.x`).
     - Markwhen-Quellen (`markwhen/*.mw`) und grafische Exporte (`exporte/`) sind **von der Bibel ausgeschlossen**: sie bleiben ausschließlich in `weltstruktur.json` indiziert.

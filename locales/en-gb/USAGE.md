@@ -77,15 +77,15 @@ The Archivist organises **only** what you provide or have already canonised. It 
 
 | Tome | Contents |
 | :--- | :--- |
-| `01_cosmology/` | Planes, celestial mechanics, flow of magic, cosmic ethics. |
-| `02_geography/` | Cartography, territories, subterranean regions, regional dossiers (`regions/`). |
-| `03_society_and_politics/` | Civil order, economy, social classes, public order; `customs_festivals_and_events/` (`customs/`, `festivals_and_occurrences/`, `events/`). |
-| `04_law_and_statutes/` | 10 legal branches (`01_legal_order_and_sources/` … `10_law_of_war_and_adventurers/`): sources, civil rights, succession, contracts, treaties, criminal law, courts, arcane/religious law, taxation, war. |
-| `05_characters/` | Modular PC dossiers (`Player_Characters/<Campaign>/<PC_Name>/`) and NPC sheets (`Non_Player_Characters/`). |
-| `06_locations/` | Adventure hubs, cities, strongholds, area hazards. |
-| `07_factions/` | Noble houses, covens, guilds, orders, power hierarchies. |
-| `08_unique_magic_items/` | Unique artefacts, relics, legal registers, properties. |
-| `09_chronicles/` | Campaign hub: summary table + progressive session minutes (`campaigns/<name>/sessions/`). |
+| `01_cosmology/` | Planes, celestial mechanics, flow of magic, cosmic ethics (optional `<planes>/`, `<pantheon>/`). |
+| `02_geography/` | Cartography, territories, subterranean regions, regional dossiers (`regions/` or custom name, e.g. `provinces/`, `realms/`). |
+| `03_society_and_politics/` | Civil order, economy, social classes, public order; optional `peoples/` (or custom name) and `customs_festivals_and_events/` (`customs/`, `festivals_and_occurrences/`, `events/`). |
+| `04_law_and_statutes/` | 10 legal branches (`01_legal_order_and_sources/` … `10_law_of_war_and_adventurers/`), plus any extra branches `11_+` or jurisdictions. |
+| `05_characters/` | Modular PC dossiers (`<Player_Characters>/<Campaign_or_Party>/<PC_Name>/`, default `Player_Characters/<Campaign>/`) and NPC sheets (`<Non_Player_Characters>/[<npc_group>/]`, default `Non_Player_Characters/`). |
+| `06_locations/` | Adventure hubs, cities, strongholds, area hazards (optional `<location_groups>/`). |
+| `07_factions/` | Noble houses, covens, guilds, orders, power hierarchies (optional `<faction_groups>/`). |
+| `<08_unique_magic_items>/` | Unique artefacts, relics, legal registers, properties (customisable tome name and optional `<categories>/`). |
+| `09_chronicles/` | Campaign hub: summary table + progressive session minutes (`<campaigns>/<name>/<sessions>/`, default `campaigns/` and `sessions/`). |
 | `10_timeline/` | Cross-cutting chronology: `historical_chronology/`, `occurrence_register/`, `markwhen/` (`general_timeline.mw`, `epochs/`, `campaigns/`), `calendar/`, `exports/`. |
 
 ### Verification Badges

@@ -1,6 +1,6 @@
 # Referenzvorlage: Besonderer Magischer Gegenstand
 
-Dieses Dokument definiert die Standardstruktur für die Erfassung eines magischen Gegenstands, Artefakts oder Relikts in `08_besondere_magische_gegenstaende/`.
+Dieses Dokument definiert die Standardstruktur für die Erfassung eines magischen Gegenstands, Artefakts oder Relikts in Band VIII (`08_besondere_magische_gegenstaende/` oder einem im Workspace konfigurierten Namen).
 
 ```markdown
 # Magischer Gegenstand: [Gegenstandsname]
