@@ -105,7 +105,7 @@ Every validated section adopts the standard visible badge:
 ## 6. Modular Sub-Skills Matrix
 
 1. **`init-world`**: Interview and scaffolding of the ten-tome structure for new settings.
-2. **`validate-structure`**: Technical diagnostics (directory compliance, missing `README.md` files, broken links, orphan files).
+2. **`validate-structure`**: Technical diagnostics (directory compliance, missing `README.md` files, broken links, unlinked proper names, orphan files).
 3. **`session-minutes`**: Guided interview, drafting minutes with Mermaid diagram, and updating the campaign index.
 4. **`character-dossier`**: Creation and maintenance of 5-module PC dossiers and NPC sheets.
 5. **`magic-item`**: Cataloguing artefacts, resonances, and legal standing.
@@ -115,12 +115,17 @@ Every validated section adopts the standard visible badge:
 9. **`sync-bible-structure`**: Full compilation and incremental alignment of the master Bible and `setting_structure.json` (`generate-Bible`, `generate-structure-json`, `update-bible`, `update-structure-json`).
 10. **`custom-festival-event`**: Creation and maintenance of sheets for customs, festivals/occurrences, and one-off events in `03_society_and_politics/customs_festivals_and_events/`, updating historical chronology and occurrence register in `10_timeline/`.
 11. **`timeline-markwhen`**: Creation, incremental updating, syntactic/cross-reference validation, and export of Markwhen graphical timeline sources (`.mw`) in `10_timeline/markwhen/` and `exports/` (`create-mw`, `update-mw`, `validate-mw`, `export-mw`).
+12. **`link-proper-names`**: Scanning, verification, and conversion of proper names of people, places, items, and events into Markdown links to entities' canonical files (linked proper names rule).
 
 ---
 
-## 7. Cross-Linking & Workspace Integration
+## 7. Linked Proper Names (Mandatory Rule) & Workspace Integration
 
-- Whenever names of registered PCs, NPCs, factions, guilds, cities, or magic items appear, locate the corresponding file and generate relative Markdown links without backticks (e.g. `[Name](folder/file.md)`).
+- **Linked Name Rule**: every proper name of a setting entity — PCs, NPCs, houses, factions, guilds, cities, locations, regions, planes, magic items, customs, festivals, events, epochs, laws, institutions — appearing in produced text must be a **Markdown link** to the entity's canonical `.md` file, with the proper name as the link text (e.g. `[Name](folder/file.md)`), never plain text or a backticked entry.
+- **Valid Paths**: the link uses a path relative to the file being written and must point to a file that actually exists on disk.
+- **Exceptions** (names allowed without a link): headings and file names; YAML frontmatter, code blocks, and paths; labels of Mermaid diagrams and Markwhen `.mw` sources; generic designations not referring to registered entities.
+- **Entity Without a Sheet**: do not invent the sheet — use the placeholder `[TO_BE_DEFINED_BY_DM: missing sheet for <Name>]`, ask the DM whether to register it with the relevant skill, and flag the gap in the affected-files list.
+- **Verification**: scan and convert with the `link-proper-names` skill (pillar E of `validate-structure`).
 - Respect the modularity of the local repository, adapting automatically to existing folders.
 
 ---

@@ -1,6 +1,6 @@
 # Archivista di Campagna — Guida di Utilizzo
 
-Tutto ciò che serve per mettere a lavoro l'**Archivista di Campagna** al tuo tavolo: installazione, primi passi, riferimento completo delle **11 skill**, flussi di lavoro tipici, risoluzione dei problemi e FAQ.
+Tutto ciò che serve per mettere a lavoro l'**Archivista di Campagna** al tuo tavolo: installazione, primi passi, riferimento completo delle **12 skill**, flussi di lavoro tipici, risoluzione dei problemi e FAQ.
 
 * Copie localizzate di questa guida: [British English](https://github.com/<owner>/DMs_Companion/blob/main/locales/en-gb/USAGE.md) · [Français](https://github.com/<owner>/DMs_Companion/blob/main/locales/fr/GUIDE-UTILISATION.md) · [Deutsch](https://github.com/<owner>/DMs_Companion/blob/main/locales/de/NUTZUNGSANLEITUNG.md) — vedi anche il [USAGE.md](https://github.com/<owner>/DMs_Companion/blob/main/USAGE.md) di progetto sul branch `main`.
 
@@ -38,7 +38,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/it/.ag
 | `AGENTS.md` | Regole e flussi universali, letti da ogni harness. |
 | `CLAUDE.md` | Punto di ingresso per Claude Code; importa `AGENTS.md`. |
 | `.github/agents/archivista-di-campagna.agent.md` | La persona *Archivista di Campagna* (voce nella selezione agenti di VS Code). |
-| `.agents/skills/<skill>/SKILL.md` | Le 11 skill modulari (più i template in `references/`). |
+| `.agents/skills/<skill>/SKILL.md` | Le 12 skill modulari (più i template in `references/`). |
 | `GUIDA-UTILIZZO.md` | Questa guida. |
 
 ### Note per Harness
@@ -119,6 +119,7 @@ Invoca le skill con il relativo comando slash dove disponibile (VS Code, Claude 
 | 9 | `sincronizza-bibbia-struttura` | Bibbia dell'Ambientazione master + JSON machine-readable. |
 | 10 | `usanza-festa-evento` | Usanze, festival/occorrenze, eventi una tantum. |
 | 11 | `timeline-markwhen` | Timeline grafiche Markwhen (`.mw`). |
+| 12 | `collega-nomi-propri` | Nomi propri sempre collegati alle schede canoniche. |
 
 ### 4.1 `init-mondo` — Scaffolding del Mondo
 
@@ -186,6 +187,12 @@ Invoca le skill con il relativo comando slash dove disponibile (VS Code, Claude 
 * **Come**: `/timeline-markwhen` con un'operazione — `crea-mw`, `aggiorna-mw`, `valida-mw` o `esporta-mw` (es. *“crea-mw epoca: Prima Era”*, *“aggiorna-mw campagna: Cronache del Nord”*).
 * **Risultato**: sorgenti `.mw` in `10_timeline/markwhen/` (`timeline_generale.mw`, `epoche/`, `campagne/`) mantenuti in sincronia con cronologia, registro occorrenze e verbali; esportazioni renderizzate in `10_timeline/esportazioni/`.
 
+### 4.12 `collega-nomi-propri` — Nomi Propri Collegati
+
+* **Quando**: vuoi verificare o ripristinare la regola che ogni nome proprio è un link al file `.md` canonico dell'entità.
+* **Come**: `/collega-nomi-propri` — *“Percorso del file o della cartella da scansionare (oppure 'intero archivio').”*
+* **Risultato**: una tabella dei nomi non collegati con conversione in link proposta o applicata, e segnalazione delle entità prive di scheda.
+
 ---
 
 ## 5. Flussi di Lavoro Tipici
@@ -228,7 +235,7 @@ PG/PNG → `dossier-personaggio` · Manufatto → `oggetto-magico` · Usanza/fes
 
 ## 7. FAQ
 
-* **Mi servono tutte e 11 le skill?** No. Installale tutte (sono autosufficienti) e usa solo ciò che ti serve.
+* **Mi servono tutte e 12 le skill?** No. Installale tutte (sono autosufficienti) e usa solo ciò che ti serve.
 * **Posso gestire più campagne in un mondo?** Sì — `09_cronache/campagne/<nome>/` mantiene separati i verbali di ogni campagna; la lore condivisa vive negli altri tomi.
 * **Posso usarlo per campagne a pagamento, stream o actual play?** Sì. La clausola non commerciale riguarda la vendita del toolkit stesso, mai i giochi che conduci con esso.
 * **Posso ripacchettizzare o vendere le skill?** No — CC BY-NC-SA 4.0 (vedi `LICENSE` sul branch `main`).

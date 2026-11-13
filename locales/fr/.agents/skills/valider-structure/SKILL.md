@@ -1,6 +1,6 @@
 ---
 name: valider-structure
-description: "Use when: vérifier l'intégrité structurelle du dépôt d'un monde D&D, détecter les dossiers manquants, les index README absents, les liens Markdown rompus et les fichiers mal placés."
+description: "Use when: vérifier l'intégrité structurelle du dépôt d'un monde D&D, détecter les dossiers manquants, les index README absents, les liens Markdown rompus, les noms propres non liés et les fichiers mal placés."
 argument-hint: "Exécute le contrôle de conformité structurelle de l'archive"
 user-invocable: true
 disable-model-invocation: false
@@ -10,11 +10,13 @@ disable-model-invocation: false
 
 Cette compétence réalise un audit diagnostique approfondi de l'arborescence des fichiers du dépôt, vérifiant sa conformité à l'architecture standard D&D et signalant rapidement toute anomalie technique.
 
+> **📌 Règle des Noms Propres Liés** : tout nom propre d'entité de l'univers (PJ, PNJ, factions, maisons, cités, lieux, objets magiques, coutumes, fêtes, événements…) apparaissant dans le texte produit doit être un **lien Markdown** vers le fichier `.md` canonique de l'entité (ex. `[Nom](chemin/relatif/fichier.md)`), jamais un simple texte brut. Exceptions : titres, noms de fichiers, frontmatter, blocs de code, nœuds Mermaid et sources `.mw`. Entité sans fiche : ne l'inventez pas — utilisez `[A_DEFINIR_MJ: fiche manquante pour <Nom>]` et signalez la lacune. Vérification et conversion : compétence `lier-noms-propres`.
+
 ---
 
 ## 1. Critères de Vérification Diagnostique
 
-La compétence contrôle les quatre piliers de l'intégrité structurelle :
+La compétence contrôle les cinq piliers de l'intégrité structurelle :
 
 ### A. Conformité des Dix Tomes
 Vérifie la présence des répertoires canoniques (en acceptant les variantes équivalentes déjà établies dans un dépôt existant) :
@@ -38,22 +40,27 @@ Analyse les liens relatifs dans les fichiers `.md` (ex. `[Nom](../../05_personna
 ### D. Fichiers Orphelins ou Mal Placés
 Repère les fichiers `.md` enregistrés à la racine du projet ou dans des emplacements non canoniques qui devraient se trouver dans l'un des dix tomes (à l'exception des fichiers maîtres canoniques de la racine tels que `README.md`, `AGENTS.md`, `CLAUDE.md`, `BIBLE_DE_L_UNIVERS.md`, `STATUT_REVISION.md`). Pour la validation syntaxique et croisée des sources `.mw` dans `10_chronologie/markwhen/`, s'intègre avec la compétence `timeline-markwhen` (`valider-mw`).
 
+### E. Couverture des Noms Propres Liés
+Vérifie que tout nom propre d'entité recensée (PJ, PNJ, factions, maisons, cités, lieux, objets magiques, coutumes, fêtes, événements…) apparaît dans le texte sous forme de **lien Markdown** vers le fichier `.md` canonique de l'entité et non comme simple texte brut (règle des noms propres liés, sous réserve des exceptions prévues). L'analyse approfondie et la conversion sont déléguées à la compétence `lier-noms-propres`, dont ce pilier constitue le contrôle diagnostique de surface.
+
 ---
 
 ## 2. Procédure Opératoire
 
 1. **Analyse du Système de Fichiers** :
    - Inspectez les dossiers et les fichiers `.md` présents dans l'espace de travail en excluant les répertoires techniques (`.git`, `.agents`, `.github`, `.claude`, `node_modules`, `graphify-out`).
-2. **Exécution des Tests A–D** :
+2. **Exécution des Tests A–E** :
    - Validez les dossiers des 10 tomes (y compris les sous-dossiers de `coutumes_fetes_et_evenements/` et `10_chronologie/`).
    - Repérez les `README.md` manquants.
    - Analysez les liens `[Texte](chemin)` et vérifiez l'existence du fichier cible via le chemin relatif.
    - Inspectez la racine pour détecter d'éventuels fichiers orphelins.
+   - Vérifiez que les noms propres des entités recensées apparaissent comme liens et non comme texte brut (déléguer l'analyse approfondie à `lier-noms-propres`).
 3. **Production du Rapport Diagnostique** :
    - Présentez au MJ un récapitulatif synthétique :
      - 🟢 **Conformité de l'Arborescence** : [OK / Alertes sur tomes manquants]
      - 🟢 **Couverture des Index README** : [OK / Liste des dossiers dépourvus d'index]
      - 🔗 **Intégrité des Liens** : [OK / Liste des liens brisés avec fichier et ligne]
+     - 🏷️ **Noms Propres Liés** : [OK / Liste des noms non liés avec fichier et ligne]
      - 📂 **Emplacement des Fichiers** : [OK / Fichiers orphelins à déplacer]
 4. **Proposition de Réparation Automatique** :
    - Si des anomalies sont détectées, demandez au MJ (à l'aide de l'outil de questions structurées de l'environnement comme `vscode_askQuestions` / `AskUserQuestion` si disponible, sinon dans le chat) la marche à suivre :

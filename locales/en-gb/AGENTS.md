@@ -54,7 +54,7 @@ Every validated section or sheet uses the standard badge:
 Every operational procedure is defined in the modular skills under `.agents/skills/`:
 
 1. **`init-world`**: Initial interview and scaffolding of the ten-tome architecture.
-2. **`validate-structure`**: Diagnostics for directories, missing `README.md` indices, broken links, and misplaced files.
+2. **`validate-structure`**: Diagnostics for directories, missing `README.md` indices, broken links, unlinked proper names, and misplaced files.
 3. **`session-minutes`**: Guided interview or rough-notes compilation, minutes with a Mermaid diagram, and campaign index update.
 4. **`character-dossier`**: Creation and maintenance of 5-module PC dossiers and NPC sheets.
 5. **`magic-item`**: Cataloguing of artefacts, relics, mechanics, and legal status.
@@ -64,12 +64,21 @@ Every operational procedure is defined in the modular skills under `.agents/skil
 9. **`sync-bible-structure`**: Full compilation and incremental synchronisation of `SETTING_BIBLE.md` and `setting_structure.json`.
 10. **`custom-festival-event`**: Sheets for customs, festivals/occurrences, and one-off events aligned with `10_timeline/`.
 11. **`timeline-markwhen`**: Full lifecycle for Markwhen `.mw` sources (`create-mw`, `update-mw`, `validate-mw`, `export-mw`).
+12. **`link-proper-names`**: Scanning, verification, and conversion of proper names into Markdown links to entities' canonical files (linked proper names rule).
 
 ---
 
-## 5. Cross-Linking and Cross-Propagation
+## 5. Linked Proper Names (Mandatory Rule) & Cross-Propagation
 
-- Whenever registered entities appear (PCs, NPCs, factions, locations, items, customs/events), create relative Markdown links without backticks (e.g. `[Name](path/file.md)`).
+- **Linked Name Rule**: every **proper name** of a setting entity — people (PCs, NPCs), houses, factions, guilds, cities, locations, regions, planes, magic items, customs, festivals, events, epochs, laws, institutions — appearing in produced text must be written as a **Markdown link** to that entity's canonical `.md` file, with the proper name as the link text: `[Name](relative/path/file.md)`. Never plain text or a backticked entry.
+- **Valid Paths**: the link uses a path relative to the file being written and must point to a file that actually exists on disk.
+- **Exceptions** (names allowed without a link):
+  1. Headings and file names.
+  2. YAML frontmatter, code blocks, commands, and paths.
+  3. Labels of Mermaid diagrams and Markwhen `.mw` sources (where Markdown links are not rendered).
+  4. Generic designations not referring to registered entities.
+- **Entity Without a Sheet**: if a proper name designates an entity with no canonical `.md` file, **do not invent the sheet**: insert the placeholder `[TO_BE_DEFINED_BY_DM: missing sheet for <Name>]` (in interactive mode, ask the DM whether to register it with the relevant skill) and flag the gap in the affected-files list.
+- **Compliance Check**: scan and convert unlinked names with the `link-proper-names` skill; surface-level diagnostic check as pillar E of `validate-structure`.
 - After every entry or session record:
   1. Save the primary file and update connecting `README.md` indices.
   2. List all affected files (dossiers, NPCs, items, chronology) and propose draft updates before applying them.

@@ -29,6 +29,8 @@ Consultez les documents de référence associés :
 | **`mettre-a-jour-bible`** | `BIBLE_DE_L_UNIVERS.md` | Incrémental / Delta | Met à jour dans la Bible uniquement les sections correspondant aux modules modifiés. |
 | **`mettre-a-jour-structure-json`** | `structure_univers.json` | Incrémental / Delta | Synchronise le JSON avec les modules ajoutés, renommés ou modifiés. |
 
+> **📌 Règle des Noms Propres Liés** : tout nom propre d'entité de l'univers (PJ, PNJ, factions, maisons, cités, lieux, objets magiques, coutumes, fêtes, événements…) apparaissant dans le texte produit doit être un **lien Markdown** vers le fichier `.md` canonique de l'entité (ex. `[Nom](chemin/relatif/fichier.md)`), jamais un simple texte brut. Exceptions : titres, noms de fichiers, frontmatter, blocs de code, nœuds Mermaid et sources `.mw`. Entité sans fiche : ne l'inventez pas — utilisez `[A_DEFINIR_MJ: fiche manquante pour <Nom>]` et signalez la lacune. Vérification et conversion : compétence `lier-noms-propres`.
+
 ---
 
 ## 1. Procédure : `generer-Bible` (Compilation Maîtresse)

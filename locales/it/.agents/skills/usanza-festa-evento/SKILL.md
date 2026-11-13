@@ -10,6 +10,8 @@ disable-model-invocation: false
 
 Questa skill gestisce la sottoserie `03_societa_e_politica/usi_costumi_ed_eventi/` e il suo legame con il tomo `10_timeline/`: cataloga le peculiarità della vita quotidiana, i festival e le occorrenze ricorrenti, e gli eventi peculiari una tantum, con i medesimi standard di fedeltà notarile del resto dell'archivio.
 
+> **📌 Regola Nomi Propri Collegati**: ogni nome proprio di entità dell'ambientazione (PG, PNG, fazioni, casate, città, luoghi, oggetti magici, usanze, festival, eventi…) che compare nel testo prodotto deve essere un **collegamento Markdown** al file `.md` canonico dell'entità (es. `[Nome](percorso/relativo/file.md)`), mai semplice testo nudo. Eccezioni: intestazioni, nomi di file, frontmatter, blocchi di codice, nodi Mermaid e sorgenti `.mw`. Entità priva di scheda: non inventarla — usa `[DA_DEFINIRE_MASTER: scheda mancante per <Nome>]` e segnala la lacuna. Verifica e conversione: skill `collega-nomi-propri`.
+
 ---
 
 ## 1. Regola Aurea (Zero Allucinazioni)

@@ -10,6 +10,8 @@ disable-model-invocation: false
 
 Questa skill governa la catalogazione formale di artefatti, reliquie e focus arcani all'interno del tomo `08_oggetti_magici_peculiari/` (o `08_oggetti magici peculiari/` nei repository esistenti), rispettando il modello strutturale definito in [template-oggetto](./references/template-oggetto.md).
 
+> **📌 Regola Nomi Propri Collegati**: ogni nome proprio di entità dell'ambientazione (PG, PNG, fazioni, casate, città, luoghi, oggetti magici, usanze, festival, eventi…) che compare nel testo prodotto deve essere un **collegamento Markdown** al file `.md` canonico dell'entità (es. `[Nome](percorso/relativo/file.md)`), mai semplice testo nudo. Eccezioni: intestazioni, nomi di file, frontmatter, blocchi di codice, nodi Mermaid e sorgenti `.mw`. Entità priva di scheda: non inventarla — usa `[DA_DEFINIRE_MASTER: scheda mancante per <Nome>]` e segnala la lacuna. Verifica e conversione: skill `collega-nomi-propri`.
+
 ---
 
 ## 1. Principi di Registrazione

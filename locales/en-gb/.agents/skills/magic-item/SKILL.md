@@ -10,6 +10,8 @@ disable-model-invocation: false
 
 This skill governs the formal cataloguing of artefacts, relics, and arcane focuses inside Tome `08_unique_magic_items/`, adhering to the structural template defined in [item-template](./references/item-template.md).
 
+> **📌 Linked Proper Names Rule**: every proper name of a setting entity (PCs, NPCs, factions, houses, cities, locations, magic items, customs, festivals, events…) appearing in produced text must be a **Markdown link** to the entity's canonical `.md` file (e.g. `[Name](relative/path/file.md)`), never plain text. Exceptions: headings, file names, frontmatter, code blocks, Mermaid nodes, and `.mw` sources. Entity without a sheet: never invent it — use `[TO_BE_DEFINED_BY_DM: missing sheet for <Name>]` and flag the gap. Checking and conversion: `link-proper-names` skill.
+
 ---
 
 ## 1. Registration Principles

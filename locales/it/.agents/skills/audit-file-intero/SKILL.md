@@ -10,6 +10,8 @@ disable-model-invocation: false
 
 Questa skill consente una revisione rapida, organica e globale di un intero file o di un gruppo di file (cartella tematica) di D&D, ideale quando il Master non desidera l'interrogatorio atomico concetto per concetto, ma un quadro d'insieme con validazione a blocchi.
 
+> **📌 Regola Nomi Propri Collegati**: ogni nome proprio di entità dell'ambientazione (PG, PNG, fazioni, casate, città, luoghi, oggetti magici, usanze, festival, eventi…) che compare nel testo prodotto deve essere un **collegamento Markdown** al file `.md` canonico dell'entità (es. `[Nome](percorso/relativo/file.md)`), mai semplice testo nudo. Eccezioni: intestazioni, nomi di file, frontmatter, blocchi di codice, nodi Mermaid e sorgenti `.mw`. Entità priva di scheda: non inventarla — usa `[DA_DEFINIRE_MASTER: scheda mancante per <Nome>]` e segnala la lacuna. Verifica e conversione: skill `collega-nomi-propri`.
+
 ---
 
 ## 1. Regole di Revisione

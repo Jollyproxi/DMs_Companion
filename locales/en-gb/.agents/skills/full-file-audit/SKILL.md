@@ -10,6 +10,8 @@ disable-model-invocation: false
 
 This skill enables a fast, holistic, and organic review of an entire D&D file or group of files (thematic folder), ideal when the DM prefers a comprehensive overview with block-level validation rather than concept-by-concept questioning.
 
+> **📌 Linked Proper Names Rule**: every proper name of a setting entity (PCs, NPCs, factions, houses, cities, locations, magic items, customs, festivals, events…) appearing in produced text must be a **Markdown link** to the entity's canonical `.md` file (e.g. `[Name](relative/path/file.md)`), never plain text. Exceptions: headings, file names, frontmatter, code blocks, Mermaid nodes, and `.mw` sources. Entity without a sheet: never invent it — use `[TO_BE_DEFINED_BY_DM: missing sheet for <Name>]` and flag the gap. Checking and conversion: `link-proper-names` skill.
+
 ---
 
 ## 1. Review Rules

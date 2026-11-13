@@ -72,9 +72,9 @@ Every language package ships with harness-agnostic entrypoints and graceful fall
 
 ## What's Inside Each Language Package
 
-Each locale provides **1 Archivist agent** and **11 modular skills** designed around a standard **Ten-Tome World Architecture**:
+Each locale provides **1 Archivist agent** and **12 modular skills** designed around a standard **Ten-Tome World Architecture**:
 
-1. **World Scaffolding & Validation** (`init-world`, `validate-structure`): Interactive world setup and tree/link diagnostics.
+1. **World Scaffolding & Validation** (`init-world`, `validate-structure`, `link-proper-names`): Interactive world setup, tree/link diagnostics, and mandatory proper-name linking.
 2. **Chronicles & Session Minutes** (`session-minutes`): Post-session DM interview or rough-note structuring, Mermaid PC-hook diagrams, and campaign index updates.
 3. **Character Dossiers & Unique Magic Items** (`character-dossier`, `magic-item`): 5-module PC dossiers, NPC sheets, and 4-section magic item records.
 4. **Lore Auditing & Review Dashboard** (`step-by-step-audit`, `full-file-audit`, `review-status`): Atomic or full-file fact-checking with visible `🛡️` verification timestamps and dashboard tracking.
