@@ -46,7 +46,7 @@ Each element of the `structure` array represents one of the ten architectural to
 ```
 
 ### Tome Fields
-* `id` *(string)*: Unique snake_case identifier without numerical prefix (e.g. `"cosmology"`, `"geography"`, `"law_and_succession"`).
+* `id` *(string)*: Unique snake_case identifier without numerical prefix (e.g. `"cosmology"`, `"geography"`, `"law_and_statutes"`).
 * `code` *(string)*: Two-digit tome number (`"01"`–`"10"`).
 * `title` *(string)*: Formal tome title extracted from its `README.md`.
 * `folder` *(string)*: Directory name relative to the root (e.g. `"01_cosmology"`).
@@ -165,6 +165,37 @@ If a regional subdirectory exists:
 * `trigger` *(string, optional)*: conditions triggering the recurring event.
 * `occurrence_status` *(string, optional)* for events: `"planned"`, `"ongoing"`, or `"concluded"`.
 
+### D2. Tome 04 (Law & Statutes — Subfolders `01_` … `10_`)
+```json
+{
+  "id": "law_and_statutes",
+  "code": "04",
+  "title": "Law & Statutes",
+  "folder": "04_law_and_statutes",
+  "index": "04_law_and_statutes/README.md",
+  "description": "Legal order, civil rights, succession, contracts, treaties, criminal law, courts, arcane law, taxation, and law of war.",
+  "modules": [],
+  "branches": [
+    {
+      "id": "legal_order_and_sources",
+      "code": "4.1",
+      "title": "Legal Order & Sources of Law",
+      "folder": "04_law_and_statutes/01_legal_order_and_sources",
+      "index": "04_law_and_statutes/01_legal_order_and_sources/README.md",
+      "modules": [
+        {
+          "id": "general_framework",
+          "code": "4.1.1",
+          "title": "General Framework of the Legal Order",
+          "file": "04_law_and_statutes/01_legal_order_and_sources/01_general_framework.md"
+        }
+      ]
+    }
+  ]
+}
+```
+*(In existing settings using a flat `04_law_and_succession/` folder, those files are indexed under `"modules"`, retaining `"id": "law_and_succession"` if applicable.)*
+
 ### E. Tome 10 (Timeline)
 ```json
 {
@@ -226,5 +257,5 @@ When running `generate-structure-json` or `update-structure-json`:
 3. **Tables**: Detected via column separator rows `| :--- | :--- |` preceded by a `## Table...` heading or caption.
 4. **DM Notes**: Detected via `**NOTE FOR THE DUNGEON MASTER:**` or `> ⚠️ **DM Note:**` markers.
 5. **Numerical Code**: If a file is named `03_flow_of_magic.md` inside `01_cosmology`, its code is `"1.3"`.
-6. **Sub-series Codes**: Sheets inside `customs_festivals_and_events/` use third-level codes per subfolder (`3.5.x` customs, `3.6.x` festivals/occurrences, `3.7.x` events; sequential numbering per subfolder). Files in `10_timeline/` use `10.1.x` (historical chronology), `10.2.x` (occurrence register), `10.3.x` (calendar).
+6. **Sub-series Codes**: Sheets inside `customs_festivals_and_events/` use third-level codes per subfolder (`3.5.x` customs, `3.6.x` festivals/occurrences, `3.7.x` events; sequential numbering per subfolder). Branches inside `04_law_and_statutes/` use `4.1.x` … `4.10.x` (`4.Y.1` for `01_general_framework.md`, `4.Y.2+` for individual acts `02_<entry_slug>.md`). Files in `10_timeline/` use `10.1.x` (historical chronology), `10.2.x` (occurrence register), `10.3.x` (calendar).
 7. **Typological Fields**: For festivals/occurrences extract `periodicity` and `trigger` from their template sections; for one-off events extract `occurrence_status`.

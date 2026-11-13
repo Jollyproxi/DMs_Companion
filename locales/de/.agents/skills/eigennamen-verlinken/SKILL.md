@@ -31,7 +31,7 @@ Dieser Skill setzt die universelle Regel durch, dass jeder Eigenname einer Welte
 Baue vor dem Scan die Zuordnung `Name → Pfad der kanonischen Datei` auf:
 
 1. **Bevorzugte Quelle**: Liegt `weltstruktur.json` im Wurzelverzeichnis des Workspaces, verwende sie als Index (Modulnamen und zugehörige Pfade).
-2. **Direkte Durchsicht**: Andernfalls (oder ergänzend) durchsuche die zehn Bände — `05_charaktere/` (SCs und NSCs), `06_orte/`, `07_fraktionen/`, `08_besondere_magische_gegenstaende/`, `03_gesellschaft_und_politik/braeuche_feste_und_ereignisse/`, `02_geografie/` (Regionen), `01_kosmologie/` (Ebenen), `04_recht_und_erbfolge/` (Gesetze, Abkommen), `10_zeitlinie/historische_chronologie/` (Epochen, historische Ereignisse) — und erfasse H1-Titel und Dateinamen.
+2. **Direkte Durchsicht**: Andernfalls (oder ergänzend) durchsuche die zehn Bände — `05_charaktere/` (SCs und NSCs), `06_orte/`, `07_fraktionen/`, `08_besondere_magische_gegenstaende/`, `03_gesellschaft_und_politik/braeuche_feste_und_ereignisse/`, `02_geografie/` (Regionen), `01_kosmologie/` (Ebenen), `04_recht_und_gesetze/` (oder `04_recht_und_erbfolge/`, Gesetze, Abkommen, Pakte, Gerichte), `10_zeitlinie/historische_chronologie/` (Epochen, historische Ereignisse) — und erfasse H1-Titel und Dateinamen.
 3. **Kanonische Namen**: Für jeden Bogen ist der Eigenname der Dokumenttitel (H1) oder der Dateiname ohne Erweiterung; halte auch etwaige, im Bogen ausdrücklich dokumentierte Varianten oder Aliase fest.
 4. **Homonyme**: Teilen zwei Entitäten denselben Namen, markiere die Mehrdeutigkeit und frage den SL, welcher Bogen verknüpft werden soll.
 

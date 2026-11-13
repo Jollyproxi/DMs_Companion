@@ -46,7 +46,7 @@ Jedes Element des Arrays `struktur` repräsentiert einen der zehn Architektur-B�
 ```
 
 ### Bandfelder
-* `id` *(string)*: Eindeutige snake_case-Kennung ohne Nummernpräfix (z. B. `"kosmologie"`, `"geografie"`, `"recht_und_erbfolge"`).
+* `id` *(string)*: Eindeutige snake_case-Kennung ohne Nummernpräfix (z. B. `"kosmologie"`, `"geografie"`, `"recht_und_gesetze"`).
 * `code` *(string)*: Zweistellige Bandnummer (`"01"`–`"10"`).
 * `titel` *(string)*: Formeller Bandtitel aus der jeweiligen `README.md`.
 * `ordner` *(string)*: Verzeichnisname relativ zum Wurzelverzeichnis (z. B. `"01_kosmologie"`).
@@ -165,6 +165,37 @@ Falls ein regionales Unterverzeichnis existiert:
 * `ausloeser` *(string, optional)*: Bedingungen, die das wiederkehrende Ereignis auslösen.
 * `vorkommnis_status` *(string, optional)* für Ereignisse: `"geplant"`, `"laufend"` oder `"abgeschlossen"`.
 
+### D2. Band 04 (Recht & Gesetze — Unterordner `01_` … `10_`)
+```json
+{
+  "id": "recht_und_gesetze",
+  "code": "04",
+  "titel": "Recht & Gesetze",
+  "ordner": "04_recht_und_gesetze",
+  "index": "04_recht_und_gesetze/README.md",
+  "beschreibung": "Rechtsordnung, Bürgerrechte, Erbfolge, Verträge, Abkommen, Strafrecht, Gerichte, arkanes Recht, Steuern und Kriegsrecht.",
+  "module": [],
+  "rechtsgebiete": [
+    {
+      "id": "rechtsordnung_und_quellen",
+      "code": "4.1",
+      "titel": "Rechtsordnung & Rechtsquellen",
+      "ordner": "04_recht_und_gesetze/01_rechtsordnung_und_quellen",
+      "index": "04_recht_und_gesetze/01_rechtsordnung_und_quellen/README.md",
+      "module": [
+        {
+          "id": "allgemeiner_rahmen",
+          "code": "4.1.1",
+          "titel": "Allgemeiner Rahmen der Rechtsordnung",
+          "datei": "04_recht_und_gesetze/01_rechtsordnung_und_quellen/01_allgemeiner_rahmen.md"
+        }
+      ]
+    }
+  ]
+}
+```
+*(In bestehenden Welten mit flachem Ordner `04_recht_und_erbfolge/` werden die Dateien unter `"module"` indiziert und behalten ggf. `"id": "recht_und_erbfolge"`.)*
+
 ### E. Band 10 (Zeitlinie)
 ```json
 {
@@ -226,5 +257,5 @@ Bei Ausführung von `Struktur-JSON-generieren` oder `Struktur-JSON-aktualisieren
 3. **Tabellen**: Erkannt anhand von Spaltentrennzeilen `| :--- | :--- |` nach einer `## Tabelle...`-Überschrift oder Bildunterschrift.
 4. **SL-Hinweise**: Erkannt über `**HINWEIS FÜR DEN SPIELLEITER:**` oder `> ⚠️ **SL-Hinweis:**`.
 5. **Zahlencode**: Heißt eine Datei `03_magiefluss.md` in `01_kosmologie`, lautet der Code `"1.3"`.
-6. **Unterseriencodes**: Bögen unter `braeuche_feste_und_ereignisse/` verwenden dreistufige Codes je Unterordner (`3.5.x` Bräuche, `3.6.x` Feste/Vorkommnisse, `3.7.x` Ereignisse; fortlaufend je Unterordner). Dateien unter `10_zeitlinie/` verwenden `10.1.x` (historische Chronologie), `10.2.x` (Vorkommnisregister), `10.3.x` (Kalender).
+6. **Unterseriencodes**: Bögen unter `braeuche_feste_und_ereignisse/` verwenden dreistufige Codes je Unterordner (`3.5.x` Bräuche, `3.6.x` Feste/Vorkommnisse, `3.7.x` Ereignisse; fortlaufend je Unterordner). Rechtsgebiete unter `04_recht_und_gesetze/` verwenden `4.1.x` … `4.10.x` (`4.Y.1` für `01_allgemeiner_rahmen.md`, `4.Y.2+` für Einzelakte `02_<eintrag_slug>.md`). Dateien unter `10_zeitlinie/` verwenden `10.1.x` (historische Chronologie), `10.2.x` (Vorkommnisregister), `10.3.x` (Kalender).
 7. **Typologische Felder**: Für Feste/Vorkommnisse `periodizitaet` und `ausloeser` aus den jeweiligen Vorlagenabschnitten extrahieren; für einmalige Ereignisse `vorkommnis_status`.

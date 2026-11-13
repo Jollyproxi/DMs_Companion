@@ -79,8 +79,8 @@ L'Archivista organizza **solo** ciò che fornisci o che hai già canonizzato. No
 | :--- | :--- |
 | `01_cosmologia/` | Piani, meccaniche celesti, flusso magico ed etica cosmica. |
 | `02_geografia/` | Cartografia, territori, regioni sotterranee, dossier regionali (`regioni/` o `cornici/`). |
-| `03_societa_e_politica/` | Ordinamento civile, economia, classi sociali, giustizia; sottoserie `usi_costumi_ed_eventi/` (`usanze/`, `festival_ed_occorrenze/`, `eventi/`). |
-| `04_diritto_e_successione/` | Leggi fondamentali, diritto dinastico, patti, trattati, tribunali. |
+| `03_societa_e_politica/` | Ordinamento civile, economia, classi sociali, ordine pubblico; sottoserie `usi_costumi_ed_eventi/` (`usanze/`, `festival_ed_occorrenze/`, `eventi/`). |
+| `04_diritto_e_leggi/` | 10 branche giuridiche (`01_ordinamento_e_fonti/` … `10_diritto_bellico_e_avventurieri/`): fonti, diritti civili, successione, contratti, trattati, penale, tribunali, arcano/religioso, fisco, guerra. |
 | `05_personaggi/` | Dossier modulari PG (`Giocanti/<Campagna>/<Nome_PG>/`) e schede PNG (`Non-Giocanti/`). |
 | `06_luoghi/` | Nodi d'avventura, città, roccaforti, pericoli d'area. |
 | `07_fazioni/` | Casate, congreghe, corporazioni, ordini, gerarchie di potere. |

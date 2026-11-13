@@ -20,12 +20,12 @@ These instructions are compatible with any AI harness or assistant (VS Code Copi
 
 ## 2. Ten-Tome World Architecture
 
-The setting follows the standard modular ten-tome architecture (adapting automatically to any equivalent folders already present in existing repositories, such as `02_geography/provinces/` or `05_characters/PCs/`):
+The setting follows the standard modular ten-tome architecture (adapting automatically to any equivalent folders already present in existing repositories, such as `02_geography/provinces/`, `04_law_and_succession/`, or `05_characters/PCs/`):
 
 * `01_cosmology/`: Planes, celestial mechanics, flow of magic, and cosmic ethics.
 * `02_geography/`: Cartography, territories, subterranean regions, and dossiers under `regions/`.
-* `03_society_and_politics/`: Civil order, economy, social classes, justice, and the sub-series `customs_festivals_and_events/` (`customs/`, `festivals_and_occurrences/`, `events/`).
-* `04_law_and_succession/`: Fundamental laws, dynastic succession, pacts, treaties, and courts.
+* `03_society_and_politics/`: Civil order, economy, social classes, public order, and the sub-series `customs_festivals_and_events/` (`customs/`, `festivals_and_occurrences/`, `events/`).
+* `04_law_and_statutes/`: 10 legal subfolders (`01_legal_order_and_sources/`, `02_civil_rights_and_status/`, `03_dynastic_law_and_succession/`, `04_contracts_and_pacts/`, `05_treaties_and_diplomacy/`, `06_criminal_law_and_offences/`, `07_courts_and_procedure/`, `08_arcane_and_religious_law/`, `09_property_trade_and_taxation/`, `10_law_of_war_and_adventurers/`), each with `01_general_framework.md` and numbered sheets `02_<entry_slug>.md`.
 * `05_characters/`: Modular PC dossiers (`Player_Characters/<Campaign>/<PC_Name>/`) and NPC sheets (`Non_Player_Characters/`).
 * `06_locations/`: Adventure hubs, cities, strongholds, and area hazards.
 * `07_factions/`: Noble houses, covens, guilds, orders, and power hierarchies.

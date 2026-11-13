@@ -48,10 +48,10 @@ Die Kompilierung folgt streng der kanonischen Nummerierung:
    - Hauptmodule zu Geografie, Karte, Unterreich und Schwellenebenen.
    - Einzelne Regionen/Provinzen unter `regionen/` in aufsteigender Reihenfolge.
 3. **##### 3. Gesellschafts-, Politik- & Wirtschaftsordnung** (`03_gesellschaft_und_politik/`)
-   - Gesellschaftsmodelle, Wirtschaft, Schichten, Strafrecht.
+   - Gesellschaftsmodelle, Wirtschaft, Schichten, öffentliche Ordnung und Sicherheitskräfte.
    - Unterserie `braeuche_feste_und_ereignisse/`: Bräuche (`3.5.x`), Feste/Vorkommnisse (`3.6.x`), einmalige Ereignisse (`3.7.x`), jeweils aufsteigend nummeriert.
-4. **##### 4. Recht, Pakte & Erbfolgeregeln** (`04_recht_und_erbfolge/`)
-   - Verträge, Pakte, Abkommen, Erbfolgehierarchie, Gerichte.
+4. **##### 4. Recht & Gesetze** (`04_recht_und_gesetze/` oder Bestandsname `04_recht_und_erbfolge/`)
+   - Rechtsordnung und Quellen (`4.1.x`), Bürgerrechte und Status (`4.2.x`), dynastisches Recht und Erbfolge (`4.3.x`), Verträge und Pakte (`4.4.x`), Abkommen und Diplomatie (`4.5.x`), Strafrecht und Delikte (`4.6.x`), Gerichte und Verfahren (`4.7.x`), arkanes und religiöses Recht (`4.8.x`), Eigentum, Handel und Steuern (`4.9.x`), Kriegsrecht und Abenteurer (`4.10.x`), jeweils mit allgemeinem Rahmen (`4.Y.1`) und erfassten Rechtsakten (`4.Y.2+`) in aufsteigender Reihenfolge.
 5. **##### 5. Charakterverzeichnis der Welt** (`05_charaktere/`)
    - Bedeutsame NSCs (`Nichtspielercharaktere/`), gruppiert nach Fraktion oder Region.
    - Zusammenfassung der Gruppenbindungen, falls eine kanonische Kampagne existiert.

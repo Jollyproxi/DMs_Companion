@@ -31,7 +31,7 @@ This skill enforces the universal rule whereby every proper name of a setting en
 Before scanning, build the `name → canonical file path` map:
 
 1. **Preferred source**: if `setting_structure.json` is present at the workspace root, use it as the index (module names and associated paths).
-2. **Direct sweep**: otherwise (or for completeness) scan the ten tomes — `05_characters/` (PCs and NPCs), `06_locations/`, `07_factions/`, `08_unique_magic_items/`, `03_society_and_politics/customs_festivals_and_events/`, `02_geography/` (regions), `01_cosmology/` (planes), `04_law_and_succession/` (laws, treaties), `10_timeline/historical_chronology/` (epochs, historical events) — collecting H1 titles and file names.
+2. **Direct sweep**: otherwise (or for completeness) scan the ten tomes — `05_characters/` (PCs and NPCs), `06_locations/`, `07_factions/`, `08_unique_magic_items/`, `03_society_and_politics/customs_festivals_and_events/`, `02_geography/` (regions), `01_cosmology/` (planes), `04_law_and_statutes/` (or `04_law_and_succession/`, laws, treaties, pacts, courts), `10_timeline/historical_chronology/` (epochs, historical events) — collecting H1 titles and file names.
 3. **Canonical names**: for each sheet the proper name is the document title (H1) or the file name without extension; also record any variants or aliases explicitly documented in the sheet.
 4. **Homonyms**: if two entities share the same name, flag the ambiguity and ask the DM which sheet to link.
 

@@ -19,11 +19,11 @@ Cette compétence réalise un audit diagnostique approfondi de l'arborescence de
 La compétence contrôle les cinq piliers de l'intégrité structurelle :
 
 ### A. Conformité des Dix Tomes
-Vérifie la présence des répertoires canoniques (en acceptant les variantes équivalentes déjà établies dans un dépôt existant) :
+Vérifie la présence des répertoires canoniques (en acceptant les variantes équivalentes déjà établies dans un dépôt existant, telles que `04_droit_et_succession`) :
 1. `01_cosmologie`
 2. `02_geographie`
 3. `03_societe_et_politique` (avec sous-dossier `coutumes_fetes_et_evenements/` contenant `coutumes/`, `fetes_et_occurrences/`, `evenements/`)
-4. `04_droit_et_succession`
+4. `04_droit_et_lois` *(ou variante historique `04_droit_et_succession` ; avec sous-dossiers `01_ordre_juridique_et_sources/` … `10_droit_de_la_guerre_et_aventuriers/`)*
 5. `05_personnages` (avec sous-dossiers `Joueurs/` et `Non_Joueurs/`)
 6. `06_lieux`
 7. `07_factions`
@@ -50,7 +50,7 @@ Vérifie que tout nom propre d'entité recensée (PJ, PNJ, factions, maisons, ci
 1. **Analyse du Système de Fichiers** :
    - Inspectez les dossiers et les fichiers `.md` présents dans l'espace de travail en excluant les répertoires techniques (`.git`, `.agents`, `.github`, `.claude`, `node_modules`, `graphify-out`).
 2. **Exécution des Tests A–E** :
-   - Validez les dossiers des 10 tomes (y compris les sous-dossiers de `coutumes_fetes_et_evenements/` et `10_chronologie/`).
+   - Validez les dossiers des 10 tomes (y compris les sous-dossiers de `coutumes_fetes_et_evenements/`, `04_droit_et_lois/` et `10_chronologie/`).
    - Repérez les `README.md` manquants.
    - Analysez les liens `[Texte](chemin)` et vérifiez l'existence du fichier cible via le chemin relatif.
    - Inspectez la racine pour détecter d'éventuels fichiers orphelins.

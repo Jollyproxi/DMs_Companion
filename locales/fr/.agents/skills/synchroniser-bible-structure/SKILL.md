@@ -43,7 +43,7 @@ Utilisez cette procédure pour régénérer ou créer `BIBLE_DE_L_UNIVERS.md` à
    - S'il n'en existe aucun, créez `BIBLE_DE_L_UNIVERS.md`.
 2. **Détermination de l'Ordre des Tomes** :
    - Lisez `structure_univers.json` s'il existe pour récupérer l'ordre officiel des tomes et des modules.
-   - Sinon, triez les répertoires à préfixe numérique : `01_cosmologie`, `02_geographie` (y compris `regions/` trié numériquement), `03_societe_et_politique` (y compris `coutumes_fetes_et_evenements/` : `coutumes/` = 3.5.x, `fetes_et_occurrences/` = 3.6.x, `evenements/` = 3.7.x), `04_droit_et_succession`, `05_personnages` (`Non_Joueurs/`), `06_lieux`, `07_factions`, `08_objets_magiques_singuliers`, `09_chroniques`, `10_chronologie` (`chronologie_historique/` = 10.1.x, `registre_occurrences/` = 10.2.x, `calendrier/` = 10.3.x ; les sources `.mw` de `markwhen/` et `exportations/` sont exclues de la Bible).
+   - Sinon, triez les répertoires à préfixe numérique : `01_cosmologie`, `02_geographie` (y compris `regions/` trié numériquement), `03_societe_et_politique` (y compris `coutumes_fetes_et_evenements/` : `coutumes/` = 3.5.x, `fetes_et_occurrences/` = 3.6.x, `evenements/` = 3.7.x), `04_droit_et_lois` (ou variante historique `04_droit_et_succession` ; avec branches `01_ordre_juridique_et_sources/` … `10_droit_de_la_guerre_et_aventuriers/` = 4.1.x … 4.10.x), `05_personnages` (`Non_Joueurs/`), `06_lieux`, `07_factions`, `08_objets_magiques_singuliers`, `09_chroniques`, `10_chronologie` (`chronologie_historique/` = 10.1.x, `registre_occurrences/` = 10.2.x, `calendrier/` = 10.3.x ; les sources `.mw` de `markwhen/` et `exportations/` sont exclues de la Bible).
 3. **Composition du Texte Monolithique** :
    - Insérez l'en-tête canonique avec métadonnées et badge d'état :
      ```markdown
@@ -84,7 +84,7 @@ Utilisez cette procédure pour inspecter tous les fichiers de l'espace de travai
        - `concepts_cles` : extrayez 3 à 7 points clés tirés des sous-titres et définitions en gras.
        - `tableaux` : détectez et listez les titres des tableaux Markdown présents.
        - `notes_mj` : extrayez le contenu des éventuelles notes réservées au MJ.
-   - Traitez les sous-dossiers canoniques (`02_geographie/regions/`, `03_societe_et_politique/coutumes_fetes_et_evenements/`, `05_personnages/Non_Joueurs/`, `09_chroniques/campagnes/`, `10_chronologie/` avec les sources `markwhen/`) en renseignant les propriétés dédiées définies dans [format-structure-json](./references/format-structure-json.md).
+   - Traitez les sous-dossiers canoniques (`02_geographie/regions/`, `03_societe_et_politique/coutumes_fetes_et_evenements/`, `04_droit_et_lois/`, `05_personnages/Non_Joueurs/`, `09_chroniques/campagnes/`, `10_chronologie/` avec les sources `markwhen/`) en renseignant les propriétés dédiées définies dans [format-structure-json](./references/format-structure-json.md).
 3. **Validation Syntaxique et Écriture** :
    - Générez `structure_univers.json` indenté à 2 espaces.
    - Vérifiez que le JSON est strictement valide, sans clés dupliquées ni caractères parasites.

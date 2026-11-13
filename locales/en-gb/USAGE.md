@@ -79,8 +79,8 @@ The Archivist organises **only** what you provide or have already canonised. It 
 | :--- | :--- |
 | `01_cosmology/` | Planes, celestial mechanics, flow of magic, cosmic ethics. |
 | `02_geography/` | Cartography, territories, subterranean regions, regional dossiers (`regions/`). |
-| `03_society_and_politics/` | Civil order, economy, social classes, justice; `customs_festivals_and_events/` (`customs/`, `festivals_and_occurrences/`, `events/`). |
-| `04_law_and_succession/` | Fundamental laws, dynastic succession, pacts, treaties, courts. |
+| `03_society_and_politics/` | Civil order, economy, social classes, public order; `customs_festivals_and_events/` (`customs/`, `festivals_and_occurrences/`, `events/`). |
+| `04_law_and_statutes/` | 10 legal branches (`01_legal_order_and_sources/` … `10_law_of_war_and_adventurers/`): sources, civil rights, succession, contracts, treaties, criminal law, courts, arcane/religious law, taxation, war. |
 | `05_characters/` | Modular PC dossiers (`Player_Characters/<Campaign>/<PC_Name>/`) and NPC sheets (`Non_Player_Characters/`). |
 | `06_locations/` | Adventure hubs, cities, strongholds, area hazards. |
 | `07_factions/` | Noble houses, covens, guilds, orders, power hierarchies. |

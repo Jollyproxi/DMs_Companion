@@ -48,10 +48,10 @@ Compilation follows the strict canonical numerical sequence:
    - Main geography, map, subterranean, and liminal-plane modules.
    - Individual regions/provinces in `regions/`, ordered by ascending number.
 3. **##### 3. Social, Political & Economic Order** (`03_society_and_politics/`)
-   - Social models, economy, classes, criminal law.
+   - Social models, economy, classes, public order and law enforcement.
    - Sub-series `customs_festivals_and_events/`: customs (`3.5.x`), festivals/occurrences (`3.6.x`), one-off events (`3.7.x`), in ascending numerical order per subfolder.
-4. **##### 4. Law, Pacts & Rules of Succession** (`04_law_and_succession/`)
-   - Contracts, pacts, treaties, succession hierarchy, courts.
+4. **##### 4. Law & Statutes** (`04_law_and_statutes/` or legacy `04_law_and_succession/`)
+   - Legal order and sources (`4.1.x`), civil rights and status (`4.2.x`), dynastic law and succession (`4.3.x`), contracts and pacts (`4.4.x`), treaties and diplomacy (`4.5.x`), criminal law and offences (`4.6.x`), courts and procedure (`4.7.x`), arcane and religious law (`4.8.x`), property, trade and taxation (`4.9.x`), law of war and adventurers (`4.10.x`), each with general framework (`4.Y.1`) and registered acts (`4.Y.2+`) in ascending numerical order.
 5. **##### 5. Character Roster of the World** (`05_characters/`)
    - Notable NPC roster (`Non_Player_Characters/`), grouped by faction or region.
    - Party bonds summary if a canonical campaign is present.

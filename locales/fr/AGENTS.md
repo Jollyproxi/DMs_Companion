@@ -20,12 +20,12 @@ Ces instructions sont compatibles avec n'importe quel environnement ou assistant
 
 ## 2. Architecture du Monde en Dix Tomes
 
-L'univers suit l'architecture modulaire standard en dix tomes (en s'adaptant automatiquement aux éventuels dossiers équivalents déjà présents dans des dépôts existants) :
+L'univers suit l'architecture modulaire standard en dix tomes (en s'adaptant automatiquement aux éventuels dossiers équivalents déjà présents dans des dépôts existants, tels que `04_droit_et_succession/`) :
 
 * `01_cosmologie/` : Plans, mécaniques célestes, flux de la magie et éthique cosmique.
 * `02_geographie/` : Cartographie, territoires, régions souterraines et dossiers dans `regions/`.
-* `03_societe_et_politique/` : Ordre civil, économie, classes sociales, justice et sous-série `coutumes_fetes_et_evenements/` (`coutumes/`, `fetes_et_occurrences/`, `evenements/`).
-* `04_droit_et_succession/` : Lois fondamentales, droit dynastique, pactes, traités et tribunaux.
+* `03_societe_et_politique/` : Ordre civil, économie, classes sociales, ordre public et sous-série `coutumes_fetes_et_evenements/` (`coutumes/`, `fetes_et_occurrences/`, `evenements/`).
+* `04_droit_et_lois/` : 10 sous-dossiers juridiques (`01_ordre_juridique_et_sources/`, `02_droits_civils_et_statuts/`, `03_droit_dynastique_et_succession/`, `04_contrats_et_pactes/`, `05_traites_et_diplomatie/`, `06_droit_penal_et_infractions/`, `07_tribunaux_et_procedure/`, `08_droit_arcanique_et_religieux/`, `09_propriete_commerce_et_fiscalite/`, `10_droit_de_la_guerre_et_aventuriers/`), chacun contenant `01_cadre_general.md` et des fiches numérotées `02_<slug_entree>.md`.
 * `05_personnages/` : Dossiers modulaires PJ (`Joueurs/<Campagne>/<Nom_PJ>/`) et fiches PNJ (`Non_Joueurs/`).
 * `06_lieux/` : Nœuds d'aventure, cités, forteresses et dangers locaux.
 * `07_factions/` : Maisons nobles, ordres, guildes, congrégations et hiérarchies de pouvoir.

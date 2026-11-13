@@ -2,7 +2,7 @@
 
 Ce document définit l'arborescence standard de dossiers et de fichiers pour l'archivage encyclopédique d'un univers et des campagnes de D&D associées.
 
-> **Note d'adaptation** : Si l'espace de travail contient déjà un univers existant doté de noms de dossiers équivalents, respectez et conservez l'organisation existante sans renommer de force les fichiers déjà établis.
+> **Note d'adaptation** : Si l'espace de travail contient déjà un univers existant doté de noms de dossiers équivalents (ex. `04_droit_et_succession/`), respectez et conservez l'organisation existante sans renommer de force les fichiers déjà établis.
 
 ```text
 ├── README.md                                               # Index général du monde et guide de navigation
@@ -28,7 +28,7 @@ Ce document définit l'arborescence standard de dossiers et de fichiers pour l'a
 │   ├── 01_philosophie_sociale_et_coutumes.md               # Valeurs sociales, éthique et conventions
 │   ├── 02_monopole_du_pouvoir_et_economie.md               # Armée, commerce, monnaies et impôts
 │   ├── 03_classes_sociales_et_roles.md                     # Stratification civique, guildes et esthétique
-│   ├── 04_droit_penal_et_justice.md                        # Tribunaux ordinaires, peines et lois civiles
+│   ├── 04_ordre_public_et_forces_de_l_ordre.md             # Gardes, milices, maintien de l'ordre et perception sociale (lois et procès dans le Tome IV)
 │   └── coutumes_fetes_et_evenements/                       # Sous-série : coutumes, fêtes récurrentes et événements ponctuels
 │       ├── README.md                                       # Index de la sous-série par typologie
 │       ├── coutumes/                                       # Particularités du quotidien (structures et manières)
@@ -41,11 +41,21 @@ Ce document définit l'arborescence standard de dossiers et de fichiers pour l'a
 │           ├── README.md
 │           └── 01_<slug_entree>.md                         # Fiche événement (historique ou en cours)
 │
-├── 04_droit_et_succession/                                 # Tome IV : Lois fondamentales, droit dynastique, pactes et traités
-│   ├── README.md                                           # Panorama juridico-institutionnel
-│   ├── 01_contrats_pactes_et_traites.md                    # Normes, alliances formelles et pactes de sang
-│   ├── 02_hierarchie_et_succession.md                      # Ordres de succession, charges et héritage
-│   └── 03_tribunaux_et_litiges.md                          # Règlement des litiges juridiques, successoraux et expertises
+├── 04_droit_et_lois/                                       # Tome IV : Droit, lois fondamentales, droits civils, pactes, délits et juridictions (chaque sous-dossier 01–10 contient README.md, 01_cadre_general.md, 02_<slug_entree>.md…)
+│   ├── README.md                                           # Panorama juridico-institutionnel et index des branches
+│   ├── 01_ordre_juridique_et_sources/                      # Sources du droit, édits souverains, chartes, coutumes, organes législatifs et hiérarchie des normes
+│   │   ├── README.md                                       # Index de la branche
+│   │   ├── 01_cadre_general.md                             # Principes généraux et cadre de la branche
+│   │   └── 02_<slug_entree>.md                             # Lois, codes, chartes ou édits individuels (numérotation progressive)
+│   ├── 02_droits_civils_et_statuts/                        # Citoyenneté, droits par rang ou espèce, servitude/affranchissement, apatridie, asile et sauf-conduits
+│   ├── 03_droit_dynastique_et_succession/                  # Ordres de succession (héréditaire, électif, mérite), régences, héritages, fiefs et transmission de charges
+│   ├── 04_contrats_et_pactes/                              # Contrats civils et marchands, obligations, serments contraignants et pactes de sang
+│   ├── 05_traites_et_diplomatie/                           # Traités internationaux, alliances entre royaumes ou factions, accords de paix et frontières
+│   ├── 06_droit_penal_et_infractions/                      # Classification des crimes et délits, lèse-majesté, peines, wergeld, primes, confiscations, exil et grâces
+│   ├── 07_tribunaux_et_procedure/                          # Compétences des juridictions, procès, preuves magiques (Zone de vérité), ordalies, duels judiciaires et appels
+│   ├── 08_droit_arcanique_et_religieux/                    # Écoles et sorts interdits, licences de lanceurs de sorts, statut des artefacts, hérésies et for ecclésiastique
+│   ├── 09_propriete_commerce_et_fiscalite/                 # Propriété foncière et domaine, monopoles de guilde, droits de douane et impôts, prêts, faillite et droit maritime
+│   └── 10_droit_de_la_guerre_et_aventuriers/               # Déclarations de guerre, trêves, prisonniers et rançons, mercenaires, guildes d'aventuriers et brevets de fouilles
 │
 ├── 05_personnages/                                         # Tome V : Répertoire des Personnages Joueurs et Non-Joueurs
 │   ├── README.md                                           # Index général des personnages et matrice relationnelle

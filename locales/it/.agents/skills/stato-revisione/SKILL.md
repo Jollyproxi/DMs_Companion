@@ -16,7 +16,7 @@ Questa skill genera, aggiorna e mantiene il file di controllo e monitoraggio `ST
 
 ## 1. Criteri di Classificazione dello Stato
 
-La skill analizza i file markdown delle cartelle canoniche del mondo (`01_cosmologia`, `02_geografia`, `03_societa_e_politica` inclusa la sottoserie `usi_costumi_ed_eventi/`, `04_diritto_e_successione`, `05_personaggi`, `06_luoghi` o `06_location`, `07_fazioni` o `07_factions`, `08_oggetti_magici_peculiari` o `08_oggetti magici peculiari`, `09_cronache`, `10_timeline`) e individua i badge:
+La skill analizza i file markdown delle cartelle canoniche del mondo (`01_cosmologia`, `02_geografia`, `03_societa_e_politica` inclusa la sottoserie `usi_costumi_ed_eventi/`, `04_diritto_e_leggi` o variante legacy `04_diritto_e_successione`, `05_personaggi`, `06_luoghi` o `06_location`, `07_fazioni` o `07_factions`, `08_oggetti_magici_peculiari` o `08_oggetti magici peculiari`, `09_cronache`, `10_timeline`) e individua i badge:
 
 ```markdown
 > 🛡️ *Verificato: [DATA_V] | Modificato: [DATA_M]*
@@ -52,7 +52,7 @@ Questo registro monitora l'avanzamento dell'audit formale della lore, tracciando
 | **02 Geografia** | X | A | B | C | D | [Icona] |
 | **03 Società e Politica** | X | A | B | C | D | [Icona] |
 | **03· Usi, Costumi ed Eventi** | X | A | B | C | D | [Icona] |
-| **04 Diritto e Successione** | X | A | B | C | D | [Icona] |
+| **04 Diritto e Leggi** | X | A | B | C | D | [Icona] |
 | **05 Personaggi (PG & PNG)** | X | A | B | C | D | [Icona] |
 | **06 Luoghi** | X | A | B | C | D | [Icona] |
 | **07 Fazioni** | X | A | B | C | D | [Icona] |

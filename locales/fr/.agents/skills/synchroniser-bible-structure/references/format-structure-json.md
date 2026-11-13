@@ -46,7 +46,7 @@ Chaque élément du tableau `structure` représente l'un des dix tomes de l'arch
 ```
 
 ### Champs du Tome
-* `id` *(string)* : Identifiant unique en snake_case sans préfixe numérique (ex. `"cosmologie"`, `"geographie"`, `"droit_et_succession"`).
+* `id` *(string)* : Identifiant unique en snake_case sans préfixe numérique (ex. `"cosmologie"`, `"geographie"`, `"droit_et_lois"`).
 * `code` *(string)* : Numéro du tome sur deux chiffres (`"01"`–`"10"`).
 * `titre` *(string)* : Titre officiel du tome extrait de son `README.md`.
 * `dossier` *(string)* : Nom du répertoire relatif à la racine (ex. `"01_cosmologie"`).
@@ -165,6 +165,37 @@ Si un sous-répertoire régional existe :
 * `declencheur` *(string, optionnel)* : conditions de déclenchement de l'événement récurrent.
 * `statut_occurrence` *(string, optionnel)* pour les événements : `"planifie"`, `"en_cours"` ou `"acheve"`.
 
+### D2. Tome 04 (Droit & Lois — Sous-dossiers `01_` … `10_`)
+```json
+{
+  "id": "droit_et_lois",
+  "code": "04",
+  "titre": "Droit et Lois",
+  "dossier": "04_droit_et_lois",
+  "index": "04_droit_et_lois/README.md",
+  "description": "Ordre juridique, droits civils, succession, contrats, traités, pénal, tribunaux, droit arcanique, fiscalité et droit de la guerre.",
+  "modules": [],
+  "branches": [
+    {
+      "id": "ordre_juridique_et_sources",
+      "code": "4.1",
+      "titre": "Ordre Juridique et Sources du Droit",
+      "dossier": "04_droit_et_lois/01_ordre_juridique_et_sources",
+      "index": "04_droit_et_lois/01_ordre_juridique_et_sources/README.md",
+      "modules": [
+        {
+          "id": "cadre_general",
+          "code": "4.1.1",
+          "titre": "Cadre Général de l'Ordre Juridique",
+          "fichier": "04_droit_et_lois/01_ordre_juridique_et_sources/01_cadre_general.md"
+        }
+      ]
+    }
+  ]
+}
+```
+*(Dans les univers existants utilisant un dossier `04_droit_et_succession/` à modules plats, ceux-ci sont indexés dans `"modules"` en conservant éventuellement `"id": "droit_et_succession"`.)*
+
 ### E. Tome 10 (Chronologie)
 ```json
 {
@@ -226,5 +257,5 @@ Lors de l'exécution de `generer-structure-json` ou `mettre-a-jour-structure-jso
 3. **Tableaux** : Détectés par les lignes de séparation `| :--- | :--- |` précédées d'un titre `## Tableau...` ou d'une légende.
 4. **Notes MJ** : Détectées via les balises `**NOTE POUR LE MAÎTRE DU JEU :**` ou `> ⚠️ **Note MJ :**`.
 5. **Code Numérique** : Si le fichier se nomme `03_flux_de_la_magie.md` dans `01_cosmologie`, son code est `"1.3"`.
-6. **Codes des Sous-séries** : Les fiches de `coutumes_fetes_et_evenements/` utilisent des codes à trois niveaux par sous-dossier (`3.5.x` coutumes, `3.6.x` fêtes/occurrences, `3.7.x` événements ; numérotation progressive par sous-dossier). Les fichiers de `10_chronologie/` utilisent `10.1.x` (chronologie historique), `10.2.x` (registre des occurrences), `10.3.x` (calendrier).
+6. **Codes des Sous-séries** : Les fiches de `coutumes_fetes_et_evenements/` utilisent des codes à trois niveaux par sous-dossier (`3.5.x` coutumes, `3.6.x` fêtes/occurrences, `3.7.x` événements ; numérotation progressive par sous-dossier). Les branches de `04_droit_et_lois/` utilisent `4.1.x` … `4.10.x` (`4.Y.1` pour `01_cadre_general.md`, `4.Y.2+` pour les actes `02_<slug_entree>.md`). Les fichiers de `10_chronologie/` utilisent `10.1.x` (chronologie historique), `10.2.x` (registre des occurrences), `10.3.x` (calendrier).
 7. **Champs Typologiques** : Pour les fêtes/occurrences extrayez `periodicite` et `declencheur` depuis leurs sections du modèle ; pour les événements ponctuels extrayez `statut_occurrence`.

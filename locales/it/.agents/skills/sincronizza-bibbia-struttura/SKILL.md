@@ -43,7 +43,7 @@ Usa questa procedura per rigenerare o creare ex-novo la Bibbia dell'Ambientazion
    - Se non esiste alcun file master, crea `BIBBIA DELL'AMBIENTAZIONE.md`.
 2. **Determinazione dell'Ordine dei Tomi**:
    - Legge `struttura_ambientazione.json` se disponibile per recuperare l'ordine ufficiale dei tomi e dei moduli.
-   - In alternativa, ordina le directory con prefisso numerico: `01_cosmologia`, `02_geografia` (inclusa la sottocartella `regioni/` o `cornici/` ordinata numericamente), `03_societa_e_politica` (inclusa la sottoserie `usi_costumi_ed_eventi/`: `usanze/` = 3.5.x, `festival_ed_occorrenze/` = 3.6.x, `eventi/` = 3.7.x), `04_diritto_e_successione`, `05_personaggi` (`Non-Giocanti/`), `06_luoghi` (o `06_location`), `07_fazioni` (o `07_factions`), `08_oggetti_magici_peculiari` (o `08_oggetti magici peculiari`), `09_cronache`, `10_timeline` (`cronologia_storica/` = 10.1.x, `registro_occorrenze/` = 10.2.x, `calendario/` = 10.3.x; i sorgenti `.mw` di `markwhen/` e `esportazioni/` sono esclusi dalla Bibbia).
+   - In alternativa, ordina le directory con prefisso numerico: `01_cosmologia`, `02_geografia` (inclusa la sottocartella `regioni/` o `cornici/` ordinata numericamente), `03_societa_e_politica` (inclusa la sottoserie `usi_costumi_ed_eventi/`: `usanze/` = 3.5.x, `festival_ed_occorrenze/` = 3.6.x, `eventi/` = 3.7.x), `04_diritto_e_leggi` (o variante legacy `04_diritto_e_successione`; con branche `01_ordinamento_e_fonti/` … `10_diritto_bellico_e_avventurieri/` = 4.1.x … 4.10.x), `05_personaggi` (`Non-Giocanti/`), `06_luoghi` (o `06_location`), `07_fazioni` (o `07_factions`), `08_oggetti_magici_peculiari` (o `08_oggetti magici peculiari`), `09_cronache`, `10_timeline` (`cronologia_storica/` = 10.1.x, `registro_occorrenze/` = 10.2.x, `calendario/` = 10.3.x; i sorgenti `.mw` di `markwhen/` e `esportazioni/` sono esclusi dalla Bibbia).
 3. **Composizione del Testo Monolitico**:
    - Inserisci la testata canonica con metadati e badge di stato:
      ```markdown
@@ -84,7 +84,7 @@ Usa questa procedura per scansionare tutti i file del workspace e produrre una m
        - `concetti_chiave`: estrae da 3 a 7 punti salienti ricavati dai sottotitoli e dalle definizioni in grassetto.
        - `tabelle`: rileva e inserisce i titoli delle tabelle markdown presenti.
        - `note_dm`: estrae il contenuto di eventuali note per il DM.
-   - Gestisce le sottocartelle canoniche (`02_geografia/regioni/` o `cornici/`, `03_societa_e_politica/usi_costumi_ed_eventi/`, `05_personaggi/Non-Giocanti/`, `09_cronache/campagne/`, `10_timeline/` con i sorgenti `markwhen/`) popolando le proprietà dedicate definite in [formato-struttura-json](./references/formato-struttura-json.md).
+   - Gestisce le sottocartelle canoniche (`02_geografia/regioni/` o `cornici/`, `03_societa_e_politica/usi_costumi_ed_eventi/`, `04_diritto_e_leggi/`, `05_personaggi/Non-Giocanti/`, `09_cronache/campagne/`, `10_timeline/` con i sorgenti `markwhen/`) popolando le proprietà dedicate definite in [formato-struttura-json](./references/formato-struttura-json.md).
 3. **Validazione Sintattica e Scrittura**:
    - Genera il file `struttura_ambientazione.json` con indentazione a 2 spazi.
    - Valida che il JSON sia formalmente valido e privo di chiavi duplicate o caratteri spuri.

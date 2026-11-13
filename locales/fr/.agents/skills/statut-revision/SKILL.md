@@ -16,7 +16,7 @@ Cette compétence génère, actualise et maintient le fichier de suivi `STATUT_R
 
 ## 1. Critères de Classification des Statuts
 
-La compétence analyse les fichiers Markdown des dossiers canoniques de l'univers (`01_cosmologie`, `02_geographie`, `03_societe_et_politique` y compris la sous-série `coutumes_fetes_et_evenements/`, `04_droit_et_succession`, `05_personnages`, `06_lieux`, `07_factions`, `08_objets_magiques_singuliers`, `09_chroniques`, `10_chronologie`) et inspecte les badges :
+La compétence analyse les fichiers Markdown des dossiers canoniques de l'univers (`01_cosmologie`, `02_geographie`, `03_societe_et_politique` y compris la sous-série `coutumes_fetes_et_evenements/`, `04_droit_et_lois` ou variante historique `04_droit_et_succession`, `05_personnages`, `06_lieux`, `07_factions`, `08_objets_magiques_singuliers`, `09_chroniques`, `10_chronologie`) et inspecte les badges :
 
 ```markdown
 > 🛡️ *Vérifié : [DATE_V] | Modifié : [DATE_M]*
@@ -52,7 +52,7 @@ Ce registre suit l'avancement de l'audit officiel du lore, en recensant les sect
 | **02 Géographie** | X | A | B | C | D | [Icône] |
 | **03 Société & Politique** | X | A | B | C | D | [Icône] |
 | **03· Coutumes, Fêtes & Événements** | X | A | B | C | D | [Icône] |
-| **04 Droit & Succession** | X | A | B | C | D | [Icône] |
+| **04 Droit & Lois** | X | A | B | C | D | [Icône] |
 | **05 Personnages (PJ & PNJ)** | X | A | B | C | D | [Icône] |
 | **06 Lieux** | X | A | B | C | D | [Icône] |
 | **07 Factions** | X | A | B | C | D | [Icône] |

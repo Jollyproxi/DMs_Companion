@@ -31,7 +31,7 @@ Questa skill fa rispettare la regola universale secondo cui ogni nome proprio di
 Prima di scansionare, costruisci la mappa `nome → percorso del file canonico`:
 
 1. **Fonte privilegiata**: se `struttura_ambientazione.json` è presente nella radice del workspace, usalo come indice (nomi dei moduli e percorsi associati).
-2. **Ricognizione diretta**: altrimenti (o per integrazione) scansiona i dieci tomi — `05_personaggi/` (PG e PNG), `06_luoghi/` (o `06_location/`), `07_fazioni/` (o `07_factions/`), `08_oggetti_magici_peculiari/` (o variante legacy), `03_societa_e_politica/usi_costumi_ed_eventi/`, `02_geografia/` (regioni), `01_cosmologia/` (piani), `04_diritto_e_successione/` (leggi, trattati), `10_timeline/cronologia_storica/` (epoche, eventi storici) — raccogliendo titoli H1 e nomi di file.
+2. **Ricognizione diretta**: altrimenti (o per integrazione) scansiona i dieci tomi — `05_personaggi/` (PG e PNG), `06_luoghi/` (o `06_location/`), `07_fazioni/` (o `07_factions/`), `08_oggetti_magici_peculiari/` (o variante legacy), `03_societa_e_politica/usi_costumi_ed_eventi/`, `02_geografia/` (regioni), `01_cosmologia/` (piani), `04_diritto_e_leggi/` (o `04_diritto_e_successione/`, leggi, trattati, patti, corti), `10_timeline/cronologia_storica/` (epoche, eventi storici) — raccogliendo titoli H1 e nomi di file.
 3. **Nomi canonici**: per ogni scheda il nome proprio è il titolo del documento (H1) o il nome del file senza estensione; registra anche le eventuali varianti o alias esplicitamente documentate nella scheda.
 4. **Omonimie**: se due entità condividono lo stesso nome, marca l'ambiguità e chiedi al Master a quale scheda collegare.
 

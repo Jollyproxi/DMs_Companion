@@ -48,10 +48,10 @@ La compilation suit strictement la séquence numérique canonique :
    - Modules principaux de géographie, carte, souterrains et plans liminaux.
    - Traitement des régions/provinces dans `regions/`, classées par numéro croissant.
 3. **##### 3. Ordre Social, Politique et Économique** (`03_societe_et_politique/`)
-   - Modèles sociaux, économie, classes, droit pénal.
+   - Modèles sociaux, économie, classes, ordre public et forces de l'ordre.
    - Sous-série `coutumes_fetes_et_evenements/` : coutumes (`3.5.x`), fêtes/occurrences (`3.6.x`), événements ponctuels (`3.7.x`), dans l'ordre numérique croissant par sous-dossier.
-4. **##### 4. Droit, Pactes et Règles de Succession** (`04_droit_et_succession/`)
-   - Contrats, pactes, traités, hiérarchie successorale, tribunaux.
+4. **##### 4. Droit et Lois** (`04_droit_et_lois/` ou variante historique `04_droit_et_succession/`)
+   - Ordre juridique et sources (`4.1.x`), droits civils et statuts (`4.2.x`), droit dynastique et succession (`4.3.x`), contrats et pactes (`4.4.x`), traités et diplomatie (`4.5.x`), droit pénal et infractions (`4.6.x`), tribunaux et procédure (`4.7.x`), droit arcanique et religieux (`4.8.x`), propriété, commerce et fiscalité (`4.9.x`), droit de la guerre et aventuriers (`4.10.x`), chacune avec cadre général (`4.Y.1`) et actes recensés (`4.Y.2+`) dans l'ordre numérique croissant.
 5. **##### 5. Répertoire des Personnages du Monde** (`05_personnages/`)
    - Répertoire des PNJ notables (`Non_Joueurs/`), regroupés par faction ou région.
    - Synthèse des liens du groupe si une campagne canonique est présente.
