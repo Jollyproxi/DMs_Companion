@@ -79,8 +79,8 @@ Der Archivar ordnet **nur** das, was Sie liefern oder bereits kanonisiert haben.
 | :--- | :--- |
 | `01_kosmologie/` | Ebenen, Himmelsmechanik, Magiefluss, kosmische Ethik. |
 | `02_geografie/` | Kartografie, Gebiete, unterirdische Regionen, Regions-Dossiers (`regionen/`). |
-| `03_gesellschaft_und_politik/` | Zivile Ordnung, Wirtschaft, Gesellschaftsschichten, Justiz; Unterreihe `braeuche_feste_und_ereignisse/` (`braeuche/`, `feste_und_vorkommnisse/`, `ereignisse/`). |
-| `04_recht_und_erbfolge/` | Grundgesetze, Erbfolgerecht, Pakte, Abkommen, Gerichte. |
+| `03_gesellschaft_und_politik/` | Zivile Ordnung, Wirtschaft, Gesellschaftsschichten, öffentliche Ordnung; Unterreihe `braeuche_feste_und_ereignisse/` (`braeuche/`, `feste_und_vorkommnisse/`, `ereignisse/`). |
+| `04_recht_und_gesetze/` | 10 Rechtsgebiete (`01_rechtsordnung_und_quellen/` … `10_kriegsrecht_und_abenteurer/`): Rechtsquellen, Bürgerrechte, Erbfolge, Verträge, Abkommen, Strafrecht, Gerichte, arkanes/religiöses Recht, Steuern, Kriegsrecht. |
 | `05_charaktere/` | Modulare SC-Dossiers (`Spielercharaktere/<Kampagne>/<SC_Name>/`) und NSC-Bögen (`Nichtspielercharaktere/`). |
 | `06_orte/` | Abenteuerknoten, Städte, Festungen, Gebietsgefahren. |
 | `07_fraktionen/` | Adelshäuser, Zirkel, Gilden, Orden, Machthierarchien. |

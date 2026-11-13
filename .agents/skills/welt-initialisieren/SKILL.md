@@ -44,7 +44,7 @@ Erzeuge nach Erhalt der Antworten des SL die modulare Struktur mithilfe der Schr
    - `01_kosmologie/README.md`
    - `02_geografie/README.md` (mit optionalem Unterordner `regionen/` oder der gewählten Bezeichnung für Großgebiete)
    - `03_gesellschaft_und_politik/README.md` (mit Unterordner `braeuche_feste_und_ereignisse/` samt `braeuche/`, `feste_und_vorkommnisse/`, `ereignisse/`, jeweils mit `README.md`)
-   - `04_recht_und_erbfolge/README.md`
+   - `04_recht_und_gesetze/README.md` (mit Unterordnern `01_rechtsordnung_und_quellen/`, `02_buergerrechte_und_status/`, `03_dynastisches_recht_und_erbfolge/`, `04_vertraege_und_pakte/`, `05_abkommen_und_diplomatie/`, `06_strafrecht_und_delikte/`, `07_gerichte_und_verfahren/`, `08_arkanes_und_religioeses_recht/`, `09_eigentum_handel_und_steuern/`, `10_kriegsrecht_und_abenteurer/`, jeweils mit `README.md`)
    - `05_charaktere/README.md` (mit Unterordnern `Spielercharaktere/` und `Nichtspielercharaktere/`, jeweils mit `README.md`)
    - `06_orte/README.md`
    - `07_fraktionen/README.md`

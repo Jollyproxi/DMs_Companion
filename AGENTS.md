@@ -20,12 +20,12 @@ Diese Anweisungen sind mit jedem KI-Harness oder Assistenten kompatibel (VS Code
 
 ## 2. Weltarchitektur in zehn Bänden
 
-Die Spielwelt folgt der standardisierten modularen Zehn-Bände-Architektur (und passt sich automatisch an eventuell bereits vorhandene äquivalente Ordner in bestehenden Repositories an):
+Die Spielwelt folgt der standardisierten modularen Zehn-Bände-Architektur (und passt sich automatisch an eventuell bereits vorhandene äquivalente Ordner in bestehenden Repositories an, z. B. `04_recht_und_erbfolge/`):
 
 * `01_kosmologie/`: Ebenen, Himmelsmechanik, Magiefluss und kosmische Ethik.
 * `02_geografie/`: Kartografie, Gebiete, unterirdische Regionen und Dossiers unter `regionen/`.
-* `03_gesellschaft_und_politik/`: Zivile Ordnung, Wirtschaft, Gesellschaftsschichten, Justiz sowie die Unterserie `braeuche_feste_und_ereignisse/` (`braeuche/`, `feste_und_vorkommnisse/`, `ereignisse/`).
-* `04_recht_und_erbfolge/`: Grundgesetze, Erbfolgerecht, Pakte, Abkommen und Gerichte.
+* `03_gesellschaft_und_politik/`: Zivile Ordnung, Wirtschaft, Gesellschaftsschichten, öffentliche Ordnung sowie die Unterserie `braeuche_feste_und_ereignisse/` (`braeuche/`, `feste_und_vorkommnisse/`, `ereignisse/`).
+* `04_recht_und_gesetze/`: 10 juristische Unterordner (`01_rechtsordnung_und_quellen/`, `02_buergerrechte_und_status/`, `03_dynastisches_recht_und_erbfolge/`, `04_vertraege_und_pakte/`, `05_abkommen_und_diplomatie/`, `06_strafrecht_und_delikte/`, `07_gerichte_und_verfahren/`, `08_arkanes_und_religioeses_recht/`, `09_eigentum_handel_und_steuern/`, `10_kriegsrecht_und_abenteurer/`), jeweils mit `01_allgemeiner_rahmen.md` und nummerierten Bögen `02_<eintrag_slug>.md`.
 * `05_charaktere/`: Modulare SC-Dossiers (`Spielercharaktere/<Kampagne>/<SC_Name>/`) und NSC-Bögen (`Nichtspielercharaktere/`).
 * `06_orte/`: Abenteuerknoten, Städte, Festungen und Gebietsgefahren.
 * `07_fraktionen/`: Adelshäuser, Zirkel, Gilden, Orden und Machthierarchien.

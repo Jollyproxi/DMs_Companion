@@ -2,7 +2,7 @@
 
 Dieses Dokument definiert die standardisierte Ordner- und Dateistruktur für die enzyklopädische Archivierung einer Spielwelt und ihrer D&D-Kampagnen.
 
-> **Anpassungshinweis**: Enthält der Workspace bereits eine bestehende Spielwelt mit äquivalenten Ordnernamen, respektiere und bewahre die vorhandene Struktur, ohne etablierte Dateien zwangsweise umzubenennen.
+> **Anpassungshinweis**: Enthält der Workspace bereits eine bestehende Spielwelt mit äquivalenten Ordnernamen (z. B. `04_recht_und_erbfolge/`), respektiere und bewahre die vorhandene Struktur, ohne etablierte Dateien zwangsweise umzubenennen.
 
 ```text
 ├── README.md                                               # Allgemeines Weltverzeichnis und Navigationsleitfaden
@@ -28,7 +28,7 @@ Dieses Dokument definiert die standardisierte Ordner- und Dateistruktur für die
 │   ├── 01_sozialphilosophie_und_braeuche.md                # Gesellschaftliche Werte, Ethik und Konventionen
 │   ├── 02_machtmonopol_und_wirtschaft.md                   # Militär, Handel, Währungen und Abgaben
 │   ├── 03_gesellschaftsschichten_und_rollen.md             # Bürgerliche Schichtung, Zünfte und Ästhetik
-│   ├── 04_strafrecht_und_justiz.md                         # Ordentliche Gerichte, Strafen und Zivilgesetze
+│   ├── 04_oeffentliche_ordnung_und_sicherheitskraefte.md   # Stadtwachen, Milizen, öffentliche Ordnung und Wahrnehmung (Gesetze und Gerichte in Band IV)
 │   └── braeuche_feste_und_ereignisse/                      # Unterserie: Bräuche, wiederkehrende Feste und einmalige Ereignisse
 │       ├── README.md                                       # Index der Unterserie nach Typologie
 │       ├── braeuche/                                       # Besonderheiten des Alltags (Struktur und Ablauf)
@@ -41,11 +41,21 @@ Dieses Dokument definiert die standardisierte Ordner- und Dateistruktur für die
 │           ├── README.md
 │           └── 01_<eintrag_slug>.md                        # Ereignis-Bogen (historisch oder laufend)
 │
-├── 04_recht_und_erbfolge/                                  # Band IV: Grundgesetze, Erbrecht, Pakte und Abkommen
-│   ├── README.md                                           # Juristisch-institutioneller Überblick
-│   ├── 01_vertraege_pakte_und_abkommen.md                  # Normen, formelle Bündnisse und Blutpakte
-│   ├── 02_hierarchie_und_erbfolge.md                       # Erbfolgen, Ämter und Nachlassregelungen
-│   └── 03_gerichte_und_streitfaelle.md                     # Beilegung von Rechts- oder Erbstreitigkeiten und Gutachten
+├── 04_recht_und_gesetze/                                   # Band IV: Recht, Grundgesetze, Bürgerrechte, Pakte, Straftaten und Gerichtsbarkeiten (jeder Unterordner 01–10 enthält README.md, 01_allgemeiner_rahmen.md, 02_<eintrag_slug>.md…)
+│   ├── README.md                                           # Juristisch-institutioneller Überblick und Index der Rechtsgebiete
+│   ├── 01_rechtsordnung_und_quellen/                       # Rechtsquellen, herrscherliche Edikte, Satzungen, Gewohnheitsrecht, Gesetzgeber und Normenhierarchie
+│   │   ├── README.md                                       # Index des Rechtsgebiets
+│   │   ├── 01_allgemeiner_rahmen.md                        # Allgemeine Grundsätze und Rahmenordnung des Rechtsgebiets
+│   │   └── 02_<eintrag_slug>.md                            # Einzelne Gesetze, Kodizes, Satzungen oder Edikte (fortlaufend nummeriert)
+│   ├── 02_buergerrechte_und_status/                        # Bürgerrecht, Rechte nach Stand oder Spezies, Unfreiheit/Freilassung, Staatenlose, Asyl und Geleitbriefe
+│   ├── 03_dynastisches_recht_und_erbfolge/                 # Erbfolgen (Blut, Wahl, Verdienst), Regentschaften, Nachlass, Lehen und Amtsübergabe
+│   ├── 04_vertraege_und_pakte/                             # Zivil- und Handelsverträge, Verbindlichkeiten, bindende Schwüre und Blutpakte
+│   ├── 05_abkommen_und_diplomatie/                         # Staatsverträge, Bündnisse zwischen Reichen oder Fraktionen, Friedensabkommen und Grenzen
+│   ├── 06_strafrecht_und_delikte/                          # Straftatenklassifikation, Hochverrat, Strafen, Wergeld, Kopfgelder, Beschlagnahmen, Verbannung und Begnadigung
+│   ├── 07_gerichte_und_verfahren/                          # Gerichtszuständigkeiten, Prozesse, magische Beweise (Zone der Wahrheit), Gottesurteile, Gerichtskämpfe und Berufung
+│   ├── 08_arkanes_und_religioeses_recht/                   # Verbotene Schulen und Zauber, Zauberlizenzen, Artefaktstatus, Häresien und geistliche Gerichtsbarkeit
+│   ├── 09_eigentum_handel_und_steuern/                     # Grundbesitz und Krongut, Zunftmonopole, Zölle und Steuern, Darlehen, Konkurs und Seerecht
+│   └── 10_kriegsrecht_und_abenteurer/                      # Kriegserklärungen, Waffenstillstände, Gefangene und Lösegeld, Söldner, Abenteurergilden und Ruinenschürfrechte
 │
 ├── 05_charaktere/                                          # Band V: Verzeichnis der Spieler- und Nichtspielercharaktere
 │   ├── README.md                                           # Allgemeiner Charakterindex und Beziehungsmatrix

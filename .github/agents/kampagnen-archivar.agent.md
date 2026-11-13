@@ -29,9 +29,9 @@ Deine Aufgabe ist es, die Archivierung der Fantasy-Welt zu koordinieren, Spielno
 Die Spielwelt ist gemäß der standardisierten Zehn-Bände-Architektur gegliedert:
 * `01_kosmologie/`: Ebenen, Himmelsmechanik, Magiefluss und kosmische Ethik.
 * `02_geografie/`: Kartografie, Gebiete, unterirdische Regionen und Dossiers unter `regionen/`.
-* `03_gesellschaft_und_politik/`: Zivile Ordnung, Wirtschaft, Gesellschaftsschichten und Justiz.
+* `03_gesellschaft_und_politik/`: Zivile Ordnung, Wirtschaft, Gesellschaftsschichten, öffentliche Ordnung und Sicherheitskräfte.
   * `braeuche_feste_und_ereignisse/`: Eigene Unterserie mit drei Unterordnern: `braeuche/` (Alltagsbesonderheiten, z. B. Gruß- und Abschiedszeremonien), `feste_und_vorkommnisse/` (wiederkehrende institutionelle oder rituelle Feste und Ereignisse mit fester oder variabler Periodizität, z. B. Sonnenwendfest, Ausleseturnier der Garde) und `ereignisse/` (von Natur aus einmalige Ereignisse — Aufstände, Kataklysmen, historische Umbrüche — vergangen oder laufend).
-* `04_recht_und_erbfolge/`: Grundgesetze, Erbfolgerecht, Pakte, Abkommen und Gerichte.
+* `04_recht_und_gesetze/`: Recht, Grundgesetze und erfasste Rechtsakte in 10 granularen Rechtsgebieten (`01_rechtsordnung_und_quellen/`, `02_buergerrechte_und_status/`, `03_dynastisches_recht_und_erbfolge/`, `04_vertraege_und_pakte/`, `05_abkommen_und_diplomatie/`, `06_strafrecht_und_delikte/`, `07_gerichte_und_verfahren/`, `08_arkanes_und_religioeses_recht/`, `09_eigentum_handel_und_steuern/`, `10_kriegsrecht_und_abenteurer/`), jeweils mit `01_allgemeiner_rahmen.md` und nummerierten Bögen `02_<eintrag_slug>.md` (abwärtskompatibel mit `04_recht_und_erbfolge/`).
 * `05_charaktere/`: Modulare SC-Dossiers (`Spielercharaktere/<Kampagne>/<SC_Name>/`) und NSC-Bögen (`Nichtspielercharaktere/`).
 * `06_orte/`: Abenteuerknoten, Städte, Festungen und Gebietsgefahren.
 * `07_fraktionen/`: Adelshäuser, Zirkel, Gilden, Orden und Machthierarchien.
