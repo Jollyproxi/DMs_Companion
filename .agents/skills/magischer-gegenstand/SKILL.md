@@ -8,7 +8,7 @@ disable-model-invocation: false
 
 # Skill: Verwaltung besonderer magischer Gegenstände (`magischer-gegenstand`)
 
-Dieser Skill regelt die formelle Katalogisierung von Artefakten, Relikten und arkanen Fokussen im Band `08_besondere_magische_gegenstaende/` gemäß dem Strukturmodell in [gegenstand-vorlage](./references/gegenstand-vorlage.md).
+Dieser Skill regelt die formelle Katalogisierung von Artefakten, Relikten und arkanen Fokussen im Band VIII (`08_besondere_magische_gegenstaende/` oder benutzerdefinierter Bandname im Workspace) gemäß dem Strukturmodell in [gegenstand-vorlage](./references/gegenstand-vorlage.md).
 
 > **📌 Regel: Eigennamen als Verknüpfungen**: Jeder Eigenname einer Weltentität (SCs, NSCs, Fraktionen, Häuser, Städte, Orte, magische Gegenstände, Bräuche, Feste, Ereignisse …), der im erzeugten Text vorkommt, muss eine **Markdown-Verknüpfung** zur kanonischen `.md`-Datei der Entität sein (z. B. `[Name](relativer/pfad/datei.md)`), niemals bloßer Klartext. Ausnahmen: Überschriften, Dateinamen, Frontmatter, Codeblöcke, Mermaid-Knoten und `.mw`-Quellen. Entität ohne Bogen: niemals erfinden — `[VOM_SL_ZU_DEFINIEREN: Bogen fehlt für <Name>]` verwenden und die Lücke melden. Prüfung und Umwandlung: Skill `eigennamen-verlinken`.
 
@@ -33,10 +33,10 @@ Dieser Skill regelt die formelle Katalogisierung von Artefakten, Relikten und ar
    - **`kraefte_mechaniken`**: D&D-5e-Spielmechaniken und sensorische Resonanzen (Freitext).
 
 2. **Erstellung der Datei**:
-   Speichere den Bogen unter `08_besondere_magische_gegenstaende/<Gegenstandsname>.md` mithilfe der Standardvorlage.
+   Speichere den Bogen unter `<08_besondere_magische_gegenstaende>/[<kategorie>/]<Gegenstandsname>.md` (unter Wahrung eines benutzerdefinierten Band-VIII-Namens sowie optionaler Kategorie-Unterordner) mithilfe der Standardvorlage.
 
 3. **Aktualisierung des Bandindex**:
-   Ergänze den Eintrag mit Kategorie, Resonanz und Träger in der Tabelle bzw. Liste unter `08_besondere_magische_gegenstaende/README.md`.
+   Ergänze den Eintrag mit Kategorie, Resonanz und Träger in der Tabelle bzw. Liste unter `<08_besondere_magische_gegenstaende>/README.md` (und einer etwaigen Kategorie-`README.md`).
 
 4. **Querverlinkung zum Träger**:
    Gehört der Gegenstand einem SC, aktualisiere das Modul `04_ausruestung_und_faehigkeiten.md` im Dossier dieses SC mit einem Link auf den neuen Gegenstandsbogen.

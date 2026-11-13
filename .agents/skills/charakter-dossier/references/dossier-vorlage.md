@@ -2,7 +2,7 @@
 
 ## 1. Modulares Spielercharakter-(SC-)Dossier
 
-Jeder SC besitzt einen eigenen Ordner unter `05_charaktere/Spielercharaktere/<Kampagne>/<SC_Name>/` mit einer verbindenden `README.md` und fünf thematischen Modulen:
+Jeder SC besitzt einen eigenen Ordner unter `05_charaktere/<Spielercharaktere>/<Kampagne_oder_Gruppe>/<SC_Name>/` (Standard: `05_charaktere/Spielercharaktere/<Kampagne>/<SC_Name>/`) mit einer verbindenden `README.md` und fünf thematischen Modulen:
 
 ### `README.md` (Charakter-Hub)
 ```markdown
@@ -98,7 +98,7 @@ Jeder SC besitzt einen eigenen Ordner unter `05_charaktere/Spielercharaktere/<Ka
 
 ## 2. Nichtspielercharakter-(NSC-)Bogen
 
-Jeder NSC liegt als einzelne Datei unter `05_charaktere/Nichtspielercharaktere/[NSC_Name].md`:
+Jeder NSC liegt als einzelne Datei unter `05_charaktere/<Nichtspielercharaktere>/[<nsc_gruppe>/][NSC_Name].md` (Standard: `05_charaktere/Nichtspielercharaktere/[NSC_Name].md`):
 
 ```markdown
 # [NSC Name] — [Titel oder Rolle]

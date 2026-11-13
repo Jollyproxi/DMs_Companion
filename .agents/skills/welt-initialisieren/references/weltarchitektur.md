@@ -2,7 +2,7 @@
 
 Dieses Dokument definiert die standardisierte Ordner- und Dateistruktur für die enzyklopädische Archivierung einer Spielwelt und ihrer D&D-Kampagnen.
 
-> **Anpassungshinweis**: Enthält der Workspace bereits eine bestehende Spielwelt mit äquivalenten Ordnernamen (z. B. `04_recht_und_erbfolge/`), respektiere und bewahre die vorhandene Struktur, ohne etablierte Dateien zwangsweise umzubenennen.
+> **Anpassungshinweis**: Enthält der Workspace bereits eine bestehende Spielwelt mit äquivalenten Ordnernamen, respektiere und bewahre die vorhandene Struktur, ohne etablierte Dateien zwangsweise umzubenennen.
 
 ```text
 ├── README.md                                               # Allgemeines Weltverzeichnis und Navigationsleitfaden
@@ -14,14 +14,16 @@ Dieses Dokument definiert die standardisierte Ordner- und Dateistruktur für die
 │   ├── 01_ebenenstruktur.md                                # Ebenen, Himmelssphären, höllische oder abgrundtiefe Reiche
 │   ├── 02_jahreszeiten_und_himmelsmechanik.md              # Zeitdynamiken, astronomische Zyklen und Ebenenübergänge
 │   ├── 03_magiefluss_und_goettliche_ordnung.md             # Natur des Arkanen, Theurgie, Monopole und Grenzen
-│   └── 04_moralisches_oder_philosophisches_system.md       # Werte, Tugenden, Laster oder kosmischer Ethikkodex
+│   ├── 04_moralisches_oder_philosophisches_system.md       # Werte, Tugenden, Laster oder kosmischer Ethikkodex
+│   ├── [<ebenen>/]                                         # Optional, eigener Name (z. B. ebenen/, sphaeren/, reiche/, dimensionen/ — mit README.md)
+│   └── [<pantheon>/]                                       # Optional, eigener Name (z. B. gottheiten/, pantheon/, kosmische_wesen/, patrone/ — mit README.md)
 │
 ├── 02_geografie/                                           # Band II: Physische Geografie, Kartografie und Regionen
 │   ├── README.md                                           # Allgemeiner geografischer Überblick und Gebietsquerschnitte
 │   ├── 01_hauptkarte_und_biome.md                          # Gebiete, Klimazonen und Grenzen
 │   ├── 02_unterirdische_regionen_und_abgruende.md          # Unterreich, Verwerfungen und Höhlen
 │   ├── 03_besondere_domaenen_und_verbundene_ebenen.md      # Schwebende Reiche, Portale und Schwellenlande
-│   └── regionen/                                           # Dossiers pro Region/Reich/Provinz (mit README.md)
+│   └── <regionen>/                                         # Dossiers pro Region/Großgebiet (Name anpassbar: z. B. regionen/, provinzen/, domaenen/, marken/ — mit README.md)
 │
 ├── 03_gesellschaft_und_politik/                            # Band III: Gesellschaftliches, wirtschaftliches und kulturelles Modell
 │   ├── README.md                                           # Überblick über die Gesellschaftsordnung
@@ -29,6 +31,7 @@ Dieses Dokument definiert die standardisierte Ordner- und Dateistruktur für die
 │   ├── 02_machtmonopol_und_wirtschaft.md                   # Militär, Handel, Währungen und Abgaben
 │   ├── 03_gesellschaftsschichten_und_rollen.md             # Bürgerliche Schichtung, Zünfte und Ästhetik
 │   ├── 04_oeffentliche_ordnung_und_sicherheitskraefte.md   # Stadtwachen, Milizen, öffentliche Ordnung und Wahrnehmung (Gesetze und Gerichte in Band IV)
+│   ├── [voelker/]                                          # Optional (Standard: voelker/; anpassbar zu spezies/, rassen/, abstammungen/, kulturen/ — mit README.md)
 │   └── braeuche_feste_und_ereignisse/                      # Unterserie: Bräuche, wiederkehrende Feste und einmalige Ereignisse
 │       ├── README.md                                       # Index der Unterserie nach Typologie
 │       ├── braeuche/                                       # Besonderheiten des Alltags (Struktur und Ablauf)
@@ -55,13 +58,14 @@ Dieses Dokument definiert die standardisierte Ordner- und Dateistruktur für die
 │   ├── 07_gerichte_und_verfahren/                          # Gerichtszuständigkeiten, Prozesse, magische Beweise (Zone der Wahrheit), Gottesurteile, Gerichtskämpfe und Berufung
 │   ├── 08_arkanes_und_religioeses_recht/                   # Verbotene Schulen und Zauber, Zauberlizenzen, Artefaktstatus, Häresien und geistliche Gerichtsbarkeit
 │   ├── 09_eigentum_handel_und_steuern/                     # Grundbesitz und Krongut, Zunftmonopole, Zölle und Steuern, Darlehen, Konkurs und Seerecht
-│   └── 10_kriegsrecht_und_abenteurer/                      # Kriegserklärungen, Waffenstillstände, Gefangene und Lösegeld, Söldner, Abenteurergilden und Ruinenschürfrechte
+│   ├── 10_kriegsrecht_und_abenteurer/                      # Kriegserklärungen, Waffenstillstände, Gefangene und Lösegeld, Söldner, Abenteurergilden und Ruinenschürfrechte
+│   └── [11_<rechtsgebiet_custom>/]                         # Optional: zusätzliche Rechtsgebiete oder Unterordner nach Gerichtsbarkeit/Reich innerhalb eines Gebiets
 │
 ├── 05_charaktere/                                          # Band V: Verzeichnis der Spieler- und Nichtspielercharaktere
 │   ├── README.md                                           # Allgemeiner Charakterindex und Beziehungsmatrix
-│   ├── Spielercharaktere/                                  # SC-Archiv
+│   ├── <Spielercharaktere>/                                # SC-Archiv (Standard: Spielercharaktere/; anpassbar zu SCs/, Helden/, usw.)
 │   │   ├── README.md                                       # Gesamtübersicht der Gruppen und Synergien
-│   │   └── [Kampagnenname]/                                # Ordner der jeweiligen Gruppe/Kampagne
+│   │   └── [<Kampagne_oder_Gruppe>]/                       # Ordner der jeweiligen Kampagne oder Gruppe/Mannschaft
 │   │       ├── README.md                                   # Beziehungs-Hub der Gruppe
 │   │       └── [SC_Name]/                                  # Modulares SC-Dossier:
 │   │           ├── README.md                               # Zusammenfassung und Index des Charakters
@@ -70,28 +74,32 @@ Dieses Dokument definiert die standardisierte Ordner- und Dateistruktur für die
 │   │           ├── 03_beziehungen_und_dynamiken.md         # Bindungen zu anderen SCs und NSCs
 │   │           ├── 04_ausruestung_und_faehigkeiten.md      # Schlüsselgegenstände, Talente und Fähigkeiten
 │   │           └── 05_sl_aufhaenger_und_geheimnisse.md     # Dem SL vorbehaltene Erzählaufhänger
-│   └── Nichtspielercharaktere/                             # NSC-Archiv der Spielwelt
+│   └── <Nichtspielercharaktere>/                           # NSC-Archiv (Standard: Nichtspielercharaktere/; anpassbar zu NSCs/, Nebenfiguren/, usw.)
 │       ├── README.md                                       # Index und Gruppierung nach Fraktion
+│       ├── [<nsc_gruppen>/]                                # Optional: eigene Unterordner (nach fraktion/, region/, verbuendete/, gegenspieler/)
 │       └── [NSC_Name].md                                   # Bogen mit Rolle, Wesen, Geheimnissen und Aufhängern
 │
 ├── 06_orte/                                                # Band VI: Bedeutsame Orte und Abenteuerknoten
 │   ├── README.md                                           # Liste relevanter Orte und Verbindungen
+│   ├── [<ortsgruppen>/]                                    # Optional, eigener Name (z. B. staedte/, dungeons/, ruinen/ oder nach Großgebiet — mit README.md)
 │   └── [XX_ortsname].md                                    # Ortsbogen (Atmosphäre, Gefahren, NSCs, Aufhänger)
 │
 ├── 07_fraktionen/                                          # Band VII: Fraktionen, Adelshäuser, Zirkel und Gilden
 │   ├── README.md                                           # Geopolitische Machtkarte und Konflikte
+│   ├── [<fraktionsgruppen>/]                               # Optional, eigener Name (z. B. haeuser/, gilden/, kirchen_und_kulte/, orden/ — mit README.md)
 │   └── [XX_fraktionsname].md                               # Satzung, Hierarchie, Bündnisse, Ressourcen und Ziele
 │
-├── 08_besondere_magische_gegenstaende/                     # Band VIII: Artefakte, Relikte und einzigartige Apparaturen
+├── <08_besondere_magische_gegenstaende>/                   # Band VIII: Artefakte, Relikte und Apparaturen (Standard: 08_besondere_magische_gegenstaende/; anpassbar zu 08_magische_gegenstaende/, 08_artefakte_und_relikte/, 08_geraete/)
 │   ├── README.md                                           # Rechtsregister für Magie und Gegenstandsindex
+│   ├── [<kategorien>/]                                     # Optional, eigener Name (z. B. artefakte/, relikte/, grimoires/, apparaturen/ — mit README.md)
 │   └── [Gegenstandsname].md                                # Technischer Bogen, Herkunft, Kräfte und SL-Aufhänger
 │
 ├── 09_chroniken/                                           # Band IX: Chroniken und Kampagnenprotokolle
 │   ├── README.md                                           # Chronologischer Index aller aktiven Kampagnen
-│   └── kampagnen/
-│       └── [kampagnenname]/                                # Ordner der einzelnen Kampagne
+│   └── <kampagnen>/                                        # Chronik-Archiv (Standard: kampagnen/; anpassbar zu expeditionen/, abenteuer/, one_shots/)
+│       └── [kampagnenname]/                                # Ordner der einzelnen Kampagne oder Expedition
 │           ├── README.md                                   # Hub: Gruppenzusammensetzung, Ziel, Sitzungsübersicht
-│           └── sitzungen/                                  # Fortlaufend nummerierte Protokolle:
+│           └── <sitzungen>/                                # Fortlaufende Protokolle (Standard: sitzungen/; anpassbar zu tagebuecher/, kapitel/):
 │               ├── README.md                               # Protokollindex
 │               ├── 01_sitzungstitel.md                     # Protokoll Sitzung 1
 │               └── 02_sitzungstitel.md                     # Protokoll Sitzung 2...

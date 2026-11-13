@@ -94,8 +94,8 @@ Jedes Element des Arrays `module` beschreibt eine atomare `.md`-Datei:
 
 Für Bände mit kanonischen Unterordnern:
 
-### A. Band 02 (Geografie — Unterordner `regionen/`)
-Falls ein regionales Unterverzeichnis existiert:
+### A. Band 02 (Geografie — Unterordner `regionen/` oder benutzerdefinierter Name)
+Falls ein Unterverzeichnis für Regionen oder Großgebiete existiert:
 ```json
 "ordner_regionen": "02_geografie/regionen",
 "index_regionen": "02_geografie/regionen/README.md",
@@ -108,16 +108,18 @@ Falls ein regionales Unterverzeichnis existiert:
   }
 ]
 ```
+*(Unterordnername und zugehörige Schlüssel sind anpassbar: Jeder für Großgebiete gewählte Ordner — z. B. `provinzen/`, `kontinente/`, `domaenen/` — kann die Standardschlüssel `ordner_regionen` / `index_regionen` / `regionen_module` oder passende Schlüssel `ordner_<name>` / `index_<name>` / `<name>_module` verwenden.)*
 
-### B. Band 05 (Charaktere — Unterordner `Spielercharaktere/` und `Nichtspielercharaktere/`)
+### B. Band 05 (Charaktere — Unterordner `<Spielercharaktere>/` und `<Nichtspielercharaktere>/`)
 ```json
 "unterordner": {
   "spielercharaktere": "05_charaktere/Spielercharaktere",
   "nichtspielercharaktere": "05_charaktere/Nichtspielercharaktere"
 }
 ```
+*(Passt der SL die Ordnernamen an — z. B. `SCs/`, `NSCs/`, `Helden/`, NSC-Gruppierungsordner oder `<Kampagne_oder_Gruppe>/` — bilden die Pfade die tatsächlichen Verzeichnisse auf der Festplatte ab.)*
 
-### C. Band 09 (Chroniken — Unterordner `kampagnen/`)
+### C. Band 09 (Chroniken — Unterordner `<kampagnen>/`)
 ```json
 "ordner_kampagnen": "09_chroniken/kampagnen",
 "aktive_kampagnen": [
@@ -128,9 +130,19 @@ Falls ein regionales Unterverzeichnis existiert:
   }
 ]
 ```
+*(Nutzen `kampagnen/` oder `sitzungen/` eigene Namen — z. B. `expeditionen/`, `abenteuer/`, `one_shots/`, `tagebuecher/` — verweisen die Schlüssel auf die tatsächlichen Pfade auf der Festplatte.)*
 
-### D. Band 03 (Gesellschaft & Politik — Unterserie `braeuche_feste_und_ereignisse/`)
+### D. Band 03 (Gesellschaft & Politik — Unterserie `braeuche_feste_und_ereignisse/` und optional `voelker/`)
 ```json
+"ordner_voelker": "03_gesellschaft_und_politik/voelker",
+"voelker_module": [
+  {
+    "id": "beispielvolk",
+    "code": "3.8.1",
+    "titel": "Name des Volkes / der Spezies",
+    "datei": "03_gesellschaft_und_politik/voelker/01_beispielvolk.md"
+  }
+],
 "ordner_braeuche_feste_ereignisse": "03_gesellschaft_und_politik/braeuche_feste_und_ereignisse",
 "index_braeuche_feste_ereignisse": "03_gesellschaft_und_politik/braeuche_feste_und_ereignisse/README.md",
 "brauch_module": [
@@ -194,7 +206,10 @@ Falls ein regionales Unterverzeichnis existiert:
   ]
 }
 ```
-*(In bestehenden Welten mit flachem Ordner `04_recht_und_erbfolge/` werden die Dateien unter `"module"` indiziert und behalten ggf. `"id": "recht_und_erbfolge"`.)*
+*(Etwaige Zusatzgebiete `11_<rechtsgebiet>/` erhalten die Codes `4.11.x`…; eventuelle Unterordner nach Gerichtsbarkeit innerhalb eines Rechtsgebiets werden im jeweiligen Gebiet unter `"unterordner"` oder `"gerichtsbarkeiten"` verschachtelt.)*
+
+### D3. Optionale Unterordner (Bände I, VI, VII, VIII)
+Bestehen in den Bänden `01_kosmologie/` (`<ebenen>/`, `<pantheon>/`), `06_orte/` (`<ortsgruppen>/`), `07_fraktionen/` (`<fraktionsgruppen>/`) oder `<08_besondere_magische_gegenstaende>/` (`<kategorien>/`) optionale benutzerdefinierte Unterordner, speichert jeder Band seinen tatsächlichen Pfad (`"ordner"`, `"index"`) und stellt ein Array `"unterordner"` (oder `"gruppen"`) mit `{ "id", "titel", "ordner", "index", "module": [...] }` bereit.
 
 ### E. Band 10 (Zeitlinie)
 ```json
@@ -257,5 +272,5 @@ Bei Ausführung von `Struktur-JSON-generieren` oder `Struktur-JSON-aktualisieren
 3. **Tabellen**: Erkannt anhand von Spaltentrennzeilen `| :--- | :--- |` nach einer `## Tabelle...`-Überschrift oder Bildunterschrift.
 4. **SL-Hinweise**: Erkannt über `**HINWEIS FÜR DEN SPIELLEITER:**` oder `> ⚠️ **SL-Hinweis:**`.
 5. **Zahlencode**: Heißt eine Datei `03_magiefluss.md` in `01_kosmologie`, lautet der Code `"1.3"`.
-6. **Unterseriencodes**: Bögen unter `braeuche_feste_und_ereignisse/` verwenden dreistufige Codes je Unterordner (`3.5.x` Bräuche, `3.6.x` Feste/Vorkommnisse, `3.7.x` Ereignisse; fortlaufend je Unterordner). Rechtsgebiete unter `04_recht_und_gesetze/` verwenden `4.1.x` … `4.10.x` (`4.Y.1` für `01_allgemeiner_rahmen.md`, `4.Y.2+` für Einzelakte `02_<eintrag_slug>.md`). Dateien unter `10_zeitlinie/` verwenden `10.1.x` (historische Chronologie), `10.2.x` (Vorkommnisregister), `10.3.x` (Kalender).
+6. **Unterseriencodes**: Bögen unter `braeuche_feste_und_ereignisse/` verwenden dreistufige Codes je Unterordner (`3.5.x` Bräuche, `3.6.x` Feste/Vorkommnisse, `3.7.x` Ereignisse; `3.8.x` für optionales `voelker/` oder eigenen Ordnernamen). Rechtsgebiete unter `04_recht_und_gesetze/` verwenden `4.1.x` … `4.10.x` (und `4.11.x+` für benutzerdefinierte Zusatzgebiete; `4.Y.1` für `01_allgemeiner_rahmen.md`, `4.Y.2+` für Einzelakte `02_<eintrag_slug>.md`). Dateien unter `10_zeitlinie/` verwenden `10.1.x` (historische Chronologie), `10.2.x` (Vorkommnisregister), `10.3.x` (Kalender).
 7. **Typologische Felder**: Für Feste/Vorkommnisse `periodizitaet` und `ausloeser` aus den jeweiligen Vorlagenabschnitten extrahieren; für einmalige Ereignisse `vorkommnis_status`.

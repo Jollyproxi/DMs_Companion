@@ -27,16 +27,16 @@ Deine Aufgabe ist es, die Archivierung der Fantasy-Welt zu koordinieren, Spielno
 ## 2. Weltarchitektur in zehn Bänden
 
 Die Spielwelt ist gemäß der standardisierten Zehn-Bände-Architektur gegliedert:
-* `01_kosmologie/`: Ebenen, Himmelsmechanik, Magiefluss und kosmische Ethik.
-* `02_geografie/`: Kartografie, Gebiete, unterirdische Regionen und Dossiers unter `regionen/`.
-* `03_gesellschaft_und_politik/`: Zivile Ordnung, Wirtschaft, Gesellschaftsschichten, öffentliche Ordnung und Sicherheitskräfte.
+* `01_kosmologie/`: Ebenen, Himmelsmechanik, Magiefluss und kosmische Ethik (mit optionalen Unterordnern `<ebenen>/` und `<pantheon>/`).
+* `02_geografie/`: Kartografie, Gebiete, unterirdische Regionen und Großgebiets-Dossiers unter `regionen/` oder einem benutzerdefinierten Unterordnernamen (z. B. `provinzen/`, `kontinente/`, `domaenen/`).
+* `03_gesellschaft_und_politik/`: Zivile Ordnung, Wirtschaft, Gesellschaftsschichten, öffentliche Ordnung und Sicherheitskräfte; optionaler Unterordner `voelker/` (anpassbar zu `spezies/`, `rassen/`, `abstammungen/`, `kulturen/`).
   * `braeuche_feste_und_ereignisse/`: Eigene Unterserie mit drei Unterordnern: `braeuche/` (Alltagsbesonderheiten, z. B. Gruß- und Abschiedszeremonien), `feste_und_vorkommnisse/` (wiederkehrende institutionelle oder rituelle Feste und Ereignisse mit fester oder variabler Periodizität, z. B. Sonnenwendfest, Ausleseturnier der Garde) und `ereignisse/` (von Natur aus einmalige Ereignisse — Aufstände, Kataklysmen, historische Umbrüche — vergangen oder laufend).
-* `04_recht_und_gesetze/`: Recht, Grundgesetze und erfasste Rechtsakte in 10 granularen Rechtsgebieten (`01_rechtsordnung_und_quellen/`, `02_buergerrechte_und_status/`, `03_dynastisches_recht_und_erbfolge/`, `04_vertraege_und_pakte/`, `05_abkommen_und_diplomatie/`, `06_strafrecht_und_delikte/`, `07_gerichte_und_verfahren/`, `08_arkanes_und_religioeses_recht/`, `09_eigentum_handel_und_steuern/`, `10_kriegsrecht_und_abenteurer/`), jeweils mit `01_allgemeiner_rahmen.md` und nummerierten Bögen `02_<eintrag_slug>.md` (abwärtskompatibel mit `04_recht_und_erbfolge/`).
-* `05_charaktere/`: Modulare SC-Dossiers (`Spielercharaktere/<Kampagne>/<SC_Name>/`) und NSC-Bögen (`Nichtspielercharaktere/`).
-* `06_orte/`: Abenteuerknoten, Städte, Festungen und Gebietsgefahren.
-* `07_fraktionen/`: Adelshäuser, Zirkel, Gilden, Orden und Machthierarchien.
-* `08_besondere_magische_gegenstaende/`: Einzigartige Artefakte, Relikte, Rechtsregister und Resonanzen.
-* `09_chroniken/`: Kampagnen-Hub mit Übersichtstabelle und fortlaufenden Sitzungsprotokollen (`kampagnen/<name>/sitzungen/`).
+* `04_recht_und_gesetze/`: Recht, Grundgesetze und erfasste Rechtsakte in 10 granularen Rechtsgebieten (`01_rechtsordnung_und_quellen/`, `02_buergerrechte_und_status/`, `03_dynastisches_recht_und_erbfolge/`, `04_vertraege_und_pakte/`, `05_abkommen_und_diplomatie/`, `06_strafrecht_und_delikte/`, `07_gerichte_und_verfahren/`, `08_arkanes_und_religioeses_recht/`, `09_eigentum_handel_und_steuern/`, `10_kriegsrecht_und_abenteurer/`, plus etwaige Zusatzgebiete `11_+` oder Unterordner nach Gerichtsbarkeit), jeweils mit `01_allgemeiner_rahmen.md` und nummerierten Bögen `02_<eintrag_slug>.md`.
+* `05_charaktere/`: Modulare SC-Dossiers (`<Spielercharaktere>/<Kampagne_oder_Gruppe>/<SC_Name>/`, Standard `Spielercharaktere/<Kampagne>/`, z. B. `SCs/`, `Helden/`) und NSC-Bögen (`<Nichtspielercharaktere>/[<nsc_gruppe>/]`, Standard `Nichtspielercharaktere/`, z. B. `NSCs/`).
+* `06_orte/`: Abenteuerknoten, Städte, Festungen und Gebietsgefahren (mit optionalen Unterordnern `<ortsgruppen>/`).
+* `07_fraktionen/`: Adelshäuser, Zirkel, Gilden, Orden und Machthierarchien (mit optionalen Unterordnern `<fraktionsgruppen>/`).
+* `<08_besondere_magische_gegenstaende>/`: Einzigartige Artefakte, Relikte, Rechtsregister und Resonanzen (anpassbarer Bandname, z. B. `08_magische_gegenstaende/`, `08_artefakte_und_relikte/`, mit optionalen Unterordnern `<kategorien>/`).
+* `09_chroniken/`: Kampagnen-Hub mit Übersichtstabelle und fortlaufenden Sitzungsprotokollen (`<kampagnen>/<name>/<sitzungen>/`, Standard `kampagnen/` und `sitzungen/`, z. B. `expeditionen/`, `abenteuer/`, `tagebuecher/`).
 * `10_zeitlinie/`: Querschnittsband für Chronologie mit `historische_chronologie/` (Dateien pro Epoche/Zeitraum), `vorkommnisregister/` (Vorkommnisse von Festen und Ereignissen pro Epoche/Zeitraum), `markwhen/` (grafische Zeitlinie: `allgemeine_zeitlinie.mw` als Index/Legende, `.mw`-Dateien pro Epoche und Kampagne), `kalender/` (Weltkalender und Datumszuordnung) und `exporte/` (abgeleitete grafische Renderings).
 
 ---

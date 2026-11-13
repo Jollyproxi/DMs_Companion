@@ -16,7 +16,7 @@ Dieser Skill erstellt, aktualisiert und pflegt die Kontroll- und Übersichtsdate
 
 ## 1. Kriterien zur Statusklassifizierung
 
-Der Skill untersucht die Markdown-Dateien der kanonischen Weltordner (`01_kosmologie`, `02_geografie`, `03_gesellschaft_und_politik` einschließlich der Unterserie `braeuche_feste_und_ereignisse/`, `04_recht_und_gesetze` oder Bestandsname `04_recht_und_erbfolge`, `05_charaktere`, `06_orte`, `07_fraktionen`, `08_besondere_magische_gegenstaende`, `09_chroniken`, `10_zeitlinie`) und wertet die Badges aus:
+Der Skill untersucht die Markdown-Dateien der kanonischen Weltordner (`01_kosmologie`, `02_geografie`, `03_gesellschaft_und_politik` einschließlich optionalem `voelker/` und der Unterserie `braeuche_feste_und_ereignisse/`, `04_recht_und_gesetze`, `05_charaktere`, `06_orte`, `07_fraktionen`, `08_besondere_magische_gegenstaende` oder angepasster Bandname, `09_chroniken`, `10_zeitlinie` — rekursiv auch in optionalen oder benutzerdefinierten Unterordnern) und wertet die Badges aus:
 
 ```markdown
 > 🛡️ *Geprüft: [DATUM_G] | Geändert: [DATUM_A]*

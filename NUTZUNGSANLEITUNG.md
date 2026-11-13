@@ -77,15 +77,15 @@ Der Archivar ordnet **nur** das, was Sie liefern oder bereits kanonisiert haben.
 
 | Band | Inhalt |
 | :--- | :--- |
-| `01_kosmologie/` | Ebenen, Himmelsmechanik, Magiefluss, kosmische Ethik. |
-| `02_geografie/` | Kartografie, Gebiete, unterirdische Regionen, Regions-Dossiers (`regionen/`). |
-| `03_gesellschaft_und_politik/` | Zivile Ordnung, Wirtschaft, Gesellschaftsschichten, öffentliche Ordnung; Unterreihe `braeuche_feste_und_ereignisse/` (`braeuche/`, `feste_und_vorkommnisse/`, `ereignisse/`). |
-| `04_recht_und_gesetze/` | 10 Rechtsgebiete (`01_rechtsordnung_und_quellen/` … `10_kriegsrecht_und_abenteurer/`): Rechtsquellen, Bürgerrechte, Erbfolge, Verträge, Abkommen, Strafrecht, Gerichte, arkanes/religiöses Recht, Steuern, Kriegsrecht. |
-| `05_charaktere/` | Modulare SC-Dossiers (`Spielercharaktere/<Kampagne>/<SC_Name>/`) und NSC-Bögen (`Nichtspielercharaktere/`). |
-| `06_orte/` | Abenteuerknoten, Städte, Festungen, Gebietsgefahren. |
-| `07_fraktionen/` | Adelshäuser, Zirkel, Gilden, Orden, Machthierarchien. |
-| `08_besondere_magische_gegenstaende/` | Einzigartige Artefakte, Relikte, Rechtsregister, Eigenschaften. |
-| `09_chroniken/` | Kampagnen-Hub: Übersichtstabelle + fortlaufende Sitzungsprotokolle (`kampagnen/<name>/sitzungen/`). |
+| `01_kosmologie/` | Ebenen, Himmelsmechanik, Magiefluss, kosmische Ethik (`<ebenen>/`, `<pantheon>/` optional). |
+| `02_geografie/` | Kartografie, Gebiete, unterirdische Regionen, Regions-Dossiers (`regionen/` oder eigener Name, z. B. `provinzen/`, `domaenen/`). |
+| `03_gesellschaft_und_politik/` | Zivile Ordnung, Wirtschaft, Gesellschaftsschichten, öffentliche Ordnung; optional `voelker/` (oder eigener Name) und Unterreihe `braeuche_feste_und_ereignisse/` (`braeuche/`, `feste_und_vorkommnisse/`, `ereignisse/`). |
+| `04_recht_und_gesetze/` | 10 Rechtsgebiete (`01_rechtsordnung_und_quellen/` … `10_kriegsrecht_und_abenteurer/`), plus optionale Zusatzgebiete `11_+` oder Gerichtsbarkeiten. |
+| `05_charaktere/` | Modulare SC-Dossiers (`<Spielercharaktere>/<Kampagne_oder_Gruppe>/<SC_Name>/`, Standard `Spielercharaktere/<Kampagne>/`) und NSC-Bögen (`<Nichtspielercharaktere>/[<nsc_gruppe>/]`, Standard `Nichtspielercharaktere/`). |
+| `06_orte/` | Abenteuerknoten, Städte, Festungen, Gebietsgefahren (`<ortsgruppen>/` optional). |
+| `07_fraktionen/` | Adelshäuser, Zirkel, Gilden, Orden, Machthierarchien (`<fraktionsgruppen>/` optional). |
+| `<08_besondere_magische_gegenstaende>/` | Einzigartige Artefakte, Relikte, Rechtsregister, Eigenschaften (anpassbarer Bandname und `<kategorien>/` optional). |
+| `09_chroniken/` | Kampagnen-Hub: Übersichtstabelle + fortlaufende Sitzungsprotokolle (`<kampagnen>/<name>/<sitzungen>/`, Standard `kampagnen/` und `sitzungen/`). |
 | `10_zeitlinie/` | Querschnitts-Chronologie: `historische_chronologie/`, `vorkommnisregister/`, `markwhen/` (`allgemeine_zeitlinie.mw`, `epochen/`, `kampagnen/`), `kalender/`, `exporte/`. |
 
 ### Prüf-Badges
