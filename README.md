@@ -79,7 +79,7 @@ Each locale provides **1 Archivist agent** and **11 modular skills** designed ar
 
 ---
 
-## Maintaining Language Branches (`Opzione B` Workflow)
+## Maintaining Language Branches
 
 Edit translations on `main` inside `locales/<lang>/`, then synchronise the orphan branches:
 
@@ -87,6 +87,14 @@ Edit translations on `main` inside `locales/<lang>/`, then synchronise the orpha
 * **Local Sync**:
   * PowerShell (Windows): `./scripts/sync-branches.ps1`
   * Bash (macOS / Linux): `./scripts/sync-branches.sh`
+
+---
+
+## Work in Progress & Contributions
+
+**DMs_Companion is still a work in progress.** The core skills and the Archivist persona are functional and usable today, but expect rough edges, evolving conventions, and occasional restructuring as the toolkit matures.
+
+Contributions are very welcome — whether that's bug reports, translation fixes, new harness compatibility notes, or improvements to the skills themselves. That said, this is a solo-maintained project, and **reviews may take a while**: I want to give each contribution proper attention to preserve the project's principles, so please be patient if responses aren't immediate. A slow "yes, carefully reviewed" is worth more than a fast "merged and broken".
 
 ---
 
