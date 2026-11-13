@@ -54,7 +54,7 @@ Jeder validierte Abschnitt oder Bogen erhält das Standard-Badge:
 Jedes operative Verfahren ist in den modularen Skills unter `.agents/skills/` festgelegt:
 
 1. **`welt-initialisieren`**: Erstinterview und Erstellung des Zehn-Bände-Verzeichnisbaums.
-2. **`struktur-validieren`**: Diagnose für Ordner, fehlende `README.md`-Dateien, defekte Links und falsch platzierte Dateien.
+2. **`struktur-validieren`**: Diagnose für Ordner, fehlende `README.md`-Dateien, defekte Links, nicht verknüpfte Eigennamen und falsch platzierte Dateien.
 3. **`sitzungsprotokoll`**: Geführtes Interview oder Strukturierung von Rohnotizen, Protokoll mit Mermaid-Diagramm und Aktualisierung des Kampagnenindex.
 4. **`charakter-dossier`**: Erstellung und Pflege der 5-teiligen SC-Dossiers und NSC-Bögen.
 5. **`magischer-gegenstand`**: Katalogisierung von Artefakten, Relikten, Spielmechaniken und Rechtsstatus.
@@ -64,12 +64,21 @@ Jedes operative Verfahren ist in den modularen Skills unter `.agents/skills/` fe
 9. **`bibel-struktur-synchronisieren`**: Vollständige Kompilierung und inkrementelle Synchronisation von `WELTENBIBEL.md` und `weltstruktur.json`.
 10. **`brauch-fest-ereignis`**: Bögen für Bräuche, Feste/Vorkommnisse und einmalige Ereignisse im Einklang mit `10_zeitlinie/`.
 11. **`timeline-markwhen`**: Vollständiger Lebenszyklus für Markwhen-`.mw`-Quellen (`mw-erstellen`, `mw-aktualisieren`, `mw-validieren`, `mw-exportieren`).
+12. **`eigennamen-verlinken`**: Analyse, Prüfung und Umwandlung von Eigennamen in Markdown-Links auf die kanonischen Dateien der Entitäten (Regel der verknüpften Eigennamen).
 
 ---
 
-## 5. Querverweise und Kreuz-Aktualisierung
+## 5. Eigennamen als Verknüpfungen (Pflichtregel) & Kreuz-Aktualisierung
 
-- Sobald erfasste Entitäten erscheinen (SCs, NSCs, Fraktionen, Orte, Gegenstände, Bräuche/Ereignisse), erstelle relative Markdown-Links ohne Backticks (z. B. `[Name](pfad/datei.md)`).
+- **Regel des verknüpften Namens**: Jeder **Eigenname** einer Weltentität — Personen (SCs, NSCs), Häuser, Fraktionen, Gilden, Städte, Orte, Regionen, Ebenen, magische Gegenstände, Bräuche, Feste, Ereignisse, Epochen, Gesetze, Institutionen —, der im erzeugten Text vorkommt, muss als **Markdown-Link** auf die kanonische `.md`-Datei dieser Entität geschrieben werden, mit dem Eigennamen als Linktext: `[Name](relativer/pfad/datei.md)`. Niemals bloßer Klartext oder ein Backtick-Eintrag.
+- **Gültige Pfade**: Der Link verwendet einen relativen Pfad zur geschriebenen Datei und muss auf eine tatsächlich auf der Festplatte existierende Datei verweisen.
+- **Ausnahmen** (Namen ohne Link zulässig):
+  1. Überschriften und Dateinamen.
+  2. YAML-Frontmatter, Codeblöcke, Befehle und Pfade.
+  3. Beschriftungen von Mermaid-Diagrammen und Markwhen-`.mw`-Quellen (dort werden Markdown-Links nicht gerendert).
+  4. Allgemeine Bezeichnungen ohne Bezug auf erfasste Entitäten.
+- **Entität ohne Bogen**: Bezeichnet ein Eigenname eine Entität ohne kanonische `.md`-Datei, **erfinde den Bogen nicht**: Setze den Platzhalter `[VOM_SL_ZU_DEFINIEREN: Bogen fehlt für <Name>]` (im interaktiven Modus frage den SL, ob die Entität mit der passenden Skill zu erfassen ist) und melde die Lücke in der Liste der betroffenen Dateien.
+- **Konformitätsprüfung**: Nicht verknüpfte Namen mit der Skill `eigennamen-verlinken` scannen und umwandeln; oberflächliche Diagnosekontrolle als Pfeiler E von `struktur-validieren`.
 - Nach jedem Eintrag oder Sitzungsprotokoll:
   1. Speichere die Hauptdatei und aktualisiere verknüpfte `README.md`-Übersichten.
   2. Liste alle betroffenen Dateien (Dossiers, NSCs, Gegenstände, Chronologie) auf und schlage Änderungsentwürfe vor dem Anwenden vor.

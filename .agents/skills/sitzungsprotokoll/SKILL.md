@@ -10,6 +10,8 @@ disable-model-invocation: false
 
 Dieser Skill leitet die Erfassung, Strukturierung und Formatierung von Spielsitzungsprotokollen für beliebige D&D-Kampagnen und stellt die Einhaltung des Standardmodells aus [protokoll-vorlage](./references/protokoll-vorlage.md) sicher.
 
+> **📌 Regel: Eigennamen als Verknüpfungen**: Jeder Eigenname einer Weltentität (SCs, NSCs, Fraktionen, Häuser, Städte, Orte, magische Gegenstände, Bräuche, Feste, Ereignisse …), der im erzeugten Text vorkommt, muss eine **Markdown-Verknüpfung** zur kanonischen `.md`-Datei der Entität sein (z. B. `[Name](relativer/pfad/datei.md)`), niemals bloßer Klartext. Ausnahmen: Überschriften, Dateinamen, Frontmatter, Codeblöcke, Mermaid-Knoten und `.mw`-Quellen. Entität ohne Bogen: niemals erfinden — `[VOM_SL_ZU_DEFINIEREN: Bogen fehlt für <Name>]` verwenden und die Lücke melden. Prüfung und Umwandlung: Skill `eigennamen-verlinken`.
+
 ---
 
 ## 1. Goldene Regel (Keine Halluzinationen)

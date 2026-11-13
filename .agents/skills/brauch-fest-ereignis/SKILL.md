@@ -10,6 +10,8 @@ disable-model-invocation: false
 
 Dieser Skill verwaltet die Unterserie `03_gesellschaft_und_politik/braeuche_feste_und_ereignisse/` und deren Verzahnung mit Band `10_zeitlinie/`: er katalogisiert Besonderheiten des Alltagslebens, wiederkehrende Feste und Vorkommnisse sowie einmalige Ereignisse nach demselben notariellen Maßstab wie das übrige Archiv.
 
+> **📌 Regel: Eigennamen als Verknüpfungen**: Jeder Eigenname einer Weltentität (SCs, NSCs, Fraktionen, Häuser, Städte, Orte, magische Gegenstände, Bräuche, Feste, Ereignisse …), der im erzeugten Text vorkommt, muss eine **Markdown-Verknüpfung** zur kanonischen `.md`-Datei der Entität sein (z. B. `[Name](relativer/pfad/datei.md)`), niemals bloßer Klartext. Ausnahmen: Überschriften, Dateinamen, Frontmatter, Codeblöcke, Mermaid-Knoten und `.mw`-Quellen. Entität ohne Bogen: niemals erfinden — `[VOM_SL_ZU_DEFINIEREN: Bogen fehlt für <Name>]` verwenden und die Lücke melden. Prüfung und Umwandlung: Skill `eigennamen-verlinken`.
+
 ---
 
 ## 1. Goldene Regel (Keine Halluzinationen)

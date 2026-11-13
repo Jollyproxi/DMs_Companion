@@ -1,6 +1,6 @@
 # Kampagnen-Archivar — Nutzungsanleitung
 
-Alles, was Sie brauchen, um den **Kampagnen-Archivar** an Ihrem Spieltisch arbeiten zu lassen: Installation, erste Schritte, vollständige Referenz aller **11 Fähigkeiten**, typische Arbeitsabläufe, Fehlerbehebung und FAQ.
+Alles, was Sie brauchen, um den **Kampagnen-Archivar** an Ihrem Spieltisch arbeiten zu lassen: Installation, erste Schritte, vollständige Referenz aller **12 Fähigkeiten**, typische Arbeitsabläufe, Fehlerbehebung und FAQ.
 
 * Lokalisierte Fassungen dieser Anleitung: [Italiano](https://github.com/<owner>/DMs_Companion/blob/main/locales/it/GUIDA-UTILIZZO.md) · [British English](https://github.com/<owner>/DMs_Companion/blob/main/locales/en-gb/USAGE.md) · [Français](https://github.com/<owner>/DMs_Companion/blob/main/locales/fr/GUIDE-UTILISATION.md) — siehe auch das projekteigene [USAGE.md](https://github.com/<owner>/DMs_Companion/blob/main/USAGE.md) auf dem `main`-Branch.
 
@@ -38,7 +38,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/de/.ag
 | `AGENTS.md` | Universelle Regeln und Abläufe, von jedem Harness gelesen. |
 | `CLAUDE.md` | Einstiegspunkt für Claude Code; importiert `AGENTS.md`. |
 | `.github/agents/kampagnen-archivar.agent.md` | Die Persona *Kampagnen-Archivar* (Eintrag im Agenten-Auswahlmenü von VS Code). |
-| `.agents/skills/<faehigkeit>/SKILL.md` | Die 11 modularen Fähigkeiten (plus Vorlagen unter `references/`). |
+| `.agents/skills/<faehigkeit>/SKILL.md` | Die 12 modularen Fähigkeiten (plus Vorlagen unter `references/`). |
 | `NUTZUNGSANLEITUNG.md` | Diese Anleitung. |
 
 ### Hinweise je Harness
@@ -119,6 +119,7 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 | 9 | `bibel-struktur-synchronisieren` | Master-Weltenbibel + maschinenlesbares JSON. |
 | 10 | `brauch-fest-ereignis` | Bräuche, Feste/Vorkommnisse, Einmal-Ereignisse. |
 | 11 | `timeline-markwhen` | Grafische Markwhen-Zeitlinien (`.mw`). |
+| 12 | `eigennamen-verlinken` | Eigennamen stets mit kanonischen Bögen verknüpft. |
 
 ### 4.1 `welt-initialisieren` — Weltgerüst
 
@@ -186,6 +187,12 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 * **Wie**: `/timeline-markwhen` mit einem Vorgang — `mw-erstellen`, `mw-aktualisieren`, `mw-validieren` oder `mw-exportieren` (z. B. *„mw-erstellen epoche: Erstes Zeitalter“*, *„mw-aktualisieren kampagne: Chroniken des Nordens“*).
 * **Ergebnis**: `.mw`-Quellen unter `10_zeitlinie/markwhen/` (`allgemeine_zeitlinie.mw`, `epochen/`, `kampagnen/`), synchron gehalten mit Chronologie, Vorkommnisregister und Protokollen; gerenderte Exporte unter `10_zeitlinie/exporte/`.
 
+### 4.12 `eigennamen-verlinken` — Verknüpfte Eigennamen
+
+* **Wann**: Sie die Regel prüfen oder wiederherstellen wollen, dass jeder Eigenname ein Link auf die kanonische `.md`-Datei der Entität ist.
+* **Wie**: `/eigennamen-verlinken` — *„Pfad der zu scannenden Datei oder des Ordners (oder 'ganzes Archiv').“*
+* **Ergebnis**: eine Tabelle nicht verknüpfter Namen mit vorgeschlagener oder angewandter Link-Umwandlung sowie Meldung der Entitäten ohne Bogen.
+
 ---
 
 ## 5. Typische Arbeitsabläufe
@@ -228,7 +235,7 @@ SC/NSC → `charakter-dossier` · Artefakt → `magischer-gegenstand` · Brauch/
 
 ## 7. FAQ
 
-* **Brauche ich alle 11 Fähigkeiten?** Nein. Installieren Sie sie alle (sie sind eigenständig) und nutzen Sie nur, was Sie brauchen.
+* **Brauche ich alle 12 Fähigkeiten?** Nein. Installieren Sie sie alle (sie sind eigenständig) und nutzen Sie nur, was Sie brauchen.
 * **Kann ich mehrere Kampagnen in einer Welt führen?** Ja — `09_chroniken/kampagnen/<name>/` hält die Protokolle jeder Kampagne getrennt; gemeinsame Lore lebt in den übrigen Bänden.
 * **Kann ich es für bezahlte Kampagnen, Streams oder Actual Plays nutzen?** Ja. Die Nicht-Kommerz-Klausel betrifft den Verkauf der Werkzeugsammlung selbst, niemals die Spiele, die Sie damit leiten.
 * **Kann ich die Fähigkeiten umverpacken oder verkaufen?** Nein — CC BY-NC-SA 4.0 (siehe `LICENSE` auf dem `main`-Branch).

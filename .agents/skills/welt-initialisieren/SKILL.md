@@ -10,6 +10,8 @@ disable-model-invocation: false
 
 Dieser Skill begleitet den Spielleiter bei der interaktiven Konfiguration und Erstellung der Ordnerstruktur einer Fantasy-Spielwelt gemäß der standardisierten Zehn-Bände-Architektur aus [weltarchitektur](./references/weltarchitektur.md).
 
+> **📌 Regel: Eigennamen als Verknüpfungen**: Jeder Eigenname einer Weltentität (SCs, NSCs, Fraktionen, Häuser, Städte, Orte, magische Gegenstände, Bräuche, Feste, Ereignisse …), der im erzeugten Text vorkommt, muss eine **Markdown-Verknüpfung** zur kanonischen `.md`-Datei der Entität sein (z. B. `[Name](relativer/pfad/datei.md)`), niemals bloßer Klartext. Ausnahmen: Überschriften, Dateinamen, Frontmatter, Codeblöcke, Mermaid-Knoten und `.mw`-Quellen. Entität ohne Bogen: niemals erfinden — `[VOM_SL_ZU_DEFINIEREN: Bogen fehlt für <Name>]` verwenden und die Lücke melden. Prüfung und Umwandlung: Skill `eigennamen-verlinken`.
+
 ---
 
 ## 1. Geführtes Verfahren (Erstinterview)

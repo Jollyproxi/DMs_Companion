@@ -105,7 +105,7 @@ Jeder validierte Abschnitt erhält das sichtbare Standard-Badge:
 ## 6. Matrix der modularen Sub-Skills
 
 1. **`welt-initialisieren`**: Interview und Aufbau der Zehn-Bände-Struktur für neue Spielwelten.
-2. **`struktur-validieren`**: Technische Diagnose (Ordnerkonformität, fehlende `README.md`, defekte Links, verwaiste Dateien).
+2. **`struktur-validieren`**: Technische Diagnose (Ordnerkonformität, fehlende `README.md`, defekte Links, nicht verknüpfte Eigennamen, verwaiste Dateien).
 3. **`sitzungsprotokoll`**: Geführtes Interview, Protokollierung mit Mermaid-Diagramm und Aktualisierung des Kampagnenindex.
 4. **`charakter-dossier`**: Erstellung und Pflege der 5-teiligen SC-Dossiers und NSC-Bögen.
 5. **`magischer-gegenstand`**: Katalogisierung von Artefakten, Resonanzen und rechtlicher Einordnung.
@@ -115,12 +115,17 @@ Jeder validierte Abschnitt erhält das sichtbare Standard-Badge:
 9. **`bibel-struktur-synchronisieren`**: Vollständige Kompilierung und inkrementeller Abgleich von Weltenbibel und `weltstruktur.json` (`Bibel-generieren`, `Struktur-JSON-generieren`, `Bibel-aktualisieren`, `Struktur-JSON-aktualisieren`).
 10. **`brauch-fest-ereignis`**: Erstellung und Pflege der Bögen für Bräuche, Feste/Vorkommnisse und einmalige Ereignisse in `03_gesellschaft_und_politik/braeuche_feste_und_ereignisse/` samt Aktualisierung von historischer Chronologie und Vorkommnisregister in `10_zeitlinie/`.
 11. **`timeline-markwhen`**: Erstellung, inkrementelle Aktualisierung, syntaktische/gegenseitige Validierung und Export der grafischen Markwhen-Zeitlinienquellen (`.mw`) in `10_zeitlinie/markwhen/` und `exporte/` (`mw-erstellen`, `mw-aktualisieren`, `mw-validieren`, `mw-exportieren`).
+12. **`eigennamen-verlinken`**: Analyse, Prüfung und Umwandlung von Eigennamen von Personen, Orten, Gegenständen und Ereignissen in Markdown-Links auf die kanonischen Dateien der Entitäten (Regel der verknüpften Eigennamen).
 
 ---
 
-## 7. Querverweise & Workspace-Integration
+## 7. Eigennamen als Verknüpfungen (Pflichtregel) & Workspace-Integration
 
-- Sobald Namen erfasster SCs, NSCs, Fraktionen, Gilden, Städte oder magischer Gegenstände auftauchen, ermittle die zugehörige Datei und erzeuge relative Markdown-Links ohne Backticks (z. B. `[Name](ordner/datei.md)`).
+- **Regel des verknüpften Namens**: Jeder Eigenname einer Weltentität — SCs, NSCs, Häuser, Fraktionen, Gilden, Städte, Orte, Regionen, Ebenen, magische Gegenstände, Bräuche, Feste, Ereignisse, Epochen, Gesetze, Institutionen —, der im erzeugten Text vorkommt, muss eine **Markdown-Verknüpfung** zur kanonischen `.md`-Datei der Entität sein, mit dem Eigennamen als Linktext (z. B. `[Name](ordner/datei.md)`), niemals bloßer Klartext oder ein Backtick-Eintrag.
+- **Gültige Pfade**: Der Link verwendet einen relativen Pfad zur geschriebenen Datei und muss auf eine tatsächlich auf der Festplatte existierende Datei verweisen.
+- **Ausnahmen** (Namen ohne Link zulässig): Überschriften und Dateinamen; YAML-Frontmatter, Codeblöcke und Pfade; Beschriftungen von Mermaid-Diagrammen und Markwhen-`.mw`-Quellen; allgemeine Bezeichnungen ohne Bezug auf erfasste Entitäten.
+- **Entität ohne Bogen**: Erfinde den Bogen nicht — verwende den Platzhalter `[VOM_SL_ZU_DEFINIEREN: Bogen fehlt für <Name>]`, frage den SL, ob die Entität mit der passenden Skill zu erfassen ist, und melde die Lücke in der Liste der betroffenen Dateien.
+- **Prüfung**: Scannen und Umwandeln mit der Skill `eigennamen-verlinken` (Pfeiler E von `struktur-validieren`).
 - Respektiere die Modularität des lokalen Repositories und passe dich automatisch an bestehende Ordner an.
 
 ---

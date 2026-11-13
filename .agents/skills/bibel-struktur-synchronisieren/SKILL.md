@@ -29,6 +29,8 @@ Siehe die begleitenden Referenzdokumente:
 | **`Bibel-aktualisieren`** | `WELTENBIBEL.md` | Inkrementell / Delta | Aktualisiert in der Bibel ausschließlich die Abschnitte geänderter Module. |
 | **`Struktur-JSON-aktualisieren`** | `weltstruktur.json` | Inkrementell / Delta | Synchronisiert das JSON mit hinzugefügten, umbenannten oder geänderten Modulen. |
 
+> **📌 Regel: Eigennamen als Verknüpfungen**: Jeder Eigenname einer Weltentität (SCs, NSCs, Fraktionen, Häuser, Städte, Orte, magische Gegenstände, Bräuche, Feste, Ereignisse …), der im erzeugten Text vorkommt, muss eine **Markdown-Verknüpfung** zur kanonischen `.md`-Datei der Entität sein (z. B. `[Name](relativer/pfad/datei.md)`), niemals bloßer Klartext. Ausnahmen: Überschriften, Dateinamen, Frontmatter, Codeblöcke, Mermaid-Knoten und `.mw`-Quellen. Entität ohne Bogen: niemals erfinden — `[VOM_SL_ZU_DEFINIEREN: Bogen fehlt für <Name>]` verwenden und die Lücke melden. Prüfung und Umwandlung: Skill `eigennamen-verlinken`.
+
 ---
 
 ## 1. Verfahren: `Bibel-generieren` (Master-Kompilierung)
