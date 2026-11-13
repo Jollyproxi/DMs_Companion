@@ -19,11 +19,11 @@ Questa skill esegue un audit diagnostico approfondito dell'alberatura dei file d
 La skill controlla i cinque pilastri dell'integrità strutturale:
 
 ### A. Conformità dei Dieci Tomi
-Verifica la presenza delle directory canoniche (accettando eventuali varianti già in uso nel repository come `06_location`, `07_factions`, `08_oggetti magici peculiari` o `cornici/`):
+Verifica la presenza delle directory canoniche (accettando eventuali varianti già in uso nel repository come `04_diritto_e_successione`, `06_location`, `07_factions`, `08_oggetti magici peculiari` o `cornici/`):
 1. `01_cosmologia`
 2. `02_geografia`
 3. `03_societa_e_politica` (con sottocartella `usi_costumi_ed_eventi/` contenente `usanze/`, `festival_ed_occorrenze/`, `eventi/`)
-4. `04_diritto_e_successione`
+4. `04_diritto_e_leggi` *(o variante legacy `04_diritto_e_successione`; con sottocartelle `01_ordinamento_e_fonti/` … `10_diritto_bellico_e_avventurieri/`)*
 5. `05_personaggi` (con sottocartelle `Giocanti/` e `Non-Giocanti/`)
 6. `06_luoghi` *(o variante `06_location`)*
 7. `07_fazioni` *(o variante `07_factions`)*
@@ -50,7 +50,7 @@ Verifica che ogni nome proprio di entità censita (PG, PNG, fazioni, casate, cit
 1. **Scansione del File System**:
    - Esegui una ricognizione delle cartelle e dei file `.md` presenti nel workspace escludendo directory tecniche (`.git`, `.agents`, `.github`, `.claude`, `node_modules`, `graphify-out`).
 2. **Esecuzione dei Test A-B-C-D-E**:
-   - Valida le cartelle dei 10 tomi (incluse le sottocartelle `usi_costumi_ed_eventi/` e `10_timeline/`).
+   - Valida le cartelle dei 10 tomi (incluse le sottocartelle `usi_costumi_ed_eventi/`, `04_diritto_e_leggi/` e `10_timeline/`).
    - Controlla i `README.md` mancanti.
    - Analizza le stringhe di link `[Testo](percorso)` e verifica l'esistenza del file tramite path relativo.
    - Ispeziona la radice per rilevare file orfani.

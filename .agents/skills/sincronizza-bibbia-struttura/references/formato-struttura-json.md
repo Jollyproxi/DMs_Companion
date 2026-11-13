@@ -46,7 +46,7 @@ Ciascun elemento dell'array `struttura` rappresenta uno dei dieci tomi dell'arch
 ```
 
 ### Campi del Tomo
-* `id` *(string)*: Identificatore univoco snake_case senza prefisso numerico (es. `"cosmologia"`, `"geografia"`, `"diritto_successione"`).
+* `id` *(string)*: Identificatore univoco snake_case senza prefisso numerico (es. `"cosmologia"`, `"geografia"`, `"diritto_e_leggi"`).
 * `codice` *(string)*: Numero del tomo a due cifre (`"01"` - `"10"`).
 * `titolo` *(string)*: Titolo formale del tomo, desunto dal rispettivo `README.md`.
 * `cartella` *(string)*: Nome della directory relativa alla radice (es. `"01_cosmologia"`).
@@ -166,6 +166,37 @@ Se presente una sottodirectory regionale:
 * `scaturiggine` *(string, opzionale)*: condizioni di innesto dell'evento ricorrente.
 * `stato_occorrenza` *(string, opzionale)* per gli eventi: `"pianificato"`, `"in_svolgimento"` o `"concluso"`.
 
+### D2. Tomo 04 (Diritto e Leggi — Sottocartelle `01_` … `10_`)
+```json
+{
+  "id": "diritto_e_leggi",
+  "codice": "04",
+  "titolo": "Diritto e Leggi",
+  "cartella": "04_diritto_e_leggi",
+  "indice": "04_diritto_e_leggi/README.md",
+  "descrizione": "Ordinamento giuridico, diritti civili, successione, contratti, trattati, penale, tribunali, diritto arcano, fisco e diritto bellico.",
+  "moduli": [],
+  "branche": [
+    {
+      "id": "ordinamento_e_fonti",
+      "codice": "4.1",
+      "titolo": "Ordinamento e Fonti del Diritto",
+      "cartella": "04_diritto_e_leggi/01_ordinamento_e_fonti",
+      "indice": "04_diritto_e_leggi/01_ordinamento_e_fonti/README.md",
+      "moduli": [
+        {
+          "id": "quadro_generale",
+          "codice": "4.1.1",
+          "titolo": "Quadro Generale dell'Ordinamento",
+          "file": "04_diritto_e_leggi/01_ordinamento_e_fonti/01_quadro_generale.md"
+        }
+      ]
+    }
+  ]
+}
+```
+*(In ambientazioni esistenti con cartella `04_diritto_e_successione/` a moduli piatti, questi vengono indicizzati in `"moduli"` mantenendo eventuale `"id": "diritto_successione"`.)*
+
 ### E. Tomo 10 (Timeline)
 ```json
 {
@@ -227,5 +258,5 @@ Quando si esegue `genera-struttura-json` o `aggiorna-struttura-json`:
 3. **Tabelle**: Rilevate tramite righe con separatori di colonna `| :--- | :--- |` precedute da un titolo `## Tabella...` o didascalia.
 4. **Note DM**: Rilevate tramite marcatori `**NOTA PER IL DUNGEON MASTER:**` o `> ⚠️ **Nota DM:**`.
 5. **Codice Numerico**: Se il file si chiama `03_flusso_della_magia.md` dentro `01_cosmologia`, il codice è `"1.3"`.
-6. **Codici Sottoserie**: Le schede di `usi_costumi_ed_eventi/` usano codici di terzo livello per sottocartella (`3.5.x` usanze, `3.6.x` festival/occorrenze, `3.7.x` eventi; numerazione progressiva per sottocartella). I file della `10_timeline/` usano `10.1.x` (cronologia storica), `10.2.x` (registro occorrenze), `10.3.x` (calendario).
+6. **Codici Sottoserie**: Le schede di `usi_costumi_ed_eventi/` usano codici di terzo livello per sottocartella (`3.5.x` usanze, `3.6.x` festival/occorrenze, `3.7.x` eventi; numerazione progressiva per sottocartella). Le branche di `04_diritto_e_leggi/` usano `4.1.x` … `4.10.x` (`4.Y.1` per `01_quadro_generale.md`, `4.Y.2+` per gli atti `02_<slug_atto>.md`). I file della `10_timeline/` usano `10.1.x` (cronologia storica), `10.2.x` (registro occorrenze), `10.3.x` (calendario).
 7. **Campi Tipologici**: Per i festival/occorrenze estrarre `periodicita` e `scaturiggine` dalle rispettive sezioni del template; per gli eventi una tantum estrarre `stato_occorrenza`.

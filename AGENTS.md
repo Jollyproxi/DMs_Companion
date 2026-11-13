@@ -20,12 +20,12 @@ Queste istruzioni sono compatibili con qualsiasi harness o assistente AI (VS Cod
 
 ## 2. Architettura del Mondo a Dieci Tomi
 
-L'ambientazione segue l'architettura modulare standard a dieci tomi (adattandosi automaticamente a eventuali cartelle già presenti nei repository esistenti, come `06_location/`, `07_factions/`, `08_oggetti magici peculiari/` o `cornici/`):
+L'ambientazione segue l'architettura modulare standard a dieci tomi (adattandosi automaticamente a eventuali cartelle già presenti nei repository esistenti, come `04_diritto_e_successione/`, `06_location/`, `07_factions/`, `08_oggetti magici peculiari/` o `cornici/`):
 
 * `01_cosmologia/`: Piani, meccaniche celesti, flusso magico ed etica cosmica.
 * `02_geografia/`: Cartografia, territori, regioni sotterranee e dossier per `regioni/` (o `cornici/`).
-* `03_societa_e_politica/`: Ordinamento civile, economia, classi sociali, giustizia e sottoserie `usi_costumi_ed_eventi/` (`usanze/`, `festival_ed_occorrenze/`, `eventi/`).
-* `04_diritto_e_successione/`: Leggi fondamentali, diritto dinastico, patti, trattati e tribunali.
+* `03_societa_e_politica/`: Ordinamento civile, economia, classi sociali, ordine pubblico e sottoserie `usi_costumi_ed_eventi/` (`usanze/`, `festival_ed_occorrenze/`, `eventi/`).
+* `04_diritto_e_leggi/`: 10 sottocartelle giuridiche (`01_ordinamento_e_fonti/`, `02_diritti_civili_e_status/`, `03_diritto_dinastico_e_successione/`, `04_contratti_e_patti/`, `05_trattati_e_diplomazia/`, `06_diritto_penale_e_reati/`, `07_tribunali_e_procedura/`, `08_diritto_arcano_e_religioso/`, `09_proprieta_commercio_e_fisco/`, `10_diritto_bellico_e_avventurieri/`), ognuna con `01_quadro_generale.md` e schede numerate `02_<slug_atto>.md`.
 * `05_personaggi/`: Dossier modulari PG (`Giocanti/<Campagna>/<Nome_PG>/`) e schede PNG (`Non-Giocanti/`).
 * `06_luoghi/`: Nodi d'avventura, città, roccaforti e pericoli d'area.
 * `07_fazioni/`: Casate, congreghe, corporazioni, ordini e gerarchie di potere.

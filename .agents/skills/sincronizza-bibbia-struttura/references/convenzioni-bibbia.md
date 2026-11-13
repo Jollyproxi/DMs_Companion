@@ -48,10 +48,10 @@ La compilazione procede rigorosamente secondo la sequenza numerica canonica:
    - Moduli principali di geografia, mappe, sottosuolo e piani liminali.
    - Trattazione delle singole regioni/province/cornici in `regioni/` (o `cornici/`), ordinate per numero crescente.
 3. **##### 3. Ordinamento Sociale, Politico ed Economico** (`03_societa_e_politica/`)
-   - Modelli sociali, economia, classi, diritto penale.
+   - Modelli sociali, economia, classi, ordine pubblico e forze dell'ordine.
    - Sottoserie `usi_costumi_ed_eventi/`: usanze (`3.5.x`), festival/occorrenze (`3.6.x`), eventi una tantum (`3.7.x`), in ordine numerico progressivo per sottocartella.
-4. **##### 4. Diritto, Patti e Regole di Successione** (`04_diritto_e_successione/`)
-   - Contratti, patti, trattati, gerarchia di successione, tribunali.
+4. **##### 4. Diritto e Leggi** (`04_diritto_e_leggi/` o variante legacy `04_diritto_e_successione/`)
+   - Ordinamento e fonti (`4.1.x`), diritti civili e status (`4.2.x`), diritto dinastico e successione (`4.3.x`), contratti e patti (`4.4.x`), trattati e diplomazia (`4.5.x`), diritto penale e reati (`4.6.x`), tribunali e procedura (`4.7.x`), diritto arcano e religioso (`4.8.x`), proprietà, commercio e fisco (`4.9.x`), diritto bellico e avventurieri (`4.10.x`), ciascuna con quadro generale (`4.Y.1`) e atti censiti (`4.Y.2+`) in ordine numerico progressivo.
 5. **##### 5. Anagrafica dei Personaggi del Mondo** (`05_personaggi/`)
    - Roster PNG significativi (`Non-Giocanti/`), raggruppati per fazione o regione.
    - Sintesi dei legami del party se presente una campagna canonica.

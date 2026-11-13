@@ -44,7 +44,7 @@ Una volta ricevute le risposte del Master, genera la struttura modulare utilizza
    - `01_cosmologia/README.md`
    - `02_geografia/README.md` (con eventuale sottocartella `regioni/` o denominazione scelta per le macro-aree)
    - `03_societa_e_politica/README.md` (con sottocartella `usi_costumi_ed_eventi/` contenente `usanze/`, `festival_ed_occorrenze/`, `eventi/`, ciascuna con `README.md`)
-   - `04_diritto_e_successione/README.md`
+   - `04_diritto_e_leggi/README.md` (con sottocartelle `01_ordinamento_e_fonti/`, `02_diritti_civili_e_status/`, `03_diritto_dinastico_e_successione/`, `04_contratti_e_patti/`, `05_trattati_e_diplomazia/`, `06_diritto_penale_e_reati/`, `07_tribunali_e_procedura/`, `08_diritto_arcano_e_religioso/`, `09_proprieta_commercio_e_fisco/`, `10_diritto_bellico_e_avventurieri/`, ciascuna con `README.md`)
    - `05_personaggi/README.md` (con sottocartelle `Giocanti/` e `Non-Giocanti/`, ciascuna con `README.md`)
    - `06_luoghi/README.md`
    - `07_fazioni/README.md`
