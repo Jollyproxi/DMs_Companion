@@ -8,7 +8,7 @@ disable-model-invocation: false
 
 # Skill: Gestione Oggetti Magici Peculiari (Oggetto-Magico)
 
-Questa skill governa la catalogazione formale di artefatti, reliquie e focus arcani all'interno del tomo `08_oggetti_magici_peculiari/` (o `08_oggetti magici peculiari/` nei repository esistenti), rispettando il modello strutturale definito in [template-oggetto](./references/template-oggetto.md).
+Questa skill governa la catalogazione formale di artefatti, reliquie e focus arcani all'interno del Tomo VIII (`08_oggetti_magici_peculiari/`, oppure `08_oggetti magici peculiari/` o altro nome custom del tomo nel workspace), rispettando il modello strutturale definito in [template-oggetto](./references/template-oggetto.md).
 
 > **📌 Regola Nomi Propri Collegati**: ogni nome proprio di entità dell'ambientazione (PG, PNG, fazioni, casate, città, luoghi, oggetti magici, usanze, festival, eventi…) che compare nel testo prodotto deve essere un **collegamento Markdown** al file `.md` canonico dell'entità (es. `[Nome](percorso/relativo/file.md)`), mai semplice testo nudo. Eccezioni: intestazioni, nomi di file, frontmatter, blocchi di codice, nodi Mermaid e sorgenti `.mw`. Entità priva di scheda: non inventarla — usa `[DA_DEFINIRE_MASTER: scheda mancante per <Nome>]` e segnala la lacuna. Verifica e conversione: skill `collega-nomi-propri`.
 
@@ -33,10 +33,10 @@ Questa skill governa la catalogazione formale di artefatti, reliquie e focus arc
    - **`poteri_meccaniche`**: Proprietà meccaniche D&D 5e e risonanze sensoriali (campo libero).
 
 2. **Creazione del File**:
-   Salva la scheda in `08_oggetti_magici_peculiari/<Nome_Oggetto>.md` utilizzando il template standard.
+   Salva la scheda in `<08_oggetti_magici_peculiari>/[<categoria>/]<Nome_Oggetto>.md` (rispettando l'eventuale nome custom del tomo VIII e le sottocartelle opzionali di categoria) utilizzando il template standard.
 
 3. **Aggiornamento Indice del Tomo**:
-   Aggiungi la voce con categoria, risonanza e custode nella tabella o lista del file `08_oggetti_magici_peculiari/README.md`.
+   Aggiungi la voce con categoria, risonanza e custode nella tabella o lista del file `<08_oggetti_magici_peculiari>/README.md` (e dell'eventuale `README.md` di categoria).
 
 4. **Collegamento Incrociato con il Custode**:
    Se l'oggetto appartiene a un PG, aggiorna il modulo `04_equipaggiamento_e_capacita.md` del dossier PG collegandolo alla nuova scheda dell'oggetto.

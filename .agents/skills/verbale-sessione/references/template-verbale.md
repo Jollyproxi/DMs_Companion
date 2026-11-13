@@ -10,7 +10,7 @@ Questo documento definisce la struttura standard e le linee guida per la stesura
 * **Campagna:** [Nome Campagna con link Markdown al relativo README]
 * **Data in-game:** [Riferimento temporale narrativo, es. Giorno 12, Anno 514]
 * **Teatro degli Eventi:** [Luoghi geografici con link relativi ai dossier se presenti in 06_luoghi/ o 02_geografia/]
-* **Protagonisti:** [Elenco dei PG presenti con link relativi ai loro dossier in 05_personaggi/Giocanti/]
+* **Protagonisti:** [Elenco dei PG presenti con link relativi ai loro dossier nel Tomo V (es. 05_personaggi/Giocanti/)]
 * **Usi, costumi ed eventi emersi:** [Link alle schede in 03_societa_e_politica/usi_costumi_ed_eventi/ per usanze, festival o eventi introdotti/menzionati; link alla 10_timeline/ per le occorrenze svolte. Scrivere "Nessuno" se la sessione non ne ha toccati.]
 
 ---

@@ -68,7 +68,7 @@ Usa questa procedura per inizializzare `10_timeline/markwhen/` o creare un nuovo
    - Leggi `10_timeline/README.md`, `10_timeline/calendario/` e `10_timeline/markwhen/README.md`.
    - In base al target richiesto (`generale`, `epoca`, `campagna`, o `tutto`), ispeziona le fonti pertinenti:
      - Per un'**epoca**: `10_timeline/cronologia_storica/`, `10_timeline/registro_occorrenze/` e le schede in `03_societa_e_politica/usi_costumi_ed_eventi/`.
-     - Per una **campagna**: `09_cronache/campagne/<nome_campagna>/README.md`, i verbali in `sessioni/`, i dossier PG (`05_personaggi/Giocanti/<nome_campagna>/`) e gli eventi storici/in svolgimento collegati.
+     - Per una **campagna**: `09_cronache/<campagne>/<nome_campagna>/README.md`, i verbali in `<sessioni>/`, i dossier PG (`05_personaggi/<Giocanti>/<Campagna_o_Party>/`) e gli eventi storici/in svolgimento collegati.
 2. **Intervista Preliminare**:
    - Se mancano coordinate essenziali (es. nome/slug dell'epoca, anno di inizio/fine, anno corrente della campagna), chiedile al Master prima di generare il file (usando lo strumento di domande strutturate dell'ambiente se disponibile, altrimenti in chat).
 3. **Generazione dei File secondo i Template**:

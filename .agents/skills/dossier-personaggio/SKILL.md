@@ -31,9 +31,9 @@ I template completi sono consultabili in [template-dossier](./references/templat
 
 Quando il Master introduce o documenta un nuovo Personaggio Giocante:
 
-1. **Acquisizione Guidata (se necessario)**: Conferma con il Master nome esatto, classe, livello e campagna di appartenenza.
+1. **Acquisizione Guidata (se necessario)**: Conferma con il Master nome esatto, classe, livello e campagna/gruppo di appartenenza.
 2. **Creazione della Cartella**:
-   `05_personaggi/Giocanti/<Campagna>/<Nome_PG>/`
+   `05_personaggi/<Giocanti>/<Campagna_o_Party>/<Nome_PG>/` *(default: `05_personaggi/Giocanti/<Campagna>/<Nome_PG>/`, rispettando eventuali nomi custom nel workspace)*
 3. **Generazione dei File Modulari**:
    - `README.md`: Hub del personaggio con ruolo, tratti morali e indice dei 5 file.
    - `01_anagrafica_e_tratti.md`: Dati anagrafici, classe, livello, tratti e aspetto.
@@ -42,7 +42,7 @@ Quando il Master introduce o documenta un nuovo Personaggio Giocante:
    - `04_equipaggiamento_e_capacita.md`: Oggetti caratteristici, armi, focus e capacità uniche.
    - `05_ganci_e_segreti_dm.md`: Spunti riservati per il Master, enigmi e rivelazioni.
 4. **Aggiornamento Hub Campagna e Gruppo**:
-   Aggiungi il nuovo PG al file `README.md` in `05_personaggi/Giocanti/<Campagna>/README.md` e nell'indice generale `05_personaggi/README.md`.
+   Aggiungi il nuovo PG al file `README.md` in `05_personaggi/<Giocanti>/<Campagna_o_Party>/README.md` e nell'indice generale `05_personaggi/README.md`.
 
 ---
 
@@ -52,12 +52,12 @@ Quando il Master introduce un Personaggio Non Giocante rilevante:
 
 1. **Acquisizione Guidata**: Se mancano elementi essenziali, chiarisci con il Master fazione di appartenenza, stato vitale e ubicazione.
 2. **Percorso**:
-   `05_personaggi/Non-Giocanti/<Nome_PNG>.md`
+   `05_personaggi/<Non-Giocanti>/[<gruppo_png>/]<Nome_PNG>.md` *(default: `05_personaggi/Non-Giocanti/<Nome_PNG>.md`; rispetta eventuali sottocartelle di raggruppamento opzionali per fazione, regione o schieramento)*
 3. **Struttura**:
-   - Intestazione con ruolo, fazione (con link a `07_fazioni/`), residenza (link a `06_luoghi/`), allineamento e stato vitale.
+   - Intestazione con ruolo, fazione (con link al Tomo VII `07_fazioni/`), residenza (link al Tomo VI `06_luoghi/`), allineamento e stato vitale.
    - Sezioni su Aspetto & Indole, Ruolo Narrativo e Segreti & Ganci DM.
 4. **Aggiornamento Indice PNG**:
-   Aggiungi la voce nella tabella delle relazioni in `05_personaggi/Non-Giocanti/README.md`.
+   Aggiungi la voce nella tabella delle relazioni in `05_personaggi/<Non-Giocanti>/README.md` (e nell'eventuale `README.md` del sottogruppo).
 
 ---
 
