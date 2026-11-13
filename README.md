@@ -25,6 +25,8 @@ The `main` branch holds only this project overview, the source localisations und
 
 ## Quick Start: Copy or Install into Your Campaign
 
+> **New here?** The [Usage Guide](USAGE.md) walks you through installation, first steps, every skill, typical workflows, and troubleshooting. Localised: [Italiano](locales/it/GUIDA-UTILIZZO.md) · [British English](locales/en-gb/USAGE.md) · [Français](locales/fr/GUIDE-UTILISATION.md) · [Deutsch](locales/de/NUTZUNGSANLEITUNG.md).
+
 Replace `<lang>` with `it`, `en-gb`, `fr`, or `de`, and `<owner>` with the repository owner.
 
 ### Option 1 — Clone a single language branch and copy into your repo
@@ -50,6 +52,8 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/<lang>
 ### Option 3 — Download ZIP from GitHub
 
 Switch the branch selector on GitHub from `main` to `it`, `en-gb`, `fr`, or `de`, click **Code → Download ZIP**, and extract the files into your campaign folder.
+
+Each language package also ships its own usage guide at the branch root (`USAGE.md` / `GUIDA-UTILIZZO.md` / `GUIDE-UTILISATION.md` / `NUTZUNGSANLEITUNG.md`) — see the [Usage Guide](USAGE.md) on `main` for the full walkthrough.
 
 ---
 
@@ -81,12 +85,10 @@ Each locale provides **1 Archivist agent** and **11 modular skills** designed ar
 
 ## Maintaining Language Branches
 
-Edit translations on `main` inside `locales/<lang>/`, then synchronise the orphan branches:
+Edit translations on `main` inside `locales/<lang>/`, then let the pipeline synchronise the orphan branches:
 
-* **Automatic (GitHub Actions)**: Pushing changes under `locales/**` to `main` triggers [`.github/workflows/sync-language-branches.yml`](.github/workflows/sync-language-branches.yml), updating `it`, `en-gb`, `fr`, and `de` cleanly.
-* **Local Sync**:
-  * PowerShell (Windows): `./scripts/sync-branches.ps1`
-  * Bash (macOS / Linux): `./scripts/sync-branches.sh`
+* **Automatic**: Pushing changes under `locales/**` to `main` triggers [`.github/workflows/sync-language-branches.yml`](.github/workflows/sync-language-branches.yml), which publishes each `locales/<lang>/` tree to the root of its `it`, `en-gb`, `fr`, or `de` branch.
+* **Manual**: Run the same workflow on demand from the **Actions** tab (*Sync Language Branches → Run workflow*).
 
 ---
 
