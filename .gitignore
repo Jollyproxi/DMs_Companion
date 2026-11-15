@@ -20,5 +20,5 @@ __pycache__/
 # Local backups (git bundles etc.)
 *.bundle
 
-# Local scripts (non versionati)
-sync-branch-orfane.*
+# Local scripts (non versionated)
+*.ps1
