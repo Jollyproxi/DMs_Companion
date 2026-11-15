@@ -38,6 +38,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/de/.ag
 | `AGENTS.md` | Universelle Regeln und Abläufe, von jedem Harness gelesen. |
 | `CLAUDE.md` | Einstiegspunkt für Claude Code; importiert `AGENTS.md`. |
 | `.github/agents/kampagnen-archivar.agent.md` | Die Persona *Kampagnen-Archivar* (Eintrag im Agenten-Auswahlmenü von VS Code). |
+| `.agents/agents/kampagnen-archivar.md` | Dieselbe Persona im Antigravity-Format: Hauptagent und Subagent, mit nativen strukturierten Rückfragen. |
 | `.agents/skills/<faehigkeit>/SKILL.md` | Die 12 modularen Fähigkeiten (plus Vorlagen unter `references/`). |
 | `NUTZUNGSANLEITUNG.md` | Diese Anleitung. |
 
@@ -46,8 +47,9 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/de/.ag
 | Harness | Was passiert |
 | :--- | :--- |
 | **VS Code / GitHub Copilot** | Der Agent erscheint im Agenten-Auswahlmenü des Chats; die Fähigkeiten stehen als `/slash`-Befehle bereit; Rückfragen kommen als strukturierte Dialoge (`vscode_askQuestions`). |
+| **Antigravity (App, IDE, CLI)** | Der Agent wird aus `.agents/agents/` erkannt, die 12 Fähigkeiten aus `.agents/skills/` – ohne Kopien. Rückfragen nutzen das native Werkzeug `ask_question` und verhalten sich wie die Schaltflächen und Kontrollkästchen in VS Code. |
 | **Claude Code** | `CLAUDE.md` wird automatisch geladen. Werden die Fähigkeiten nicht erkannt, kopieren Sie `.agents/skills/*` nach `.claude/skills/` oder erstellen Sie einen Symlink. |
-| **OpenAI Codex CLI / Cursor / OpenCode / Gemini CLI / Antigravity** | `AGENTS.md` und `.agents/skills/` werden automatisch erkannt; fragen Sie einfach in natürlicher Sprache. |
+| **OpenAI Codex CLI / Cursor / OpenCode / Gemini CLI** | `AGENTS.md` und `.agents/skills/` werden automatisch erkannt; fragen Sie einfach in natürlicher Sprache. |
 | **Optionale Erweiterungen** | Graphify MCP (Querverlinkungs-Graph) und die Markwhen-CLI/-Erweiterung (`@markwhen/mw`) für den Timeline-Render. Alles funktioniert auch ohne sie. |
 
 ---

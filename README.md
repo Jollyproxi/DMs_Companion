@@ -64,6 +64,7 @@ Every language package ships with harness-agnostic entrypoints and graceful fall
 | Harness / Framework | Discovered Files | Notes |
 | :--- | :--- | :--- |
 | **VS Code / GitHub Copilot** | `.github/agents/*.agent.md`, `.agents/skills/*/SKILL.md`, `AGENTS.md` | Full custom-agent picker + `/slash` skill commands + structured `vscode_askQuestions` prompts. |
+| **Google Antigravity (App, IDE, CLI)** | `.agents/agents/*.md`, `.agents/skills/*/SKILL.md`, `AGENTS.md` | Native custom agent (primary agent + subagent) and auto-discovered skills under the user's global `~/.gemini/config/` or the workspace `.agents/`; structured `ask_question` prompts with the same button and checkbox behaviour as VS Code. |
 | **OpenAI Codex CLI / Cursor / OpenCode / Gemini CLI** | `AGENTS.md`, `.agents/skills/*/SKILL.md` | Reads `AGENTS.md` instructions and standard Agent Skills automatically; prompts fall back to chat. |
 | **Claude Code** | `CLAUDE.md` (`@AGENTS.md`), `.agents/skills/*/SKILL.md` | Copy or symlink `.agents/skills/*` into `.claude/skills/` if not auto-detected; uses `AskUserQuestion` or chat. |
 | **Optional Extensions & MCPs** | `graphify/*`, `@markwhen/mw` / Markwhen extension | Enhanced cross-link graphing and timeline HTML/SVG rendering when installed; all skills work without them. |

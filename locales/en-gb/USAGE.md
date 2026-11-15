@@ -38,6 +38,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/en-gb/
 | `AGENTS.md` | Universal rules and workflows, read by every harness. |
 | `CLAUDE.md` | Claude Code entry point; imports `AGENTS.md`. |
 | `.github/agents/campaign-archivist.agent.md` | The *Campaign Archivist* persona (agent picker entry in VS Code). |
+| `.agents/agents/campaign-archivist.md` | The same persona in Antigravity format: primary agent and subagent, with native structured questions. |
 | `.agents/skills/<skill>/SKILL.md` | The 12 modular skills (plus `references/` templates). |
 | `USAGE.md` | This guide. |
 
@@ -46,8 +47,9 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/en-gb/
 | Harness | What Happens |
 | :--- | :--- |
 | **VS Code / GitHub Copilot** | The *Campaign Archivist* appears in the chat agent picker; skills are available as `/slash` commands; follow-up questions come as structured prompts (`vscode_askQuestions`). |
+| **Antigravity (App, IDE, CLI)** | The agent is discovered from `.agents/agents/` and the 12 skills from `.agents/skills/`, with no copies needed. Follow-up questions use the native `ask_question` tool, giving the same button-and-checkbox behaviour as VS Code. |
 | **Claude Code** | `CLAUDE.md` is auto-loaded. If skills are not detected, copy or symlink `.agents/skills/*` into `.claude/skills/`. |
-| **OpenAI Codex CLI / Cursor / OpenCode / Gemini CLI / Antigravity** | `AGENTS.md` and `.agents/skills/` are auto-discovered; just ask in natural language. |
+| **OpenAI Codex CLI / Cursor / OpenCode / Gemini CLI** | `AGENTS.md` and `.agents/skills/` are auto-discovered; just ask in natural language. |
 | **Optional extras** | Graphify MCP (cross-link graphing) and the Markwhen CLI/extension (`@markwhen/mw`) for timeline rendering. Everything works without them. |
 
 ---

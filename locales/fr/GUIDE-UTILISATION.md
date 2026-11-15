@@ -38,6 +38,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/fr/.ag
 | `AGENTS.md` | Règles et flux universels, lus par tous les environnements. |
 | `CLAUDE.md` | Point d'entrée pour Claude Code ; importe `AGENTS.md`. |
 | `.github/agents/archiviste-de-campagne.agent.md` | La persona *Archiviste de Campagne* (entrée dans le sélecteur d'agents de VS Code). |
+| `.agents/agents/archiviste-de-campagne.md` | La même persona au format Antigravity : agent principal et sous-agent, avec questions structurées natives. |
 | `.agents/skills/<competence>/SKILL.md` | Les 12 compétences modulaires (plus les modèles dans `references/`). |
 | `GUIDE-UTILISATION.md` | Ce guide. |
 
@@ -46,8 +47,9 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/fr/.ag
 | Environnement | Ce qui se passe |
 | :--- | :--- |
 | **VS Code / GitHub Copilot** | L'agent apparaît dans le sélecteur d'agents du chat ; les compétences sont disponibles en commandes `/slash` ; les questions de suivi arrivent sous forme de prompts structurés (`vscode_askQuestions`). |
+| **Antigravity (App, IDE, CLI)** | L'agent est découvert dans `.agents/agents/` et les 12 compétences dans `.agents/skills/`, sans aucune copie. Les questions de suivi utilisent l'outil natif `ask_question`, avec le même comportement à boutons et cases à cocher que VS Code. |
 | **Claude Code** | `CLAUDE.md` est chargé automatiquement. Si les compétences ne sont pas détectées, copiez ou créez un lien symbolique de `.agents/skills/*` vers `.claude/skills/`. |
-| **OpenAI Codex CLI / Cursor / OpenCode / Gemini CLI / Antigravity** | `AGENTS.md` et `.agents/skills/` sont découverts automatiquement ; il suffit de poser vos questions en langage naturel. |
+| **OpenAI Codex CLI / Cursor / OpenCode / Gemini CLI** | `AGENTS.md` et `.agents/skills/` sont découverts automatiquement ; il suffit de poser vos questions en langage naturel. |
 | **Extensions optionnelles** | Graphify MCP (graphe des liens croisés) et la CLI/extension Markwhen (`@markwhen/mw`) pour le rendu des chronologies. Tout fonctionne sans elles. |
 
 ---

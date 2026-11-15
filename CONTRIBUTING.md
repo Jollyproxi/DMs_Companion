@@ -18,7 +18,7 @@ Thank you for considering a contribution! This document explains how to contribu
 These are the pillars of the toolkit. Contributions should preserve them:
 
 1. **Notarial fidelity (zero hallucinations)** — skills must organise only what the DM provides or has already canonised. Missing information gets flagged and asked for; it is never invented. Templates must never encourage placeholder lore to be silently filled in by the AI.
-2. **Harness agnosticism** — every skill must degrade gracefully across VS Code Copilot, Claude Code, Codex CLI, Cursor, Gemini CLI / Antigravity, OpenCode, etc. Structured question tools are used when available, with plain-chat fallbacks.
+2. **Harness agnosticism** — every skill must degrade gracefully across VS Code Copilot, Claude Code, Codex CLI, Cursor, Gemini CLI / Antigravity, OpenCode, etc. Structured question tools are used when available, with plain-chat fallbacks: `vscode_askQuestions` in VS Code, `AskUserQuestion` in Claude Code, `ask_question` in Antigravity (`questions[]` with `options` and `is_multi_select`, plus the mandatory `toolSummary` / `toolAction` fields).
 3. **Architecture** — skills must respect the standard world tree (`01_` … `10_`) and its cross-references (especially the sync between tomes and `10_timeline/`).
 4. **Self-contained skills** — each skill lives in its own folder with `SKILL.md` and, when useful, a `references/` subfolder. No hidden cross-skill dependencies.
 
