@@ -15,6 +15,7 @@ Tutto ciò che serve per mettere a lavoro l'**Archivista di Campagna** al tuo ta
 Stai leggendo il pacchetto `it` (clonato con `git clone --depth 1 -b it …` oppure scaricato come ZIP). Copia il suo contenuto nella radice del **tuo repository di campagna** (oppure nella directory di configurazione utente del tuo assistente AI, per rendere il toolkit disponibile in ogni progetto):
 
 * `AGENTS.md`, `CLAUDE.md`
+* `.codex/agents/` (Archivista per Codex)
 * `.github/agents/`
 * `.agents/skills/`
 * `GUIDA-UTILIZZO.md` (questa guida)
@@ -49,7 +50,8 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/it/.ag
 | **VS Code / GitHub Copilot** | L'agente compare nella selezione agenti della chat; le skill sono disponibili come comandi `/slash`; le domande di approfondimento arrivano come prompt strutturati (`vscode_askQuestions`). |
 | **Antigravity (App, IDE, CLI)** | L'agente viene scoperto da `.agents/agents/` e le 12 skill da `.agents/skills/`, senza copie. Le domande di approfondimento usano il tool nativo `ask_question`, con lo stesso comportamento a pulsanti e caselle di VS Code. |
 | **Claude Code** | `CLAUDE.md` viene caricato automaticamente. Se le skill non vengono rilevate, copia o crea un symlink di `.agents/skills/*` in `.claude/skills/`. |
-| **OpenAI Codex CLI / Cursor / OpenCode / Gemini CLI** | `AGENTS.md` e `.agents/skills/` vengono scoperti automaticamente; basta chiedere in linguaggio naturale. |
+| **OpenAI Codex** | Apri la cartella della campagna. Per una skill scrivi «Usa `$verbale-sessione` per intervistarmi». Per delegare un compito scrivi «Usa il subagente `archivista-di-campagna` per controllare il verbale». |
+| **Cursor / OpenCode / Gemini CLI** | `AGENTS.md` e `.agents/skills/` vengono scoperti automaticamente; basta chiedere in linguaggio naturale. |
 | **Estensioni opzionali** | Graphify MCP (grafia dei cross-link) e la CLI/estensione Markwhen (`@markwhen/mw`) per il rendering delle timeline. Tutto funziona anche senza. |
 
 ---
