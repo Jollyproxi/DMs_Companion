@@ -41,7 +41,10 @@ When the DM introduces or documents a new Player Character:
    - `03_relationships_and_dynamics.md`: Bonds with party companions, factions, and NPCs.
    - `04_equipment_and_abilities.md`: Signature items, weapons, focuses, and unique abilities.
    - `05_dm_hooks_and_secrets.md`: Hooks reserved for the DM, mysteries, and revelations.
-4. **Update Campaign & Party Hubs**:
+4. **Structure**:
+   - Header with role, faction (linked to Tome VII `07_factions/`), residence (linked to Tome VI `06_locations/`), alignment, and status.
+   - Sections for Appearance & Temperament, Narrative Role, and DM Secrets & Hooks.
+   - **Update Campaign & Party Hubs**:
    Add the new PC to `README.md` in `05_characters/<Player_Characters>/<Campaign_or_Party>/README.md` and to the general index `05_characters/README.md`.
 
 ---
@@ -50,14 +53,18 @@ When the DM introduces or documents a new Player Character:
 
 When the DM introduces a notable Non-Player Character:
 
-1. **Guided Acquisition**: If essential details are missing, clarify faction affiliation, living status, and whereabouts with the DM.
-2. **Path**:
-   `05_characters/<Non_Player_Characters>/[<npc_group>/]<NPC_Name>.md` *(default: `05_characters/Non_Player_Characters/<NPC_Name>.md`; respect any optional grouping subfolders by faction, region, or alignment)*
-3. **Structure**:
+1. Organise NPCs by **frame and primary reference location**, based on their stable territorial or narrative connection documented in canon. First encounter and current whereabouts are separate facts and do not automatically determine placement. Keep one canonical sheet; factions, campaigns and other locations link to it.
+2. `05_characters/<Non_Player_Characters>/<Frame>/<Reference_location>/<NPC_Name>.md` (default: `05_characters/Non_Player_Characters/<Frame>/<Reference_location>/<NPC_Name>.md`).
+3. If the reference is ambiguous, ask the DM; in direct drafting use `TO_BE_DEFINED_BY_DM/` at the unknown level (frame or location), without inventing affiliations. Use `Cross_Frame/` and/or `Itinerant/` for explicitly cross-frame or itinerant NPCs only when documented. Reuse canonical frame and location names and respect custom tome names.
+4. **Structure**:
    - Header with role, faction (linked to Tome VII `07_factions/`), residence (linked to Tome VI `06_locations/`), alignment, and status.
    - Sections for Appearance & Temperament, Narrative Role, and DM Secrets & Hooks.
-4. **Update NPC Index**:
-   Add the entry to the relationship table in `05_characters/<Non_Player_Characters>/README.md` (and any subgroup `README.md`).
+   - **Reference frame:** [Link to the canonical sheet in Tome II]
+   - **Primary reference location:** [Link to the canonical sheet in Tome VI and reason for the connection]
+   - **Current whereabouts:** [Location link, if known; separate from primary reference]
+   - **First encounter:** [Links to minutes and location, if documented]
+5. Create or update the tome, NPC, frame and location `README.md` files; indexes list the frame, primary location and link to the unique sheet.
+6. When reorganising existing sheets, prepare a source → destination map from canon and apply authorised moves. Recalculate outgoing relative links and update all incoming references (minutes, dossiers, locations, factions, timelines), old and new READMEs, the Bible and JSON. Do not duplicate sheets or rewrite the historical first-encounter location. Flag unresolved cases and check links after moving.
 
 ---
 

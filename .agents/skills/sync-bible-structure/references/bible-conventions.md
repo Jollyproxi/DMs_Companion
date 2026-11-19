@@ -55,7 +55,7 @@ Compilation follows the strict canonical numerical sequence:
 4. **##### 4. Law & Statutes** (`04_law_and_statutes/`)
    - Legal order and sources (`4.1.x`), civil rights and status (`4.2.x`), dynastic law and succession (`4.3.x`), contracts and pacts (`4.4.x`), treaties and diplomacy (`4.5.x`), criminal law and offences (`4.6.x`), courts and procedure (`4.7.x`), arcane and religious law (`4.8.x`), property, trade and taxation (`4.9.x`), law of war and adventurers (`4.10.x`), plus any extra branches (`4.11.x+`) or jurisdictional subfolders, each with general framework (`4.Y.1`) and registered acts (`4.Y.2+`) in ascending numerical order.
 5. **##### 5. Character Roster of the World** (`05_characters/`)
-   - Notable NPC roster (`<Non_Player_Characters>/`, with any custom grouping subfolders), grouped by faction or region.
+   - Organise NPCs by **frame and primary reference location**, based on their stable territorial or narrative connection documented in canon. First encounter and current whereabouts are separate facts and do not automatically determine placement. Keep one canonical sheet; factions, campaigns and other locations link to it.
    - Party bonds summary if a canonical campaign/party is present.
 6. **##### 6. Atlas of Locations & Adventure Hubs** (`06_locations/`)
    - Prominent sites, strongholds, cities, and gates (also grouped under optional `<location_groups>/` subfolders).

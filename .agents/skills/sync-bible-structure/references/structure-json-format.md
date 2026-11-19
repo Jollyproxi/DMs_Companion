@@ -117,7 +117,33 @@ If a regional or macro-area subdirectory exists:
   "non_player_characters": "05_characters/Non_Player_Characters"
 }
 ```
-*(If the DM customises folder names — e.g. `PCs/`, `NPCs/`, `Heroes/`, NPC grouping subfolders, or `<Campaign_or_Party>/` — paths record the actual directories on disk.)*
+*(If the DM customises folder names — e.g. `PCs/`, `NPCs/`, `Heroes/`, NPC frames and locations, or `<Campaign_or_Party>/` — paths record the actual directories on disk.)*
+
+```json
+{
+  "npc_frames": [
+    {
+      "frame": "<Frame>",
+      "locations": [
+        {
+          "reference_location": "<Reference_location>",
+          "index": "05_characters/Non_Player_Characters/<Frame>/<Reference_location>/README.md",
+          "modules": [
+            {
+              "file": "05_characters/Non_Player_Characters/<Frame>/<Reference_location>/<NPC_Name>.md"
+            }
+          ],
+          "folder": "05_characters/Non_Player_Characters/<Frame>/<Reference_location>"
+        }
+      ],
+      "folder": "05_characters/Non_Player_Characters/<Frame>",
+      "index": "05_characters/Non_Player_Characters/<Frame>/README.md"
+    }
+  ]
+}
+```
+
+For NPCs preserve the frame → primary location hierarchy and actual paths. Sheet modules live only under their respective locations, without duplication in the tome modules array. Each sheet may record `reference_frame` and `reference_location` as paths to canonical Tome II and VI sheets; unknown data remains `null` with a DM note, without inventing files.
 
 ### C. Tome 09 (Chronicles — `<campaigns>/` Subfolder)
 ```json

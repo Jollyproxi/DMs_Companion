@@ -75,9 +75,12 @@ This document defines the standard folder and file structure for encyclopaedic a
 │   │           ├── 04_equipment_and_abilities.md           # Key items, feats, and abilities
 │   │           └── 05_dm_hooks_and_secrets.md              # Narrative hooks reserved for the DM
 │   └── <Non_Player_Characters>/                            # Setting NPC Archive (default: Non_Player_Characters/; customisable to NPCs/, Supporting/, etc.)
-│       ├── README.md                                       # Index grouped by faction
-│       ├── [<npc_groups>/]                                 # Optional: custom subfolders (by faction/, region/, allies/, antagonists/)
-│       └── [NPC_Name].md                                   # Sheet with role, temperament, secrets, and hooks
+│       ├── README.md
+│       └── <Frame>/
+│           ├── README.md
+│           └── <Reference_location>/
+│               ├── README.md
+│               └── [NPC_Name].md
 │
 ├── 06_locations/                                           # Tome VI: Notable locations and adventure hubs
 │   ├── README.md                                           # List of points of interest and connections
@@ -122,3 +125,5 @@ This document defines the standard folder and file structure for encyclopaedic a
     └── exports/                                            # Derived graphical renders (HTML/PNG/SVG/PDF of the timeline)
         └── README.md                                       # Register of derived graphical renders
 ```
+
+Organise NPCs by **frame and primary reference location**, based on their stable territorial or narrative connection documented in canon. First encounter and current whereabouts are separate facts and do not automatically determine placement. Keep one canonical sheet; factions, campaigns and other locations link to it.

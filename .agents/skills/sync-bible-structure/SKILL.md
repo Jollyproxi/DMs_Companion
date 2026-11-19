@@ -33,6 +33,8 @@ Consult the supporting reference files:
 
 ---
 
+Organise NPCs by **frame and primary reference location**, based on their stable territorial or narrative connection documented in canon. First encounter and current whereabouts are separate facts and do not automatically determine placement. Keep one canonical sheet; factions, campaigns and other locations link to it. For NPCs preserve the frame → primary location hierarchy and actual paths. Sheet modules live only under their respective locations, without duplication in the tome modules array. Each sheet may record `reference_frame` and `reference_location` as paths to canonical Tome II and VI sheets; unknown data remains `null` with a DM note, without inventing files.
+
 ## 1. Procedure: `generate-Bible` (Master Compilation)
 
 Use this procedure to regenerate or create `SETTING_BIBLE.md` from scratch by assembling the individual modules.
@@ -43,7 +45,7 @@ Use this procedure to regenerate or create `SETTING_BIBLE.md` from scratch by as
    - If no master file exists, create `SETTING_BIBLE.md`.
 2. **Determine Tome Order**:
    - Read `setting_structure.json` if present to retrieve the official order of tomes and modules.
-   - Otherwise, sort numerically prefixed folders: `01_cosmology` (including optional `<planes>/`, `<pantheon>/` subfolders), `02_geography` (including `regions/` or the custom subfolder name adopted for macro-areas, sorted numerically), `03_society_and_politics` (including optional `peoples/` or custom-named subfolder and `customs_festivals_and_events/`: `customs/` = 3.5.x, `festivals_and_occurrences/` = 3.6.x, `events/` = 3.7.x), `04_law_and_statutes` (with branches `01_legal_order_and_sources/` … `10_law_of_war_and_adventurers/` = 4.1.x … 4.10.x, plus any extra branches `11_+` or jurisdictions), `05_characters` (`<Non_Player_Characters>/` and any grouping subfolders), `06_locations` (including optional grouping subfolders), `07_factions` (including optional grouping subfolders), `<08_unique_magic_items>` (or custom Tome VIII name, including optional category subfolders), `09_chronicles` (`<campaigns>/.../<sessions>/`), `10_timeline` (`historical_chronology/` = 10.1.x, `occurrence_register/` = 10.2.x, `calendar/` = 10.3.x; `.mw` sources in `markwhen/` and `exports/` are excluded from the Bible).
+   - Otherwise, sort numerically prefixed folders: `01_cosmology` (including optional `<planes>/`, `<pantheon>/` subfolders), `02_geography` (including `regions/` or the custom subfolder name adopted for macro-areas, sorted numerically), `03_society_and_politics` (including optional `peoples/` or custom-named subfolder and `customs_festivals_and_events/`: `customs/` = 3.5.x, `festivals_and_occurrences/` = 3.6.x, `events/` = 3.7.x), `04_law_and_statutes` (with branches `01_legal_order_and_sources/` … `10_law_of_war_and_adventurers/` = 4.1.x … 4.10.x, plus any extra branches `11_+` or jurisdictions), `05_characters` (`<Non_Player_Characters>/<Frame>/<Reference_location>/`), `06_locations` (including optional grouping subfolders), `07_factions` (including optional grouping subfolders), `<08_unique_magic_items>` (or custom Tome VIII name, including optional category subfolders), `09_chronicles` (`<campaigns>/.../<sessions>/`), `10_timeline` (`historical_chronology/` = 10.1.x, `occurrence_register/` = 10.2.x, `calendar/` = 10.3.x; `.mw` sources in `markwhen/` and `exports/` are excluded from the Bible).
 3. **Compose Monolithic Text**:
    - Insert the canonical header with metadata and status badge:
      ```markdown
@@ -84,7 +86,7 @@ Use this procedure to scan all workspace files and produce a complete, up-to-dat
        - `key_concepts`: extract 3 to 7 key points drawn from subheadings and bold definitions.
        - `tables`: detect and include titles of any Markdown tables present.
        - `dm_notes`: extract the contents of any DM-only notes.
-   - Handle canonical, optional, and custom-named subfolders (`01_cosmology/<planes_or_pantheon>/`, `02_geography/<regions_or_custom>/`, `03_society_and_politics/<peoples_or_custom>/` and `customs_festivals_and_events/`, `04_law_and_statutes/` including extra branches and jurisdictions, `05_characters/<Non_Player_Characters>/`, `06_locations/<groups>/`, `07_factions/<groups>/`, `<08_unique_magic_items>/<categories>/`, `09_chronicles/<campaigns>/`, `10_timeline/` with `markwhen/` sources) by populating the dedicated properties defined in [structure-json-format](./references/structure-json-format.md).
+   - Handle canonical, optional, and custom-named subfolders (`01_cosmology/<planes_or_pantheon>/`, `02_geography/<regions_or_custom>/`, `03_society_and_politics/<peoples_or_custom>/` and `customs_festivals_and_events/`, `04_law_and_statutes/` including extra branches and jurisdictions, `05_characters/<Non_Player_Characters>/<Frame>/<Reference_location>/`, `06_locations/<groups>/`, `07_factions/<groups>/`, `<08_unique_magic_items>/<categories>/`, `09_chronicles/<campaigns>/`, `10_timeline/` with `markwhen/` sources) by populating the dedicated properties defined in [structure-json-format](./references/structure-json-format.md).
 3. **Syntax Validation & Output**:
    - Generate `setting_structure.json` indented with 2 spaces.
    - Verify the JSON is strictly valid with no duplicate keys or stray characters.
