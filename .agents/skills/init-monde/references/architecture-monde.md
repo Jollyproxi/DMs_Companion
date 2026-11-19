@@ -75,9 +75,12 @@ Ce document définit l'arborescence standard de dossiers et de fichiers pour l'a
 │   │           ├── 04_equipement_et_capacites.md           # Objets clés, dons et aptitudes
 │   │           └── 05_accroches_et_secrets_mj.md           # Pistes narratives réservées au MJ
 │   └── <Non_Joueurs>/                                      # Archive PNJ (défaut : Non_Joueurs/ ; personnalisable en PNJ/, Figurants/, etc.)
-│       ├── README.md                                       # Index et regroupement par faction
-│       ├── [<groupes_pnj>/]                                # Optionnel : sous-dossiers personnalisés (par faction/, region/, allies/, antagonistes/)
-│       └── [Nom_PNJ].md                                    # Fiche avec rôle, tempérament, secrets et accroches
+│       ├── README.md
+│       └── <Cadre>/
+│           ├── README.md
+│           └── <Lieu_reference>/
+│               ├── README.md
+│               └── [Nom_PNJ].md
 │
 ├── 06_lieux/                                               # Tome VI : Lieux notables et nœuds d'aventure
 │   ├── README.md                                           # Liste des points d'intérêt et liaisons
@@ -122,3 +125,5 @@ Ce document définit l'arborescence standard de dossiers et de fichiers pour l'a
     └── exportations/                                       # Rendus graphiques dérivés (HTML/PNG/SVG/PDF de la frise)
         └── README.md                                       # Registre des rendus graphiques dérivés
 ```
+
+Classez les PNJ par **cadre et lieu principal de référence**, selon leur lien territorial ou narratif stable documenté dans le canon. La première rencontre et la position actuelle sont des données distinctes qui ne déterminent pas automatiquement le classement. Conservez une seule fiche canonique ; factions, campagnes et autres lieux y renvoient par des liens.

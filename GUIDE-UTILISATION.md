@@ -83,12 +83,14 @@ L'Archiviste organise **uniquement** ce que vous fournissez ou que vous avez dé
 | `02_geographie/` | Cartographie, territoires, régions souterraines, dossiers régionaux (`regions/` ou nom personnalisé, ex. `provinces/`, `domaines/`). |
 | `03_societe_et_politique/` | Ordre civil, économie, classes sociales, ordre public ; `peuples/` optionnel (ou nom personnalisé) et sous-série `coutumes_fetes_et_evenements/` (`coutumes/`, `fetes_et_occurrences/`, `evenements/`). |
 | `04_droit_et_lois/` | 10 branches juridiques (`01_ordre_juridique_et_sources/` … `10_droit_de_la_guerre_et_aventuriers/`), plus éventuelles branches supplémentaires `11_+` ou juridictions. |
-| `05_personnages/` | Dossiers modulaires PJ (`<Joueurs>/<Campagne_ou_Groupe>/<Nom_PJ>/`, défaut `Joueurs/<Campagne>/`) et fiches PNJ (`<Non_Joueurs>/[<groupe_pnj>/]`, défaut `Non_Joueurs/`). |
+| `05_personnages/` | Dossiers modulaires PJ (`<Joueurs>/<Campagne_ou_Groupe>/<Nom_PJ>/`, défaut `Joueurs/<Campagne>/`) et fiches PNJ (`<Non_Joueurs>/<Cadre>/<Lieu_reference>/`, défaut `Non_Joueurs/`). |
 | `06_lieux/` | Nœuds d'aventure, cités, forteresses, dangers locaux (`<groupes_lieux>/` optionnels). |
 | `07_factions/` | Maisons nobles, congrégations, guildes, ordres, hiérarchies de pouvoir (`<groupes_factions>/` optionnels). |
 | `<08_objets_magiques_singuliers>/` | Artefacts uniques, reliques, registres juridiques, propriétés (nom du tome personnalisable et `<categories>/` optionnelles). |
 | `09_chroniques/` | Portail des campagnes : tableau synoptique + comptes rendus progressifs (`<campagnes>/<nom>/<sessions>/`, défaut `campagnes/` et `sessions/`). |
 | `10_chronologie/` | Chronologie transversale : `chronologie_historique/`, `registre_occurrences/`, `markwhen/` (`chronologie_generale.mw`, `epoques/`, `campagnes/`), `calendrier/`, `exportations/`. |
+
+Classez les PNJ par **cadre et lieu principal de référence**, selon leur lien territorial ou narratif stable documenté dans le canon. La première rencontre et la position actuelle sont des données distinctes qui ne déterminent pas automatiquement le classement. Conservez une seule fiche canonique ; factions, campagnes et autres lieux y renvoient par des liens.
 
 ### Badges de vérification
 
@@ -145,7 +147,7 @@ Invoquez les compétences avec leur commande slash quand elle est disponible (VS
 
 * **Quand** : un nouveau personnage joueur rejoint la campagne, un PNJ est approfondi, ou un module de dossier doit être mis à jour.
 * **Comment** : `/dossier-personnage` — *« Précisez le type (PJ ou PNJ), le nom du personnage et l'opération (creer, mettre a jour module, fiche). »*
-* **Résultat** : un dossier PJ à 5 modules (`01_etat_civil_et_traits`, `02_historique_integre`, `03_relations_et_dynamiques`, `04_equipement_et_capacites`, `05_accroches_et_secrets_mj`) dans `05_personnages/Joueurs/<Campagne>/<Nom_PJ>/`, ou une fiche PNJ dans `05_personnages/Non_Joueurs/`, tous deux inscrits dans les index.
+* **Résultat** : un dossier PJ à 5 modules (`01_etat_civil_et_traits`, `02_historique_integre`, `03_relations_et_dynamiques`, `04_equipement_et_capacites`, `05_accroches_et_secrets_mj`) dans `05_personnages/Joueurs/<Campagne>/<Nom_PJ>/`, ou une fiche PNJ dans `05_personnages/Non_Joueurs/<Cadre>/<Lieu_reference>/`, tous deux inscrits dans les index.
 
 ### 4.5 `objet-magique` — Objets magiques singuliers
 
