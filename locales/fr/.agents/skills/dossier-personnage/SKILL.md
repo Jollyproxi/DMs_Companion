@@ -41,7 +41,10 @@ Lorsque le MJ introduit ou documente un nouveau Personnage Joueur :
    - `03_relations_et_dynamiques.md` : Liens avec les compagnons, factions et PNJ.
    - `04_equipement_et_capacites.md` : Objets marquants, armes, focaliseurs et capacités uniques.
    - `05_accroches_et_secrets_mj.md` : Pistes réservées au MJ, mystères et révélations.
-4. **Mise à Jour des Portails Campagne et Groupe** :
+4. **Structure** :
+   - En-tête avec rôle, faction (lien vers le Tome VII `07_factions/`), résidence (lien vers le Tome VI `06_lieux/`), alignement et statut vital.
+   - Sections Apparence & Tempérament, Rôle Narratif et Secrets & Accroches MJ.
+   - **Mise à Jour des Portails Campagne et Groupe** :
    Ajoutez le nouveau PJ au `README.md` dans `05_personnages/<Joueurs>/<Campagne_ou_Groupe>/README.md` et à l'index général `05_personnages/README.md`.
 
 ---
@@ -50,14 +53,18 @@ Lorsque le MJ introduit ou documente un nouveau Personnage Joueur :
 
 Lorsque le MJ introduit un Personnage Non-Joueur notable :
 
-1. **Acquisition Guidée** : S'il manque des éléments essentiels, clarifiez avec le MJ la faction d'appartenance, le statut vital et la localisation.
-2. **Chemin** :
-   `05_personnages/<Non_Joueurs>/[<groupe_pnj>/]<Nom_PNJ>.md` *(défaut : `05_personnages/Non_Joueurs/<Nom_PNJ>.md` ; respectez les éventuels sous-dossiers de regroupement optionnels par faction, région ou camp)*
-3. **Structure** :
+1. Classez les PNJ par **cadre et lieu principal de référence**, selon leur lien territorial ou narratif stable documenté dans le canon. La première rencontre et la position actuelle sont des données distinctes qui ne déterminent pas automatiquement le classement. Conservez une seule fiche canonique ; factions, campagnes et autres lieux y renvoient par des liens.
+2. `05_personnages/<Non_Joueurs>/<Cadre>/<Lieu_reference>/<Nom_PNJ>.md` (default: `05_personnages/Non_Joueurs/<Cadre>/<Lieu_reference>/<Nom_PNJ>.md`).
+3. Si le rattachement est ambigu, interrogez le MJ ; en rédaction directe, utilisez `A_DEFINIR_MJ/` au niveau inconnu (cadre ou lieu), sans inventer de liens. Utilisez `Transversaux/` et/ou `Itinerants/` uniquement pour les PNJ explicitement documentés comme tels. Réutilisez les noms canoniques des cadres et lieux et respectez les noms personnalisés des tomes.
+4. **Structure** :
    - En-tête avec rôle, faction (lien vers le Tome VII `07_factions/`), résidence (lien vers le Tome VI `06_lieux/`), alignement et statut vital.
    - Sections Apparence & Tempérament, Rôle Narratif et Secrets & Accroches MJ.
-4. **Mise à Jour de l'Index PNJ** :
-   Ajoutez l'entrée au tableau des relations dans `05_personnages/<Non_Joueurs>/README.md` (et l'éventuel `README.md` du sous-groupe).
+   - **Cadre de référence :** [Lien vers la fiche canonique du Tome II]
+   - **Lieu principal de référence :** [Lien vers la fiche canonique du Tome VI et motif du lien]
+   - **Position actuelle :** [Lien vers le lieu, si connu ; donnée distincte du rattachement principal]
+   - **Première rencontre :** [Liens vers le compte rendu et le lieu, si documentés]
+5. Créez ou actualisez les `README.md` du tome, des PNJ, du cadre et du lieu ; les index indiquent cadre, lieu principal et lien vers la fiche unique.
+6. Pour réorganiser les fiches existantes, préparez une table source → destination fondée sur le canon et appliquez les déplacements autorisés. Recalculez les liens relatifs sortants et actualisez tous les liens entrants (comptes rendus, dossiers, lieux, factions, chronologies), les anciens et nouveaux README, la Bible et le JSON. Ne dupliquez pas les fiches et ne réécrivez pas le lieu historique de première rencontre. Signalez les cas non résolus et vérifiez les liens après déplacement.
 
 ---
 

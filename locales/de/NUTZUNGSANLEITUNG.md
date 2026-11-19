@@ -83,12 +83,14 @@ Der Archivar ordnet **nur** das, was Sie liefern oder bereits kanonisiert haben.
 | `02_geografie/` | Kartografie, Gebiete, unterirdische Regionen, Regions-Dossiers (`regionen/` oder eigener Name, z. B. `provinzen/`, `domaenen/`). |
 | `03_gesellschaft_und_politik/` | Zivile Ordnung, Wirtschaft, Gesellschaftsschichten, öffentliche Ordnung; optional `voelker/` (oder eigener Name) und Unterreihe `braeuche_feste_und_ereignisse/` (`braeuche/`, `feste_und_vorkommnisse/`, `ereignisse/`). |
 | `04_recht_und_gesetze/` | 10 Rechtsgebiete (`01_rechtsordnung_und_quellen/` … `10_kriegsrecht_und_abenteurer/`), plus optionale Zusatzgebiete `11_+` oder Gerichtsbarkeiten. |
-| `05_charaktere/` | Modulare SC-Dossiers (`<Spielercharaktere>/<Kampagne_oder_Gruppe>/<SC_Name>/`, Standard `Spielercharaktere/<Kampagne>/`) und NSC-Bögen (`<Nichtspielercharaktere>/[<nsc_gruppe>/]`, Standard `Nichtspielercharaktere/`). |
+| `05_charaktere/` | Modulare SC-Dossiers (`<Spielercharaktere>/<Kampagne_oder_Gruppe>/<SC_Name>/`, Standard `Spielercharaktere/<Kampagne>/`) und NSC-Bögen (`<Nichtspielercharaktere>/<Rahmen>/<Bezugsort>/`, Standard `Nichtspielercharaktere/`). |
 | `06_orte/` | Abenteuerknoten, Städte, Festungen, Gebietsgefahren (`<ortsgruppen>/` optional). |
 | `07_fraktionen/` | Adelshäuser, Zirkel, Gilden, Orden, Machthierarchien (`<fraktionsgruppen>/` optional). |
 | `<08_besondere_magische_gegenstaende>/` | Einzigartige Artefakte, Relikte, Rechtsregister, Eigenschaften (anpassbarer Bandname und `<kategorien>/` optional). |
 | `09_chroniken/` | Kampagnen-Hub: Übersichtstabelle + fortlaufende Sitzungsprotokolle (`<kampagnen>/<name>/<sitzungen>/`, Standard `kampagnen/` und `sitzungen/`). |
 | `10_zeitlinie/` | Querschnitts-Chronologie: `historische_chronologie/`, `vorkommnisregister/`, `markwhen/` (`allgemeine_zeitlinie.mw`, `epochen/`, `kampagnen/`), `kalender/`, `exporte/`. |
+
+Ordne NSCs nach **Rahmen und hauptsächlichem Bezugsort**, anhand ihrer im Kanon dokumentierten dauerhaften territorialen oder erzählerischen Bindung. Erstbegegnung und aktueller Aufenthaltsort sind getrennte Angaben und bestimmen die Ablage nicht automatisch. Bewahre genau einen kanonischen Bogen; Fraktionen, Kampagnen und andere Orte verlinken darauf.
 
 ### Prüf-Badges
 
@@ -145,7 +147,7 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 
 * **Wann**: ein neuer Spielercharakter stößt dazu, ein NSC wird ausgearbeitet oder ein Dossiermodul muss aktualisiert werden.
 * **Wie**: `/charakter-dossier` — *„Gib Typ (SC oder NSC), Charakternamen und Vorgang (erstellen, modul aktualisieren, bogen) an.“*
-* **Ergebnis**: ein SC-Dossier mit 5 Modulen (`01_stammdaten_und_merkmale`, `02_integrierter_hintergrund`, `03_beziehungen_und_dynamiken`, `04_ausruestung_und_faehigkeiten`, `05_sl_aufhaenger_und_geheimnisse`) unter `05_charaktere/Spielercharaktere/<Kampagne>/<SC_Name>/`, oder ein NSC-Bogen unter `05_charaktere/Nichtspielercharaktere/`, beide in den Indizes eingetragen.
+* **Ergebnis**: ein SC-Dossier mit 5 Modulen (`01_stammdaten_und_merkmale`, `02_integrierter_hintergrund`, `03_beziehungen_und_dynamiken`, `04_ausruestung_und_faehigkeiten`, `05_sl_aufhaenger_und_geheimnisse`) unter `05_charaktere/Spielercharaktere/<Kampagne>/<SC_Name>/`, oder ein NSC-Bogen unter `05_charaktere/Nichtspielercharaktere/<Rahmen>/<Bezugsort>/`, beide in den Indizes eingetragen.
 
 ### 4.5 `magischer-gegenstand` — Besondere magische Gegenstände
 

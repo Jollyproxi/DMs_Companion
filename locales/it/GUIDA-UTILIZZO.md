@@ -85,12 +85,14 @@ L'Archivista organizza **solo** ciò che fornisci o che hai già canonizzato. No
 | `02_geografia/` | Cartografia, territori, regioni sotterranee, dossier regionali (`regioni/` o nome custom, es. `province/`, `cornici/`). |
 | `03_societa_e_politica/` | Ordinamento civile, economia, classi sociali, ordine pubblico; `popoli/` opzionale (o nome custom) e sottoserie `usi_costumi_ed_eventi/` (`usanze/`, `festival_ed_occorrenze/`, `eventi/`). |
 | `04_diritto_e_leggi/` | 10 branche giuridiche (`01_ordinamento_e_fonti/` … `10_diritto_bellico_e_avventurieri/`), più eventuali branche extra `11_+` o giurisdizioni. |
-| `05_personaggi/` | Dossier modulari PG (`<Giocanti>/<Campagna_o_Party>/<Nome_PG>/`, default `Giocanti/<Campagna>/`) e schede PNG (`<Non-Giocanti>/[<gruppo_png>/]`, default `Non-Giocanti/`). |
+| `05_personaggi/` | Dossier modulari PG (`<Giocanti>/<Campagna_o_Party>/<Nome_PG>/`, default `Giocanti/<Campagna>/`) e schede PNG (`<Non-Giocanti>/<Cornice>/<Luogo_riferimento>/`, default `Non-Giocanti/`). |
 | `06_luoghi/` | Nodi d'avventura, città, roccaforti, pericoli d'area (sottocartelle opzionali `<gruppi_luoghi>/`). |
 | `07_fazioni/` | Casate, congreghe, corporazioni, ordini, gerarchie di potere (sottocartelle opzionali `<gruppi_fazioni>/`). |
 | `<08_oggetti_magici_peculiari>/` | Manufatti unici, reliquie, registri normativi, proprietà (nome tomo personalizzabile e sottocartelle opzionali `<categorie>/`). |
 | `09_cronache/` | Hub di campagna: tabella sinottica + verbali progressivi (`<campagne>/<nome>/<sessioni>/`, default `campagne/` e `sessioni/`). |
 | `10_timeline/` | Cronologia trasversale: `cronologia_storica/`, `registro_occorrenze/`, `markwhen/` (`timeline_generale.mw`, `epoche/`, `campagne/`), `calendario/`, `esportazioni/`. |
+
+Organizza i PNG per **cornice e luogo principale di riferimento**, usando il legame territoriale o narrativo stabile documentato nel canone. Il primo incontro e la posizione attuale sono dati distinti e non determinano automaticamente la collocazione. Mantieni una sola scheda canonica; fazioni, campagne e altri luoghi la richiamano tramite link.
 
 ### Badge di Verifica
 
@@ -147,7 +149,7 @@ Invoca le skill con il relativo comando slash dove disponibile (VS Code, Claude 
 
 * **Quando**: un nuovo personaggio giocante entra in gioco, un PNG va definito, o un modulo di dossier va aggiornato.
 * **Come**: `/dossier-personaggio` — *“Specifica il tipo (PG o PNG), il nome del personaggio e l'operazione (crea, aggiorna modulo, scheda).”*
-* **Risultato**: un dossier PG a 5 moduli (`01_anagrafica_e_tratti`, `02_backstory_integrata`, `03_relazioni_e_dinamiche`, `04_equipaggiamento_e_capacita`, `05_ganci_e_segreti_dm`) in `05_personaggi/Giocanti/<Campagna>/<Nome_PG>/`, oppure una scheda PNG in `05_personaggi/Non-Giocanti/`, entrambi registrati negli indici.
+* **Risultato**: un dossier PG a 5 moduli (`01_anagrafica_e_tratti`, `02_backstory_integrata`, `03_relazioni_e_dinamiche`, `04_equipaggiamento_e_capacita`, `05_ganci_e_segreti_dm`) in `05_personaggi/Giocanti/<Campagna>/<Nome_PG>/`, oppure una scheda PNG in `05_personaggi/Non-Giocanti/<Cornice>/<Luogo_riferimento>/`, entrambi registrati negli indici.
 
 ### 4.5 `oggetto-magico` — Oggetti Magici Peculiari
 

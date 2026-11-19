@@ -98,13 +98,17 @@ Jeder SC besitzt einen eigenen Ordner unter `05_charaktere/<Spielercharaktere>/<
 
 ## 2. Nichtspielercharakter-(NSC-)Bogen
 
-Jeder NSC liegt als einzelne Datei unter `05_charaktere/<Nichtspielercharaktere>/[<nsc_gruppe>/][NSC_Name].md` (Standard: `05_charaktere/Nichtspielercharaktere/[NSC_Name].md`):
+Jeder NSC liegt als einzelne Datei unter `05_charaktere/<Nichtspielercharaktere>/<Rahmen>/<Bezugsort>/[NSC_Name].md` (Standard: `05_charaktere/Nichtspielercharaktere/<Rahmen>/<Bezugsort>/<NSC_Name>.md`):
 
 ```markdown
 # [NSC Name] — [Titel oder Rolle]
 
 > 🛡️ *Geprüft: NICHT_GEPRUEFT | Geändert: [HEUTIGES_DATUM]*
 
+* **Bezugsrahmen:** [Link zum kanonischen Bogen in Band II]
+* **Hauptsächlicher Bezugsort:** [Link zum kanonischen Bogen in Band VI und Grund der Bindung]
+* **Aktueller Aufenthaltsort:** [Ortslink, falls bekannt; getrennt vom hauptsächlichen Bezug]
+* **Erstbegegnung:** [Links zu Protokoll und Ort, falls dokumentiert]
 * **Fraktion / Haus:** [Fraktionsname mit relativem Link zu 07_fraktionen/]
 * **Wohnort / Wirkungsstätte:** [Ort mit Link zu 06_orte/]
 * **Gesinnung / Moral:** [Gesinnung oder moralische Grundsätze]

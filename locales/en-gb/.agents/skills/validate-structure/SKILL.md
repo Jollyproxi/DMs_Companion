@@ -24,7 +24,10 @@ Verifies the presence of the canonical directories (accepting equivalent legacy 
 2. `02_geography` *(with optional `regions/` subfolder or custom macro-area folder name, e.g. `provinces/`, `continents/`, `realms/`)*
 3. `03_society_and_politics` *(with optional `peoples/` or custom-named subfolder, and mandatory `customs_festivals_and_events/` subfolder containing `customs/`, `festivals_and_occurrences/`, `events/`)*
 4. `04_law_and_statutes` *(with subfolders `01_legal_order_and_sources/` … `10_law_of_war_and_adventurers/`, plus any custom extra branches `11_+` or jurisdictional subfolders)*
-5. `05_characters` *(with `<Player_Characters>/` [default `Player_Characters/`, e.g. `PCs/`, `Heroes/`] grouped by `<Campaign_or_Party>/`, and `<Non_Player_Characters>/` [default `Non_Player_Characters/`, e.g. `NPCs/`] with optional grouping subfolders)*
+5. `05_characters` *(with `<Player_Characters>/` [default `Player_Characters/`, e.g. `PCs/`, `Heroes/`] grouped by `<Campaign_or_Party>/`, and `<Non_Player_Characters>/` [default `Non_Player_Characters/`, e.g. `NPCs/`] `<Frame>/<Reference_location>/`)*
+
+   Check the NPC hierarchy `<Frame>/<Reference_location>/`, consistency with sheet fields, READMEs at both levels, duplicate sheets and references after each move. Legacy layouts require a migration map; do not derive placement solely from the first encounter.
+
 6. `06_locations` *(with optional custom `<location_groups>/` subfolders by type or macro-area)*
 7. `07_factions` *(with optional custom `<faction_groups>/` subfolders by type)*
 8. `08_unique_magic_items` *(or custom Tome VIII folder name, e.g. `08_magic_items/`, `08_artefacts_and_relics/`, with optional `<categories>/` subfolders)*

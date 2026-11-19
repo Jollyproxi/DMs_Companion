@@ -55,7 +55,7 @@ La compilation suit strictement la séquence numérique canonique :
 4. **##### 4. Droit et Lois** (`04_droit_et_lois/`)
    - Ordre juridique et sources (`4.1.x`), droits civils et statuts (`4.2.x`), droit dynastique et succession (`4.3.x`), contrats et pactes (`4.4.x`), traités et diplomatie (`4.5.x`), droit pénal et infractions (`4.6.x`), tribunaux et procédure (`4.7.x`), droit arcanique et religieux (`4.8.x`), propriété, commerce et fiscalité (`4.9.x`), droit de la guerre et aventuriers (`4.10.x`), plus d'éventuelles branches supplémentaires (`4.11.x+`) ou sous-dossiers par juridiction, chacune avec cadre général (`4.Y.1`) et actes recensés (`4.Y.2+`) dans l'ordre numérique croissant.
 5. **##### 5. Répertoire des Personnages du Monde** (`05_personnages/`)
-   - Répertoire des PNJ notables (`<Non_Joueurs>/`, avec éventuels sous-dossiers de regroupement personnalisés), regroupés par faction ou région.
+   - Classez les PNJ par **cadre et lieu principal de référence**, selon leur lien territorial ou narratif stable documenté dans le canon. La première rencontre et la position actuelle sont des données distinctes qui ne déterminent pas automatiquement le classement. Conservez une seule fiche canonique ; factions, campagnes et autres lieux y renvoient par des liens.
    - Synthèse des liens du groupe si une campagne/équipe canonique est présente.
 6. **##### 6. Atlas des Lieux & Nœuds d'Aventure** (`06_lieux/`)
    - Lieux notables, forteresses, cités et portails (également regroupés dans d'éventuels sous-dossiers optionnels `<groupes_lieux>/`).

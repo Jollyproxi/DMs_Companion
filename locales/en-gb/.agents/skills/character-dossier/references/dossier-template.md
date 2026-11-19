@@ -98,13 +98,17 @@ Each PC has a dedicated folder under `05_characters/<Player_Characters>/<Campaig
 
 ## 2. Non-Player Character (NPC) Sheet
 
-Each NPC resides as a single file in `05_characters/<Non_Player_Characters>/[<npc_group>/][NPC_Name].md` (default: `05_characters/Non_Player_Characters/[NPC_Name].md`):
+Each NPC resides as a single file in `05_characters/<Non_Player_Characters>/<Frame>/<Reference_location>/[NPC_Name].md` (default: `05_characters/Non_Player_Characters/<Frame>/<Reference_location>/<NPC_Name>.md`):
 
 ```markdown
 # [NPC Name] — [Title or Role]
 
 > 🛡️ *Verified: UNVERIFIED | Modified: [TODAY_DATE]*
 
+* **Reference frame:** [Link to the canonical sheet in Tome II]
+* **Primary reference location:** [Link to the canonical sheet in Tome VI and reason for the connection]
+* **Current whereabouts:** [Location link, if known; separate from primary reference]
+* **First encounter:** [Links to minutes and location, if documented]
 * **Faction / House:** [Faction Name with relative link to 07_factions/]
 * **Place of Residence / Operations:** [Location with link to 06_locations/]
 * **Alignment / Morals:** [Alignment or moral principles]

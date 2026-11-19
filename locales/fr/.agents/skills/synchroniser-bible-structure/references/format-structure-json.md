@@ -119,6 +119,32 @@ Si un sous-répertoire régional ou de macro-zones existe :
 ```
 *(Si le MJ personnalise les noms de dossiers — ex. `PJ/`, `PNJ/`, `Heros/`, sous-dossiers de regroupement PNJ ou `<Campagne_ou_Groupe>/` — les chemins consignent les répertoires réels sur disque.)*
 
+```json
+{
+  "cadres_pnj": [
+    {
+      "cadre": "<Cadre>",
+      "lieux": [
+        {
+          "lieu_reference": "<Lieu_reference>",
+          "index": "05_personnages/Non_Joueurs/<Cadre>/<Lieu_reference>/README.md",
+          "modules": [
+            {
+              "fichier": "05_personnages/Non_Joueurs/<Cadre>/<Lieu_reference>/<Nom_PNJ>.md"
+            }
+          ],
+          "dossier": "05_personnages/Non_Joueurs/<Cadre>/<Lieu_reference>"
+        }
+      ],
+      "dossier": "05_personnages/Non_Joueurs/<Cadre>",
+      "index": "05_personnages/Non_Joueurs/<Cadre>/README.md"
+    }
+  ]
+}
+```
+
+Pour les PNJ, conservez la hiérarchie cadre → lieu principal et les chemins réels. Les modules des fiches figurent uniquement dans leurs lieux respectifs, sans duplication dans le tableau des modules du tome. Chaque fiche peut enregistrer `cadre_reference` et `lieu_reference` comme chemins vers les fiches canoniques des Tomes II et VI ; les données inconnues restent `null` avec une note MJ, sans inventer de fichiers.
+
 ### C. Tome 09 (Chroniques — Sous-dossier `<campagnes>/`)
 ```json
 "dossier_campagnes": "09_chroniques/campagnes",

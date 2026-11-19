@@ -24,7 +24,10 @@ Vérifie la présence des répertoires canoniques (en acceptant les variantes é
 2. `02_geographie` *(avec éventuel sous-dossier `regions/` ou nom personnalisé choisi pour les macro-zones, ex. `provinces/`, `continents/`, `domaines/`)*
 3. `03_societe_et_politique` *(avec éventuel sous-dossier optionnel `peuples/` ou nom personnalisé, et sous-dossier obligatoire `coutumes_fetes_et_evenements/` contenant `coutumes/`, `fetes_et_occurrences/`, `evenements/`)*
 4. `04_droit_et_lois` *(avec sous-dossiers `01_ordre_juridique_et_sources/` … `10_droit_de_la_guerre_et_aventuriers/`, plus éventuelles branches supplémentaires `11_+` ou sous-dossiers par juridiction)*
-5. `05_personnages` *(avec sous-dossiers `<Joueurs>/` [défaut `Joueurs/`, ex. `PJ/`, `Heros/`] organisés par `<Campagne_ou_Groupe>/`, et `<Non_Joueurs>/` [défaut `Non_Joueurs/`, ex. `PNJ/`] avec éventuels sous-dossiers de regroupement optionnels)*
+5. `05_personnages` *(avec sous-dossiers `<Joueurs>/` [défaut `Joueurs/`, ex. `PJ/`, `Heros/`] organisés par `<Campagne_ou_Groupe>/`, et `<Non_Joueurs>/` [défaut `Non_Joueurs/`, ex. `PNJ/`] `<Cadre>/<Lieu_reference>/`)*
+
+   Vérifiez la hiérarchie PNJ `<Cadre>/<Lieu_reference>/`, sa cohérence avec les champs des fiches, les README aux deux niveaux, les doublons et les liens après chaque déplacement. Les anciennes structures nécessitent une table de migration ; ne déduisez pas le classement de la seule première rencontre.
+
 6. `06_lieux` *(avec éventuels sous-dossiers optionnels personnalisés `<groupes_lieux>/` par type ou macro-zone)*
 7. `07_factions` *(avec éventuels sous-dossiers optionnels personnalisés `<groupes_factions>/` par type)*
 8. `08_objets_magiques_singuliers` *(ou nom personnalisé du Tome VIII, ex. `08_objets_magiques/`, `08_artefacts_et_reliques/`, avec éventuels sous-dossiers optionnels `<categories>/`)*

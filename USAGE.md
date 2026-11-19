@@ -111,7 +111,7 @@ Every world is organised in ten numbered tomes (folder names are localised per p
 | `02_geography/` | Cartography, territories, subterranean regions, regional dossiers (`regions/` or custom subfolder name). |
 | `03_society_and_politics/` | Civil order, economy, social classes, public order; optional `peoples/` (or custom name) and `customs_festivals_and_events/` sub-series. |
 | `04_law_and_statutes/` | 10 legal branches (`01_legal_order_and_sources/` … `10_law_of_war_and_adventurers/`), plus optional extra branches `11_+` or jurisdictions. |
-| `05_characters/` | Modular PC dossiers (`<Player_Characters>/<Campaign_or_Party>/`) and NPC sheets (`<Non_Player_Characters>/[<group>/]`). |
+| `05_characters/` | Modular PC dossiers (`<Player_Characters>/<Campaign_or_Party>/`) and NPC sheets (`<Non_Player_Characters>/<Frame>/<Reference_location>/`). |
 | `06_locations/` | Adventure hubs, cities, strongholds, area hazards (optional `<location_groups>/`). |
 | `07_factions/` | Noble houses, covens, guilds, orders, power hierarchies (optional `<faction_groups>/`). |
 | `<08_unique_magic_items>/` | Unique artefacts, relics, legal registers, properties (customisable tome name and optional `<categories>/`). |
@@ -173,7 +173,7 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 
 * **When**: a new player character joins, an NPC is fleshed out, or a dossier module needs updating.
 * **How**: `/character-dossier` — *“Specify type (PC or NPC), character name, and operation (create, update module, sheet).”*
-* **Result**: a 5-module PC dossier (`01_profile_and_traits`, `02_integrated_backstory`, `03_relationships_and_dynamics`, `04_equipment_and_abilities`, `05_dm_hooks_and_secrets`) under `05_characters/Player_Characters/<Campaign>/<PC_Name>/`, or an NPC sheet under `05_characters/Non_Player_Characters/`, both registered in the indexes.
+* **Result**: a 5-module PC dossier (`01_profile_and_traits`, `02_integrated_backstory`, `03_relationships_and_dynamics`, `04_equipment_and_abilities`, `05_dm_hooks_and_secrets`) under `05_characters/Player_Characters/<Campaign>/<PC_Name>/`, or an NPC sheet under `05_characters/Non_Player_Characters/<Frame>/<Reference_location>/`, both registered in the indexes.
 
 ### 5.5 `magic-item` — Unique Magic Items
 
@@ -275,3 +275,5 @@ PC/NPC → `character-dossier` · Artefact → `magic-item` · Custom/festival/e
 ---
 
 *DMs_Companion is free to use and share under [CC BY-NC-SA 4.0](LICENSE). If it saves you prep time, you can support the project via [GitHub Sponsors](https://github.com/sponsors/Jollyproxi) or [Buy Me a Coffee](https://buymeacoffee.com/jollyproxi) — entirely optional.*
+
+Organise NPCs by **frame and primary reference location**, based on their stable territorial or narrative connection documented in canon. First encounter and current whereabouts are separate facts and do not automatically determine placement. Keep one canonical sheet; factions, campaigns and other locations link to it.

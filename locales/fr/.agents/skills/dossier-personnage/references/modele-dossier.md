@@ -98,13 +98,17 @@ Chaque PJ possède un dossier dédié dans `05_personnages/<Joueurs>/<Campagne_o
 
 ## 2. Fiche de Personnage Non-Joueur (PNJ)
 
-Chaque PNJ réside sous la forme d'un fichier unique dans `05_personnages/<Non_Joueurs>/[<groupe_pnj>/][Nom_PNJ].md` (défaut : `05_personnages/Non_Joueurs/[Nom_PNJ].md`) :
+Chaque PNJ réside sous la forme d'un fichier unique dans `05_personnages/<Non_Joueurs>/<Cadre>/<Lieu_reference>/[Nom_PNJ].md` (défaut : `05_personnages/Non_Joueurs/<Cadre>/<Lieu_reference>/<Nom_PNJ>.md`) :
 
 ```markdown
 # [Nom PNJ] — [Titre ou Rôle]
 
 > 🛡️ *Vérifié : NON_VALIDE | Modifié : [DATE_DU_JOUR]*
 
+* **Cadre de référence :** [Lien vers la fiche canonique du Tome II]
+* **Lieu principal de référence :** [Lien vers la fiche canonique du Tome VI et motif du lien]
+* **Position actuelle :** [Lien vers le lieu, si connu ; donnée distincte du rattachement principal]
+* **Première rencontre :** [Liens vers le compte rendu et le lieu, si documentés]
 * **Faction / Maison :** [Nom de Faction avec lien relatif vers 07_factions/]
 * **Lieu de Résidence / Activité :** [Lieu avec lien vers 06_lieux/]
 * **Alignement / Morale :** [Alignement ou principes moraux]

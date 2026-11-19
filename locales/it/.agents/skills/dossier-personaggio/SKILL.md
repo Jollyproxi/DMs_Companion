@@ -41,7 +41,10 @@ Quando il Master introduce o documenta un nuovo Personaggio Giocante:
    - `03_relazioni_e_dinamiche.md`: Legami con compagni di gruppo, fazioni e PNG.
    - `04_equipaggiamento_e_capacita.md`: Oggetti caratteristici, armi, focus e capacità uniche.
    - `05_ganci_e_segreti_dm.md`: Spunti riservati per il Master, enigmi e rivelazioni.
-4. **Aggiornamento Hub Campagna e Gruppo**:
+4. **Struttura**:
+   - Intestazione con ruolo, fazione (con link al Tomo VII `07_fazioni/`), residenza (link al Tomo VI `06_luoghi/`), allineamento e stato vitale.
+   - Sezioni su Aspetto & Indole, Ruolo Narrativo e Segreti & Ganci DM.
+   - **Aggiornamento Hub Campagna e Gruppo**:
    Aggiungi il nuovo PG al file `README.md` in `05_personaggi/<Giocanti>/<Campagna_o_Party>/README.md` e nell'indice generale `05_personaggi/README.md`.
 
 ---
@@ -50,14 +53,18 @@ Quando il Master introduce o documenta un nuovo Personaggio Giocante:
 
 Quando il Master introduce un Personaggio Non Giocante rilevante:
 
-1. **Acquisizione Guidata**: Se mancano elementi essenziali, chiarisci con il Master fazione di appartenenza, stato vitale e ubicazione.
-2. **Percorso**:
-   `05_personaggi/<Non-Giocanti>/[<gruppo_png>/]<Nome_PNG>.md` *(default: `05_personaggi/Non-Giocanti/<Nome_PNG>.md`; rispetta eventuali sottocartelle di raggruppamento opzionali per fazione, regione o schieramento)*
-3. **Struttura**:
+1. Organizza i PNG per **cornice e luogo principale di riferimento**, usando il legame territoriale o narrativo stabile documentato nel canone. Il primo incontro e la posizione attuale sono dati distinti e non determinano automaticamente la collocazione. Mantieni una sola scheda canonica; fazioni, campagne e altri luoghi la richiamano tramite link.
+2. `05_personaggi/<Non-Giocanti>/<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` (default: `05_personaggi/Non-Giocanti/<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md`).
+3. Se il riferimento è ambiguo, chiedi al Master; in stesura diretta usa `DA_DEFINIRE_MASTER/` al livello ignoto (cornice o luogo), senza inventare affiliazioni. Per PNG esplicitamente itineranti o trasversali usa `Trasversali/` e/o `Itineranti/` solo se documentato. Riutilizza i nomi canonici di cornici e luoghi, rispettando i nomi custom dei tomi.
+4. **Struttura**:
    - Intestazione con ruolo, fazione (con link al Tomo VII `07_fazioni/`), residenza (link al Tomo VI `06_luoghi/`), allineamento e stato vitale.
    - Sezioni su Aspetto & Indole, Ruolo Narrativo e Segreti & Ganci DM.
-4. **Aggiornamento Indice PNG**:
-   Aggiungi la voce nella tabella delle relazioni in `05_personaggi/<Non-Giocanti>/README.md` (e nell'eventuale `README.md` del sottogruppo).
+   - **Cornice di riferimento:** [Link alla scheda canonica nel Tomo II]
+   - **Luogo principale di riferimento:** [Link alla scheda canonica nel Tomo VI e motivo del legame]
+   - **Posizione attuale:** [Link al luogo, se noto; dato distinto dal riferimento principale]
+   - **Primo incontro:** [Link al verbale e al luogo, se documentati]
+5. Crea o aggiorna i `README.md` del tomo, dei PNG, della cornice e del luogo; gli indici riportano cornice, luogo principale e link alla scheda unica.
+6. Per riorganizzare schede esistenti, prepara la mappa origine → destinazione sulla base del canone e applica gli spostamenti autorizzati. Ricalcola i link relativi in uscita e aggiorna tutti i riferimenti in entrata (verbali, dossier, luoghi, fazioni, timeline), i README vecchi e nuovi, la Bibbia e il JSON. Non duplicare le schede né riscrivere il luogo storico del primo incontro. I casi irrisolti restano segnalati; verifica i link dopo gli spostamenti.
 
 ---
 

@@ -24,7 +24,10 @@ Verifica la presenza delle directory canoniche (accettando eventuali varianti gi
 2. `02_geografia` *(con eventuale sottocartella `regioni/` o nome custom scelto per le macro-aree, es. `province/`, `continenti/`, `domini/`, `cornici/`)*
 3. `03_societa_e_politica` *(con eventuale sottocartella opzionale `popoli/` o nome custom, e sottocartella obbligatoria `usi_costumi_ed_eventi/` contenente `usanze/`, `festival_ed_occorrenze/`, `eventi/`)*
 4. `04_diritto_e_leggi` *(con sottocartelle `01_ordinamento_e_fonti/` … `10_diritto_bellico_e_avventurieri/`, più eventuali branche custom `11_+` o sottocartelle per giurisdizione)*
-5. `05_personaggi` *(con sottocartelle `<Giocanti>/` [default `Giocanti/`, es. `PG/`, `Eroi/`], organizzate per `<Campagna_o_Party>/`, e `<Non-Giocanti>/` [default `Non-Giocanti/`, es. `PNG/`] con eventuali sottocartelle di raggruppamento opzionali)*
+5. `05_personaggi` *(con sottocartelle `<Giocanti>/` [default `Giocanti/`, es. `PG/`, `Eroi/`], organizzate per `<Campagna_o_Party>/`, e `<Non-Giocanti>/` [default `Non-Giocanti/`, es. `PNG/`] `<Cornice>/<Luogo_riferimento>/`)*
+
+   Controlla la gerarchia PNG `<Cornice>/<Luogo_riferimento>/`, la coerenza con i campi della scheda, i README a entrambi i livelli, le schede duplicate e i riferimenti dopo ogni spostamento. Le strutture pregresse richiedono una mappa di migrazione; non ricavare la destinazione dal solo primo incontro.
+
 6. `06_luoghi` *(o variante `06_location`; con eventuali sottocartelle opzionali custom per tipologia o macro-area)*
 7. `07_fazioni` *(o variante `07_factions`; con eventuali sottocartelle opzionali custom per tipologia)*
 8. `08_oggetti_magici_peculiari` *(o variante `08_oggetti magici peculiari` o nome custom es. `08_oggetti_magici/`, `08_artefatti_e_reliquie/`; con eventuali sottocartelle opzionali per categoria)*
