@@ -13,6 +13,7 @@ Ces instructions sont compatibles avec n'importe quel environnement ou assistant
   2. Déjà présent et documenté dans les fichiers canoniques du dépôt ou de la campagne.
 - **Gestion des Lacunes** : Si une information manque (ex. nom d'un PNJ mineur, direction empruntée, date ou issue secondaire) :
   - En mode interactif : **demandez-la directement** au MJ avant de poursuivre (en utilisant l'outil de questions structurées de l'environnement, tel que `vscode_askQuestions` ou `AskUserQuestion`, s'il est disponible ; sinon directement dans le chat).
+  - **OpenAI Codex**. Utilisez les outils disponibles pour consulter les fichiers canoniques, appliquer les compétences et vérifier les mises à jour. Lorsqu’une réponse du MJ est nécessaire, appelez `request_user_input` ou `request_user_input_async` si la session propose cet outil et autorise son usage pour la question. Si aucun des deux n’est utilisable, posez la question dans le chat. Attendez la réponse avant d’inscrire la décision dans le canon.
   - En mode rédaction directe : insérez un marqueur bien visible au format `[A_DEFINIR_MJ: description du détail manquant]`.
 - **Aucune Créativité Non Sollicitée** : Agissez avec la rigueur d'un notaire ou d'un archiviste. Ne proposez d'options ou d'idées créatives **que si** le MJ vous demande explicitement de faire un brainstorming (ex. *« Donne-moi 3 options pour… »*, *« Invente un nom cohérent »*).
 

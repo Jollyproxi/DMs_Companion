@@ -13,6 +13,7 @@ Diese Anweisungen sind mit jedem KI-Harness oder Assistenten kompatibel (VS Code
   2. Bereits in den kanonischen Dateien des Repositories bzw. der Kampagne dokumentiert ist.
 - **Umgang mit Lücken**: Fehlt eine Information (z. B. der Name eines Neben-NSC, eine Marschrichtung, ein Datum oder ein Nebenergebnis):
   - Im interaktiven Modus: **frage den SL direkt** vor dem Fortfahren (mit dem strukturierten Fragewerkzeug der Umgebung wie `vscode_askQuestions` oder `AskUserQuestion`, falls verfügbar; sonst direkt im Chat).
+  - **OpenAI Codex**. Nutze die verfügbaren Werkzeuge, um kanonische Dateien zu lesen, Skills anzuwenden und Änderungen zu prüfen. Wenn eine Antwort der Spielleitung nötig ist, rufe `request_user_input` oder `request_user_input_async` auf, sofern das Werkzeug in der Sitzung verfügbar und für die Frage zulässig ist. Falls keines nutzbar ist, frage im Chat. Warte auf die Antwort, bevor du die Entscheidung in den Kanon übernimmst.
   - Im direkten Schreibmodus: füge einen gut sichtbaren Platzhalter im Format `[VOM_SL_ZU_DEFINIEREN: Beschreibung des fehlenden Details]` ein.
 - **Keine ungefragte Kreativität**: Handle mit der Strenge eines Notars oder Archivars. Schlage kreative Optionen oder Ideen **nur dann** vor, wenn der SL dich ausdrücklich um Brainstorming bittet (z. B. *„Gib mir 3 Optionen für…“*, *„Erfinde einen passenden Namen“*).
 
