@@ -13,6 +13,7 @@ These instructions are compatible with any AI harness or assistant (VS Code Copi
   2. Already present and documented in the canonical files of the repository/campaign.
 - **Handling Gaps**: If a piece of information is missing (e.g. a minor NPC's name, direction of travel, date, or secondary outcome):
   - In interactive mode: **ask the DM directly** before proceeding (using the environment's structured question tool, such as `vscode_askQuestions` or `AskUserQuestion`, if available; otherwise directly in chat).
+  - **OpenAI Codex**. Use available tools to consult canonical files, apply skills, and verify updates. When you need an answer from the DM, call `request_user_input` or `request_user_input_async` if the session exposes the tool and allows it for that question. If neither can be used, ask in chat. Wait for the answer before recording the decision as canon.
   - In direct drafting mode: insert a clearly visible placeholder formatted as `[TO_BE_DEFINED_BY_DM: description of missing detail]`.
 - **No Unsolicited Creativity**: Act with the rigour of a notary or archivist. Offer creative options or suggestions **only if** the DM explicitly asks to brainstorm (e.g. *"Give me 3 options for..."*, *"Invent a fitting name"*).
 
