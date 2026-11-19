@@ -13,6 +13,7 @@ Queste istruzioni sono compatibili con qualsiasi harness o assistente AI (VS Cod
   2. Già presente e documentato nei file canonici della repository/campagna.
 - **Gestione delle Lacune**: Se un'informazione manca (es. nome di un PNG minore, direzione di marcia, data, esito secondario):
   - In modalità interattiva: **chiedila direttamente** al Master prima di procedere (usando lo strumento di domande strutturate dell'ambiente, come `vscode_askQuestions` o `AskUserQuestion`, se disponibile; altrimenti direttamente in chat).
+  - **OpenAI Codex**. Usa gli strumenti disponibili per consultare i file canonici, applicare le skill e verificare gli aggiornamenti. Quando serve una risposta del Master, chiama `request_user_input` o `request_user_input_async` se la sessione espone lo strumento e ne consente l’uso per la domanda. Se nessuno dei due è utilizzabile, chiedi in chat. Attendi la risposta prima di registrare la decisione nel canone.
   - In modalità stesura diretta: inserisci un segnaposto ben visibile in formato `[DA_DEFINIRE_MASTER: descrizione del dettaglio mancante]`.
 - **Nessuna Creatività Non Richiesta**: Agisci con il rigore di un notaio o cancelliere. Proponi opzioni o spunti creativi **soltanto se** il Master chiede esplicitamente di fare brainstorming (es. *"Dammi 3 opzioni per..."*, *"Inventa un nome coerente"*).
 
