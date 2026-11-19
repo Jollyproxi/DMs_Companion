@@ -119,6 +119,32 @@ Falls ein Unterverzeichnis für Regionen oder Großgebiete existiert:
 ```
 *(Passt der SL die Ordnernamen an — z. B. `SCs/`, `NSCs/`, `Helden/`, NSC-Gruppierungsordner oder `<Kampagne_oder_Gruppe>/` — bilden die Pfade die tatsächlichen Verzeichnisse auf der Festplatte ab.)*
 
+```json
+{
+  "nsc_rahmen": [
+    {
+      "rahmen": "<Rahmen>",
+      "orte": [
+        {
+          "bezugsort": "<Bezugsort>",
+          "index": "05_charaktere/Nichtspielercharaktere/<Rahmen>/<Bezugsort>/README.md",
+          "module": [
+            {
+              "datei": "05_charaktere/Nichtspielercharaktere/<Rahmen>/<Bezugsort>/<NSC_Name>.md"
+            }
+          ],
+          "ordner": "05_charaktere/Nichtspielercharaktere/<Rahmen>/<Bezugsort>"
+        }
+      ],
+      "ordner": "05_charaktere/Nichtspielercharaktere/<Rahmen>",
+      "index": "05_charaktere/Nichtspielercharaktere/<Rahmen>/README.md"
+    }
+  ]
+}
+```
+
+Bewahre für NSCs die Hierarchie Rahmen → hauptsächlicher Bezugsort und die tatsächlichen Pfade. Bogenmodule stehen ausschließlich unter den jeweiligen Orten, ohne Duplikate im Modul-Array des Bandes. Jeder Bogen kann `bezugsrahmen` und `bezugsort` als Pfade zu kanonischen Bögen der Bände II und VI speichern; unbekannte Angaben bleiben `null` mit SL-Notiz, ohne Dateien zu erfinden.
+
 ### C. Band 09 (Chroniken — Unterordner `<kampagnen>/`)
 ```json
 "ordner_kampagnen": "09_chroniken/kampagnen",

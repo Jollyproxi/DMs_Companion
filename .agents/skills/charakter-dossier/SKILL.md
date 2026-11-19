@@ -41,7 +41,10 @@ Wenn der SL einen neuen Spielercharakter einführt oder dokumentiert:
    - `03_beziehungen_und_dynamiken.md`: Bindungen zu Gefährten, Fraktionen und NSCs.
    - `04_ausruestung_und_faehigkeiten.md`: Charakteristische Gegenstände, Waffen, Fokusse und besondere Fähigkeiten.
    - `05_sl_aufhaenger_und_geheimnisse.md`: Dem SL vorbehaltene Aufhänger, Rätsel und Enthüllungen.
-4. **Aktualisierung von Kampagnen- und Gruppen-Hub**:
+4. **Aufbau**:
+   - Kopfbereich mit Rolle, Fraktion (Link zu Band VII `07_fraktionen/`), Wohnort (Link zu Band VI `06_orte/`), Gesinnung und Lebensstatus.
+   - Abschnitte zu Erscheinung & Wesen, Narrativer Rolle und Geheimnissen & SL-Aufhängern.
+   - **Aktualisierung von Kampagnen- und Gruppen-Hub**:
    Füge den neuen SC der `README.md` in `05_charaktere/<Spielercharaktere>/<Kampagne_oder_Gruppe>/README.md` sowie dem Gesamtindex `05_charaktere/README.md` hinzu.
 
 ---
@@ -50,14 +53,18 @@ Wenn der SL einen neuen Spielercharakter einführt oder dokumentiert:
 
 Wenn der SL einen bedeutsamen Nichtspielercharakter einführt:
 
-1. **Geführte Erfassung**: Fehlen zentrale Angaben, kläre mit dem SL Fraktionszugehörigkeit, Lebensstatus und Aufenthaltsort.
-2. **Pfad**:
-   `05_charaktere/<Nichtspielercharaktere>/[<nsc_gruppe>/]<NSC_Name>.md` *(Standard: `05_charaktere/Nichtspielercharaktere/<NSC_Name>.md`; respektiere optionale Gruppierungs-Unterordner nach Fraktion, Region oder Gesinnung)*
-3. **Aufbau**:
+1. Ordne NSCs nach **Rahmen und hauptsächlichem Bezugsort**, anhand ihrer im Kanon dokumentierten dauerhaften territorialen oder erzählerischen Bindung. Erstbegegnung und aktueller Aufenthaltsort sind getrennte Angaben und bestimmen die Ablage nicht automatisch. Bewahre genau einen kanonischen Bogen; Fraktionen, Kampagnen und andere Orte verlinken darauf.
+2. `05_charaktere/<Nichtspielercharaktere>/<Rahmen>/<Bezugsort>/<NSC_Name>.md` (default: `05_charaktere/Nichtspielercharaktere/<Rahmen>/<Bezugsort>/<NSC_Name>.md`).
+3. Ist die Zuordnung unklar, frage den SL; beim direkten Entwurf verwende `VOM_SL_ZU_DEFINIEREN/` auf der unbekannten Ebene (Rahmen oder Ort), ohne Bindungen zu erfinden. Verwende `Rahmenuebergreifend/` und/oder `Umherziehend/` nur für entsprechend dokumentierte NSCs. Nutze kanonische Rahmen- und Ortsnamen und beachte angepasste Bandnamen.
+4. **Aufbau**:
    - Kopfbereich mit Rolle, Fraktion (Link zu Band VII `07_fraktionen/`), Wohnort (Link zu Band VI `06_orte/`), Gesinnung und Lebensstatus.
    - Abschnitte zu Erscheinung & Wesen, Narrativer Rolle und Geheimnissen & SL-Aufhängern.
-4. **Aktualisierung des NSC-Index**:
-   Füge den Eintrag in die Beziehungstabelle unter `05_charaktere/<Nichtspielercharaktere>/README.md` (sowie einer etwaigen Untergruppen-`README.md`) ein.
+   - **Bezugsrahmen:** [Link zum kanonischen Bogen in Band II]
+   - **Hauptsächlicher Bezugsort:** [Link zum kanonischen Bogen in Band VI und Grund der Bindung]
+   - **Aktueller Aufenthaltsort:** [Ortslink, falls bekannt; getrennt vom hauptsächlichen Bezug]
+   - **Erstbegegnung:** [Links zu Protokoll und Ort, falls dokumentiert]
+5. Erstelle oder aktualisiere die `README.md` für Band, NSCs, Rahmen und Ort; Indizes enthalten Rahmen, hauptsächlichen Bezugsort und Link zum einzigen Bogen.
+6. Erstelle zur Neuordnung vorhandener Bögen eine kanonbasierte Tabelle Quelle → Ziel und führe autorisierte Verschiebungen aus. Berechne ausgehende relative Links neu und aktualisiere alle eingehenden Verweise (Protokolle, Dossiers, Orte, Fraktionen, Zeitlinien), alte und neue READMEs, Bibel und JSON. Dupliziere keine Bögen und ändere den historischen Ort der Erstbegegnung nicht. Melde ungeklärte Fälle und prüfe die Links nach dem Verschieben.
 
 ---
 

@@ -55,7 +55,7 @@ Die Kompilierung folgt streng der kanonischen Nummerierung:
 4. **##### 4. Recht & Gesetze** (`04_recht_und_gesetze/`)
    - Rechtsordnung und Quellen (`4.1.x`), Bürgerrechte und Status (`4.2.x`), dynastisches Recht und Erbfolge (`4.3.x`), Verträge und Pakte (`4.4.x`), Abkommen und Diplomatie (`4.5.x`), Strafrecht und Delikte (`4.6.x`), Gerichte und Verfahren (`4.7.x`), arkanes und religiöses Recht (`4.8.x`), Eigentum, Handel und Steuern (`4.9.x`), Kriegsrecht und Abenteurer (`4.10.x`), plus etwaige Zusatzgebiete (`4.11.x+`) oder Unterordner nach Gerichtsbarkeit, jeweils mit allgemeinem Rahmen (`4.Y.1`) und erfassten Rechtsakten (`4.Y.2+`) in aufsteigender Reihenfolge.
 5. **##### 5. Charakterverzeichnis der Welt** (`05_charaktere/`)
-   - Bedeutsame NSCs (`<Nichtspielercharaktere>/`, mit etwaigen angepassten Gruppierungs-Unterordnern), gruppiert nach Fraktion oder Region.
+   - Ordne NSCs nach **Rahmen und hauptsächlichem Bezugsort**, anhand ihrer im Kanon dokumentierten dauerhaften territorialen oder erzählerischen Bindung. Erstbegegnung und aktueller Aufenthaltsort sind getrennte Angaben und bestimmen die Ablage nicht automatisch. Bewahre genau einen kanonischen Bogen; Fraktionen, Kampagnen und andere Orte verlinken darauf.
    - Zusammenfassung der Gruppenbindungen, falls eine kanonische Kampagne/Gruppe existiert.
 6. **##### 6. Atlas der Orte & Abenteuerknoten** (`06_orte/`)
    - Bedeutende Orte, Festungen, Städte und Portale (auch gruppiert in optionalen Unterordnern `<ortsgruppen>/`).

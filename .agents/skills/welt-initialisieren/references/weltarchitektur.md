@@ -75,9 +75,12 @@ Dieses Dokument definiert die standardisierte Ordner- und Dateistruktur für die
 │   │           ├── 04_ausruestung_und_faehigkeiten.md      # Schlüsselgegenstände, Talente und Fähigkeiten
 │   │           └── 05_sl_aufhaenger_und_geheimnisse.md     # Dem SL vorbehaltene Erzählaufhänger
 │   └── <Nichtspielercharaktere>/                           # NSC-Archiv (Standard: Nichtspielercharaktere/; anpassbar zu NSCs/, Nebenfiguren/, usw.)
-│       ├── README.md                                       # Index und Gruppierung nach Fraktion
-│       ├── [<nsc_gruppen>/]                                # Optional: eigene Unterordner (nach fraktion/, region/, verbuendete/, gegenspieler/)
-│       └── [NSC_Name].md                                   # Bogen mit Rolle, Wesen, Geheimnissen und Aufhängern
+│       ├── README.md
+│       └── <Rahmen>/
+│           ├── README.md
+│           └── <Bezugsort>/
+│               ├── README.md
+│               └── [NSC_Name].md
 │
 ├── 06_orte/                                                # Band VI: Bedeutsame Orte und Abenteuerknoten
 │   ├── README.md                                           # Liste relevanter Orte und Verbindungen
@@ -122,3 +125,5 @@ Dieses Dokument definiert die standardisierte Ordner- und Dateistruktur für die
     └── exporte/                                            # Abgeleitete grafische Renderings (HTML/PNG/SVG/PDF)
         └── README.md                                       # Verzeichnis der abgeleiteten Renderings
 ```
+
+Ordne NSCs nach **Rahmen und hauptsächlichem Bezugsort**, anhand ihrer im Kanon dokumentierten dauerhaften territorialen oder erzählerischen Bindung. Erstbegegnung und aktueller Aufenthaltsort sind getrennte Angaben und bestimmen die Ablage nicht automatisch. Bewahre genau einen kanonischen Bogen; Fraktionen, Kampagnen und andere Orte verlinken darauf.
