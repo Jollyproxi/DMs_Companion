@@ -75,9 +75,12 @@ Questo documento definisce la struttura a cartelle e file standard per l'archivi
 │   │           ├── 04_equipaggiamento_e_capacita.md       # Oggetti chiave, talenti e capacità
 │   │           └── 05_ganci_e_segreti_dm.md               # Spunti narrativi riservati al Master
 │   └── <Non-Giocanti>/                                    # Archivio PNG (default: Non-Giocanti/; personalizzabile in PNG/, Comprimari/, ecc.)
-│       ├── README.md                                      # Indice e raggruppamento per fazione
-│       ├── [<gruppi_png>/]                                # Opzionale: sottocartelle custom (per fazione/, regione/, alleati/, antagonisti/)
-│       └── [Nome_PNG].md                                  # Scheda con ruolo, indole, segreti e ganci
+│       ├── README.md
+│       └── <Cornice>/
+│           ├── README.md
+│           └── <Luogo_riferimento>/
+│               ├── README.md
+│               └── [Nome_PNG].md
 │
 ├── 06_luoghi/                                             # Tomo VI: Luoghi rilevanti e snodi d'avventura
 │   ├── README.md                                          # Elenco dei luoghi d'interesse e collegamenti
@@ -122,3 +125,5 @@ Questo documento definisce la struttura a cartelle e file standard per l'archivi
     └── esportazioni/                                      # Render grafici derivati (HTML/PNG/SVG/PDF della timeline)
         └── README.md                                      # Registro dei render grafici derivati
 ```
+
+Organizza i PNG per **cornice e luogo principale di riferimento**, usando il legame territoriale o narrativo stabile documentato nel canone. Il primo incontro e la posizione attuale sono dati distinti e non determinano automaticamente la collocazione. Mantieni una sola scheda canonica; fazioni, campagne e altri luoghi la richiamano tramite link.

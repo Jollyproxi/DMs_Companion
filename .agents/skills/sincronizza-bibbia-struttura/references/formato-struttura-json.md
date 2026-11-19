@@ -117,7 +117,33 @@ Se presente una sottodirectory regionale o per macro-aree:
   "non_giocanti": "05_personaggi/Non-Giocanti"
 }
 ```
-*(Se il Master personalizza i nomi delle cartelle — es. `PG/`, `PNG/`, `Eroi/`, sottogruppi PNG o organizzazione per `<Campagna_o_Party>/` — i percorsi registrano i nomi reali su disco.)*
+*(Se il Master personalizza i nomi delle cartelle — es. `PG/`, `PNG/`, `Eroi/`, cornici e luoghi PNG o organizzazione per `<Campagna_o_Party>/` — i percorsi registrano i nomi reali su disco.)*
+
+```json
+{
+  "cornici_png": [
+    {
+      "cornice": "<Cornice>",
+      "cartella": "05_personaggi/Non-Giocanti/<Cornice>",
+      "luoghi": [
+        {
+          "luogo_riferimento": "<Luogo_riferimento>",
+          "indice": "05_personaggi/Non-Giocanti/<Cornice>/<Luogo_riferimento>/README.md",
+          "moduli": [
+            {
+              "file": "05_personaggi/Non-Giocanti/<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md"
+            }
+          ],
+          "cartella": "05_personaggi/Non-Giocanti/<Cornice>/<Luogo_riferimento>"
+        }
+      ],
+      "indice": "05_personaggi/Non-Giocanti/<Cornice>/README.md"
+    }
+  ]
+}
+```
+
+Per i PNG conserva la gerarchia cornice → luogo principale e i percorsi reali. I moduli delle schede vivono solo nei rispettivi luoghi, senza duplicarli in `moduli` del tomo. Ogni scheda può registrare `cornice_riferimento` e `luogo_riferimento` come percorsi alle schede canoniche dei Tomi II e VI; i dati ignoti restano `null` con una nota DM, senza inventare file.
 
 ### C. Tomo 09 (Cronache - Sottocartella `<campagne>/`)
 ```json

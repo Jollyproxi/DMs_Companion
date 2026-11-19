@@ -55,7 +55,7 @@ La compilazione procede rigorosamente secondo la sequenza numerica canonica:
 4. **##### 4. Diritto e Leggi** (`04_diritto_e_leggi/`)
    - Ordinamento e fonti (`4.1.x`), diritti civili e status (`4.2.x`), diritto dinastico e successione (`4.3.x`), contratti e patti (`4.4.x`), trattati e diplomazia (`4.5.x`), diritto penale e reati (`4.6.x`), tribunali e procedura (`4.7.x`), diritto arcano e religioso (`4.8.x`), proprietà, commercio e fisco (`4.9.x`), diritto bellico e avventurieri (`4.10.x`), più eventuali branche extra (`4.11.x+`) o sottocartelle per giurisdizione, ciascuna con quadro generale (`4.Y.1`) e atti censiti (`4.Y.2+`) in ordine numerico progressivo.
 5. **##### 5. Anagrafica dei Personaggi del Mondo** (`05_personaggi/`)
-   - Roster PNG significativi (`<Non-Giocanti>/`, con eventuali sottocartelle custom), raggruppati per fazione o regione.
+   - Organizza i PNG per **cornice e luogo principale di riferimento**, usando il legame territoriale o narrativo stabile documentato nel canone. Il primo incontro e la posizione attuale sono dati distinti e non determinano automaticamente la collocazione. Mantieni una sola scheda canonica; fazioni, campagne e altri luoghi la richiamano tramite link.
    - Sintesi dei legami del party se presente una campagna/gruppo canonico.
 6. **##### 6. Atlante dei Luoghi e Nodi d'Avventura** (`06_luoghi/` o `06_location/`)
    - Luoghi salienti, fortezze, città e varchi (anche raggruppati in sottocartelle opzionali `<gruppi_luoghi>/`).
