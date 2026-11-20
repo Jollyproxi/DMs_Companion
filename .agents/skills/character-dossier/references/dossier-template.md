@@ -98,15 +98,14 @@ Each PC has a dedicated folder under `05_characters/<Player_Characters>/<Campaig
 
 ## 2. Non-Player Character (NPC) Sheet
 
-Each NPC resides as a single file in `05_characters/<Non_Player_Characters>/<Frame>/<Reference_location>/[NPC_Name].md` (default: `05_characters/Non_Player_Characters/<Frame>/<Reference_location>/<NPC_Name>.md`):
+Follow the project’s NPC archive convention. Read the project instructions and the character volume index. For existing projects without an explicit rule, follow the established layout and indexes and flag conflicts or ambiguities to the GM. Look up the existing sheet through indexes, files and any aliases. Keep one canonical file per identity and link to it from campaigns, factions and other locations. For geographical or narrative levels, use the documented stable connection and record its basis. First encounter (location and session record) and current whereabouts are separate fields. Flag unresolved information and retain confirmed levels. Use a provisional location where the project defines one, otherwise ask the GM to resolve hierarchical placement. Use itinerant or cross-cutting categories only when supported by both the project and canon. In a flat archive, record these details in the sheet or index as specified.
 
 ```markdown
 # [NPC Name] — [Title or Role]
 
 > 🛡️ *Verified: UNVERIFIED | Modified: [TODAY_DATE]*
 
-* **Reference frame:** [Link to the canonical sheet in Tome II]
-* **Primary reference location:** [Link to the canonical sheet in Tome VI and reason for the connection]
+* **Stable connection and basis:** [Level values, category or unresolved detail as specified by the convention]
 * **Current whereabouts:** [Location link, if known; separate from primary reference]
 * **First encounter:** [Links to minutes and location, if documented]
 * **Faction / House:** [Faction Name with relative link to 07_factions/]

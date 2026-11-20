@@ -51,20 +51,19 @@ When the DM introduces or documents a new Player Character:
 
 ## 3. Creating or Updating an NPC Sheet
 
-When the DM introduces a notable Non-Player Character:
+## NPC archive convention
 
-1. Organise NPCs by **frame and primary reference location**, based on their stable territorial or narrative connection documented in canon. First encounter and current whereabouts are separate facts and do not automatically determine placement. Keep one canonical sheet; factions, campaigns and other locations link to it.
-2. `05_characters/<Non_Player_Characters>/<Frame>/<Reference_location>/<NPC_Name>.md` (default: `05_characters/Non_Player_Characters/<Frame>/<Reference_location>/<NPC_Name>.md`).
-3. If the reference is ambiguous, ask the DM; in direct drafting use `TO_BE_DEFINED_BY_DM/` at the unknown level (frame or location), without inventing affiliations. Use `Cross_Frame/` and/or `Itinerant/` for explicitly cross-frame or itinerant NPCs only when documented. Reuse canonical frame and location names and respect custom tome names.
-4. **Structure**:
-   - Header with role, faction (linked to Tome VII `07_factions/`), residence (linked to Tome VI `06_locations/`), alignment, and status.
-   - Sections for Appearance & Temperament, Narrative Role, and DM Secrets & Hooks.
-   - **Reference frame:** [Link to the canonical sheet in Tome II]
-   - **Primary reference location:** [Link to the canonical sheet in Tome VI and reason for the connection]
-   - **Current whereabouts:** [Location link, if known; separate from primary reference]
-   - **First encounter:** [Links to minutes and location, if documented]
-5. Create or update the tome, NPC, frame and location `README.md` files; indexes list the frame, primary location and link to the unique sheet.
-6. When reorganising existing sheets, prepare a source → destination map from canon and apply authorised moves. Recalculate outgoing relative links and update all incoming references (minutes, dossiers, locations, factions, timelines), old and new READMEs, the Bible and JSON. Do not duplicate sheets or rewrite the historical first-encounter location. Flag unresolved cases and check links after moving.
+Follow the project’s NPC archive convention. Read the project instructions and the character volume index. For existing projects without an explicit rule, follow the established layout and indexes and flag conflicts or ambiguities to the GM.
+
+Look up the existing sheet through indexes, files and any aliases. Keep one canonical file per identity and link to it from campaigns, factions and other locations. For geographical or narrative levels, use the documented stable connection and record its basis. First encounter (location and session record) and current whereabouts are separate fields.
+
+Flag unresolved information and retain confirmed levels. Use a provisional location where the project defines one, otherwise ask the GM to resolve hierarchical placement. Use itinerant or cross-cutting categories only when supported by both the project and canon. In a flat archive, record these details in the sheet or index as specified.
+
+Before an authorised move, map each source to its destination and check that the destination is free. Update old and new indexes, all incoming references and outgoing relative links. Preserve first-encounter history, refresh the derived documents required by the project, and verify canonical link targets and a single surviving sheet.
+
+Dante retains `<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` under its NPC root.
+
+Use the [template](./references/dossier-template.md) and update the required indexes.
 
 ---
 

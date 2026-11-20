@@ -119,6 +119,8 @@ If a regional or macro-area subdirectory exists:
 ```
 *(If the DM customises folder names — e.g. `PCs/`, `NPCs/`, `Heroes/`, NPC frames and locations, or `<Campaign_or_Party>/` — paths record the actual directories on disk.)*
 
+Use the actual paths and project schema for the Bible and JSON. The example below shows Dante’s two-level hierarchy. For flat archives, list sheets once under the NPC archive; for custom hierarchies, represent the actual levels. Keep canonical references as metadata where applicable and leave unknown values unset.
+
 ```json
 {
   "npc_frames": [
