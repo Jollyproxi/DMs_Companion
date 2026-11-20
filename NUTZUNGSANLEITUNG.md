@@ -36,7 +36,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/de/.ag
 | Datei / Ordner | Zweck |
 | :--- | :--- |
 | `AGENTS.md` | Universelle Regeln und Abläufe, von jedem Harness gelesen. |
-| `CLAUDE.md` | Einstiegspunkt für Claude Code; importiert `AGENTS.md`. |
+| `CLAUDE.md` | Einstiegspunkt für Claude Code. |
 | `.github/agents/kampagnen-archivar.agent.md` | Die Persona *Kampagnen-Archivar* (Eintrag im Agenten-Auswahlmenü von VS Code). |
 | `.agents/agents/kampagnen-archivar.md` | Dieselbe Persona im Antigravity-Format: Hauptagent und Subagent, mit nativen strukturierten Rückfragen. |
 | `.agents/skills/<faehigkeit>/SKILL.md` | Die 12 modularen Fähigkeiten (plus Vorlagen unter `references/`). |
@@ -83,14 +83,14 @@ Der Archivar ordnet **nur** das, was Sie liefern oder bereits kanonisiert haben.
 | `02_geografie/` | Kartografie, Gebiete, unterirdische Regionen, Regions-Dossiers (`regionen/` oder eigener Name, z. B. `provinzen/`, `domaenen/`). |
 | `03_gesellschaft_und_politik/` | Zivile Ordnung, Wirtschaft, Gesellschaftsschichten, öffentliche Ordnung; optional `voelker/` (oder eigener Name) und Unterreihe `braeuche_feste_und_ereignisse/` (`braeuche/`, `feste_und_vorkommnisse/`, `ereignisse/`). |
 | `04_recht_und_gesetze/` | 10 Rechtsgebiete (`01_rechtsordnung_und_quellen/` … `10_kriegsrecht_und_abenteurer/`), plus optionale Zusatzgebiete `11_+` oder Gerichtsbarkeiten. |
-| `05_charaktere/` | Modulare SC-Dossiers (`<Spielercharaktere>/<Kampagne_oder_Gruppe>/<SC_Name>/`, Standard `Spielercharaktere/<Kampagne>/`) und NSC-Bögen (`<Nichtspielercharaktere>/<Rahmen>/<Bezugsort>/`, Standard `Nichtspielercharaktere/`). |
+| `05_charaktere/` | Modulare SC-Dossiers (`<Spielercharaktere>/<Kampagne_oder_Gruppe>/<SC_Name>/`, Standard `Spielercharaktere/<Kampagne>/`) und NSC-Bögen |
 | `06_orte/` | Abenteuerknoten, Städte, Festungen, Gebietsgefahren (`<ortsgruppen>/` optional). |
 | `07_fraktionen/` | Adelshäuser, Zirkel, Gilden, Orden, Machthierarchien (`<fraktionsgruppen>/` optional). |
 | `<08_besondere_magische_gegenstaende>/` | Einzigartige Artefakte, Relikte, Rechtsregister, Eigenschaften (anpassbarer Bandname und `<kategorien>/` optional). |
 | `09_chroniken/` | Kampagnen-Hub: Übersichtstabelle + fortlaufende Sitzungsprotokolle (`<kampagnen>/<name>/<sitzungen>/`, Standard `kampagnen/` und `sitzungen/`). |
 | `10_zeitlinie/` | Querschnitts-Chronologie: `historische_chronologie/`, `vorkommnisregister/`, `markwhen/` (`allgemeine_zeitlinie.mw`, `epochen/`, `kampagnen/`), `kalender/`, `exporte/`. |
 
-Ordne NSCs nach **Rahmen und hauptsächlichem Bezugsort**, anhand ihrer im Kanon dokumentierten dauerhaften territorialen oder erzählerischen Bindung. Erstbegegnung und aktueller Aufenthaltsort sind getrennte Angaben und bestimmen die Ablage nicht automatisch. Bewahre genau einen kanonischen Bogen; Fraktionen, Kampagnen und andere Orte verlinken darauf.
+Wende die NSC-Ablagekonvention des Projekts an. Lies die Projektanweisungen und den Index des Charakterbands. Bei bestehenden Projekten ohne ausdrückliche Regel folge der vorhandenen Ablage und ihren Indizes und melde der SL Widersprüche oder Unklarheiten. Suche den vorhandenen Bogen in Indizes und Dateien sowie anhand etwaiger Aliasnamen. Führe eine kanonische Datei je Identität und verlinke sie aus Kampagnen, Fraktionen und anderen Orten. Verwende für geografische oder erzählerische Ebenen die belegte dauerhafte Bindung und halte ihre Grundlage fest. Erstbegegnung (Ort und Protokoll) und aktueller Aufenthaltsort sind getrennte Felder.
 
 ### Prüf-Badges
 
@@ -147,7 +147,7 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 
 * **Wann**: ein neuer Spielercharakter stößt dazu, ein NSC wird ausgearbeitet oder ein Dossiermodul muss aktualisiert werden.
 * **Wie**: `/charakter-dossier` — *„Gib Typ (SC oder NSC), Charakternamen und Vorgang (erstellen, modul aktualisieren, bogen) an.“*
-* **Ergebnis**: ein SC-Dossier mit 5 Modulen (`01_stammdaten_und_merkmale`, `02_integrierter_hintergrund`, `03_beziehungen_und_dynamiken`, `04_ausruestung_und_faehigkeiten`, `05_sl_aufhaenger_und_geheimnisse`) unter `05_charaktere/Spielercharaktere/<Kampagne>/<SC_Name>/`, oder ein NSC-Bogen unter `05_charaktere/Nichtspielercharaktere/<Rahmen>/<Bezugsort>/`, beide in den Indizes eingetragen.
+* **Ergebnis**: ein SC-Dossier mit 5 Modulen (`01_stammdaten_und_merkmale`, `02_integrierter_hintergrund`, `03_beziehungen_und_dynamiken`, `04_ausruestung_und_faehigkeiten`, `05_sl_aufhaenger_und_geheimnisse`) unter `05_charaktere/Spielercharaktere/<Kampagne>/<SC_Name>/`, oder ein NSC-Bogen gemäß Projektkonvention, beide in den Indizes eingetragen.
 
 ### 4.5 `magischer-gegenstand` — Besondere magische Gegenstände
 
@@ -227,7 +227,7 @@ SC/NSC → `charakter-dossier` · Artefakt → `magischer-gegenstand` · Brauch/
 ## 6. Fehlerbehebung
 
 * **Der Agent oder die Fähigkeiten erscheinen nicht in VS Code** — die Dateien müssen im **Wurzelverzeichnis des Workspace** liegen: `.github/agents/` und `.agents/skills/`. Laden Sie das Fenster neu und öffnen Sie das Agenten-Auswahlmenü erneut.
-* **Claude Code erkennt die Fähigkeiten nicht** — kopieren Sie `.agents/skills/*` nach `.claude/skills/` oder erstellen Sie einen Symlink; `CLAUDE.md` importiert bereits `AGENTS.md`.
+* **Claude Code erkennt die Fähigkeiten nicht** — kopieren Sie `.agents/skills/*` nach `.claude/skills/` oder erstellen Sie einen Symlink.
 * **Kein strukturierter Frage-Dialog erscheint** — das ist außerhalb von VS Code normal: Der Archivar weicht auf den Textchat aus und stellt dieselben Fragen als Text.
 * **`mw-exportieren` kann nicht rendern** — installieren Sie die Markwhen-CLI (`npx @markwhen/mw`) oder nutzen Sie die Markwhen-VS-Code-Erweiterung / `markwhen.com`; Exporte sind optional und blockieren nie die `.mw`-Quellen.
 * **Der Assistent hat Lore erfunden** — das verletzt die goldene Regel: Verweisen Sie ihn auf `AGENTS.md`, löschen Sie den erfundenen Text und starten Sie ein `schritt-fuer-schritt-audit` auf den betroffenen Abschnitt.

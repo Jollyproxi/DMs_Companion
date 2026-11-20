@@ -98,15 +98,14 @@ Jeder SC besitzt einen eigenen Ordner unter `05_charaktere/<Spielercharaktere>/<
 
 ## 2. Nichtspielercharakter-(NSC-)Bogen
 
-Jeder NSC liegt als einzelne Datei unter `05_charaktere/<Nichtspielercharaktere>/<Rahmen>/<Bezugsort>/[NSC_Name].md` (Standard: `05_charaktere/Nichtspielercharaktere/<Rahmen>/<Bezugsort>/<NSC_Name>.md`):
+Wende die NSC-Ablagekonvention des Projekts an. Lies die Projektanweisungen und den Index des Charakterbands. Bei bestehenden Projekten ohne ausdrückliche Regel folge der vorhandenen Ablage und ihren Indizes und melde der SL Widersprüche oder Unklarheiten. Suche den vorhandenen Bogen in Indizes und Dateien sowie anhand etwaiger Aliasnamen. Führe eine kanonische Datei je Identität und verlinke sie aus Kampagnen, Fraktionen und anderen Orten. Verwende für geografische oder erzählerische Ebenen die belegte dauerhafte Bindung und halte ihre Grundlage fest. Erstbegegnung (Ort und Protokoll) und aktueller Aufenthaltsort sind getrennte Felder. Markiere ungeklärte Angaben und erhalte bestätigte Ebenen. Verwende einen vorläufigen Ablageort, sofern das Projekt ihn vorsieht, und frage andernfalls die SL nach der hierarchischen Zuordnung. Nutze Kategorien für reisende oder bereichsübergreifende NSC nur, wenn Projekt und Kanon sie stützen. Erfasse diese Angaben bei flacher Ablage wie vereinbart im Bogen oder Index.
 
 ```markdown
 # [NSC Name] — [Titel oder Rolle]
 
 > 🛡️ *Geprüft: NICHT_GEPRUEFT | Geändert: [HEUTIGES_DATUM]*
 
-* **Bezugsrahmen:** [Link zum kanonischen Bogen in Band II]
-* **Hauptsächlicher Bezugsort:** [Link zum kanonischen Bogen in Band VI und Grund der Bindung]
+* **Dauerhafte Bindung und Grundlage:** [Ebenenwerte, etwaige Kategorie oder ungeklärte Angabe gemäß Konvention]
 * **Aktueller Aufenthaltsort:** [Ortslink, falls bekannt; getrennt vom hauptsächlichen Bezug]
 * **Erstbegegnung:** [Links zu Protokoll und Ort, falls dokumentiert]
 * **Fraktion / Haus:** [Fraktionsname mit relativem Link zu 07_fraktionen/]
