@@ -57,18 +57,18 @@ Al termine della validazione di ciascun blocco o elemento, viene apposto il badg
    - Seziona il documento secondo la granularità concordata (atomica o per sezioni logiche).
 
 2. **Interrogatorio Atomico**:
-   - Mostra al Master un concetto/sezione per volta in chat.
-   - Se l'ambiente dispone di uno strumento interattivo di domande strutturate (es. `vscode_askQuestions`, `AskUserQuestion`), utilizzalo per presentare la domanda con opzioni rapide:
-     - `Conferma senza modifiche` (consigliata)
-     - `Modifiche effettuate sul file di origine da parte del Master` (il Master ha già aggiornato il file, quindi il badge va aggiornato)
-     - `Modifica / Rettifica` (apre campo libero per digitare la correzione)
-     - `Rimanda a dopo [DA_DEFINIRE_MASTER]`
-   - Altrimenti, poni la domanda direttamente in chat:
-     > **Passo [N/Totale] — [Titolo Sezione o Concetto]**
-     > ```markdown
+   - Presenta un solo concetto o sezione per volta. Includi il testo esatto e la domanda nel modulo interattivo.
+   - In Codex usa `request_user_input` quando disponibile e consentito, altrimenti `request_user_input_async` alle stesse condizioni. Negli altri ambienti usa lo strumento equivalente. Come subagente, inoltra domanda e opzioni al coordinatore se il modulo si apre soltanto nella conversazione principale.
+   - Con `request_user_input` usa queste tre opzioni e indica nella domanda che il campo libero serve a dettare una rettifica:
+     - `Conferma (Consigliato)`: il testo va bene e puoi procedere con il badge.
+     - `File modificato`: il Master ha modificato il file di origine. Rileggi il punto prima di aggiornare il badge.
+     - `Rimanda`: sospendi la convalida di questo punto.
+   - Eccezione per `request_user_input_async` e per i moduli equivalenti: se lo strumento accetta quattro opzioni, aggiungi `Modifica / Rettifica` come scelta esplicita. Se il Master sceglie questa voce senza dettare la rettifica, chiedigliela prima di procedere. Se lo strumento accetta solo tre opzioni, usa le tre voci sopra e il campo libero.
+   - Usa la chat solo se il modulo non è utilizzabile, anche tramite il coordinatore, e indica il motivo concreto:
+     > **Passo [N/Totale] - [Titolo Sezione o Concetto]**
      > [Testo esatto estratto dal file]
-     > ```
-     > **Domanda**: *«Confermi che questo passaggio è corretto ed esattamente conforme al canone, oppure desideri rettificare o aggiungere dettagli?»*
+     > **Domanda**: confermi il testo, hai aggiornato il file, vuoi dettare una rettifica o preferisci rimandare?
+   - Attendi la risposta prima di applicare modifiche o badge. Con il modulo asincrono mantieni aperto il turno e riprendi dal punto pendente quando arriva la risposta.
 
 3. **Applicazione della Risposta**:
    - **Se approvato senza modifiche**: Aggiungi o aggiorna il badge:

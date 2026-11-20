@@ -57,18 +57,15 @@ Avant de commencer (ou selon la consigne du MJ), fixez la granularité du pas-à
    - Découpez le document selon la granularité convenue (atomique ou par sections logiques).
 
 2. **Interrogatoire Atomique** :
-   - Affichez au MJ un concept ou une section à la fois dans le chat.
-   - Si l'environnement dispose d'un outil interactif de questions structurées (ex. `vscode_askQuestions`, `AskUserQuestion`), utilisez-le pour proposer des choix rapides :
-     - `Confirmer sans modification` (recommandé)
-     - `Modifications déjà effectuées par le MJ dans le fichier source` (le MJ a déjà mis à jour le fichier, il faut actualiser le badge)
-     - `Modifier / Rectifier` (ouvre un champ libre pour saisir la correction)
-     - `Reporter à plus tard [A_DEFINIR_MJ]`
-   - Sinon, posez la question directement dans le chat :
-     > **Étape [N/Total] — [Titre de Section ou Concept]**
-     > ```markdown
-     > [Texte exact extrait du fichier]
-     > ```
-     > **Question :** *« Confirmez-vous que ce passage est exact et strictement conforme au canon, ou souhaitez-vous le rectifier ou l'enrichir ? »*
+   - Présentez un seul concept ou une seule section à la fois. Insérez le passage exact et la question dans le formulaire.
+   - Dans Codex, utilisez `request_user_input` si l’outil est disponible et autorisé, puis `request_user_input_async` aux mêmes conditions. Dans les autres environnements, utilisez l’équivalent natif. En tant que sous-agent, transmettez la question et les choix au coordinateur si seul le fil principal peut ouvrir le formulaire.
+   - Avec `request_user_input`, proposez ces trois choix et indiquez au MJ que le champ libre permet de dicter une correction :
+     - `Confirmer (recommandé)` : valider le passage tel quel.
+     - `Fichier modifié` : relire le passage modifié par le MJ avant de mettre à jour le badge.
+     - `Reporter` : reporter la validation de ce passage.
+   - Exception pour `request_user_input_async` et les formulaires équivalents : si l’outil accepte quatre choix, ajoutez `Modifier / Rectifier`. Si le MJ choisit cette option sans donner de correction, demandez-la avant de poursuivre. Si le formulaire est limité à trois choix, utilisez les choix ci-dessus et le champ libre.
+   - Utilisez le chat uniquement si le formulaire est indisponible ou interdit, y compris via le coordinateur. Indiquez la raison précise et incluez le passage exact et la question.
+   - Attendez la réponse avant d’appliquer les modifications ou les badges. Avec le formulaire asynchrone, gardez le tour ouvert et reprenez au point en attente dès réception de la réponse.
 
 3. **Application de la Réponse** :
    - **Si approuvé sans modification** : Ajoutez ou mettez à jour le badge :
