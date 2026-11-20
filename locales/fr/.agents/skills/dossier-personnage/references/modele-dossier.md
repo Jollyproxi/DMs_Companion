@@ -98,15 +98,14 @@ Chaque PJ possède un dossier dédié dans `05_personnages/<Joueurs>/<Campagne_o
 
 ## 2. Fiche de Personnage Non-Joueur (PNJ)
 
-Chaque PNJ réside sous la forme d'un fichier unique dans `05_personnages/<Non_Joueurs>/<Cadre>/<Lieu_reference>/[Nom_PNJ].md` (défaut : `05_personnages/Non_Joueurs/<Cadre>/<Lieu_reference>/<Nom_PNJ>.md`) :
+Appliquez la convention PNJ du projet. Consultez les instructions du projet et l’index du tome des personnages. Pour un projet existant sans règle explicite, suivez la structure et les index en usage et signalez les conflits ou ambiguïtés au MJ. Recherchez la fiche existante dans les index, les fichiers et par ses alias éventuels. Conservez un fichier canonique par identité et liez-le depuis les campagnes, factions et autres lieux. Pour les niveaux géographiques ou narratifs, utilisez le lien stable documenté et indiquez son fondement. La première rencontre (lieu et compte rendu) et la position actuelle sont des champs distincts. Signalez les données à définir et conservez les niveaux confirmés. Utilisez un emplacement provisoire si le projet le prévoit, sinon demandez au MJ de trancher le classement hiérarchique. Utilisez une catégorie itinérante ou transversale si le projet la prévoit et que le canon l’atteste. Dans une archive à plat, consignez ces informations dans la fiche ou l’index selon la convention.
 
 ```markdown
 # [Nom PNJ] — [Titre ou Rôle]
 
 > 🛡️ *Vérifié : NON_VALIDE | Modifié : [DATE_DU_JOUR]*
 
-* **Cadre de référence :** [Lien vers la fiche canonique du Tome II]
-* **Lieu principal de référence :** [Lien vers la fiche canonique du Tome VI et motif du lien]
+* **Lien stable et fondement:** [Valeurs des niveaux, catégorie éventuelle ou donnée à définir selon la convention]
 * **Position actuelle :** [Lien vers le lieu, si connu ; donnée distincte du rattachement principal]
 * **Première rencontre :** [Liens vers le compte rendu et le lieu, si documentés]
 * **Faction / Maison :** [Nom de Faction avec lien relatif vers 07_factions/]

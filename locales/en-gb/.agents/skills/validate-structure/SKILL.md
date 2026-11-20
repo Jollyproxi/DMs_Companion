@@ -24,9 +24,9 @@ Verifies the presence of the canonical directories (accepting equivalent legacy 
 2. `02_geography` *(with optional `regions/` subfolder or custom macro-area folder name, e.g. `provinces/`, `continents/`, `realms/`)*
 3. `03_society_and_politics` *(with optional `peoples/` or custom-named subfolder, and mandatory `customs_festivals_and_events/` subfolder containing `customs/`, `festivals_and_occurrences/`, `events/`)*
 4. `04_law_and_statutes` *(with subfolders `01_legal_order_and_sources/` … `10_law_of_war_and_adventurers/`, plus any custom extra branches `11_+` or jurisdictional subfolders)*
-5. `05_characters` *(with `<Player_Characters>/` [default `Player_Characters/`, e.g. `PCs/`, `Heroes/`] grouped by `<Campaign_or_Party>/`, and `<Non_Player_Characters>/` [default `Non_Player_Characters/`, e.g. `NPCs/`] `<Frame>/<Reference_location>/`)*
+5. `05_characters` *(with `<Player_Characters>/` [default `Player_Characters/`, e.g. `PCs/`, `Heroes/`] grouped by `<Campaign_or_Party>/`, and `<Non_Player_Characters>/` [default `Non_Player_Characters/`, e.g. `NPCs/`])*. Follow the project’s NPC archive convention. Read the project instructions and the character volume index. For existing projects without an explicit rule, follow the established layout and indexes and flag conflicts or ambiguities to the GM.
 
-   Check the NPC hierarchy `<Frame>/<Reference_location>/`, consistency with sheet fields, READMEs at both levels, duplicate sheets and references after each move. Legacy layouts require a migration map; do not derive placement solely from the first encounter.
+   Check the path, required indexes, documented connection, uniqueness per identity and canonical links. For flat archives, check the index and metadata where the project stores them. Flag unresolved details and propose a map before any authorised moves.
 
 6. `06_locations` *(with optional custom `<location_groups>/` subfolders by type or macro-area)*
 7. `07_factions` *(with optional custom `<faction_groups>/` subfolders by type)*

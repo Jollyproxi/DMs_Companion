@@ -24,9 +24,9 @@ Prüft das Vorhandensein der kanonischen Verzeichnisse (wobei gleichwertige etab
 2. `02_geografie` *(mit optionalem Unterordner `regionen/` oder benutzerdefiniertem Namen für Großgebiete, z. B. `provinzen/`, `kontinente/`, `domaenen/`)*
 3. `03_gesellschaft_und_politik` *(mit optionalem Unterordner `voelker/` oder eigenem Namen sowie dem Pflicht-Unterordner `braeuche_feste_und_ereignisse/` samt `braeuche/`, `feste_und_vorkommnisse/`, `ereignisse/`)*
 4. `04_recht_und_gesetze` *(mit Unterordnern `01_rechtsordnung_und_quellen/` … `10_kriegsrecht_und_abenteurer/`, plus etwaigen Zusatzgebieten `11_+` oder Unterordnern nach Gerichtsbarkeit)*
-5. `05_charaktere` *(mit `<Spielercharaktere>/` [Standard `Spielercharaktere/`, z. B. `SCs/`, `Helden/`], gruppiert nach `<Kampagne_oder_Gruppe>/`, und `<Nichtspielercharaktere>/` [Standard `Nichtspielercharaktere/`, z. B. `NSCs/`] `<Rahmen>/<Bezugsort>/`)*
+5. `05_charaktere` *(mit `<Spielercharaktere>/` [Standard `Spielercharaktere/`, z. B. `SCs/`, `Helden/`], gruppiert nach `<Kampagne_oder_Gruppe>/`, und `<Nichtspielercharaktere>/` [Standard `Nichtspielercharaktere/`, z. B. `NSCs/`])*. Wende die NSC-Ablagekonvention des Projekts an. Lies die Projektanweisungen und den Index des Charakterbands. Bei bestehenden Projekten ohne ausdrückliche Regel folge der vorhandenen Ablage und ihren Indizes und melde der SL Widersprüche oder Unklarheiten.
 
-   Prüfe die NSC-Hierarchie `<Rahmen>/<Bezugsort>/`, die Übereinstimmung mit den Bogenfeldern, READMEs auf beiden Ebenen, doppelte Bögen und Verweise nach jeder Verschiebung. Frühere Strukturen benötigen eine Migrationstabelle; leite die Ablage nicht allein aus der Erstbegegnung ab.
+   Prüfe Pfad, erforderliche Indizes, belegte Bindung, Eindeutigkeit je Identität und kanonische Links. Prüfe bei flacher Ablage den Index und die Metadaten am vorgesehenen Ort. Melde ungeklärte Angaben und schlage vor genehmigten Verschiebungen eine Zuordnung der Pfade vor.
 
 6. `06_orte` *(mit optionalen benutzerdefinierten Unterordnern `<ortsgruppen>/` nach Typ oder Großgebiet)*
 7. `07_fraktionen` *(mit optionalen benutzerdefinierten Unterordnern `<fraktionsgruppen>/` nach Typ)*

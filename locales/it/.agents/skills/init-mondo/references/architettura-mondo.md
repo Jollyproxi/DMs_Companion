@@ -76,11 +76,11 @@ Questo documento definisce la struttura a cartelle e file standard per l'archivi
 │   │           └── 05_ganci_e_segreti_dm.md               # Spunti narrativi riservati al Master
 │   └── <Non-Giocanti>/                                    # Archivio PNG (default: Non-Giocanti/; personalizzabile in PNG/, Comprimari/, ecc.)
 │       ├── README.md
-│       └── <Cornice>/
+│       └── <Area_di_riferimento>/
 │           ├── README.md
-│           └── <Luogo_riferimento>/
+│           └── <Luogo_di_riferimento>/
 │               ├── README.md
-│               └── [Nome_PNG].md
+│               └── <Nome_PNG>.md
 │
 ├── 06_luoghi/                                             # Tomo VI: Luoghi rilevanti e snodi d'avventura
 │   ├── README.md                                          # Elenco dei luoghi d'interesse e collegamenti
@@ -126,4 +126,4 @@ Questo documento definisce la struttura a cartelle e file standard per l'archivi
         └── README.md                                      # Registro dei render grafici derivati
 ```
 
-Organizza i PNG per **cornice e luogo principale di riferimento**, usando il legame territoriale o narrativo stabile documentato nel canone. Il primo incontro e la posizione attuale sono dati distinti e non determinano automaticamente la collocazione. Mantieni una sola scheda canonica; fazioni, campagne e altri luoghi la richiamano tramite link.
+Per i nuovi progetti usa come base `<Area_di_riferimento>/<Luogo_di_riferimento>/<Nome_PNG>.md` sotto la radice PNG, con un indice alla radice e ai livelli utilizzati. L’area può essere una regione o un altro raggruppamento stabile definito dal progetto. La collocazione segue il legame geografico o narrativo documentato. Presenta la struttura come base e raccogli eventuali personalizzazioni di nomi, livelli, categorie e gestione dei dati incerti. Passa a un archivio piatto solo su richiesta esplicita del Master. In quel caso salva le schede direttamente nella radice PNG e mantieni un solo indice per l’archivio. Registra la convenzione nel README del tomo dei personaggi. Per Dante resta in uso `<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` sotto la radice PNG.

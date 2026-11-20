@@ -119,6 +119,8 @@ Falls ein Unterverzeichnis für Regionen oder Großgebiete existiert:
 ```
 *(Passt der SL die Ordnernamen an — z. B. `SCs/`, `NSCs/`, `Helden/`, NSC-Gruppierungsordner oder `<Kampagne_oder_Gruppe>/` — bilden die Pfade die tatsächlichen Verzeichnisse auf der Festplatte ab.)*
 
+Verwende in Bibel und JSON die tatsächlichen Pfade und das Projektschema. Das Beispiel unten zeigt Dantes zweistufige Hierarchie. Liste bei flacher Ablage jeden Bogen einmal unter der NSC-Ablage und bilde bei eigener Hierarchie die tatsächlichen Ebenen ab. Führe kanonische Bezüge in den vorgesehenen Metadaten und lasse unbekannte Werte offen.
+
 ```json
 {
   "nsc_rahmen": [
@@ -143,7 +145,7 @@ Falls ein Unterverzeichnis für Regionen oder Großgebiete existiert:
 }
 ```
 
-Bewahre für NSCs die Hierarchie Rahmen → hauptsächlicher Bezugsort und die tatsächlichen Pfade. Bogenmodule stehen ausschließlich unter den jeweiligen Orten, ohne Duplikate im Modul-Array des Bandes. Jeder Bogen kann `bezugsrahmen` und `bezugsort` als Pfade zu kanonischen Bögen der Bände II und VI speichern; unbekannte Angaben bleiben `null` mit SL-Notiz, ohne Dateien zu erfinden.
+
 
 ### C. Band 09 (Chroniken — Unterordner `<kampagnen>/`)
 ```json

@@ -24,9 +24,9 @@ Vérifie la présence des répertoires canoniques (en acceptant les variantes é
 2. `02_geographie` *(avec éventuel sous-dossier `regions/` ou nom personnalisé choisi pour les macro-zones, ex. `provinces/`, `continents/`, `domaines/`)*
 3. `03_societe_et_politique` *(avec éventuel sous-dossier optionnel `peuples/` ou nom personnalisé, et sous-dossier obligatoire `coutumes_fetes_et_evenements/` contenant `coutumes/`, `fetes_et_occurrences/`, `evenements/`)*
 4. `04_droit_et_lois` *(avec sous-dossiers `01_ordre_juridique_et_sources/` … `10_droit_de_la_guerre_et_aventuriers/`, plus éventuelles branches supplémentaires `11_+` ou sous-dossiers par juridiction)*
-5. `05_personnages` *(avec sous-dossiers `<Joueurs>/` [défaut `Joueurs/`, ex. `PJ/`, `Heros/`] organisés par `<Campagne_ou_Groupe>/`, et `<Non_Joueurs>/` [défaut `Non_Joueurs/`, ex. `PNJ/`] `<Cadre>/<Lieu_reference>/`)*
+5. `05_personnages` *(avec sous-dossiers `<Joueurs>/` [défaut `Joueurs/`, ex. `PJ/`, `Heros/`] organisés par `<Campagne_ou_Groupe>/`, et `<Non_Joueurs>/` [défaut `Non_Joueurs/`, ex. `PNJ/`])*. Appliquez la convention PNJ du projet. Consultez les instructions du projet et l’index du tome des personnages. Pour un projet existant sans règle explicite, suivez la structure et les index en usage et signalez les conflits ou ambiguïtés au MJ.
 
-   Vérifiez la hiérarchie PNJ `<Cadre>/<Lieu_reference>/`, sa cohérence avec les champs des fiches, les README aux deux niveaux, les doublons et les liens après chaque déplacement. Les anciennes structures nécessitent une table de migration ; ne déduisez pas le classement de la seule première rencontre.
+   Vérifiez le chemin, les index requis, le lien stable documenté, l’unicité par identité et les liens canoniques. Pour une archive à plat, vérifiez l’index et les métadonnées à l’emplacement prévu. Signalez les données à définir et proposez une correspondance des chemins avant tout déplacement autorisé.
 
 6. `06_lieux` *(avec éventuels sous-dossiers optionnels personnalisés `<groupes_lieux>/` par type ou macro-zone)*
 7. `07_factions` *(avec éventuels sous-dossiers optionnels personnalisés `<groupes_factions>/` par type)*

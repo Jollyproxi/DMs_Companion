@@ -76,11 +76,11 @@ Ce document définit l'arborescence standard de dossiers et de fichiers pour l'a
 │   │           └── 05_accroches_et_secrets_mj.md           # Pistes narratives réservées au MJ
 │   └── <Non_Joueurs>/                                      # Archive PNJ (défaut : Non_Joueurs/ ; personnalisable en PNJ/, Figurants/, etc.)
 │       ├── README.md
-│       └── <Cadre>/
+│       └── <Zone_de_reference>/
 │           ├── README.md
-│           └── <Lieu_reference>/
+│           └── <Lieu_de_reference>/
 │               ├── README.md
-│               └── [Nom_PNJ].md
+│               └── <Nom_PNJ>.md
 │
 ├── 06_lieux/                                               # Tome VI : Lieux notables et nœuds d'aventure
 │   ├── README.md                                           # Liste des points d'intérêt et liaisons
@@ -126,4 +126,4 @@ Ce document définit l'arborescence standard de dossiers et de fichiers pour l'a
         └── README.md                                       # Registre des rendus graphiques dérivés
 ```
 
-Classez les PNJ par **cadre et lieu principal de référence**, selon leur lien territorial ou narratif stable documenté dans le canon. La première rencontre et la position actuelle sont des données distinctes qui ne déterminent pas automatiquement le classement. Conservez une seule fiche canonique ; factions, campagnes et autres lieux y renvoient par des liens.
+Pour les nouveaux projets, utilisez par défaut `<Zone_de_reference>/<Lieu_de_reference>/<Nom_PNJ>.md` sous la racine des PNJ, avec un index à la racine et à chaque niveau utilisé. La zone peut être une région ou un autre regroupement stable défini par le projet. Le classement suit le lien géographique ou narratif documenté. Présentez cette base et recueillez les éventuelles adaptations des noms, niveaux, catégories et du traitement des données incertaines. Passez à une archive à plat à la demande explicite du MJ. Dans ce cas, placez les fiches directement à la racine des PNJ avec un seul index pour l’archive. Consignez la convention dans le README du tome des personnages. Dante conserve `<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` sous sa racine PNJ.

@@ -76,11 +76,11 @@ This document defines the standard folder and file structure for encyclopaedic a
 │   │           └── 05_dm_hooks_and_secrets.md              # Narrative hooks reserved for the DM
 │   └── <Non_Player_Characters>/                            # Setting NPC Archive (default: Non_Player_Characters/; customisable to NPCs/, Supporting/, etc.)
 │       ├── README.md
-│       └── <Frame>/
+│       └── <Reference_area>/
 │           ├── README.md
 │           └── <Reference_location>/
 │               ├── README.md
-│               └── [NPC_Name].md
+│               └── <NPC_Name>.md
 │
 ├── 06_locations/                                           # Tome VI: Notable locations and adventure hubs
 │   ├── README.md                                           # List of points of interest and connections
@@ -126,4 +126,4 @@ This document defines the standard folder and file structure for encyclopaedic a
         └── README.md                                       # Register of derived graphical renders
 ```
 
-Organise NPCs by **frame and primary reference location**, based on their stable territorial or narrative connection documented in canon. First encounter and current whereabouts are separate facts and do not automatically determine placement. Keep one canonical sheet; factions, campaigns and other locations link to it.
+For new projects, start with `<Reference_area>/<Reference_location>/<NPC_Name>.md` under the NPC root, with an index in the root and at each level used. The area can be a region or another stable grouping defined by the project. Placement follows the documented geographical or narrative connection. Present this as the default and collect any changes to names, levels, categories and handling of unresolved details. Use a flat archive only at the GM’s explicit request. In that case, keep the sheets directly under the NPC root with one archive index. Record the convention in the character volume README. Dante retains `<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` under its NPC root.

@@ -51,20 +51,19 @@ Wenn der SL einen neuen Spielercharakter einführt oder dokumentiert:
 
 ## 3. Erstellung oder Aktualisierung eines NSC-Bogens
 
-Wenn der SL einen bedeutsamen Nichtspielercharakter einführt:
+## Ablagekonvention für NSC
 
-1. Ordne NSCs nach **Rahmen und hauptsächlichem Bezugsort**, anhand ihrer im Kanon dokumentierten dauerhaften territorialen oder erzählerischen Bindung. Erstbegegnung und aktueller Aufenthaltsort sind getrennte Angaben und bestimmen die Ablage nicht automatisch. Bewahre genau einen kanonischen Bogen; Fraktionen, Kampagnen und andere Orte verlinken darauf.
-2. `05_charaktere/<Nichtspielercharaktere>/<Rahmen>/<Bezugsort>/<NSC_Name>.md` (default: `05_charaktere/Nichtspielercharaktere/<Rahmen>/<Bezugsort>/<NSC_Name>.md`).
-3. Ist die Zuordnung unklar, frage den SL; beim direkten Entwurf verwende `VOM_SL_ZU_DEFINIEREN/` auf der unbekannten Ebene (Rahmen oder Ort), ohne Bindungen zu erfinden. Verwende `Rahmenuebergreifend/` und/oder `Umherziehend/` nur für entsprechend dokumentierte NSCs. Nutze kanonische Rahmen- und Ortsnamen und beachte angepasste Bandnamen.
-4. **Aufbau**:
-   - Kopfbereich mit Rolle, Fraktion (Link zu Band VII `07_fraktionen/`), Wohnort (Link zu Band VI `06_orte/`), Gesinnung und Lebensstatus.
-   - Abschnitte zu Erscheinung & Wesen, Narrativer Rolle und Geheimnissen & SL-Aufhängern.
-   - **Bezugsrahmen:** [Link zum kanonischen Bogen in Band II]
-   - **Hauptsächlicher Bezugsort:** [Link zum kanonischen Bogen in Band VI und Grund der Bindung]
-   - **Aktueller Aufenthaltsort:** [Ortslink, falls bekannt; getrennt vom hauptsächlichen Bezug]
-   - **Erstbegegnung:** [Links zu Protokoll und Ort, falls dokumentiert]
-5. Erstelle oder aktualisiere die `README.md` für Band, NSCs, Rahmen und Ort; Indizes enthalten Rahmen, hauptsächlichen Bezugsort und Link zum einzigen Bogen.
-6. Erstelle zur Neuordnung vorhandener Bögen eine kanonbasierte Tabelle Quelle → Ziel und führe autorisierte Verschiebungen aus. Berechne ausgehende relative Links neu und aktualisiere alle eingehenden Verweise (Protokolle, Dossiers, Orte, Fraktionen, Zeitlinien), alte und neue READMEs, Bibel und JSON. Dupliziere keine Bögen und ändere den historischen Ort der Erstbegegnung nicht. Melde ungeklärte Fälle und prüfe die Links nach dem Verschieben.
+Wende die NSC-Ablagekonvention des Projekts an. Lies die Projektanweisungen und den Index des Charakterbands. Bei bestehenden Projekten ohne ausdrückliche Regel folge der vorhandenen Ablage und ihren Indizes und melde der SL Widersprüche oder Unklarheiten.
+
+Suche den vorhandenen Bogen in Indizes und Dateien sowie anhand etwaiger Aliasnamen. Führe eine kanonische Datei je Identität und verlinke sie aus Kampagnen, Fraktionen und anderen Orten. Verwende für geografische oder erzählerische Ebenen die belegte dauerhafte Bindung und halte ihre Grundlage fest. Erstbegegnung (Ort und Protokoll) und aktueller Aufenthaltsort sind getrennte Felder.
+
+Markiere ungeklärte Angaben und erhalte bestätigte Ebenen. Verwende einen vorläufigen Ablageort, sofern das Projekt ihn vorsieht, und frage andernfalls die SL nach der hierarchischen Zuordnung. Nutze Kategorien für reisende oder bereichsübergreifende NSC nur, wenn Projekt und Kanon sie stützen. Erfasse diese Angaben bei flacher Ablage wie vereinbart im Bogen oder Index.
+
+Ordne vor einer genehmigten Verschiebung jedem Quellpfad einen Zielpfad zu und prüfe, ob das Ziel frei ist. Aktualisiere alte und neue Indizes, alle eingehenden Verweise und ausgehende relative Links. Erhalte die Historie der Erstbegegnung, aktualisiere die vorgesehenen abgeleiteten Dokumente und prüfe kanonische Linkziele sowie die Eindeutigkeit des Bogens.
+
+Dante behält `<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` unter seinem NSC-Stammordner.
+
+Nutze die [Vorlage](./references/dossier-vorlage.md) und aktualisiere die vorgesehenen Indizes.
 
 ---
 

@@ -76,11 +76,11 @@ Dieses Dokument definiert die standardisierte Ordner- und Dateistruktur für die
 │   │           └── 05_sl_aufhaenger_und_geheimnisse.md     # Dem SL vorbehaltene Erzählaufhänger
 │   └── <Nichtspielercharaktere>/                           # NSC-Archiv (Standard: Nichtspielercharaktere/; anpassbar zu NSCs/, Nebenfiguren/, usw.)
 │       ├── README.md
-│       └── <Rahmen>/
+│       └── <Bezugsgebiet>/
 │           ├── README.md
 │           └── <Bezugsort>/
 │               ├── README.md
-│               └── [NSC_Name].md
+│               └── <NSC_Name>.md
 │
 ├── 06_orte/                                                # Band VI: Bedeutsame Orte und Abenteuerknoten
 │   ├── README.md                                           # Liste relevanter Orte und Verbindungen
@@ -126,4 +126,4 @@ Dieses Dokument definiert die standardisierte Ordner- und Dateistruktur für die
         └── README.md                                       # Verzeichnis der abgeleiteten Renderings
 ```
 
-Ordne NSCs nach **Rahmen und hauptsächlichem Bezugsort**, anhand ihrer im Kanon dokumentierten dauerhaften territorialen oder erzählerischen Bindung. Erstbegegnung und aktueller Aufenthaltsort sind getrennte Angaben und bestimmen die Ablage nicht automatisch. Bewahre genau einen kanonischen Bogen; Fraktionen, Kampagnen und andere Orte verlinken darauf.
+Verwende für neue Projekte standardmäßig `<Bezugsgebiet>/<Bezugsort>/<NSC_Name>.md` unter dem NSC-Stammordner, mit einem Index im Stammordner und auf jeder genutzten Ebene. Das Gebiet kann eine Region oder eine andere dauerhafte, vom Projekt definierte Gruppierung sein. Die Ablage folgt der belegten geografischen oder erzählerischen Bindung. Stelle die Standardstruktur vor und erfasse gewünschte Anpassungen an Namen, Ebenen, Kategorien und am Umgang mit ungeklärten Angaben. Verwende eine flache Ablage nur auf ausdrücklichen Wunsch der SL. Lege dann die Bögen direkt im NSC-Stammordner mit einem einzigen Archivindex ab. Halte die Konvention im README des Charakterbands fest. Dante behält `<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` unter seinem NSC-Stammordner.

@@ -119,6 +119,8 @@ Si un sous-répertoire régional ou de macro-zones existe :
 ```
 *(Si le MJ personnalise les noms de dossiers — ex. `PJ/`, `PNJ/`, `Heros/`, sous-dossiers de regroupement PNJ ou `<Campagne_ou_Groupe>/` — les chemins consignent les répertoires réels sur disque.)*
 
+Utilisez les chemins réels et le schéma du projet pour la Bible et le JSON. L’exemple ci-dessous présente la hiérarchie à deux niveaux de Dante. Pour une archive à plat, listez chaque fiche une fois sous l’archive PNJ ; pour une hiérarchie personnalisée, représentez les niveaux réels. Conservez les références canoniques dans les métadonnées prévues et laissez les valeurs inconnues indéfinies.
+
 ```json
 {
   "cadres_pnj": [
@@ -143,7 +145,7 @@ Si un sous-répertoire régional ou de macro-zones existe :
 }
 ```
 
-Pour les PNJ, conservez la hiérarchie cadre → lieu principal et les chemins réels. Les modules des fiches figurent uniquement dans leurs lieux respectifs, sans duplication dans le tableau des modules du tome. Chaque fiche peut enregistrer `cadre_reference` et `lieu_reference` comme chemins vers les fiches canoniques des Tomes II et VI ; les données inconnues restent `null` avec une note MJ, sans inventer de fichiers.
+
 
 ### C. Tome 09 (Chroniques — Sous-dossier `<campagnes>/`)
 ```json
