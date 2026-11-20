@@ -51,20 +51,19 @@ Lorsque le MJ introduit ou documente un nouveau Personnage Joueur :
 
 ## 3. Création ou Mise à Jour d'une Fiche PNJ
 
-Lorsque le MJ introduit un Personnage Non-Joueur notable :
+## Convention de l’archive PNJ
 
-1. Classez les PNJ par **cadre et lieu principal de référence**, selon leur lien territorial ou narratif stable documenté dans le canon. La première rencontre et la position actuelle sont des données distinctes qui ne déterminent pas automatiquement le classement. Conservez une seule fiche canonique ; factions, campagnes et autres lieux y renvoient par des liens.
-2. `05_personnages/<Non_Joueurs>/<Cadre>/<Lieu_reference>/<Nom_PNJ>.md` (default: `05_personnages/Non_Joueurs/<Cadre>/<Lieu_reference>/<Nom_PNJ>.md`).
-3. Si le rattachement est ambigu, interrogez le MJ ; en rédaction directe, utilisez `A_DEFINIR_MJ/` au niveau inconnu (cadre ou lieu), sans inventer de liens. Utilisez `Transversaux/` et/ou `Itinerants/` uniquement pour les PNJ explicitement documentés comme tels. Réutilisez les noms canoniques des cadres et lieux et respectez les noms personnalisés des tomes.
-4. **Structure** :
-   - En-tête avec rôle, faction (lien vers le Tome VII `07_factions/`), résidence (lien vers le Tome VI `06_lieux/`), alignement et statut vital.
-   - Sections Apparence & Tempérament, Rôle Narratif et Secrets & Accroches MJ.
-   - **Cadre de référence :** [Lien vers la fiche canonique du Tome II]
-   - **Lieu principal de référence :** [Lien vers la fiche canonique du Tome VI et motif du lien]
-   - **Position actuelle :** [Lien vers le lieu, si connu ; donnée distincte du rattachement principal]
-   - **Première rencontre :** [Liens vers le compte rendu et le lieu, si documentés]
-5. Créez ou actualisez les `README.md` du tome, des PNJ, du cadre et du lieu ; les index indiquent cadre, lieu principal et lien vers la fiche unique.
-6. Pour réorganiser les fiches existantes, préparez une table source → destination fondée sur le canon et appliquez les déplacements autorisés. Recalculez les liens relatifs sortants et actualisez tous les liens entrants (comptes rendus, dossiers, lieux, factions, chronologies), les anciens et nouveaux README, la Bible et le JSON. Ne dupliquez pas les fiches et ne réécrivez pas le lieu historique de première rencontre. Signalez les cas non résolus et vérifiez les liens après déplacement.
+Appliquez la convention PNJ du projet. Consultez les instructions du projet et l’index du tome des personnages. Pour un projet existant sans règle explicite, suivez la structure et les index en usage et signalez les conflits ou ambiguïtés au MJ.
+
+Recherchez la fiche existante dans les index, les fichiers et par ses alias éventuels. Conservez un fichier canonique par identité et liez-le depuis les campagnes, factions et autres lieux. Pour les niveaux géographiques ou narratifs, utilisez le lien stable documenté et indiquez son fondement. La première rencontre (lieu et compte rendu) et la position actuelle sont des champs distincts.
+
+Signalez les données à définir et conservez les niveaux confirmés. Utilisez un emplacement provisoire si le projet le prévoit, sinon demandez au MJ de trancher le classement hiérarchique. Utilisez une catégorie itinérante ou transversale si le projet la prévoit et que le canon l’atteste. Dans une archive à plat, consignez ces informations dans la fiche ou l’index selon la convention.
+
+Avant un déplacement autorisé, associez chaque source à sa destination et vérifiez que celle-ci est libre. Actualisez les anciens et nouveaux index, toutes les références entrantes et les liens relatifs sortants. Préservez l’historique de la première rencontre, actualisez les documents dérivés prévus et vérifiez les cibles canoniques des liens et l’unicité de la fiche.
+
+Dante conserve `<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` sous sa racine PNJ.
+
+Utilisez le [modèle](./references/modele-dossier.md) et actualisez les index prévus.
 
 ---
 
