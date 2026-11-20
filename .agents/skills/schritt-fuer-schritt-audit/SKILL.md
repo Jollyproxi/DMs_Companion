@@ -57,18 +57,15 @@ Nach der Validierung jedes Blocks oder Elements wird das offizielle Markdown-Bad
    - Unterteile das Dokument gemäß der vereinbarten Granularität (atomar oder nach logischen Abschnitten).
 
 2. **Atomare Befragung**:
-   - Zeige dem SL jeweils ein Konzept bzw. einen Abschnitt im Chat.
-   - Verfügt die Umgebung über ein interaktives strukturiertes Fragewerkzeug (z. B. `vscode_askQuestions`, `AskUserQuestion`), nutze es für schnelle Auswahloptionen:
-     - `Ohne Änderungen bestätigen` (empfohlen)
-     - `Änderungen bereits durch den SL in der Quelldatei vorgenommen` (der SL hat die Datei bereits aktualisiert, daher muss das Badge erneuert werden)
-     - `Ändern / Berichtigen` (öffnet Freitext für die Korrektur)
-     - `Auf später verschieben [VOM_SL_ZU_DEFINIEREN]`
-   - Stelle die Frage sonst direkt im Chat:
-     > **Schritt [N/Gesamt] — [Titel des Abschnitts oder Konzepts]**
-     > ```markdown
-     > [Exakter Auszug aus der Datei]
-     > ```
-     > **Frage**: *„Bestätigst du, dass dieser Abschnitt korrekt und streng kanontreu ist, oder möchtest du ihn berichtigen bzw. ergänzen?“*
+   - Lege jeweils einen Begriff oder Abschnitt vor. Füge den genauen Wortlaut und die Frage in das Formular ein.
+   - Verwende in Codex `request_user_input`, sofern verfügbar und zulässig, sonst unter denselben Bedingungen `request_user_input_async`. Nutze in anderen Umgebungen das entsprechende Werkzeug. Leite als Subagent die Frage und die Optionen an die Hauptunterhaltung weiter, wenn nur diese das Formular öffnen kann.
+   - Biete mit `request_user_input` diese drei Optionen an und weise darauf hin, dass Korrekturen im Freitextfeld eingegeben werden können:
+     - `Bestätigen (empfohlen)`: den Abschnitt unverändert freigeben.
+     - `Datei bearbeitet`: den von der Spielleitung geänderten Abschnitt vor der Aktualisierung des Prüfvermerks erneut lesen.
+     - `Zurückstellen`: die Prüfung dieses Abschnitts verschieben.
+   - Ausnahme für `request_user_input_async` und vergleichbare Formulare: Unterstützt das Werkzeug vier Optionen, ergänze `Korrigieren`. Wählt die Spielleitung diese Option ohne Korrekturtext, frage nach der Korrektur, bevor du fortfährst. Bei höchstens drei Optionen verwende die obigen Optionen und das Freitextfeld.
+   - Frage nur im Chat, wenn das Formular auch über die Hauptunterhaltung nicht verfügbar oder nicht zulässig ist. Nenne den konkreten Grund und füge den genauen Wortlaut und die Frage bei.
+   - Warte auf die Antwort, bevor du Änderungen oder Prüfvermerke anbringst. Halte beim asynchronen Formular den Gesprächsschritt offen und setze die Prüfung nach der Antwort am offenen Punkt fort.
 
 3. **Antwort anwenden**:
    - **Ohne Änderungen genehmigt**: Badge hinzufügen oder aktualisieren:
