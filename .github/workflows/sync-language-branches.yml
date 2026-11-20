@@ -6,14 +6,33 @@ on:
       - main
     paths:
       - 'locales/**'
+      - 'scripts/sync_agents.py'
+      - '.github/workflows/sync-language-branches.yml'
+  pull_request:
+    paths:
+      - 'locales/**'
+      - 'scripts/sync_agents.py'
       - '.github/workflows/sync-language-branches.yml'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
+  check-agents:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python scripts/sync_agents.py --check
+
   sync-branches:
+    if: github.event_name != 'pull_request'
+    needs: check-agents
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

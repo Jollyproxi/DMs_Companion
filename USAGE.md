@@ -62,7 +62,7 @@ Switch the branch selector on GitHub from `main` to `it`, `en-gb`, `fr`, or `de`
 | File / Folder | Purpose |
 | :--- | :--- |
 | `AGENTS.md` | Universal rules and workflows, read by every harness. |
-| `CLAUDE.md` | Claude Code entry point; imports `AGENTS.md`. |
+| `CLAUDE.md` | Claude Code entry point. |
 | `.github/agents/*.agent.md` | The Archivist persona (agent picker entry in VS Code). |
 | `.agents/agents/*.md` | The same persona in Antigravity format (primary agent + subagent, native structured questions). |
 | `.agents/skills/<skill>/SKILL.md` | The 12 modular skills (plus `references/` templates). |
@@ -253,7 +253,7 @@ PC/NPC → `character-dossier` · Artefact → `magic-item` · Custom/festival/e
 ## 7. Troubleshooting
 
 * **The agent or skills don't show up in VS Code** — the files must sit at the **workspace root**: `.github/agents/` and `.agents/skills/`. Reload the window and reopen the agent picker.
-* **Claude Code doesn't detect the skills** — copy or symlink `.agents/skills/*` into `.claude/skills/`; `CLAUDE.md` already imports `AGENTS.md`.
+* **Claude Code doesn't detect the skills** — copy or symlink `.agents/skills/*` into `.claude/skills/`.
 * **No structured question dialog appears** — that is expected outside VS Code: the Archivist falls back to plain chat and asks the same questions as text.
 * **`export-mw` can't render** — install the Markwhen CLI (`npx @markwhen/mw`) or use the Markwhen VS Code extension / `markwhen.com`; exports are optional and never block the `.mw` sources.
 * **The assistant invented lore** — that violates the golden rule: point it back to `AGENTS.md`, delete the invented text, and run a `step-by-step-audit` on the affected section.

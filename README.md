@@ -67,7 +67,7 @@ Every language package ships with harness-agnostic entrypoints and graceful fall
 | **Google Antigravity (App, IDE, CLI)** | `.agents/agents/*.md`, `.agents/skills/*/SKILL.md`, `AGENTS.md` | Native custom agent (primary agent + subagent) and auto-discovered skills under the user's global `~/.gemini/config/` or the workspace `.agents/`; structured `ask_question` prompts with the same button and checkbox behaviour as VS Code. |
 | **OpenAI Codex** | `AGENTS.md`, `.agents/skills/*/SKILL.md`, `.codex/agents/*.toml` | Uses structured questions through `request_user_input` or `request_user_input_async` when available and permitted, with chat as a fallback. |
 | **Cursor / OpenCode / Gemini CLI** | `AGENTS.md`, `.agents/skills/*/SKILL.md` | Reads `AGENTS.md` instructions and standard Agent Skills automatically; prompts fall back to chat. |
-| **Claude Code** | `CLAUDE.md` (`@AGENTS.md`), `.agents/skills/*/SKILL.md` | Copy or symlink `.agents/skills/*` into `.claude/skills/` if not auto-detected; uses `AskUserQuestion` or chat. |
+| **Claude Code** | `CLAUDE.md`, `.claude/agents/*.md`, `.agents/skills/*/SKILL.md` | Copy or symlink `.agents/skills/*` into `.claude/skills/` if not auto-detected; uses `AskUserQuestion` or chat. |
 | **Optional Extensions & MCPs** | `graphify/*`, `@markwhen/mw` / Markwhen extension | Enhanced cross-link graphing and timeline HTML/SVG rendering when installed; all skills work without them. |
 
 ---

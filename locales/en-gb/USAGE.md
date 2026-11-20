@@ -36,7 +36,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/en-gb/
 | File / Folder | Purpose |
 | :--- | :--- |
 | `AGENTS.md` | Universal rules and workflows, read by every harness. |
-| `CLAUDE.md` | Claude Code entry point; imports `AGENTS.md`. |
+| `CLAUDE.md` | Claude Code entry point. |
 | `.github/agents/campaign-archivist.agent.md` | The *Campaign Archivist* persona (agent picker entry in VS Code). |
 | `.agents/agents/campaign-archivist.md` | The same persona in Antigravity format: primary agent and subagent, with native structured questions. |
 | `.agents/skills/<skill>/SKILL.md` | The 12 modular skills (plus `references/` templates). |
@@ -83,14 +83,14 @@ The Archivist organises **only** what you provide or have already canonised. It 
 | `02_geography/` | Cartography, territories, subterranean regions, regional dossiers (`regions/` or custom name, e.g. `provinces/`, `realms/`). |
 | `03_society_and_politics/` | Civil order, economy, social classes, public order; optional `peoples/` (or custom name) and `customs_festivals_and_events/` (`customs/`, `festivals_and_occurrences/`, `events/`). |
 | `04_law_and_statutes/` | 10 legal branches (`01_legal_order_and_sources/` … `10_law_of_war_and_adventurers/`), plus any extra branches `11_+` or jurisdictions. |
-| `05_characters/` | Modular PC dossiers (`<Player_Characters>/<Campaign_or_Party>/<PC_Name>/`, default `Player_Characters/<Campaign>/`) and NPC sheets (`<Non_Player_Characters>/<Frame>/<Reference_location>/`, default `Non_Player_Characters/`). |
+| `05_characters/` | Modular PC dossiers (`<Player_Characters>/<Campaign_or_Party>/<PC_Name>/`, default `Player_Characters/<Campaign>/`) and NPC sheets |
 | `06_locations/` | Adventure hubs, cities, strongholds, area hazards (optional `<location_groups>/`). |
 | `07_factions/` | Noble houses, covens, guilds, orders, power hierarchies (optional `<faction_groups>/`). |
 | `<08_unique_magic_items>/` | Unique artefacts, relics, legal registers, properties (customisable tome name and optional `<categories>/`). |
 | `09_chronicles/` | Campaign hub: summary table + progressive session minutes (`<campaigns>/<name>/<sessions>/`, default `campaigns/` and `sessions/`). |
 | `10_timeline/` | Cross-cutting chronology: `historical_chronology/`, `occurrence_register/`, `markwhen/` (`general_timeline.mw`, `epochs/`, `campaigns/`), `calendar/`, `exports/`. |
 
-Organise NPCs by **frame and primary reference location**, based on their stable territorial or narrative connection documented in canon. First encounter and current whereabouts are separate facts and do not automatically determine placement. Keep one canonical sheet; factions, campaigns and other locations link to it.
+Follow the project’s NPC archive convention. Read the project instructions and the character volume index. For existing projects without an explicit rule, follow the established layout and indexes and flag conflicts or ambiguities to the GM. Look up the existing sheet through indexes, files and any aliases. Keep one canonical file per identity and link to it from campaigns, factions and other locations. For geographical or narrative levels, use the documented stable connection and record its basis. First encounter (location and session record) and current whereabouts are separate fields.
 
 ### Verification Badges
 
@@ -147,7 +147,7 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 
 * **When**: a new player character joins, an NPC is fleshed out, or a dossier module needs updating.
 * **How**: `/character-dossier` — *“Specify type (PC or NPC), character name, and operation (create, update module, sheet).”*
-* **Result**: a 5-module PC dossier (`01_profile_and_traits`, `02_integrated_backstory`, `03_relationships_and_dynamics`, `04_equipment_and_abilities`, `05_dm_hooks_and_secrets`) under `05_characters/Player_Characters/<Campaign>/<PC_Name>/`, or an NPC sheet under `05_characters/Non_Player_Characters/<Frame>/<Reference_location>/`, both registered in the indexes.
+* **Result**: a 5-module PC dossier (`01_profile_and_traits`, `02_integrated_backstory`, `03_relationships_and_dynamics`, `04_equipment_and_abilities`, `05_dm_hooks_and_secrets`) under `05_characters/Player_Characters/<Campaign>/<PC_Name>/`, or an NPC sheet filed according to the project convention, both registered in the indexes.
 
 ### 4.5 `magic-item` — Unique Magic Items
 
@@ -227,7 +227,7 @@ PC/NPC → `character-dossier` · Artefact → `magic-item` · Custom/festival/e
 ## 6. Troubleshooting
 
 * **The agent or skills don't show up in VS Code** — the files must sit at the **workspace root**: `.github/agents/` and `.agents/skills/`. Reload the window and reopen the agent picker.
-* **Claude Code doesn't detect the skills** — copy or symlink `.agents/skills/*` into `.claude/skills/`; `CLAUDE.md` already imports `AGENTS.md`.
+* **Claude Code doesn't detect the skills** — copy or symlink `.agents/skills/*` into `.claude/skills/`.
 * **No structured question dialog appears** — that is expected outside VS Code: the Archivist falls back to plain chat and asks the same questions as text.
 * **`export-mw` can't render** — install the Markwhen CLI (`npx @markwhen/mw`) or use the Markwhen VS Code extension / `markwhen.com`; exports are optional and never block the `.mw` sources.
 * **The assistant invented lore** — that violates the golden rule: point it back to `AGENTS.md`, delete the invented text, and run a `step-by-step-audit` on the affected section.

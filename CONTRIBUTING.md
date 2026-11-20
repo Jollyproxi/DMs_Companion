@@ -26,6 +26,8 @@ These are the pillars of the toolkit. Contributions should preserve them:
 
 * Keep translations idiomatic: skill names and file names follow each language's established conventions (see the existing skills in that locale).
 
+Edit the shared archivist instructions in `locales/<lang>/AGENTS.md` and the client-specific instructions in `scripts/sync_agents.py`. Run `python scripts/sync_agents.py` (Python 3.11 or later) to regenerate the standalone files, then run `python scripts/sync_agents.py --check` to verify them.
+
 ## How to Submit
 
 1. Fork the repository and create a branch from `main`.

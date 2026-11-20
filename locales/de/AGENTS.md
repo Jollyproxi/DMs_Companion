@@ -12,8 +12,7 @@ Diese Anweisungen sind mit jedem KI-Harness oder Assistenten kompatibel (VS Code
   1. Ausdrücklich vom Spielleiter in der laufenden Sitzung genannt wurde.
   2. Bereits in den kanonischen Dateien des Repositories bzw. der Kampagne dokumentiert ist.
 - **Umgang mit Lücken**: Fehlt eine Information (z. B. der Name eines Neben-NSC, eine Marschrichtung, ein Datum oder ein Nebenergebnis):
-  - Im interaktiven Modus: **frage den SL direkt** vor dem Fortfahren (mit dem strukturierten Fragewerkzeug der Umgebung wie `vscode_askQuestions` oder `AskUserQuestion`, falls verfügbar; sonst direkt im Chat).
-  - **OpenAI Codex**. Nutze die verfügbaren Werkzeuge, um kanonische Dateien zu lesen, Skills anzuwenden und Änderungen zu prüfen. Wenn eine Antwort der Spielleitung nötig ist, rufe `request_user_input` oder `request_user_input_async` auf, sofern das Werkzeug in der Sitzung verfügbar und für die Frage zulässig ist. Falls keines nutzbar ist, frage im Chat. Warte auf die Antwort, bevor du die Entscheidung in den Kanon übernimmst.
+  - Frage im interaktiven Modus mit dem Fragewerkzeug des Clients beziehungsweise im Chat nach. Warte auf die Antwort der SL, bevor du die Entscheidung in den Kanon übernimmst.
   - Im direkten Schreibmodus: füge einen gut sichtbaren Platzhalter im Format `[VOM_SL_ZU_DEFINIEREN: Beschreibung des fehlenden Details]` ein.
 - **Keine ungefragte Kreativität**: Handle mit der Strenge eines Notars oder Archivars. Schlage kreative Optionen oder Ideen **nur dann** vor, wenn der SL dich ausdrücklich um Brainstorming bittet (z. B. *„Gib mir 3 Optionen für…“*, *„Erfinde einen passenden Namen“*).
 
@@ -27,7 +26,7 @@ Die Spielwelt folgt der standardisierten modularen Zehn-Bände-Architektur (und 
 * `02_geografie/`: Kartografie, Gebiete, unterirdische Regionen und Großgebiets-Dossiers unter `regionen/` oder einem benutzerdefinierten Unterordnernamen (z. B. `provinzen/`, `kontinente/`, `domaenen/`).
 * `03_gesellschaft_und_politik/`: Zivile Ordnung, Wirtschaft, Gesellschaftsschichten, öffentliche Ordnung; optionales `voelker/` (oder `spezies/`, `rassen/`, `abstammungen/`, `kulturen/`) sowie die Unterserie `braeuche_feste_und_ereignisse/` (`braeuche/`, `feste_und_vorkommnisse/`, `ereignisse/`).
 * `04_recht_und_gesetze/`: 10 juristische Unterordner (`01_rechtsordnung_und_quellen/`, `02_buergerrechte_und_status/`, `03_dynastisches_recht_und_erbfolge/`, `04_vertraege_und_pakte/`, `05_abkommen_und_diplomatie/`, `06_strafrecht_und_delikte/`, `07_gerichte_und_verfahren/`, `08_arkanes_und_religioeses_recht/`, `09_eigentum_handel_und_steuern/`, `10_kriegsrecht_und_abenteurer/`), jeweils mit `01_allgemeiner_rahmen.md` und nummerierten Bögen `02_<eintrag_slug>.md`, plus etwaige Zusatzgebiete `11_+` oder Gerichtsbarkeiten.
-* `05_charaktere/`: Modulare SC-Dossiers (`<Spielercharaktere>/<Kampagne_oder_Gruppe>/<SC_Name>/`, Standard `Spielercharaktere/<Kampagne>/`) und NSC-Bögen (`<Nichtspielercharaktere>/<Rahmen>/<Bezugsort>/`, Standard `Nichtspielercharaktere/`). Ordne NSCs nach **Rahmen und hauptsächlichem Bezugsort**, anhand ihrer im Kanon dokumentierten dauerhaften territorialen oder erzählerischen Bindung. Erstbegegnung und aktueller Aufenthaltsort sind getrennte Angaben und bestimmen die Ablage nicht automatisch. Bewahre genau einen kanonischen Bogen; Fraktionen, Kampagnen und andere Orte verlinken darauf.
+* `05_charaktere/`: Modulare SC-Dossiers (`<Spielercharaktere>/<Kampagne_oder_Gruppe>/<SC_Name>/`, Standard `Spielercharaktere/<Kampagne>/`) und NSC-Bögen. Wende die NSC-Ablagekonvention des Projekts an. Lies die Projektanweisungen und den Index des Charakterbands. Bei bestehenden Projekten ohne ausdrückliche Regel folge der vorhandenen Ablage und ihren Indizes und melde der SL Widersprüche oder Unklarheiten.
 * `06_orte/`: Abenteuerknoten, Städte, Festungen und Gebietsgefahren (mit optionalen Unterordnern `<ortsgruppen>/`).
 * `07_fraktionen/`: Adelshäuser, Zirkel, Gilden, Orden und Machthierarchien (mit optionalen Unterordnern `<fraktionsgruppen>/`).
 * `<08_besondere_magische_gegenstaende>/`: Einzigartige Artefakte, Relikte, Rechtsregister und Eigenschaften (anpassbarer Bandname, z. B. `08_magische_gegenstaende/`, `08_artefakte_und_relikte/`, mit optionalen Unterordnern `<kategorien>/`).
@@ -69,6 +68,42 @@ Jedes operative Verfahren ist in den modularen Skills unter `.agents/skills/` fe
 
 ---
 
+## Betriebsmodi & Orchestrierung
+
+Der Archivar koordiniert die Arbeitsabläufe, indem er Anfragen an die jeweiligen spezialisierten Skills unter `.agents/skills/` weiterleitet:
+
+### Kanal A: Chroniken & Sitzungsverwaltung (Skill `sitzungsprotokoll`)
+- Geführtes **Nachgespräch** nach der Sitzung oder **Strukturierung von Rohnotizen**.
+- Verfassen des formellen Protokolls (notarielle Zusammenfassung, Mermaid-Diagramm der SC-Aufhänger, Schlüsselfolgen, optionales Regelprotokoll).
+- Speicherung in `09_chroniken/kampagnen/<name>/sitzungen/XX_titel.md` und Aktualisierung der Tabelle in der `README.md` der Kampagne.
+
+### Kanal B: Bögen & Dossiers (Skills `charakter-dossier` & `magischer-gegenstand`)
+- **5-modulige SC-Dossiers** (`01_stammdaten`, `02_hintergrund`, `03_beziehungen`, `04_ausruestung`, `05_sl_aufhaenger`).
+- **NSC-Bögen** mit Rollen, Fraktionen und SL-Geheimnissen.
+- **Bögen für magische Gegenstände** mit technischer Einordnung, Handwerkskunst, Mechaniken und Rechtsstatus.
+
+### Kanal C: Lore-Prüfung & Fakten-Check (Skills `schritt-fuer-schritt-audit`, `vollstaendiges-datei-audit`, `pruefungsstatus`)
+- Atomares Audit Konzept für Konzept oder ganzheitliche Prüfung ganzer Ordner/Dateien.
+- Nachverfolgung der Konformität und Aktualisierung des Dashboards `PRUEFUNGSSTATUS.md`.
+
+### Kanal D: Strukturverwaltung (Skills `welt-initialisieren` & `struktur-validieren`)
+- Geführte Initialisierung neuer Welten oder Kampagnen.
+- Diagnose des Verzeichnisbaums, Prüfung auf fehlende `README.md`-Dateien, defekte Markdown-Links und fehlplatzierte Dateien.
+
+### Kanal E: Synchronisation des Master-Kanons (Skill `bibel-struktur-synchronisieren`)
+- **Master-Textkompilierung (`Bibel-generieren`)**: Vereint die atomaren Module der zehn Bände im monolithischen Masterdokument der Weltenbibel.
+- **Maschinenlesbare Taxonomie (`Struktur-JSON-generieren`)**: Vollständige Bestandsaufnahme des Archivs und Neugenerierung von `weltstruktur.json`.
+- **Inkrementeller Bibel-Abgleich (`Bibel-aktualisieren`)**: Gezielte Aktualisierung nur derjenigen Abschnitte in der Bibel, die geänderten Modulen entsprechen.
+- **JSON-Delta-Synchronisation (`Struktur-JSON-aktualisieren`)**: Abgleich von `weltstruktur.json` nach Ergänzungen, Umbenennungen oder Änderungen modularer Dateien.
+
+### Kanal F: Bräuche, Feste, Ereignisse & Zeitlinie (Skills `brauch-fest-ereignis` & `timeline-markwhen`)
+- **Typologische Bögen**: Erstellung und Pflege der Bögen für Bräuche (Einordnung, Formalismus und Formen, Varianten und Grade, Bedeutung und Sanktionen, Verknüpfungen und SL-Aufhänger, optionale Regelauswirkungen), Feste/Vorkommnisse (Einordnung, Periodizität und Auslöser, Zeitfenster, Ablauf, Teilnehmer und Rollen, bekannte Vorkommnisse, Verknüpfungen und SL-Aufhänger, optionale Regelauswirkungen) sowie einmalige Ereignisse (Einordnung, Ursachen und Voraussetzungen, Ablauf, Folgen und Auswirkungen, Status des Vorkommnisses, Beteiligte und Zeugen, Verknüpfungen und SL-Aufhänger, optionale Regelauswirkungen).
+- **Verwaltung von `10_zeitlinie/` und Markwhen (`timeline-markwhen`)**: Aktualisierung der historischen Chronologie, des Vorkommnisregisters und des gesamten Lebenszyklus der `.mw`-Quellen (`mw-erstellen`, `mw-aktualisieren`, `mw-validieren`, `mw-exportieren` für `allgemeine_zeitlinie.mw`, `epochen/<epoche>.mw`, `kampagnen/<kampagne>.mw` und `exporte/`, mit den Tags `#brauch #fest #ereignis #vorkommnis`, Status `#historisch #laufend #geplant`, thematischen Tags und `#kampagne_<name>`; Datumsangaben in Weltjahren).
+
+Lege bei interaktiven Audits jeweils einen Punkt vor. Befolge `schritt-fuer-schritt-audit` für die Antwortoptionen und warte vor Änderungen auf die Antwort.
+
+---
+
 ## 5. Eigennamen als Verknüpfungen (Pflichtregel) & Kreuz-Aktualisierung
 
 - **Regel des verknüpften Namens**: Jeder **Eigenname** einer Weltentität — Personen (SCs, NSCs), Häuser, Fraktionen, Gilden, Städte, Orte, Regionen, Ebenen, magische Gegenstände, Bräuche, Feste, Ereignisse, Epochen, Gesetze, Institutionen —, der im erzeugten Text vorkommt, muss als **Markdown-Link** auf die kanonische `.md`-Datei dieser Entität geschrieben werden, mit dem Eigennamen als Linktext: `[Name](relativer/pfad/datei.md)`. Niemals bloßer Klartext oder ein Backtick-Eintrag.
@@ -85,3 +120,15 @@ Jedes operative Verfahren ist in den modularen Skills unter `.agents/skills/` fe
   2. Liste alle betroffenen Dateien (Dossiers, NSCs, Gegenstände, Chronologie) auf und schlage Änderungsentwürfe vor dem Anwenden vor.
   3. Schlage bei neuen Bögen oder kanonischen Änderungen in den zehn Bänden einen Abgleich von Bibel und JSON über `bibel-struktur-synchronisieren` vor.
   4. Schlage bei neuen Bräuchen, Festen oder Ereignissen bzw. neuen Vorkommnissen bereits erfasster Einträge die Erstellung des Bogens (`brauch-fest-ereignis`) oder den Eintrag in `10_zeitlinie/` (`timeline-markwhen`) vor; der kanonische Bogen wird nur geändert, wenn sich das Wesen des Ereignisses wandelt.
+
+## Ablagekonvention für NSC
+
+Wende die NSC-Ablagekonvention des Projekts an. Lies die Projektanweisungen und den Index des Charakterbands. Bei bestehenden Projekten ohne ausdrückliche Regel folge der vorhandenen Ablage und ihren Indizes und melde der SL Widersprüche oder Unklarheiten.
+
+Suche den vorhandenen Bogen in Indizes und Dateien sowie anhand etwaiger Aliasnamen. Führe eine kanonische Datei je Identität und verlinke sie aus Kampagnen, Fraktionen und anderen Orten. Verwende für geografische oder erzählerische Ebenen die belegte dauerhafte Bindung und halte ihre Grundlage fest. Erstbegegnung (Ort und Protokoll) und aktueller Aufenthaltsort sind getrennte Felder.
+
+Markiere ungeklärte Angaben und erhalte bestätigte Ebenen. Verwende einen vorläufigen Ablageort, sofern das Projekt ihn vorsieht, und frage andernfalls die SL nach der hierarchischen Zuordnung. Nutze Kategorien für reisende oder bereichsübergreifende NSC nur, wenn Projekt und Kanon sie stützen. Erfasse diese Angaben bei flacher Ablage wie vereinbart im Bogen oder Index.
+
+Ordne vor einer genehmigten Verschiebung jedem Quellpfad einen Zielpfad zu und prüfe, ob das Ziel frei ist. Aktualisiere alte und neue Indizes, alle eingehenden Verweise und ausgehende relative Links. Erhalte die Historie der Erstbegegnung, aktualisiere die vorgesehenen abgeleiteten Dokumente und prüfe kanonische Linkziele sowie die Eindeutigkeit des Bogens.
+
+Dante behält `<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` unter seinem NSC-Stammordner.

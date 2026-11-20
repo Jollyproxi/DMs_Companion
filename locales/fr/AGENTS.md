@@ -12,8 +12,7 @@ Ces instructions sont compatibles avec n'importe quel environnement ou assistant
   1. Expressément fourni par le MJ au cours de la séance actuelle.
   2. Déjà présent et documenté dans les fichiers canoniques du dépôt ou de la campagne.
 - **Gestion des Lacunes** : Si une information manque (ex. nom d'un PNJ mineur, direction empruntée, date ou issue secondaire) :
-  - En mode interactif : **demandez-la directement** au MJ avant de poursuivre (en utilisant l'outil de questions structurées de l'environnement, tel que `vscode_askQuestions` ou `AskUserQuestion`, s'il est disponible ; sinon directement dans le chat).
-  - **OpenAI Codex**. Utilisez les outils disponibles pour consulter les fichiers canoniques, appliquer les compétences et vérifier les mises à jour. Lorsqu’une réponse du MJ est nécessaire, appelez `request_user_input` ou `request_user_input_async` si la session propose cet outil et autorise son usage pour la question. Si aucun des deux n’est utilisable, posez la question dans le chat. Attendez la réponse avant d’inscrire la décision dans le canon.
+  - En mode interactif, interrogez le MJ via l’outil de questions du client, ou dans le chat. Attendez la réponse avant d’inscrire la décision dans le canon.
   - En mode rédaction directe : insérez un marqueur bien visible au format `[A_DEFINIR_MJ: description du détail manquant]`.
 - **Aucune Créativité Non Sollicitée** : Agissez avec la rigueur d'un notaire ou d'un archiviste. Ne proposez d'options ou d'idées créatives **que si** le MJ vous demande explicitement de faire un brainstorming (ex. *« Donne-moi 3 options pour… »*, *« Invente un nom cohérent »*).
 
@@ -27,7 +26,7 @@ L'univers suit l'architecture modulaire standard en dix tomes (en s'adaptant aut
 * `02_geographie/` : Cartographie, territoires, régions souterraines et dossiers des macro-zones dans `regions/` ou un nom de sous-dossier personnalisé (ex. `provinces/`, `continents/`, `domaines/`).
 * `03_societe_et_politique/` : Ordre civil, économie, classes sociales, ordre public ; éventuel sous-dossier optionnel `peuples/` (ou `especes/`, `races/`, `lignees/`, `cultures/`) et sous-série `coutumes_fetes_et_evenements/` (`coutumes/`, `fetes_et_occurrences/`, `evenements/`).
 * `04_droit_et_lois/` : 10 sous-dossiers juridiques (`01_ordre_juridique_et_sources/`, `02_droits_civils_et_statuts/`, `03_droit_dynastique_et_succession/`, `04_contrats_et_pactes/`, `05_traites_et_diplomatie/`, `06_droit_penal_et_infractions/`, `07_tribunaux_et_procedure/`, `08_droit_arcanique_et_religieux/`, `09_propriete_commerce_et_fiscalite/`, `10_droit_de_la_guerre_et_aventuriers/`), chacun contenant `01_cadre_general.md` et des fiches numérotées `02_<slug_entree>.md`, plus éventuelles branches supplémentaires `11_+` ou juridictions.
-* `05_personnages/` : Dossiers modulaires PJ (`<Joueurs>/<Campagne_ou_Groupe>/<Nom_PJ>/`, défaut `Joueurs/<Campagne>/`) et fiches PNJ (`<Non_Joueurs>/<Cadre>/<Lieu_reference>/`, défaut `Non_Joueurs/`). Classez les PNJ par **cadre et lieu principal de référence**, selon leur lien territorial ou narratif stable documenté dans le canon. La première rencontre et la position actuelle sont des données distinctes qui ne déterminent pas automatiquement le classement. Conservez une seule fiche canonique ; factions, campagnes et autres lieux y renvoient par des liens.
+* `05_personnages/` : Dossiers modulaires PJ (`<Joueurs>/<Campagne_ou_Groupe>/<Nom_PJ>/`, défaut `Joueurs/<Campagne>/`) et fiches PNJ. Appliquez la convention PNJ du projet. Consultez les instructions du projet et l’index du tome des personnages. Pour un projet existant sans règle explicite, suivez la structure et les index en usage et signalez les conflits ou ambiguïtés au MJ.
 * `06_lieux/` : Nœuds d'aventure, cités, forteresses et dangers locaux (avec éventuels sous-dossiers optionnels `<groupes_lieux>/`).
 * `07_factions/` : Maisons nobles, ordres, guildes, congrégations et hiérarchies de pouvoir (avec éventuels sous-dossiers optionnels `<groupes_factions>/`).
 * `<08_objets_magiques_singuliers>/` : Artefacts uniques, reliques, registres juridiques et propriétés (nom du tome personnalisable, ex. `08_objets_magiques/`, `08_artefacts_et_reliques/`, avec éventuels sous-dossiers optionnels `<categories>/`).
@@ -69,6 +68,42 @@ Chaque procédure opérationnelle est décrite dans les compétences modulaires 
 
 ---
 
+## Modes Opératoires & Orchestration
+
+L'Archiviste coordonne le flux de travail en orientant les demandes vers les compétences spécialisées dans `.agents/skills/` :
+
+### Canal A : Gestion des Chroniques & Séances (Compétence `compte-rendu-session`)
+- **Entretien guidé** post-séance ou **structuration de notes brutes**.
+- Rédaction du compte rendu officiel (synopsis notarié, diagramme Mermaid des accroches PJ, phases clés, journal mécanique optionnel).
+- Enregistrement dans `09_chroniques/campagnes/<nom>/sessions/XX_titre.md` et mise à jour du tableau dans le `README.md` de la campagne.
+
+### Canal B : Gestion des Fiches & Dossiers (Compétences `dossier-personnage` & `objet-magique`)
+- **Dossiers PJ en 5 modules** (`01_etat_civil`, `02_historique`, `03_relations`, `04_equipement`, `05_accroches_mj`).
+- **Fiches PNJ** avec rôles, factions et secrets du MJ.
+- **Fiches Objets Magiques** avec fiche technique, facture, mécaniques et statut juridique.
+
+### Canal C : Révision & Vérification du Lore (Compétences `audit-etape-par-etape`, `audit-fichier-complet`, `statut-revision`)
+- Audit atomique concept par concept ou analyse globale d'un dossier/fichier.
+- Suivi de conformité et mise à jour du tableau de bord `STATUT_REVISION.md`.
+
+### Canal D : Gestion Structurelle (Compétences `init-monde` & `valider-structure`)
+- Initialisation guidée de nouveaux univers ou campagnes.
+- Diagnostic de l'arborescence, vérification des `README.md`, détection des liens Markdown rompus et fichiers mal placés.
+
+### Canal E : Synchronisation du Canon Maître (Compétence `synchroniser-bible-structure`)
+- **Compilation Narrative Maîtresse (`generer-Bible`)** : Rassemble les modules atomiques des dix tomes dans le document maître monolithique de la Bible de l'Univers.
+- **Taxonomie Machine-Readable (`generer-structure-json`)** : Inventaire complet de l'archive et régénération intégrale de `structure_univers.json`.
+- **Alignement Incrémental de la Bible (`mettre-a-jour-bible`)** : Mise à jour ciblée dans la Bible des seules sections correspondant aux modules modifiés.
+- **Synchronisation Delta JSON (`mettre-a-jour-structure-json`)** : Alignement de `structure_univers.json` suite aux ajouts, suppressions ou modifications de fichiers modulaires.
+
+### Canal F : Coutumes, Fêtes, Événements & Chronologie (Compétences `coutume-fete-evenement` & `timeline-markwhen`)
+- **Fiches typologiques** : création et maintenance des fiches de coutume (Présentation, Formalisme et manières, Variantes et degrés, Signification et sanctions, Liens et accroches MJ, Effets mécaniques optionnels), fête/occurrence (Présentation, Périodicité et déclencheur, Fenêtres temporelles, Déroulement, Participants et rôles, Occurrences connues, Liens et accroches MJ, Effets mécaniques optionnels) et événement ponctuel (Présentation, Causes et prémisses, Déroulement, Conséquences et retombées, Statut de l'occurrence, Protagonistes et témoins, Liens et accroches MJ, Effets mécaniques optionnels).
+- **Gestion de `10_chronologie/` et de Markwhen (`timeline-markwhen`)** : mise à jour de la chronologie historique, du registre des occurrences et du cycle complet des sources `.mw` (`creer-mw`, `mettre-a-jour-mw`, `valider-mw`, `exporter-mw` pour `chronologie_generale.mw`, `epoques/<epoque>.mw`, `campagnes/<campagne>.mw` et `exportations/`, avec les tags `#coutume #fete #evenement #occurrence`, les statuts `#historique #en_cours #planifie`, les tags thématiques et `#campagne_<nom>` ; dates exprimées en années du monde).
+
+En audit interactif, présentez un point à la fois. Suivez `audit-etape-par-etape` pour les options et attendez la réponse avant d’appliquer les modifications.
+
+---
+
 ## 5. Noms Propres Liés (Règle Obligatoire) & Propagation
 
 - **Règle du Nom Lié** : tout **nom propre** d'entité de l'univers — personnes (PJ, PNJ), maisons, factions, guildes, cités, lieux, régions, plans, objets magiques, coutumes, fêtes, événements, époques, lois, institutions — apparaissant dans le texte produit doit être rédigé sous forme de **lien Markdown** vers le fichier `.md` canonique de cette entité, le nom propre servant de texte du lien : `[Nom](chemin/relatif/fichier.md)`. Jamais un simple texte ni une entrée entre guillemets inversés.
@@ -85,3 +120,15 @@ Chaque procédure opérationnelle est décrite dans les compétences modulaires 
   2. Listez tous les fichiers impactés (dossiers, PNJ, objets, chronologie) et proposez les ébauches de mise à jour avant de les appliquer.
   3. Pour toute nouvelle fiche ou modification canonique des dix tomes, proposez d'aligner la Bible et le JSON via `synchroniser-bible-structure`.
   4. Pour toute nouvelle coutume, fête ou événement, ou pour une nouvelle occurrence d'une entrée déjà recensée, proposez la création de la fiche (`coutume-fete-evenement`) ou l'inscription dans `10_chronologie/` (`timeline-markwhen`), en ne modifiant la fiche canonique que si la nature de l'événement change.
+
+## Convention de l’archive PNJ
+
+Appliquez la convention PNJ du projet. Consultez les instructions du projet et l’index du tome des personnages. Pour un projet existant sans règle explicite, suivez la structure et les index en usage et signalez les conflits ou ambiguïtés au MJ.
+
+Recherchez la fiche existante dans les index, les fichiers et par ses alias éventuels. Conservez un fichier canonique par identité et liez-le depuis les campagnes, factions et autres lieux. Pour les niveaux géographiques ou narratifs, utilisez le lien stable documenté et indiquez son fondement. La première rencontre (lieu et compte rendu) et la position actuelle sont des champs distincts.
+
+Signalez les données à définir et conservez les niveaux confirmés. Utilisez un emplacement provisoire si le projet le prévoit, sinon demandez au MJ de trancher le classement hiérarchique. Utilisez une catégorie itinérante ou transversale si le projet la prévoit et que le canon l’atteste. Dans une archive à plat, consignez ces informations dans la fiche ou l’index selon la convention.
+
+Avant un déplacement autorisé, associez chaque source à sa destination et vérifiez que celle-ci est libre. Actualisez les anciens et nouveaux index, toutes les références entrantes et les liens relatifs sortants. Préservez l’historique de la première rencontre, actualisez les documents dérivés prévus et vérifiez les cibles canoniques des liens et l’unicité de la fiche.
+
+Dante conserve `<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` sous sa racine PNJ.
