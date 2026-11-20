@@ -57,18 +57,15 @@ Upon validating each block or element, the official Markdown badge is applied:
    - Partition the document according to the agreed granularity (atomic or logical sections).
 
 2. **Atomic Questioning**:
-   - Show the DM one concept/section at a time in chat.
-   - If the environment provides an interactive structured question tool (e.g. `vscode_askQuestions`, `AskUserQuestion`), use it to present the question with quick options:
-     - `Confirm without changes` (recommended)
-     - `Edits already made to the source file by the DM` (the DM has already updated the file, so the badge must be updated)
-     - `Modify / Amend` (opens free text to enter the correction)
-     - `Defer for later [TO_BE_DEFINED_BY_DM]`
-   - Otherwise, ask directly in chat:
-     > **Step [N/Total] — [Section or Concept Title]**
-     > ```markdown
-     > [Exact text extracted from the file]
-     > ```
-     > **Question**: *"Do you confirm that this passage is accurate and strictly true to canon, or would you like to amend or expand it?"*
+   - Present one concept or section at a time. Include the exact passage and the question in the structured form.
+   - In Codex, use `request_user_input` when available and permitted, otherwise use `request_user_input_async` under the same conditions. In other environments, use the native equivalent. As a subagent, forward the question and options to the coordinator if only the main conversation can open the form.
+   - With `request_user_input`, offer these three options and tell the DM to use the free-text field to dictate a correction:
+     - `Confirm (Recommended)`: approve the passage as written.
+     - `File edited`: re-read the passage the DM edited before updating the badge.
+     - `Defer`: postpone validation of this passage.
+   - Exception for `request_user_input_async` and equivalent forms: if the tool supports four options, add `Amend`. If the DM selects it without a correction, ask for the correction before continuing. With a three-option limit, use the choices above and the free-text field.
+   - Use chat only if the form is unavailable or disallowed, including through the coordinator. Explain the specific reason and include the exact passage and the question.
+   - Wait for the answer before applying edits or badges. With the asynchronous form, keep the turn open and resume at the pending passage when the reply arrives.
 
 3. **Apply the Answer**:
    - **If approved without changes**: Add or update the badge:
