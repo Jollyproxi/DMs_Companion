@@ -24,9 +24,9 @@ Verifica la presenza delle directory canoniche (accettando eventuali varianti gi
 2. `02_geografia` *(con eventuale sottocartella `regioni/` o nome custom scelto per le macro-aree, es. `province/`, `continenti/`, `domini/`, `cornici/`)*
 3. `03_societa_e_politica` *(con eventuale sottocartella opzionale `popoli/` o nome custom, e sottocartella obbligatoria `usi_costumi_ed_eventi/` contenente `usanze/`, `festival_ed_occorrenze/`, `eventi/`)*
 4. `04_diritto_e_leggi` *(con sottocartelle `01_ordinamento_e_fonti/` … `10_diritto_bellico_e_avventurieri/`, più eventuali branche custom `11_+` o sottocartelle per giurisdizione)*
-5. `05_personaggi` *(con sottocartelle `<Giocanti>/` [default `Giocanti/`, es. `PG/`, `Eroi/`], organizzate per `<Campagna_o_Party>/`, e `<Non-Giocanti>/` [default `Non-Giocanti/`, es. `PNG/`] `<Cornice>/<Luogo_riferimento>/`)*
+5. `05_personaggi` *(con sottocartelle `<Giocanti>/` [default `Giocanti/`, es. `PG/`, `Eroi/`], organizzate per `<Campagna_o_Party>/`, e `<Non-Giocanti>/` [default `Non-Giocanti/`, es. `PNG/`])*. Applica la convenzione PNG del progetto. Leggila nelle istruzioni del progetto e nell’indice del tomo dei personaggi. Nei progetti esistenti privi di una regola esplicita, rispetta la struttura e gli indici in uso e segnala eventuali conflitti o ambiguità al Master.
 
-   Controlla la gerarchia PNG `<Cornice>/<Luogo_riferimento>/`, la coerenza con i campi della scheda, i README a entrambi i livelli, le schede duplicate e i riferimenti dopo ogni spostamento. Le strutture pregresse richiedono una mappa di migrazione; non ricavare la destinazione dal solo primo incontro.
+   Verifica percorso, indici richiesti, coerenza con il legame documentato, unicità per identità e link canonici. Negli archivi piatti controlla l’indice e i metadati nella sede prevista. Segnala i dati da definire e proponi una mappa prima di eventuali spostamenti autorizzati.
 
 6. `06_luoghi` *(o variante `06_location`; con eventuali sottocartelle opzionali custom per tipologia o macro-area)*
 7. `07_fazioni` *(o variante `07_factions`; con eventuali sottocartelle opzionali custom per tipologia)*

@@ -51,20 +51,19 @@ Quando il Master introduce o documenta un nuovo Personaggio Giocante:
 
 ## 3. Creazione o Aggiornamento Scheda PNG
 
-Quando il Master introduce un Personaggio Non Giocante rilevante:
+## Convenzione dell’archivio PNG
 
-1. Organizza i PNG per **cornice e luogo principale di riferimento**, usando il legame territoriale o narrativo stabile documentato nel canone. Il primo incontro e la posizione attuale sono dati distinti e non determinano automaticamente la collocazione. Mantieni una sola scheda canonica; fazioni, campagne e altri luoghi la richiamano tramite link.
-2. `05_personaggi/<Non-Giocanti>/<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` (default: `05_personaggi/Non-Giocanti/<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md`).
-3. Se il riferimento è ambiguo, chiedi al Master; in stesura diretta usa `DA_DEFINIRE_MASTER/` al livello ignoto (cornice o luogo), senza inventare affiliazioni. Per PNG esplicitamente itineranti o trasversali usa `Trasversali/` e/o `Itineranti/` solo se documentato. Riutilizza i nomi canonici di cornici e luoghi, rispettando i nomi custom dei tomi.
-4. **Struttura**:
-   - Intestazione con ruolo, fazione (con link al Tomo VII `07_fazioni/`), residenza (link al Tomo VI `06_luoghi/`), allineamento e stato vitale.
-   - Sezioni su Aspetto & Indole, Ruolo Narrativo e Segreti & Ganci DM.
-   - **Cornice di riferimento:** [Link alla scheda canonica nel Tomo II]
-   - **Luogo principale di riferimento:** [Link alla scheda canonica nel Tomo VI e motivo del legame]
-   - **Posizione attuale:** [Link al luogo, se noto; dato distinto dal riferimento principale]
-   - **Primo incontro:** [Link al verbale e al luogo, se documentati]
-5. Crea o aggiorna i `README.md` del tomo, dei PNG, della cornice e del luogo; gli indici riportano cornice, luogo principale e link alla scheda unica.
-6. Per riorganizzare schede esistenti, prepara la mappa origine → destinazione sulla base del canone e applica gli spostamenti autorizzati. Ricalcola i link relativi in uscita e aggiorna tutti i riferimenti in entrata (verbali, dossier, luoghi, fazioni, timeline), i README vecchi e nuovi, la Bibbia e il JSON. Non duplicare le schede né riscrivere il luogo storico del primo incontro. I casi irrisolti restano segnalati; verifica i link dopo gli spostamenti.
+Applica la convenzione PNG del progetto. Leggila nelle istruzioni del progetto e nell’indice del tomo dei personaggi. Nei progetti esistenti privi di una regola esplicita, rispetta la struttura e gli indici in uso e segnala eventuali conflitti o ambiguità al Master.
+
+Cerca la scheda esistente negli indici, nei file e tramite eventuali alias. Mantieni un solo file canonico per identità e usa link da campagne, fazioni e altri luoghi. Per i livelli geografici o narrativi, usa il legame stabile documentato e registrane il motivo. Primo incontro (luogo e verbale) e posizione attuale sono campi distinti.
+
+Per riferimenti incerti, segnala il dato da definire e conserva i livelli accertati. Usa una collocazione provvisoria solo se prevista dal progetto, altrimenti chiedi al Master di risolvere la collocazione gerarchica. Usa categorie itineranti o trasversali solo se previste e documentate nel canone. In un archivio piatto registra queste informazioni nella scheda o nell’indice secondo la convenzione.
+
+Prima di uno spostamento autorizzato, mappa origine e destinazione e controlla che la destinazione sia libera. Aggiorna gli indici precedenti e nuovi, tutti i riferimenti in entrata e i link relativi in uscita. Conserva i dati del primo incontro, rigenera i documenti derivati previsti dal progetto e verifica che tutti i link risolvano verso le destinazioni canoniche e che resti una sola scheda.
+
+Per Dante resta in uso `<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` sotto la radice PNG.
+
+Usa il [template](./references/template-dossier.md) e aggiorna gli indici previsti.
 
 ---
 

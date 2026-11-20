@@ -119,6 +119,8 @@ Se presente una sottodirectory regionale o per macro-aree:
 ```
 *(Se il Master personalizza i nomi delle cartelle — es. `PG/`, `PNG/`, `Eroi/`, cornici e luoghi PNG o organizzazione per `<Campagna_o_Party>/` — i percorsi registrano i nomi reali su disco.)*
 
+Per Bibbia e JSON usa i percorsi reali e lo schema del progetto. L’esempio qui sotto mostra la gerarchia a due livelli di Dante. Negli archivi piatti elenca le schede una sola volta sotto l’archivio PNG; nelle gerarchie personalizzate rappresenta i livelli effettivi. Registra i riferimenti canonici come metadati quando previsti, lasciando ignoti i valori mancanti.
+
 ```json
 {
   "cornici_png": [
@@ -143,7 +145,7 @@ Se presente una sottodirectory regionale o per macro-aree:
 }
 ```
 
-Per i PNG conserva la gerarchia cornice → luogo principale e i percorsi reali. I moduli delle schede vivono solo nei rispettivi luoghi, senza duplicarli in `moduli` del tomo. Ogni scheda può registrare `cornice_riferimento` e `luogo_riferimento` come percorsi alle schede canoniche dei Tomi II e VI; i dati ignoti restano `null` con una nota DM, senza inventare file.
+
 
 ### C. Tomo 09 (Cronache - Sottocartella `<campagne>/`)
 ```json

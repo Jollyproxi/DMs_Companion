@@ -98,15 +98,14 @@ Ogni PG possiede una cartella dedicata in `05_personaggi/<Giocanti>/<Campagna_o_
 
 ## 2. Scheda Personaggio Non Giocante (PNG)
 
-Ogni PNG risiede come singolo file in `05_personaggi/<Non-Giocanti>/<Cornice>/<Luogo_riferimento>/[Nome_PNG].md` (default: `05_personaggi/Non-Giocanti/<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md`):
+Applica la convenzione PNG del progetto. Leggila nelle istruzioni del progetto e nell’indice del tomo dei personaggi. Nei progetti esistenti privi di una regola esplicita, rispetta la struttura e gli indici in uso e segnala eventuali conflitti o ambiguità al Master. Cerca la scheda esistente negli indici, nei file e tramite eventuali alias. Mantieni un solo file canonico per identità e usa link da campagne, fazioni e altri luoghi. Per i livelli geografici o narrativi, usa il legame stabile documentato e registrane il motivo. Primo incontro (luogo e verbale) e posizione attuale sono campi distinti. Per riferimenti incerti, segnala il dato da definire e conserva i livelli accertati. Usa una collocazione provvisoria solo se prevista dal progetto, altrimenti chiedi al Master di risolvere la collocazione gerarchica. Usa categorie itineranti o trasversali solo se previste e documentate nel canone. In un archivio piatto registra queste informazioni nella scheda o nell’indice secondo la convenzione.
 
 ```markdown
 # [Nome PNG] — [Titolo o Ruolo]
 
 > 🛡️ *Verificato: NON_CONVALIDATO | Modificato: [DATA_ODIERNA]*
 
-* **Cornice di riferimento:** [Link alla scheda canonica nel Tomo II]
-* **Luogo principale di riferimento:** [Link alla scheda canonica nel Tomo VI e motivo del legame]
+* **Legame stabile e motivo:** [Valori dei livelli, eventuale categoria o dato da definire secondo la convenzione]
 * **Posizione attuale:** [Link al luogo, se noto; dato distinto dal riferimento principale]
 * **Primo incontro:** [Link al verbale e al luogo, se documentati]
 * **Fazione / Casata:** [Nome Fazione con link relativo a 07_fazioni/]
