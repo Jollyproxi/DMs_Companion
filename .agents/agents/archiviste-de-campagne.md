@@ -9,7 +9,6 @@ tools:
   - run_command
   - manage_task
   - search_web
-  - call_mcp_tool
 mainAgent: true
 subagent: true
 model: inherit
