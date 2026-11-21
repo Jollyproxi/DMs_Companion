@@ -63,7 +63,7 @@ Ogni procedura operativa è definita nelle skill modulari dentro `.agents/skills
 
 1. **`init-mondo`**: Intervista iniziale e scaffolding dell'architettura a dieci tomi.
 2. **`valida-struttura`**: Diagnostica cartelle, `README.md` mancanti, link rotti, nomi propri non collegati e file fuori posto.
-3. **`verbale-sessione`**: Intervista guidata o rielaborazione appunti, verbale con diagramma Mermaid e aggiornamento indice campagna.
+3. **`verbale-sessione`**: Intervista guidata, rielaborazione appunti o importazione di trascrizioni strutturate NotebookLM/LLM, verbale con diagramma Mermaid e aggiornamento indice campagna.
 4. **`dossier-personaggio`**: Creazione e manutenzione dei dossier PG a 5 moduli e delle schede PNG.
 5. **`oggetto-magico`**: Catalogazione di artefatti, reliquie, meccaniche e inquadramento normativo.
 6. **`audit-passo-passo`**: Fact-checking interattivo atomico (singola affermazione o sezione) con il DM.
@@ -73,6 +73,7 @@ Ogni procedura operativa è definita nelle skill modulari dentro `.agents/skills
 10. **`usanza-festa-evento`**: Schede di usanze, festival/occorrenze ed eventi una tantum con allineamento a `10_timeline/`.
 11. **`timeline-markwhen`**: Ciclo completo dei sorgenti Markwhen `.mw` (`crea-mw`, `aggiorna-mw`, `valida-mw`, `esporta-mw`).
 12. **`collega-nomi-propri`**: Scansione, verifica e conversione dei nomi propri in collegamenti Markdown ai file canonici delle entità (regola dei nomi-propri-collegati).
+13. **`glossario-trascrizione`**: Estrazione dal repository di un elenco compatto di sola grafia dei nomi propri già noti (senza spoiler né fatti) per trascrizioni NotebookLM/LLM.
 
 ---
 
@@ -80,9 +81,10 @@ Ogni procedura operativa è definita nelle skill modulari dentro `.agents/skills
 
 L'Archivista coordina il flusso di lavoro instradando le richieste verso le relative sotto-skill specializzate in `.agents/skills/`:
 
-### Canale A: Gestione Cronache & Sessioni (Skill `verbale-sessione`)
-- **Intervista guidata** post-sessione o **rielaborazione di appunti grezzi**.
-- Stesura del verbale formale (Sinossi notarile, diagramma Mermaid dei ganci PG, fasi salienti, registro meccanico opzionale).
+### Canale A: Gestione Cronache & Sessioni (Skill `verbale-sessione` & `glossario-trascrizione`)
+- **Glossario di supporto pre-trascrizione** (`glossario-trascrizione`): estrae un elenco testuale compatto di sola grafia dei nomi propri canonici (con eventuali nomi extra pronunciati in sessione, zero fatti/spoiler) da caricare in NotebookLM/LLM per ridurre i `[?]`.
+- **Intervista guidata** post-sessione, **rielaborazione di appunti grezzi** o **importazione di trascrizioni strutturate** da NotebookLM/LLM (prompt in `.agents/skills/verbale-sessione/references/prompt-trascrizione-sessione.md`).
+- Stesura del verbale formale (Sinossi notarile, diagramma Mermaid dei ganci PG, fasi salienti, registro meccanico opzionale), previa verifica col Master su `[?]`, `(inferenza)`, domande aperte e contraddizioni.
 - Salvataggio del file in `09_cronache/campagne/<nome>/sessioni/XX_titolo.md` e aggiornamento della tabella nel `README.md` della campagna.
 
 ### Canale B: Gestione Schede & Dossier (Skill `dossier-personaggio` & `oggetto-magico`)
