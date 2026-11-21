@@ -1,14 +1,14 @@
 ---
 name: session-minutes
-description: "Use when: taking D&D session minutes, conducting the post-session interview with the DM, drafting formal minutes with a Mermaid diagram of PC hooks, and updating the campaign index."
-argument-hint: "Paste session notes or write 'start interview' to launch the guided procedure"
+description: "Use when: taking D&D session minutes, importing a structured NotebookLM or LLM session transcript report, conducting the post-session interview with the DM, drafting formal minutes with a Mermaid diagram of PC hooks, and updating the campaign index."
+argument-hint: "Paste session notes, a NotebookLM/LLM transcription report, or write 'start interview' to launch the guided procedure"
 user-invocable: true
 disable-model-invocation: false
 ---
 
 # Skill: Session Minutes (`session-minutes`)
 
-This skill guides the collection, structuring, and formatting of session minutes for any D&D campaign, ensuring compliance with the standard model documented in [minutes-template](./references/minutes-template.md).
+This skill guides the collection, structuring, and formatting of session minutes for any D&D campaign, ensuring compliance with the standard model documented in [minutes-template](./references/minutes-template.md). To extract a notarial report from audio recordings or long transcripts first using **NotebookLM** or another LLM, use the dedicated prompt in [session-transcription-prompt](./references/session-transcription-prompt.md). Before running NotebookLM or another LLM, you can also generate the compact spelling-only list of known proper names from the repository with the `transcription-glossary` skill to reduce `[?]` flags.
 
 > **📌 Linked Proper Names Rule**: every proper name of a setting entity (PCs, NPCs, factions, houses, cities, locations, magic items, customs, festivals, events…) appearing in produced text must be a **Markdown link** to the entity's canonical `.md` file (e.g. `[Name](relative/path/file.md)`), never plain text. Exceptions: headings, file names, frontmatter, code blocks, Mermaid nodes, and `.mw` sources. Entity without a sheet: never invent it — use `[TO_BE_DEFINED_BY_DM: missing sheet for <Name>]` and flag the gap. Checking and conversion: `link-proper-names` skill.
 
@@ -36,6 +36,17 @@ Triggered with *"start interview"* or right after a session ends. Ask the DM the
 ### Channel B: Structuring Rough Notes
 If the DM pastes disorderly notes, extract the chronology, isolate verified facts, and compile a draft directly. If critical details are missing, ask the DM to fill only those gaps (via the structured question tool if available, or in chat) before saving the file.
 
+### Channel C: Importing a Structured Transcript Report (NotebookLM / LLM)
+If the DM provides a report generated with [session-transcription-prompt](./references/session-transcription-prompt.md) (from session audio or a long transcript):
+1. **Mapping onto the Minutes**:
+   - `Overview` + `Cast & Participants` + `Chronology` → *Header*, *Synopsis of Events*, and *Key Phases* (resolving every existing proper name into a Markdown link under the Linked Proper Names Rule).
+   - `State Changes & Clues` (+ relevant `Figures` and `Commitments`) → *Protagonist Hooks* (`flowchart TD` Mermaid diagram and per-PC subsections) and optional *Mechanical Log* if requested.
+   - `Facts by Entity` (Ten-Tome taxonomy), `Commitments`, `Figures`, `Time References`, and the YAML `Data Block` → affected-files list and cross-update proposals (new NPCs, magic items, customs/festivals/events, `10_timeline/`).
+2. **Notarial Gate Before Canonising**:
+   - Cross-check names, variants, and facts against canonical files already in the repository.
+   - Before saving or drafting derived sheets, **ask the DM for confirmation** (via the structured question tool if available, or in chat) to resolve any `Name[?]`, `(inference)`, `Variants / aliases heard`, `Open Questions`, `Contradictions`, or `[inaudible ...]` gaps not already settled by canon: never guess or silently normalise.
+3. **Truncated Report**: if the report ends with `[CONTINUE FROM: ...]`, alert the DM to the missing tail before final archiving.
+
 ---
 
 ## 3. Drafting the Minutes
@@ -58,7 +69,7 @@ The minutes are compiled across the canonical sections:
 2. **Update Campaign Index**:
    Insert the new row in the summary table of `09_chronicles/<campaigns>/<campaign_name>/README.md`:
    `| **XX** | [Title] | [Date] | [Location] | [Main Focus] | [Minutes](<sessions>/XX_title.md) |`
-3. **Cross-Update Proposals (A + B)**:
+3. **Cross-Update Proposals (A + B + C)**:
    - List at the end of your response which repository files are affected (new NPCs, magic items found, hooks to update in PC dossiers via `character-dossier`).
    - **Customs, festivals, and events**: if the session introduces or mentions a new custom, recurring festival/occurrence, or one-off event, **always propose** creating the corresponding sheet in `03_society_and_politics/customs_festivals_and_events/` via `custom-festival-event`.
    - **Occurrences of registered events & Markwhen Timeline**: if the session stages a known recurrence (e.g. an annual tournament or seasonal feast) or introduces dated events, document them in the minutes and record them in `10_timeline/` (occurrence register and `.mw` sources via `timeline-markwhen`), then **ask the DM** whether to amend the canonical sheet: particulars specific to that occurrence stay in the timeline and minutes, and the sheet is updated only if they alter its nature.
