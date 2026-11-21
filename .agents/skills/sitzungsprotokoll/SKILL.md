@@ -1,14 +1,14 @@
 ---
 name: sitzungsprotokoll
-description: "Use when: ein D&D-Sitzungsprotokoll verfassen, das Nachgespräch mit dem Spielleiter führen, das formelle Protokoll samt Mermaid-Diagramm der SC-Aufhänger erstellen und den Kampagnenindex aktualisieren."
-argument-hint: "Sitzungsnotizen einfügen oder 'Interview starten' schreiben, um das geführte Verfahren zu beginnen"
+description: "Use when: ein D&D-Sitzungsprotokoll verfassen, einen strukturierten NotebookLM- oder LLM-Transkriptionsbericht importieren, das Nachgespräch mit dem Spielleiter führen, das formelle Protokoll samt Mermaid-Diagramm der SC-Aufhänger erstellen und den Kampagnenindex aktualisieren."
+argument-hint: "Sitzungsnotizen bzw. einen NotebookLM-/LLM-Transkriptionsbericht einfügen oder 'Interview starten' schreiben, um das geführte Verfahren zu beginnen"
 user-invocable: true
 disable-model-invocation: false
 ---
 
 # Skill: Sitzungsprotokoll (`sitzungsprotokoll`)
 
-Dieser Skill leitet die Erfassung, Strukturierung und Formatierung von Spielsitzungsprotokollen für beliebige D&D-Kampagnen und stellt die Einhaltung des Standardmodells aus [protokoll-vorlage](./references/protokoll-vorlage.md) sicher.
+Dieser Skill leitet die Erfassung, Strukturierung und Formatierung von Spielsitzungsprotokollen für beliebige D&D-Kampagnen und stellt die Einhaltung des Standardmodells aus [protokoll-vorlage](./references/protokoll-vorlage.md) sicher. Um aus Audioaufnahmen oder langen Transkripten zunächst einen notariellen Bericht über **NotebookLM** oder ein anderes LLM zu gewinnen, nutze den zugehörigen Prompt unter [sitzungstranskription-prompt](./references/sitzungstranskription-prompt.md). Bevor du NotebookLM oder ein anderes LLM startest, kannst du zudem mit dem Skill `transkriptions-glossar` die kompakte reine Rechtschreibliste bereits bekannter Eigennamen aus dem Archiv erzeugen, um `[?]`-Markierungen zu verringern.
 
 > **📌 Regel: Eigennamen als Verknüpfungen**: Jeder Eigenname einer Weltentität (SCs, NSCs, Fraktionen, Häuser, Städte, Orte, magische Gegenstände, Bräuche, Feste, Ereignisse …), der im erzeugten Text vorkommt, muss eine **Markdown-Verknüpfung** zur kanonischen `.md`-Datei der Entität sein (z. B. `[Name](relativer/pfad/datei.md)`), niemals bloßer Klartext. Ausnahmen: Überschriften, Dateinamen, Frontmatter, Codeblöcke, Mermaid-Knoten und `.mw`-Quellen. Entität ohne Bogen: niemals erfinden — `[VOM_SL_ZU_DEFINIEREN: Bogen fehlt für <Name>]` verwenden und die Lücke melden. Prüfung und Umwandlung: Skill `eigennamen-verlinken`.
 
@@ -36,6 +36,17 @@ Aktivierbar mit *„Interview starten“* oder direkt nach einer Sitzung. Stelle
 ### Kanal B: Aufbereitung von Rohnotizen
 Fügt der SL ungeordnete Notizen ein, extrahiere die Chronologie, isoliere gesicherte Fakten und erstelle direkt einen Entwurf. Fehlen kritische Details, bitte den SL (über das strukturierte Fragewerkzeug falls verfügbar, sonst im Chat), vor dem Speichern lediglich diese Lücken zu schließen.
 
+### Kanal C: Import eines strukturierten Transkriptionsberichts (NotebookLM / LLM)
+Liefert der SL einen Bericht, der mit [sitzungstranskription-prompt](./references/sitzungstranskription-prompt.md) (aus einer Audioaufnahme oder einem langen Transkript) erstellt wurde:
+1. **Abbildung auf das Protokoll**:
+   - `Steckbrief` + `Anwesende und Beteiligte` + `Chronologie` → *Kopfzeile*, *Ereigniszusammenfassung* und *Schlüsselphasen* (unter Verknüpfung aller vorhandenen Eigennamen gemäß der Regel zu verknüpften Eigennamen).
+   - `Zustandsänderungen und Hinweise` (+ relevante `Zahlen` und `Verpflichtungen`) → *Die Aufhänger der Protagonisten* (Mermaid-Diagramm `flowchart TD` und Unterabschnitte je SC) sowie optionales *Regelprotokoll*, falls gewünscht.
+   - `Fakten je Element` (Zehn-Bände-Taxonomie), `Verpflichtungen`, `Zahlen`, `Zeitangaben` und der YAML-`Datenblock` → Liste betroffener Dateien und Vorschläge für Querverknüpfungen (neue NSCs, magische Gegenstände, Bräuche/Feste/Ereignisse, `10_zeitlinie/`).
+2. **Notarielle Prüfung vor der Kanonisierung**:
+   - Gleiche Namen, Varianten und Fakten mit den bereits im Repository vorhandenen kanonischen Dateien ab.
+   - Bitte den SL vor dem Speichern oder Anlegen abgeleiteter Bögen um Bestätigung (über das strukturierte Fragewerkzeug falls verfügbar, sonst im Chat), um offene `Name[?]`, `(Folgerung)`, `Gehörte Varianten / Aliasnamen`, `Offene Fragen`, `Widersprüche` oder Lücken wie `[unverständlich ...]` zu klären, die im Kanon noch nicht beantwortet sind: niemals eigenmächtig raten oder stillschweigend vereinheitlichen.
+3. **Unvollständiger Bericht**: endet der Bericht mit `[FORTSETZEN AB: ...]`, weise den SL vor der endgültigen Archivierung auf den fehlenden Teil hin.
+
 ---
 
 ## 3. Verfassen des Protokolls
@@ -58,7 +69,7 @@ Das Protokoll wird in den kanonischen Abschnitten erstellt:
 2. **Kampagnenindex aktualisieren**:
    Füge die neue Zeile in die Übersichtstabelle unter `09_chroniken/<kampagnen>/<kampagnenname>/README.md` ein:
    `| **XX** | [Titel] | [Datum] | [Ort] | [Hauptfokus] | [Protokoll](<sitzungen>/XX_titel.md) |`
-3. **Vorschläge für Querverknüpfte Aktualisierungen (A + B)**:
+3. **Vorschläge für Querverknüpfte Aktualisierungen (A + B + C)**:
    - Liste am Ende der Antwort alle betroffenen Repository-Dateien auf (neue NSCs, gefundene magische Gegenstände, in SC-Dossiers per `charakter-dossier` nachzutragende Aufhänger).
    - **Bräuche, Feste und Ereignisse**: Führt die Sitzung einen neuen Brauch, ein neues Fest/Vorkommnis oder ein neues Ereignis ein bzw. erwähnt es, **schlage stets die Anlage des zugehörigen Bogens** in `03_gesellschaft_und_politik/braeuche_feste_und_ereignisse/` über `brauch-fest-ereignis` vor.
    - **Vorkommnisse bereits erfasster Ereignisse & Markwhen-Zeitlinie**: Spielt in der Sitzung eine bekannte Wiederkehr (z. B. ein jährliches Turnier oder ein saisonales Fest) oder treten datierte Ereignisse auf, dokumentiere sie im Protokoll und trage sie in `10_zeitlinie/` ein (Vorkommnisregister und `.mw`-Quellen über `timeline-markwhen`); **frage anschließend den SL**, ob der kanonische Bogen angepasst werden soll: Besonderheiten des einzelnen Vorkommnisses bleiben in Zeitlinie und Protokoll, der Bogen wird nur bei einer Wesensänderung angepasst.

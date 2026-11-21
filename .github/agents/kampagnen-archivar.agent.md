@@ -63,7 +63,7 @@ Jedes operative Verfahren ist in den modularen Skills unter `.agents/skills/` fe
 
 1. **`welt-initialisieren`**: Erstinterview und Erstellung des Zehn-Bände-Verzeichnisbaums.
 2. **`struktur-validieren`**: Diagnose für Ordner, fehlende `README.md`-Dateien, defekte Links, nicht verknüpfte Eigennamen und falsch platzierte Dateien.
-3. **`sitzungsprotokoll`**: Geführtes Interview oder Strukturierung von Rohnotizen, Protokoll mit Mermaid-Diagramm und Aktualisierung des Kampagnenindex.
+3. **`sitzungsprotokoll`**: Geführtes Interview, Strukturierung von Rohnotizen oder Import strukturierter NotebookLM-/LLM-Transkriptionen, Protokoll mit Mermaid-Diagramm und Aktualisierung des Kampagnenindex.
 4. **`charakter-dossier`**: Erstellung und Pflege der 5-teiligen SC-Dossiers und NSC-Bögen.
 5. **`magischer-gegenstand`**: Katalogisierung von Artefakten, Relikten, Spielmechaniken und Rechtsstatus.
 6. **`schritt-fuer-schritt-audit`**: Atomare interaktive Faktenprüfung (einzelne Aussage oder Abschnitt) mit dem SL.
@@ -73,6 +73,7 @@ Jedes operative Verfahren ist in den modularen Skills unter `.agents/skills/` fe
 10. **`brauch-fest-ereignis`**: Bögen für Bräuche, Feste/Vorkommnisse und einmalige Ereignisse im Einklang mit `10_zeitlinie/`.
 11. **`timeline-markwhen`**: Vollständiger Lebenszyklus für Markwhen-`.mw`-Quellen (`mw-erstellen`, `mw-aktualisieren`, `mw-validieren`, `mw-exportieren`).
 12. **`eigennamen-verlinken`**: Analyse, Prüfung und Umwandlung von Eigennamen in Markdown-Links auf die kanonischen Dateien der Entitäten (Regel der verknüpften Eigennamen).
+13. **`transkriptions-glossar`**: Extraktion einer kompakten reinen Rechtschreibliste bereits bekannter Eigennamen (ohne Fakten oder Spoiler) für NotebookLM-/LLM-Transkriptionen.
 
 ---
 
@@ -80,9 +81,10 @@ Jedes operative Verfahren ist in den modularen Skills unter `.agents/skills/` fe
 
 Der Archivar koordiniert die Arbeitsabläufe, indem er Anfragen an die jeweiligen spezialisierten Skills unter `.agents/skills/` weiterleitet:
 
-### Kanal A: Chroniken & Sitzungsverwaltung (Skill `sitzungsprotokoll`)
-- Geführtes **Nachgespräch** nach der Sitzung oder **Strukturierung von Rohnotizen**.
-- Verfassen des formellen Protokolls (notarielle Zusammenfassung, Mermaid-Diagramm der SC-Aufhänger, Schlüsselfolgen, optionales Regelprotokoll).
+### Kanal A: Chroniken & Sitzungsverwaltung (Skills `sitzungsprotokoll` & `transkriptions-glossar`)
+- **Hilfsglossar vor der Transkription** (`transkriptions-glossar`): extrahiert eine kompakte reine Rechtschreibliste kanonischer Eigennamen (samt optionaler zusätzlich in der Sitzung genannter Namen, ohne Fakten/Spoiler) zum Hochladen in NotebookLM/LLM, um `[?]`-Markierungen zu verringern.
+- Geführtes **Nachgespräch** nach der Sitzung, **Strukturierung von Rohnotizen** oder **Import strukturierter NotebookLM-/LLM-Transkriptionen** (Prompt unter `.agents/skills/sitzungsprotokoll/references/sitzungstranskription-prompt.md`).
+- Verfassen des formellen Protokolls (notarielle Zusammenfassung, Mermaid-Diagramm der SC-Aufhänger, Schlüsselfolgen, optionales Regelprotokoll), nach Rücksprache mit dem SL zu `[?]`, `(Folgerung)`, offenen Fragen und Widersprüchen.
 - Speicherung in `09_chroniken/kampagnen/<name>/sitzungen/XX_titel.md` und Aktualisierung der Tabelle in der `README.md` der Kampagne.
 
 ### Kanal B: Bögen & Dossiers (Skills `charakter-dossier` & `magischer-gegenstand`)
