@@ -1,6 +1,6 @@
 # Archivista di Campagna — Guida di Utilizzo
 
-Tutto ciò che serve per mettere a lavoro l'**Archivista di Campagna** al tuo tavolo: installazione, primi passi, riferimento completo delle **12 skill**, flussi di lavoro tipici, risoluzione dei problemi e FAQ.
+Tutto ciò che serve per mettere a lavoro l'**Archivista di Campagna** al tuo tavolo: installazione, primi passi, riferimento completo delle **13 skill**, flussi di lavoro tipici, risoluzione dei problemi e FAQ.
 
 * Copie localizzate di questa guida: [British English](https://github.com/<owner>/DMs_Companion/blob/main/locales/en-gb/USAGE.md) · [Français](https://github.com/<owner>/DMs_Companion/blob/main/locales/fr/GUIDE-UTILISATION.md) · [Deutsch](https://github.com/<owner>/DMs_Companion/blob/main/locales/de/NUTZUNGSANLEITUNG.md) — vedi anche il [USAGE.md](https://github.com/<owner>/DMs_Companion/blob/main/USAGE.md) di progetto sul branch `main`.
 
@@ -40,7 +40,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/it/.ag
 | `CLAUDE.md` | Punto di ingresso per Claude Code. |
 | `.github/agents/archivista-di-campagna.agent.md` | La persona *Archivista di Campagna* (voce nella selezione agenti di VS Code). |
 | `.agents/agents/archivista-di-campagna.md` | La stessa persona in formato Antigravity: agente primario e subagent, con domande strutturate native. |
-| `.agents/skills/<skill>/SKILL.md` | Le 12 skill modulari (più i template in `references/`). |
+| `.agents/skills/<skill>/SKILL.md` | Le 13 skill modulari (più i template in `references/`). |
 | `GUIDA-UTILIZZO.md` | Questa guida. |
 
 ### Note per Harness
@@ -48,7 +48,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/it/.ag
 | Harness | Cosa Succede |
 | :--- | :--- |
 | **VS Code / GitHub Copilot** | L'agente compare nella selezione agenti della chat; le skill sono disponibili come comandi `/slash`; le domande di approfondimento arrivano come prompt strutturati (`vscode_askQuestions`). |
-| **Antigravity (App, IDE, CLI)** | L'agente viene scoperto da `.agents/agents/` e le 12 skill da `.agents/skills/`, senza copie. Le domande di approfondimento usano il tool nativo `ask_question`, con lo stesso comportamento a pulsanti e caselle di VS Code. |
+| **Antigravity (App, IDE, CLI)** | L'agente viene scoperto da `.agents/agents/` e le 13 skill da `.agents/skills/`, senza copie. Le domande di approfondimento usano il tool nativo `ask_question`, con lo stesso comportamento a pulsanti e caselle di VS Code. |
 | **Claude Code** | `CLAUDE.md` viene caricato automaticamente. Se le skill non vengono rilevate, copia o crea un symlink di `.agents/skills/*` in `.claude/skills/`. |
 | **OpenAI Codex** | Apri la cartella della campagna. Per una skill scrivi «Usa `$verbale-sessione` per intervistarmi». Per delegare un compito scrivi «Usa il subagente `archivista-di-campagna` per controllare il verbale». |
 | **Cursor / OpenCode / Gemini CLI** | `AGENTS.md` e `.agents/skills/` vengono scoperti automaticamente; basta chiedere in linguaggio naturale. |
@@ -116,7 +116,7 @@ Invoca le skill con il relativo comando slash dove disponibile (VS Code, Claude 
 | :-: | :--- | :--- |
 | 1 | `init-mondo` | Impostazione guidata e scaffolding di un mondo nuovo. |
 | 2 | `valida-struttura` | Controllo di salute strutturale dell'archivio. |
-| 3 | `verbale-sessione` | Verbali post-sessione da appunti grezzi o intervista. |
+| 3 | `verbale-sessione` | Verbali post-sessione da appunti grezzi, intervista o trascrizione NotebookLM/LLM. |
 | 4 | `dossier-personaggio` | Dossier PG a 5 moduli e schede PNG. |
 | 5 | `oggetto-magico` | Registri a 4 sezioni per oggetti magici. |
 | 6 | `audit-passo-passo` | Fact-checking interattivo, affermazione per affermazione. |
@@ -126,6 +126,7 @@ Invoca le skill con il relativo comando slash dove disponibile (VS Code, Claude 
 | 10 | `usanza-festa-evento` | Usanze, festival/occorrenze, eventi una tantum. |
 | 11 | `timeline-markwhen` | Timeline grafiche Markwhen (`.mw`). |
 | 12 | `collega-nomi-propri` | Nomi propri sempre collegati alle schede canoniche. |
+| 13 | `glossario-trascrizione` | Glossario compatto (sola grafia) dei nomi propri per trascrizioni NotebookLM/LLM. |
 
 ### 4.1 `init-mondo` — Scaffolding del Mondo
 
@@ -142,7 +143,7 @@ Invoca le skill con il relativo comando slash dove disponibile (VS Code, Claude 
 ### 4.3 `verbale-sessione` — Cronache e Verbali di Sessione
 
 * **Quando**: subito dopo una sessione di gioco.
-* **Come**: incolla i tuoi appunti grezzi, oppure scrivi *“inizia intervista”* (`/verbale-sessione`) per essere guidato domanda per domanda.
+* **Come**: incolla i tuoi appunti grezzi, scrivi *“inizia intervista”* (`/verbale-sessione`) per essere guidato domanda per domanda, oppure genera prima un resoconto notarile da audio/trascrizione con il [prompt per NotebookLM / LLM](.agents/skills/verbale-sessione/references/prompt-trascrizione-sessione.md) e incollalo nel Canale C.
 * **Risultato**: un file verbale formale in `09_cronache/campagne/<nome>/sessioni/XX_titolo.md` — sinossi notarile, diagramma Mermaid dei ganci PG, fasi salienti, registro meccanico opzionale — più la tabella sinottica della campagna aggiornata.
 
 ### 4.4 `dossier-personaggio` — Dossier PG e Schede PNG
@@ -199,6 +200,12 @@ Invoca le skill con il relativo comando slash dove disponibile (VS Code, Claude 
 * **Come**: `/collega-nomi-propri` — *“Percorso del file o della cartella da scansionare (oppure 'intero archivio').”*
 * **Risultato**: una tabella dei nomi non collegati con conversione in link proposta o applicata, e segnalazione delle entità prive di scheda.
 
+### 4.13 `glossario-trascrizione` — Glossario Nomi per Trascrizione
+
+* **Quando**: prima di passare audio o trascrizioni grezze in NotebookLM/LLM con il [prompt di trascrizione](.agents/skills/verbale-sessione/references/prompt-trascrizione-sessione.md), per ridurre i `[?]` sui nomi propri già noti.
+* **Come**: `/glossario-trascrizione` — *“Specifica campagna/sessione (es. 'campagna: Cronache del Nord'), cartella/area o 'archivio intero', eventuali nomi extra pronunciati e se salvare anche un file .txt.”*
+* **Risultato**: un elenco testuale compatto di sola grafia pronto per copia-incolla (senza fatti né spoiler, opzionalmente salvato come `.txt` nella cartella della campagna) da caricare come fonte di supporto.
+
 ---
 
 ## 5. Flussi di Lavoro Tipici
@@ -209,7 +216,8 @@ Invoca le skill con il relativo comando slash dove disponibile (VS Code, Claude 
 
 ### B. Dopo una Sessione di Gioco (il Ciclo Principale)
 
-1. `verbale-sessione` — incolla gli appunti (o “inizia intervista”); il verbale viene salvato e l'indice campagna aggiornato.
+0. *(Opzionale, se registri la sessione)* Genera eventualmente l'elenco compatto di sola grafia dei nomi propri con `glossario-trascrizione`, poi passa audio o trascrizione in NotebookLM/LLM con il [prompt di trascrizione](.agents/skills/verbale-sessione/references/prompt-trascrizione-sessione.md) per ottenere il resoconto notarile di partenza.
+1. `verbale-sessione` — incolla gli appunti, il resoconto NotebookLM (Canale C) oppure scrivi “inizia intervista”; il verbale viene salvato e l'indice campagna aggiornato.
 2. L'Archivista elenca ogni file impattato e prepara gli aggiornamenti incrociati (dossier, schede PNG, indici): approvali uno a uno.
 3. Nuova usanza/festival/evento menzionato? → `usanza-festa-evento` propone la scheda; le ricorrenze di eventi già noti vengono registrate nella `10_timeline/`.
 4. `timeline-markwhen` (`aggiorna-mw`, o `crea-mw` per nuove campagne/epoche) mantiene i sorgenti `.mw` in sincronia.
@@ -241,7 +249,7 @@ PG/PNG → `dossier-personaggio` · Manufatto → `oggetto-magico` · Usanza/fes
 
 ## 7. FAQ
 
-* **Mi servono tutte e 12 le skill?** No. Installale tutte (sono autosufficienti) e usa solo ciò che ti serve.
+* **Mi servono tutte e 13 le skill?** No. Installale tutte (sono autosufficienti) e usa solo ciò che ti serve.
 * **Posso gestire più campagne in un mondo?** Sì — `09_cronache/campagne/<nome>/` mantiene separati i verbali di ogni campagna; la lore condivisa vive negli altri tomi.
 * **Posso usarlo per campagne a pagamento, stream o actual play?** Sì. La clausola non commerciale riguarda la vendita del toolkit stesso, mai i giochi che conduci con esso.
 * **Posso ripacchettizzare o vendere le skill?** No — CC BY-NC-SA 4.0 (vedi `LICENSE` sul branch `main`).

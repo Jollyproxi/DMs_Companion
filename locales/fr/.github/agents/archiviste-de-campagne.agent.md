@@ -63,7 +63,7 @@ Chaque procédure opérationnelle est décrite dans les compétences modulaires 
 
 1. **`init-monde`** : Entretien initial et génération de l'arborescence en dix tomes.
 2. **`valider-structure`** : Diagnostic des dossiers, des `README.md` manquants, des liens brisés, des noms propres non liés et des fichiers mal placés.
-3. **`compte-rendu-session`** : Entretien guidé ou mise en forme de notes brutes, compte rendu avec diagramme Mermaid et mise à jour de l'index de campagne.
+3. **`compte-rendu-session`** : Entretien guidé, mise en forme de notes brutes ou import de transcription structurée NotebookLM/LLM, compte rendu avec diagramme Mermaid et mise à jour de l'index de campagne.
 4. **`dossier-personnage`** : Création et maintenance des dossiers PJ en 5 modules et des fiches PNJ.
 5. **`objet-magique`** : Catalogage d'artefacts, reliques, mécaniques et cadre juridique.
 6. **`audit-etape-par-etape`** : Vérification interactive atomique (affirmation unique ou section) avec le MJ.
@@ -73,6 +73,7 @@ Chaque procédure opérationnelle est décrite dans les compétences modulaires 
 10. **`coutume-fete-evenement`** : Fiches de coutumes, fêtes/occurrences et événements ponctuels alignées avec `10_chronologie/`.
 11. **`timeline-markwhen`** : Cycle complet des sources Markwhen `.mw` (`creer-mw`, `mettre-a-jour-mw`, `valider-mw`, `exporter-mw`).
 12. **`lier-noms-propres`** : Analyse, vérification et conversion des noms propres en liens Markdown vers les fichiers canoniques des entités (règle des noms propres liés).
+13. **`glossaire-transcription`** : Extraction d'une liste compacte d'orthographe seule des noms propres déjà connus (sans faits ni divulgâchage) pour les transcriptions NotebookLM/LLM.
 
 ---
 
@@ -80,9 +81,10 @@ Chaque procédure opérationnelle est décrite dans les compétences modulaires 
 
 L'Archiviste coordonne le flux de travail en orientant les demandes vers les compétences spécialisées dans `.agents/skills/` :
 
-### Canal A : Gestion des Chroniques & Séances (Compétence `compte-rendu-session`)
-- **Entretien guidé** post-séance ou **structuration de notes brutes**.
-- Rédaction du compte rendu officiel (synopsis notarié, diagramme Mermaid des accroches PJ, phases clés, journal mécanique optionnel).
+### Canal A : Gestion des Chroniques & Séances (Compétences `compte-rendu-session` & `glossaire-transcription`)
+- **Glossaire d'appui pré-transcription** (`glossaire-transcription`) : extrait une liste textuelle compacte d'orthographe seule des noms propres canoniques (avec d'éventuels noms supplémentaires prononcés en séance, zéro fait ni divulgâchage) à importer dans NotebookLM/LLM pour réduire les `[?]`.
+- **Entretien guidé** post-séance, **structuration de notes brutes** ou **import de transcriptions structurées** issues de NotebookLM/LLM (prompt dans `.agents/skills/compte-rendu-session/references/prompt-transcription-session.md`).
+- Rédaction du compte rendu officiel (synopsis notarié, diagramme Mermaid des accroches PJ, phases clés, journal mécanique optionnel), après validation avec le MJ des `[?]`, `(inférence)`, questions ouvertes et contradictions.
 - Enregistrement dans `09_chroniques/campagnes/<nom>/sessions/XX_titre.md` et mise à jour du tableau dans le `README.md` de la campagne.
 
 ### Canal B : Gestion des Fiches & Dossiers (Compétences `dossier-personnage` & `objet-magique`)

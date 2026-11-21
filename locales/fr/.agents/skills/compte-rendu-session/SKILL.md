@@ -1,14 +1,14 @@
 ---
 name: compte-rendu-session
-description: "Use when: rédiger un compte rendu de séance D&D, mener l'entretien post-séance avec le MJ, établir le procès-verbal officiel avec diagramme Mermaid des accroches PJ et mettre à jour l'index de campagne."
-argument-hint: "Collez vos notes de séance ou écrivez 'démarrer entretien' pour lancer la procédure guidée"
+description: "Use when: rédiger un compte rendu de séance D&D, importer un rapport structuré issu d'une transcription NotebookLM ou LLM, mener l'entretien post-séance avec le MJ, établir le procès-verbal officiel avec diagramme Mermaid des accroches PJ et mettre à jour l'index de campagne."
+argument-hint: "Collez vos notes, un rapport de transcription NotebookLM/LLM ou écrivez 'démarrer entretien' pour lancer la procédure guidée"
 user-invocable: true
 disable-model-invocation: false
 ---
 
 # Compétence : Compte Rendu de Séance (`compte-rendu-session`)
 
-Cette compétence encadre la collecte, la structuration et la mise en forme des comptes rendus de séance pour toute campagne D&D, en garantissant la conformité au modèle standard documenté dans [modele-compte-rendu](./references/modele-compte-rendu.md).
+Cette compétence encadre la collecte, la structuration et la mise en forme des comptes rendus de séance pour toute campagne D&D, en garantissant la conformité au modèle standard documenté dans [modele-compte-rendu](./references/modele-compte-rendu.md). Pour extraire au préalable un rapport notarié à partir d'enregistrements audio ou de transcriptions longues avec **NotebookLM** ou un autre LLM, utilisez le prompt dédié dans [prompt-transcription-session](./references/prompt-transcription-session.md). Avant de lancer NotebookLM ou un autre LLM, vous pouvez également générer depuis le dépôt la liste compacte d'orthographe seule des noms propres déjà connus avec la compétence `glossaire-transcription` afin de réduire les `[?]`.
 
 > **📌 Règle des Noms Propres Liés** : tout nom propre d'entité de l'univers (PJ, PNJ, factions, maisons, cités, lieux, objets magiques, coutumes, fêtes, événements…) apparaissant dans le texte produit doit être un **lien Markdown** vers le fichier `.md` canonique de l'entité (ex. `[Nom](chemin/relatif/fichier.md)`), jamais un simple texte brut. Exceptions : titres, noms de fichiers, frontmatter, blocs de code, nœuds Mermaid et sources `.mw`. Entité sans fiche : ne l'inventez pas — utilisez `[A_DEFINIR_MJ: fiche manquante pour <Nom>]` et signalez la lacune. Vérification et conversion : compétence `lier-noms-propres`.
 
@@ -36,6 +36,17 @@ Déclenché par *« démarrer entretien »* ou juste après une partie. Posez le
 ### Canal B : Mise en Forme de Notes Brutes
 Si le MJ colle des notes désordonnées, extrayez la chronologie, isolez les faits avérés et rédigez directement le brouillon. S'il manque des informations critiques, demandez uniquement de combler ces lacunes (via l'outil de questions structurées si disponible, ou dans le chat) avant d'enregistrer le fichier.
 
+### Canal C : Import d'une Transcription Structurée (NotebookLM / LLM)
+Si le MJ fournit un rapport généré avec [prompt-transcription-session](./references/prompt-transcription-session.md) (à partir d'un enregistrement audio ou d'une transcription longue) :
+1. **Correspondance avec le Compte Rendu** :
+   - `Fiche` + `Personnes et entités présentes` + `Chronologie` → *En-tête*, *Synopsis des Événements* et *Phases Saillantes* (en convertissant chaque nom propre existant en lien Markdown selon la Règle des Noms Propres Liés).
+   - `Changements d'état et indices` (+ `Chiffres` et `Engagements` pertinents) → *Les Accroches des Protagonistes* (diagramme Mermaid `flowchart TD` et sous-sections par PJ) et *Journal Mécanique* optionnel sur demande.
+   - `Faits par élément` (taxonomie des Dix Tomes), `Engagements`, `Chiffres`, `Temps` et `Bloc de données` YAML → liste des fichiers impactés et propositions de mises à jour croisées (nouveaux PNJ, objets magiques, coutumes/fêtes/événements, `10_chronologie/`).
+2. **Contrôle Notarial Avant Canonisation** :
+   - Confrontez noms, variantes et faits aux fichiers canoniques déjà présents dans le dépôt.
+   - Avant d'enregistrer ou de créer des fiches dérivées, **demandez confirmation au MJ** (via l'outil de questions structurées si disponible, ou dans le chat) pour trancher les éventuels `Nom[?]`, `(inférence)`, `Variantes / alias entendus`, `Questions ouvertes`, `Contradictions` ou passages `[incompréhensible ...]` non résolus par le canon : ne devinez et ne normalisez jamais sans accord.
+3. **Rapport Incomplet** : si le rapport se termine par `[CONTINUER DEPUIS : ...]`, signalez au MJ la partie manquante avant l'archivage définitif.
+
 ---
 
 ## 3. Rédaction du Compte Rendu
@@ -58,7 +69,7 @@ Le compte rendu est structuré selon les sections canoniques :
 2. **Mise à Jour de l'Index de Campagne** :
    Ajoutez la nouvelle ligne au tableau synoptique dans `09_chroniques/<campagnes>/<nom_campagne>/README.md` :
    `| **XX** | [Titre] | [Date] | [Lieu] | [Axe Principal] | [Compte rendu](<sessions>/XX_titre.md) |`
-3. **Propositions de Mises à Jour Croisées (A + B)** :
+3. **Propositions de Mises à Jour Croisées (A + B + C)** :
    - Listez en fin de réponse tous les fichiers du dépôt impactés (nouveaux PNJ, objets magiques découverts, accroches à actualiser dans les dossiers PJ via `dossier-personnage`).
    - **Coutumes, fêtes et événements** : si la séance introduit ou mentionne une nouvelle coutume, fête/occurrence récurrente ou événement ponctuel, **proposez systématiquement** la création de sa fiche dans `03_societe_et_politique/coutumes_fetes_et_evenements/` via `coutume-fete-evenement`.
    - **Occurrences d'événements déjà recensés & Frise Markwhen** : si la séance met en scène une récurrence connue (ex. un tournoi annuel ou une fête saisonnière) ou introduit des événements datés, documentez-les dans le compte rendu et consignez-les dans `10_chronologie/` (registre des occurrences et sources `.mw` via `timeline-markwhen`), puis **demandez au MJ** s'il faut modifier la fiche canonique : les particularités propres à cette occurrence restent dans la chronologie et le compte rendu, et la fiche n'est modifiée que si elles en changent la nature.

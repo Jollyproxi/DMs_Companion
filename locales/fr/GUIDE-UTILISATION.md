@@ -1,6 +1,6 @@
 # Archiviste de Campagne — Guide d'utilisation
 
-Tout ce qu'il faut pour mettre l'**Archiviste de Campagne** au travail à votre table : installation, premiers pas, référence complète des **12 compétences**, flux de travail typiques, dépannage et FAQ.
+Tout ce qu'il faut pour mettre l'**Archiviste de Campagne** au travail à votre table : installation, premiers pas, référence complète des **13 compétences**, flux de travail typiques, dépannage et FAQ.
 
 * Copies localisées de ce guide : [Italiano](https://github.com/<owner>/DMs_Companion/blob/main/locales/it/GUIDA-UTILIZZO.md) · [British English](https://github.com/<owner>/DMs_Companion/blob/main/locales/en-gb/USAGE.md) · [Deutsch](https://github.com/<owner>/DMs_Companion/blob/main/locales/de/NUTZUNGSANLEITUNG.md) — voir aussi le [USAGE.md](https://github.com/<owner>/DMs_Companion/blob/main/USAGE.md) du projet sur la branche `main`.
 
@@ -39,7 +39,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/fr/.ag
 | `CLAUDE.md` | Point d'entrée pour Claude Code. |
 | `.github/agents/archiviste-de-campagne.agent.md` | La persona *Archiviste de Campagne* (entrée dans le sélecteur d'agents de VS Code). |
 | `.agents/agents/archiviste-de-campagne.md` | La même persona au format Antigravity : agent principal et sous-agent, avec questions structurées natives. |
-| `.agents/skills/<competence>/SKILL.md` | Les 12 compétences modulaires (plus les modèles dans `references/`). |
+| `.agents/skills/<competence>/SKILL.md` | Les 13 compétences modulaires (plus les modèles dans `references/`). |
 | `GUIDE-UTILISATION.md` | Ce guide. |
 
 ### Notes par environnement
@@ -47,7 +47,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/fr/.ag
 | Environnement | Ce qui se passe |
 | :--- | :--- |
 | **VS Code / GitHub Copilot** | L'agent apparaît dans le sélecteur d'agents du chat ; les compétences sont disponibles en commandes `/slash` ; les questions de suivi arrivent sous forme de prompts structurés (`vscode_askQuestions`). |
-| **Antigravity (App, IDE, CLI)** | L'agent est découvert dans `.agents/agents/` et les 12 compétences dans `.agents/skills/`, sans aucune copie. Les questions de suivi utilisent l'outil natif `ask_question`, avec le même comportement à boutons et cases à cocher que VS Code. |
+| **Antigravity (App, IDE, CLI)** | L'agent est découvert dans `.agents/agents/` et les 13 compétences dans `.agents/skills/`, sans aucune copie. Les questions de suivi utilisent l'outil natif `ask_question`, avec le même comportement à boutons et cases à cocher que VS Code. |
 | **Claude Code** | `CLAUDE.md` est chargé automatiquement. Si les compétences ne sont pas détectées, copiez ou créez un lien symbolique de `.agents/skills/*` vers `.claude/skills/`. |
 | **OpenAI Codex CLI / Cursor / OpenCode / Gemini CLI** | `AGENTS.md` et `.agents/skills/` sont découverts automatiquement ; il suffit de poser vos questions en langage naturel. |
 | **Extensions optionnelles** | Graphify MCP (graphe des liens croisés) et la CLI/extension Markwhen (`@markwhen/mw`) pour le rendu des chronologies. Tout fonctionne sans elles. |
@@ -114,7 +114,7 @@ Invoquez les compétences avec leur commande slash quand elle est disponible (VS
 | :-: | :--- | :--- |
 | 1 | `init-monde` | Mise en place guidée et arborescence d'un univers nouveau. |
 | 2 | `valider-structure` | Contrôle de santé structurelle de l'archive. |
-| 3 | `compte-rendu-session` | Comptes rendus post-séance à partir de notes brutes ou d'entretien. |
+| 3 | `compte-rendu-session` | Comptes rendus post-séance à partir de notes brutes, d'entretien ou de transcription NotebookLM/LLM. |
 | 4 | `dossier-personnage` | Dossiers PJ à 5 modules et fiches PNJ. |
 | 5 | `objet-magique` | Registres à 4 sections pour objets magiques. |
 | 6 | `audit-etape-par-etape` | Fact-checking interactif, affirmation par affirmation. |
@@ -124,6 +124,7 @@ Invoquez les compétences avec leur commande slash quand elle est disponible (VS
 | 10 | `coutume-fete-evenement` | Coutumes, fêtes/occurrences, événements ponctuels. |
 | 11 | `timeline-markwhen` | Chronologies graphiques Markwhen (`.mw`). |
 | 12 | `lier-noms-propres` | Noms propres toujours liés aux fiches canoniques. |
+| 13 | `glossaire-transcription` | Glossaire compact (orthographe seule) des noms propres pour transcriptions NotebookLM/LLM. |
 
 ### 4.1 `init-monde` — Arborescence de l'univers
 
@@ -140,7 +141,7 @@ Invoquez les compétences avec leur commande slash quand elle est disponible (VS
 ### 4.3 `compte-rendu-session` — Chroniques et comptes rendus
 
 * **Quand** : juste après une séance de jeu.
-* **Comment** : collez vos notes brutes, ou écrivez *« démarrer entretien »* (`/compte-rendu-session`) pour être guidé question par question.
+* **Comment** : collez vos notes brutes, écrivez *« démarrer entretien »* (`/compte-rendu-session`) pour être guidé question par question, ou extrayez d'abord un rapport notarié depuis l'audio/transcription avec le [prompt pour NotebookLM / LLM](.agents/skills/compte-rendu-session/references/prompt-transcription-session.md) puis importez-le via le Canal C.
 * **Résultat** : un fichier de compte rendu formel dans `09_chroniques/campagnes/<nom>/sessions/NN_titre.md` — synopsis notarial, diagramme Mermaid des accroches PJ, phases marquantes, registre mécanique optionnel — plus le tableau synoptique de la campagne mis à jour.
 
 ### 4.4 `dossier-personnage` — Dossiers PJ et fiches PNJ
@@ -197,6 +198,12 @@ Invoquez les compétences avec leur commande slash quand elle est disponible (VS
 * **Comment** : `/lier-noms-propres` — *« Chemin du fichier ou du dossier à analyser (ou 'dépôt entier'). »*
 * **Résultat** : un tableau des noms non liés avec conversion en lien proposée ou appliquée, et signalement des entités dépourvues de fiche.
 
+### 4.13 `glossaire-transcription` — Glossaire de Transcription
+
+* **Quand** : avant de passer l'audio ou la transcription brute dans NotebookLM/LLM avec le [prompt de transcription](.agents/skills/compte-rendu-session/references/prompt-transcription-session.md), pour réduire les `[?]` sur les noms propres déjà connus.
+* **Comment** : `/glossaire-transcription` — *« Précisez campagne/séance (ex. 'campagne : Chroniques du Nord'), dossier/zone ou 'dépôt entier', d'éventuels noms prononcés en plus, et s'il faut aussi enregistrer un fichier .txt. »*
+* **Résultat** : une liste textuelle compacte d'orthographe seule prête à copier-coller (sans faits ni divulgâchage, enregistrable en `.txt` dans le dossier de campagne) à fournir comme source d'appui.
+
 ---
 
 ## 5. Flux de travail typiques
@@ -207,7 +214,8 @@ Invoquez les compétences avec leur commande slash quand elle est disponible (VS
 
 ### B. Après une séance de jeu (le cycle principal)
 
-1. `compte-rendu-session` — collez les notes (ou « démarrer entretien ») ; le compte rendu est enregistré et l'index de campagne mis à jour.
+0. *(Optionnel, si vous enregistrez vos parties)* Générez si utile la liste d'orthographe seule des noms propres avec `glossaire-transcription`, puis passez l'audio ou la transcription dans NotebookLM/LLM avec le [prompt de transcription](.agents/skills/compte-rendu-session/references/prompt-transcription-session.md) pour obtenir un rapport notarié de départ.
+1. `compte-rendu-session` — collez les notes, le rapport NotebookLM (Canal C) ou écrivez « démarrer entretien » ; le compte rendu est enregistré et l'index de campagne mis à jour.
 2. L'Archiviste liste chaque fichier impacté et prépare les mises à jour croisées (dossiers, fiches PNJ, index) : vous les approuvez une par une.
 3. Nouvelle coutume/fête/événement mentionné ? → `coutume-fete-evenement` propose la fiche ; les occurrences d'événements déjà connus sont inscrites dans `10_chronologie/`.
 4. `timeline-markwhen` (`mettre-a-jour-mw`, ou `creer-mw` pour les nouvelles campagnes/époques) maintient les sources `.mw` en synchronie.
@@ -239,7 +247,7 @@ PJ/PNJ → `dossier-personnage` · Artefact → `objet-magique` · Coutume/fête
 
 ## 7. FAQ
 
-* **Faut-il les 12 compétences ?** Non. Installez-les toutes (elles sont autonomes) et n'utilisez que ce dont vous avez besoin.
+* **Faut-il les 13 compétences ?** Non. Installez-les toutes (elles sont autonomes) et n'utilisez que ce dont vous avez besoin.
 * **Puis-je gérer plusieurs campagnes dans un univers ?** Oui — `09_chroniques/campagnes/<nom>/` garde les comptes rendus de chaque campagne séparés ; la lore partagée vit dans les autres tomes.
 * **Puis-je l'utiliser pour des campagnes payantes, des streams ou des actual plays ?** Oui. La clause non commerciale porte sur la vente de la boîte à outils elle-même, jamais sur les jeux que vous menez avec.
 * **Puis-je reconditionner ou vendre les compétences ?** Non — CC BY-NC-SA 4.0 (voir `LICENSE` sur la branche `main`).

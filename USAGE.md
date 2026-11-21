@@ -1,6 +1,6 @@
 # DMs_Companion — Usage Guide
 
-Everything you need to install **DMs_Companion** and put the **Campaign Archivist** to work at your table: installation, first steps, a complete reference of all **12 skills**, typical workflows, troubleshooting, and FAQ.
+Everything you need to install **DMs_Companion** and put the **Campaign Archivist** to work at your table: installation, first steps, a complete reference of all **13 skills**, typical workflows, troubleshooting, and FAQ.
 
 * Project overview and licensing: [README.md](README.md)
 * How to contribute: [CONTRIBUTING.md](CONTRIBUTING.md)
@@ -65,7 +65,7 @@ Switch the branch selector on GitHub from `main` to `it`, `en-gb`, `fr`, or `de`
 | `CLAUDE.md` | Claude Code entry point. |
 | `.github/agents/*.agent.md` | The Archivist persona (agent picker entry in VS Code). |
 | `.agents/agents/*.md` | The same persona in Antigravity format (primary agent + subagent, native structured questions). |
-| `.agents/skills/<skill>/SKILL.md` | The 12 modular skills (plus `references/` templates). |
+| `.agents/skills/<skill>/SKILL.md` | The 13 modular skills (plus `references/` templates). |
 | `USAGE.md` | This guide. |
 
 ### Harness Notes
@@ -73,7 +73,7 @@ Switch the branch selector on GitHub from `main` to `it`, `en-gb`, `fr`, or `de`
 | Harness | What Happens |
 | :--- | :--- |
 | **VS Code / GitHub Copilot** | The agent appears in the chat agent picker; skills are available as `/slash` commands; follow-up questions come as structured prompts (`vscode_askQuestions`). |
-| **Antigravity (App, IDE, CLI)** | The agent is discovered from `.agents/agents/` and the 12 skills from `.agents/skills/`. Follow-up questions use the native `ask_question` tool, giving the same button and checkbox behaviour as VS Code. |
+| **Antigravity (App, IDE, CLI)** | The agent is discovered from `.agents/agents/` and the 13 skills from `.agents/skills/`. Follow-up questions use the native `ask_question` tool, giving the same button and checkbox behaviour as VS Code. |
 | **Claude Code** | `CLAUDE.md` is auto-loaded. If skills are not detected, copy or symlink `.agents/skills/*` into `.claude/skills/`. |
 | **OpenAI Codex CLI / Cursor / OpenCode / Gemini CLI** | `AGENTS.md` and `.agents/skills/` are auto-discovered; just ask in natural language. |
 | **Optional extras** | Graphify MCP (cross-link graphing) and the Markwhen CLI/extension (`@markwhen/mw`) for timeline rendering. Everything works without them. |
@@ -140,7 +140,7 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 | :-: | :--- | :--- |
 | 1 | `init-world` | Guided setup and scaffolding of a new world. |
 | 2 | `validate-structure` | Structural health check of the archive. |
-| 3 | `session-minutes` | Post-session minutes from rough notes or interview. |
+| 3 | `session-minutes` | Post-session minutes from rough notes, interview, or NotebookLM/LLM transcript. |
 | 4 | `character-dossier` | 5-module PC dossiers and NPC sheets. |
 | 5 | `magic-item` | 4-section magic item records. |
 | 6 | `step-by-step-audit` | Interactive fact-check, claim by claim. |
@@ -150,6 +150,7 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 | 10 | `custom-festival-event` | Customs, festivals/occurrences, one-off events. |
 | 11 | `timeline-markwhen` | Graphical Markwhen timelines (`.mw`). |
 | 12 | `link-proper-names` | Proper names always linked to canonical sheets. |
+| 13 | `transcription-glossary` | Spelling-only proper-name glossary for NotebookLM/LLM session transcription. |
 
 ### 5.1 `init-world` — World Scaffolding
 
@@ -166,7 +167,7 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 ### 5.3 `session-minutes` — Chronicles & Session Minutes
 
 * **When**: right after a game session.
-* **How**: paste your rough notes, or write *“start interview”* (`/session-minutes`) to be guided question by question.
+* **How**: paste your rough notes, write *“start interview”* (`/session-minutes`) to be guided question by question, or extract a notarial report from session audio/transcript first using the [NotebookLM / LLM transcription prompt](locales/en-gb/.agents/skills/session-minutes/references/session-transcription-prompt.md) (also localised in each language package under its session-minutes skill `references/` folder) and import it via Channel C.
 * **Result**: a formal minute file in `09_chronicles/campaigns/<name>/sessions/NN_title.md` — notarial synopsis, Mermaid diagram of the PC hooks, salient phases, optional mechanics register — plus the updated campaign summary table.
 
 ### 5.4 `character-dossier` — PC Dossiers & NPC Sheets
@@ -223,6 +224,12 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 * **How**: `/link-proper-names` — *“Path of the file or folder to scan (or 'entire archive').”*
 * **Result**: a table of unlinked names with proposed/applied link conversion, plus reporting of entities lacking a sheet.
 
+### 5.13 `transcription-glossary` — Transcription Proper-Name Glossary
+
+* **When**: before running session audio or raw transcripts through NotebookLM/LLM with the [transcription prompt](locales/en-gb/.agents/skills/session-minutes/references/session-transcription-prompt.md), to cut down `[?]` spelling uncertainty flags.
+* **How**: `/transcription-glossary` — *“Specify campaign/session (e.g. 'campaign: Chronicles of the North'), folder/area or 'full archive', any extra spoken names, and whether to also save a .txt file.”*
+* **Result**: a compact, copy-paste-ready plain-text spelling list (zero lore facts or spoilers, optionally saved as `.txt` inside the campaign folder) to upload as a helper source.
+
 ---
 
 ## 6. Typical Workflows
@@ -233,7 +240,8 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 
 ### B. After a Game Session (the Core Loop)
 
-1. `session-minutes` — paste the notes (or “start interview”); the minute is saved and the campaign index updated.
+0. *(Optional, if you record sessions)* Generate the spelling-only proper-name list with `transcription-glossary` if useful, then run the audio or transcript through NotebookLM/LLM using the [transcription prompt](locales/en-gb/.agents/skills/session-minutes/references/session-transcription-prompt.md) (or your locale's equivalent) to produce a notarial source report.
+1. `session-minutes` — paste the notes, the NotebookLM report (Channel C), or write “start interview”; the minute is saved and the campaign index updated.
 2. The Archivist lists every impacted file and drafts the cross-updates (dossiers, NPC sheets, indexes): approve them one by one.
 3. New custom/festival/event mentioned? → `custom-festival-event` proposes the sheet; recurrences of known events are registered in `10_timeline/`.
 4. `timeline-markwhen` (`update-mw`, or `create-mw` for new campaigns/epochs) keeps the `.mw` sources in sync.
@@ -265,7 +273,7 @@ PC/NPC → `character-dossier` · Artefact → `magic-item` · Custom/festival/e
 
 ## 8. FAQ
 
-* **Do I need all 12 skills?** No. Install them all (they are self-contained) and use only what you need.
+* **Do I need all 13 skills?** No. Install them all (they are self-contained) and use only what you need.
 * **Can I run several campaigns in one world?** Yes — `09_chronicles/campaigns/<name>/` keeps each campaign's minutes separate; shared lore lives in the other tomes.
 * **Can I use it for paid campaigns, streams, or actual plays?** Yes. The non-commercial clause applies to selling the toolkit itself, never to the games you run with it.
 * **Can I repackage or sell the skills?** No — CC BY-NC-SA 4.0 (see [LICENSE](LICENSE)).

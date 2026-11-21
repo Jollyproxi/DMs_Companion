@@ -1,6 +1,6 @@
 # Kampagnen-Archivar — Nutzungsanleitung
 
-Alles, was Sie brauchen, um den **Kampagnen-Archivar** an Ihrem Spieltisch arbeiten zu lassen: Installation, erste Schritte, vollständige Referenz aller **12 Fähigkeiten**, typische Arbeitsabläufe, Fehlerbehebung und FAQ.
+Alles, was Sie brauchen, um den **Kampagnen-Archivar** an Ihrem Spieltisch arbeiten zu lassen: Installation, erste Schritte, vollständige Referenz aller **13 Fähigkeiten**, typische Arbeitsabläufe, Fehlerbehebung und FAQ.
 
 * Lokalisierte Fassungen dieser Anleitung: [Italiano](https://github.com/<owner>/DMs_Companion/blob/main/locales/it/GUIDA-UTILIZZO.md) · [British English](https://github.com/<owner>/DMs_Companion/blob/main/locales/en-gb/USAGE.md) · [Français](https://github.com/<owner>/DMs_Companion/blob/main/locales/fr/GUIDE-UTILISATION.md) — siehe auch das projekteigene [USAGE.md](https://github.com/<owner>/DMs_Companion/blob/main/USAGE.md) auf dem `main`-Branch.
 
@@ -39,7 +39,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/de/.ag
 | `CLAUDE.md` | Einstiegspunkt für Claude Code. |
 | `.github/agents/kampagnen-archivar.agent.md` | Die Persona *Kampagnen-Archivar* (Eintrag im Agenten-Auswahlmenü von VS Code). |
 | `.agents/agents/kampagnen-archivar.md` | Dieselbe Persona im Antigravity-Format: Hauptagent und Subagent, mit nativen strukturierten Rückfragen. |
-| `.agents/skills/<faehigkeit>/SKILL.md` | Die 12 modularen Fähigkeiten (plus Vorlagen unter `references/`). |
+| `.agents/skills/<faehigkeit>/SKILL.md` | Die 13 modularen Fähigkeiten (plus Vorlagen unter `references/`). |
 | `NUTZUNGSANLEITUNG.md` | Diese Anleitung. |
 
 ### Hinweise je Harness
@@ -47,7 +47,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/de/.ag
 | Harness | Was passiert |
 | :--- | :--- |
 | **VS Code / GitHub Copilot** | Der Agent erscheint im Agenten-Auswahlmenü des Chats; die Fähigkeiten stehen als `/slash`-Befehle bereit; Rückfragen kommen als strukturierte Dialoge (`vscode_askQuestions`). |
-| **Antigravity (App, IDE, CLI)** | Der Agent wird aus `.agents/agents/` erkannt, die 12 Fähigkeiten aus `.agents/skills/` – ohne Kopien. Rückfragen nutzen das native Werkzeug `ask_question` und verhalten sich wie die Schaltflächen und Kontrollkästchen in VS Code. |
+| **Antigravity (App, IDE, CLI)** | Der Agent wird aus `.agents/agents/` erkannt, die 13 Fähigkeiten aus `.agents/skills/` – ohne Kopien. Rückfragen nutzen das native Werkzeug `ask_question` und verhalten sich wie die Schaltflächen und Kontrollkästchen in VS Code. |
 | **Claude Code** | `CLAUDE.md` wird automatisch geladen. Werden die Fähigkeiten nicht erkannt, kopieren Sie `.agents/skills/*` nach `.claude/skills/` oder erstellen Sie einen Symlink. |
 | **OpenAI Codex CLI / Cursor / OpenCode / Gemini CLI** | `AGENTS.md` und `.agents/skills/` werden automatisch erkannt; fragen Sie einfach in natürlicher Sprache. |
 | **Optionale Erweiterungen** | Graphify MCP (Querverlinkungs-Graph) und die Markwhen-CLI/-Erweiterung (`@markwhen/mw`) für den Timeline-Render. Alles funktioniert auch ohne sie. |
@@ -114,7 +114,7 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 | :-: | :--- | :--- |
 | 1 | `welt-initialisieren` | Geführte Einrichtung und Gerüst einer neuen Welt. |
 | 2 | `struktur-validieren` | Strukturelle Gesundheitsprüfung des Archivs. |
-| 3 | `sitzungsprotokoll` | Sitzungsprotokolle aus Rohnotizen oder Interview. |
+| 3 | `sitzungsprotokoll` | Sitzungsprotokolle aus Rohnotizen, Interview oder NotebookLM-/LLM-Transkription. |
 | 4 | `charakter-dossier` | SC-Dossiers mit 5 Modulen und NSC-Bögen. |
 | 5 | `magischer-gegenstand` | 4-Abschnitt-Register für magische Gegenstände. |
 | 6 | `schritt-fuer-schritt-audit` | Interaktive Faktenprüfung, Aussage für Aussage. |
@@ -124,6 +124,7 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 | 10 | `brauch-fest-ereignis` | Bräuche, Feste/Vorkommnisse, Einmal-Ereignisse. |
 | 11 | `timeline-markwhen` | Grafische Markwhen-Zeitlinien (`.mw`). |
 | 12 | `eigennamen-verlinken` | Eigennamen stets mit kanonischen Bögen verknüpft. |
+| 13 | `transkriptions-glossar` | Kompaktes Eigennamen-Glossar (nur Schreibweise) für NotebookLM-/LLM-Transkriptionen. |
 
 ### 4.1 `welt-initialisieren` — Weltgerüst
 
@@ -140,7 +141,7 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 ### 4.3 `sitzungsprotokoll` — Chroniken & Sitzungsprotokolle
 
 * **Wann**: direkt nach einer Spielsitzung.
-* **Wie**: Fügen Sie Ihre Rohnotizen ein oder schreiben Sie *„Interview starten“* (`/sitzungsprotokoll`), um Frage für Frage geführt zu werden.
+* **Wie**: Fügen Sie Ihre Rohnotizen ein, schreiben Sie *„Interview starten“* (`/sitzungsprotokoll`), um Frage für Frage geführt zu werden, oder erstellen Sie vorab mit dem [NotebookLM-/LLM-Transkriptionsprompt](.agents/skills/sitzungsprotokoll/references/sitzungstranskription-prompt.md) einen notariellen Bericht aus Audio/Transkript und übergeben Sie ihn an Kanal C.
 * **Ergebnis**: eine formelle Protokolldatei unter `09_chroniken/kampagnen/<name>/sitzungen/NN_titel.md` — notarielle Synopsis, Mermaid-Diagramm der SC-Aufhänger, prägende Phasen, optionales Regelwerk-Register — plus die aktualisierte Kampagnen-Übersichtstabelle.
 
 ### 4.4 `charakter-dossier` — SC-Dossiers & NSC-Bögen
@@ -197,6 +198,12 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 * **Wie**: `/eigennamen-verlinken` — *„Pfad der zu scannenden Datei oder des Ordners (oder 'ganzes Archiv').“*
 * **Ergebnis**: eine Tabelle nicht verknüpfter Namen mit vorgeschlagener oder angewandter Link-Umwandlung sowie Meldung der Entitäten ohne Bogen.
 
+### 4.13 `transkriptions-glossar` — Transkriptions-Glossar
+
+* **Wann**: bevor Sie Audio oder Rohtranskripte mit dem [Transkriptionsprompt](.agents/skills/sitzungsprotokoll/references/sitzungstranskription-prompt.md) in NotebookLM/LLM verarbeiten, um `[?]`-Markierungen bei bekannten Eigennamen zu verringern.
+* **Wie**: `/transkriptions-glossar` — *„Kampagne/Sitzung angeben (z. B. 'kampagne: Chroniken des Nordens'), Ordner/Gebiet oder 'ganzes Archiv', etwaige zusätzlich gesprochene Namen und ob eine .txt-Datei gespeichert werden soll.“*
+* **Ergebnis**: eine kompakte, direkt kopierbare reine Textliste der Schreibweisen (ohne Fakten oder Spoiler, optional als `.txt` im Kampagnenordner gespeichert) als Hilfsquelle.
+
 ---
 
 ## 5. Typische Arbeitsabläufe
@@ -207,7 +214,8 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 
 ### B. Nach einer Spielsitzung (die Hauptschleife)
 
-1. `sitzungsprotokoll` — Notizen einfügen (oder „Interview starten“); das Protokoll wird gespeichert und der Kampagnenindex aktualisiert.
+0. *(Optional, falls Sie Sitzungen aufzeichnen)* Erzeugen Sie bei Bedarf vorab mit `transkriptions-glossar` die reine Rechtschreibliste der Eigennamen und verarbeiten Sie Audio oder Transkript anschließend in NotebookLM/LLM mit dem [Transkriptionsprompt](.agents/skills/sitzungsprotokoll/references/sitzungstranskription-prompt.md), um einen notariellen Ausgangsbericht zu erhalten.
+1. `sitzungsprotokoll` — Notizen, den NotebookLM-Bericht (Kanal C) einfügen oder „Interview starten“ schreiben; das Protokoll wird gespeichert und der Kampagnenindex aktualisiert.
 2. Der Archivar listet jede betroffene Datei und bereitet die Queraktualisierungen vor (Dossiers, NSC-Bögen, Indize): Sie genehmigen sie eine nach der anderen.
 3. Neuer Brauch/Fest/Ereignis erwähnt? → `brauch-fest-ereignis` schlägt den Bogen vor; Wiederholungen bekannter Ereignisse werden in `10_zeitlinie/` eingetragen.
 4. `timeline-markwhen` (`mw-aktualisieren`, oder `mw-erstellen` für neue Kampagnen/Epochen) hält die `.mw`-Quellen synchron.
@@ -239,7 +247,7 @@ SC/NSC → `charakter-dossier` · Artefakt → `magischer-gegenstand` · Brauch/
 
 ## 7. FAQ
 
-* **Brauche ich alle 12 Fähigkeiten?** Nein. Installieren Sie sie alle (sie sind eigenständig) und nutzen Sie nur, was Sie brauchen.
+* **Brauche ich alle 13 Fähigkeiten?** Nein. Installieren Sie sie alle (sie sind eigenständig) und nutzen Sie nur, was Sie brauchen.
 * **Kann ich mehrere Kampagnen in einer Welt führen?** Ja — `09_chroniken/kampagnen/<name>/` hält die Protokolle jeder Kampagne getrennt; gemeinsame Lore lebt in den übrigen Bänden.
 * **Kann ich es für bezahlte Kampagnen, Streams oder Actual Plays nutzen?** Ja. Die Nicht-Kommerz-Klausel betrifft den Verkauf der Werkzeugsammlung selbst, niemals die Spiele, die Sie damit leiten.
 * **Kann ich die Fähigkeiten umverpacken oder verkaufen?** Nein — CC BY-NC-SA 4.0 (siehe `LICENSE` auf dem `main`-Branch).
