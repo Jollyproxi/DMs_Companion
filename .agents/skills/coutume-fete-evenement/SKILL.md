@@ -201,3 +201,7 @@ Les entrées dans `chronologie_historique` et `registre_occurrences` emploient l
 - **Index** : mettez à jour le `README.md` du sous-dossier, du dossier parent `coutumes_fetes_et_evenements/` et de `03_societe_et_politique/` si pertinent.
 - **Codes du canon** (Bible/JSON) : coutumes `3.5.x`, fêtes/occurrences `3.6.x`, événements `3.7.x` ; tome `10_chronologie` codé comme tome `10` (`10.1.x` chronologie historique, `10.2.x` registre des occurrences, `10.3.x` calendrier). Les sources `.mw` et exportations sont exclues de la Bible et indexées uniquement dans le JSON.
 - **Zéro hallucination** : comme pour tout autre module, aucun détail non approuvé par le MJ.
+
+## Ragots et rumeurs
+
+En fin de fiche, listez les liens relatifs vers les variantes pertinentes et ajoutez les liens de retour.

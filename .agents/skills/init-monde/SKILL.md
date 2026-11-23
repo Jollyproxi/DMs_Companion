@@ -67,3 +67,7 @@ Une fois les réponses du MJ reçues, générez la structure modulaire à l'aide
 
 4. **Validation Finale** :
    Une fois la création terminée, appelez la compétence `valider-structure` afin de certifier que l'arborescence est complète et dépourvue de liens brisés.
+
+## Ragots et rumeurs
+
+Créez le recueil et son README, reliez-le depuis l’index du tome 03 et ajoutez les sous-dossiers selon les besoins. `ragots_et_rumeurs/`

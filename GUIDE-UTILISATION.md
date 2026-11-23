@@ -115,7 +115,7 @@ Invoquez les compétences avec leur commande slash quand elle est disponible (VS
 | 1 | `init-monde` | Mise en place guidée et arborescence d'un univers nouveau. |
 | 2 | `valider-structure` | Contrôle de santé structurelle de l'archive. |
 | 3 | `compte-rendu-session` | Comptes rendus post-séance à partir de notes brutes, d'entretien ou de transcription NotebookLM/LLM. |
-| 4 | `dossier-personnage` | Dossiers PJ à 5 modules et fiches PNJ. |
+| 4 | `dossier-personnage` | Dossiers PJ à 6 modules et fiches PNJ. |
 | 5 | `objet-magique` | Registres à 4 sections pour objets magiques. |
 | 6 | `audit-etape-par-etape` | Fact-checking interactif, affirmation par affirmation. |
 | 7 | `audit-fichier-complet` | Audit d'un fichier ou dossier entier. |
@@ -149,7 +149,7 @@ Invoquez les compétences avec leur commande slash quand elle est disponible (VS
 
 * **Quand** : un nouveau personnage joueur rejoint la campagne, un PNJ est approfondi, ou un module de dossier doit être mis à jour.
 * **Comment** : `/dossier-personnage` — *« Précisez le type (PJ ou PNJ), le nom du personnage et l'opération (creer, mettre a jour module, fiche). »*
-* **Résultat** : un dossier PJ à 5 modules (`01_etat_civil_et_traits`, `02_historique_integre`, `03_relations_et_dynamiques`, `04_equipement_et_capacites`, `05_accroches_et_secrets_mj`) dans `05_personnages/Joueurs/<Campagne>/<Nom_PJ>/`, ou une fiche PNJ classée selon la convention du projet, tous deux inscrits dans les index.
+* **Résultat** : un dossier PJ à 6 modules (`01_etat_civil_et_traits`, `02_historique_integre`, `03_relations_et_dynamiques`, `04_equipement_et_capacites`, `05_rumeurs_et_convictions`, `06_accroches_et_secrets_mj`) dans `05_personnages/Joueurs/<Campagne>/<Nom_PJ>/`, ou une fiche PNJ classée selon la convention du projet, tous deux inscrits dans les index.
 
 ### 4.5 `objet-magique` — Objets magiques singuliers
 
@@ -222,6 +222,8 @@ Placez chaque ligne de connaissance sous le fait concerné. Le savoir commun est
 ```
 
 Pour le format complet, consultez [`connaissances-campagne`](.agents/skills/connaissances-campagne/SKILL.md).
+
+[Ragots et rumeurs](.agents/skills/connaissances-campagne/references/ragots_et_rumeurs.md) — Distinguez les rumeurs du tome 03 des faits lors des consultations, des comptes rendus et des mises à jour de la Bible, du JSON et de la chronologie.
 
 ---
 
