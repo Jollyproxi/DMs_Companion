@@ -55,6 +55,12 @@ Every validated section or sheet uses the standard badge:
 
 ---
 
+### In-world knowledge
+
+Use `campaign-knowledge` to answer ‘Who knows this fact?’ and ‘What does this PC or party know?’, validate labels and update them. Common knowledge is implicit. Keep labels with their facts during reviews, moves and copies into the Setting Bible.
+
+---
+
 ## 4. Skills Catalogue (`.agents/skills/`)
 
 Every operational procedure is defined in the modular skills under `.agents/skills/`:
@@ -72,6 +78,7 @@ Every operational procedure is defined in the modular skills under `.agents/skil
 11. **`timeline-markwhen`**: Full lifecycle for Markwhen `.mw` sources (`create-mw`, `update-mw`, `validate-mw`, `export-mw`).
 12. **`link-proper-names`**: Scanning, verification, and conversion of proper names into Markdown links to entities' canonical files (linked proper names rule).
 13. **`transcription-glossary`**: Extraction of a compact, spelling-only list of already-known proper names (zero spoilers or facts) for NotebookLM/LLM session transcripts.
+14. **`campaign-knowledge`** — Consult, validate and update who knows a campaign fact in-world.
 
 ---
 

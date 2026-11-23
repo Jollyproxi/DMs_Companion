@@ -8,6 +8,8 @@ disable-model-invocation: false
 
 # Skill: Validazione della Struttura del Mondo (Valida-Struttura)
 
+> **Conoscenze nella fiction** — Richiama la modalità **Verifica** di `conoscenze-campagna` sui file esaminati. Segnala le anomalie nel rapporto diagnostico. Se la skill è installata ma il client non la rileva, leggi direttamente il suo `SKILL.md`. Se manca, prosegui con il flusso ordinario.
+
 Questa skill esegue un audit diagnostico approfondito dell'alberatura dei file della repository, assicurando che rispetti la conformità dell'architettura standard D&D e identificando tempestivamente anomalie tecniche.
 
 > **📌 Regola Nomi Propri Collegati**: ogni nome proprio di entità dell'ambientazione (PG, PNG, fazioni, casate, città, luoghi, oggetti magici, usanze, festival, eventi…) che compare nel testo prodotto deve essere un **collegamento Markdown** al file `.md` canonico dell'entità (es. `[Nome](percorso/relativo/file.md)`), mai semplice testo nudo. Eccezioni: intestazioni, nomi di file, frontmatter, blocchi di codice, nodi Mermaid e sorgenti `.mw`. Entità priva di scheda: non inventarla — usa `[DA_DEFINIRE_MASTER: scheda mancante per <Nome>]` e segnala la lacuna. Verifica e conversione: skill `collega-nomi-propri`.

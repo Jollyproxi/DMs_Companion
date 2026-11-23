@@ -55,6 +55,12 @@ Chaque section ou fiche validée reçoit le badge standard :
 
 ---
 
+### Connaissances dans la fiction
+
+Utilisez `connaissances-campagne` pour répondre à « Qui connaît ce fait ? » et « Que sait ce PJ ou ce groupe ? », vérifier les étiquettes et les actualiser. Le savoir commun est implicite. Conservez les étiquettes avec leurs faits lors des révisions, déplacements et copies dans la Bible de l’univers.
+
+---
+
 ## 4. Catalogue des Compétences (`.agents/skills/`)
 
 Chaque procédure opérationnelle est décrite dans les compétences modulaires sous `.agents/skills/` :
@@ -72,6 +78,7 @@ Chaque procédure opérationnelle est décrite dans les compétences modulaires 
 11. **`timeline-markwhen`** : Cycle complet des sources Markwhen `.mw` (`creer-mw`, `mettre-a-jour-mw`, `valider-mw`, `exporter-mw`).
 12. **`lier-noms-propres`** : Analyse, vérification et conversion des noms propres en liens Markdown vers les fichiers canoniques des entités (règle des noms propres liés).
 13. **`glossaire-transcription`** : Extraction d'une liste compacte d'orthographe seule des noms propres déjà connus (sans faits ni divulgâchage) pour les transcriptions NotebookLM/LLM.
+14. **`connaissances-campagne`** — Consulter, vérifier et actualiser qui connaît un fait dans la fiction.
 
 ---
 

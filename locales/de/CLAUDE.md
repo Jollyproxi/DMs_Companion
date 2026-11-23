@@ -49,6 +49,12 @@ Jeder validierte Abschnitt oder Bogen erhält das Standard-Badge:
 
 ---
 
+### Wissen in der Spielwelt
+
+Verwende `kampagnenwissen`, um „Wer kennt diesen Sachverhalt?“ und „Was weiß dieser SC oder diese Gruppe?“ zu beantworten sowie Kennzeichnungen zu prüfen und zu aktualisieren. Allgemeinwissen gilt implizit. Behalte bei Überarbeitungen, Verschiebungen und Kopien in die Weltbibel die Kennzeichnung beim jeweiligen Sachverhalt.
+
+---
+
 ## 4. Skill-Katalog (`.agents/skills/`)
 
 Jedes operative Verfahren ist in den modularen Skills unter `.agents/skills/` festgelegt:
@@ -66,6 +72,7 @@ Jedes operative Verfahren ist in den modularen Skills unter `.agents/skills/` fe
 11. **`timeline-markwhen`**: Vollständiger Lebenszyklus für Markwhen-`.mw`-Quellen (`mw-erstellen`, `mw-aktualisieren`, `mw-validieren`, `mw-exportieren`).
 12. **`eigennamen-verlinken`**: Analyse, Prüfung und Umwandlung von Eigennamen in Markdown-Links auf die kanonischen Dateien der Entitäten (Regel der verknüpften Eigennamen).
 13. **`transkriptions-glossar`**: Extraktion einer kompakten reinen Rechtschreibliste bereits bekannter Eigennamen (ohne Fakten oder Spoiler) für NotebookLM-/LLM-Transkriptionen.
+14. **`kampagnenwissen`** — Wissen über einzelne Sachverhalte in der Spielwelt abfragen, prüfen und aktualisieren.
 
 ---
 

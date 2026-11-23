@@ -8,6 +8,8 @@ disable-model-invocation: false
 
 # Compétence : Validation de la Structure du Monde (`valider-structure`)
 
+> **Connaissances dans la fiction** — Appliquez la **Vérification** de `connaissances-campagne` aux fichiers examinés. Ajoutez les anomalies au rapport de diagnostic. Si la compétence est installée mais non détectée, lisez directement son `SKILL.md`. Si elle est absente, poursuivez la procédure habituelle.
+
 Cette compétence réalise un audit diagnostique approfondi de l'arborescence des fichiers du dépôt, vérifiant sa conformité à l'architecture standard D&D et signalant rapidement toute anomalie technique.
 
 > **📌 Règle des Noms Propres Liés** : tout nom propre d'entité de l'univers (PJ, PNJ, factions, maisons, cités, lieux, objets magiques, coutumes, fêtes, événements…) apparaissant dans le texte produit doit être un **lien Markdown** vers le fichier `.md` canonique de l'entité (ex. `[Nom](chemin/relatif/fichier.md)`), jamais un simple texte brut. Exceptions : titres, noms de fichiers, frontmatter, blocs de code, nœuds Mermaid et sources `.mw`. Entité sans fiche : ne l'inventez pas — utilisez `[A_DEFINIR_MJ: fiche manquante pour <Nom>]` et signalez la lacune. Vérification et conversion : compétence `lier-noms-propres`.

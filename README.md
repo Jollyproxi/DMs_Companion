@@ -74,7 +74,7 @@ Every language package ships with harness-agnostic entrypoints and graceful fall
 
 ## What's Inside Each Language Package
 
-Each locale provides **1 Archivist agent** and **13 modular skills** designed around a standard **Ten-Tome World Architecture**:
+Each locale provides **1 Archivist agent** and **14 modular skills** designed around a standard **Ten-Tome World Architecture**:
 
 1. **World Scaffolding & Validation** (`init-world`, `validate-structure`, `link-proper-names`): Interactive world setup, tree/link diagnostics, and mandatory proper-name linking.
 2. **Chronicles & Session Minutes** (`session-minutes`, `transcription-glossary`): Pre-transcription spelling-only proper-name glossary export, post-session DM interview, rough-note structuring, or import from the included **NotebookLM/LLM structured session-transcription prompt**, Mermaid PC-hook diagrams, and campaign index updates.
@@ -82,6 +82,8 @@ Each locale provides **1 Archivist agent** and **13 modular skills** designed ar
 4. **Lore Auditing & Review Dashboard** (`step-by-step-audit`, `full-file-audit`, `review-status`): Atomic or full-file fact-checking with visible `🛡️` verification timestamps and dashboard tracking.
 5. **Master Canon Synchronisation** (`sync-bible-structure`): Compiles all ten tomes into a monolithic Setting Bible and a machine-readable JSON taxonomy.
 6. **Customs, Festivals, Events & Markwhen Timelines** (`custom-festival-event`, `timeline-markwhen`): Structured cultural/historical sheets synced with `.mw` graphical timelines.
+
+7. **Campaign Knowledge** (`campaign-knowledge`): Consult, validate and update who knows individual facts in-world.
 
 ---
 

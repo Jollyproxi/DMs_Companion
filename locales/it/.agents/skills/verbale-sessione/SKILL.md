@@ -8,6 +8,8 @@ disable-model-invocation: false
 
 # Skill: Verbalizzazione di Sessione (Verbale-Sessione)
 
+> **Conoscenze nella fiction** — Se il resoconto confermato indica chi ha appreso un fatto, usa **Aggiornamento** di `conoscenze-campagna` sulla scheda canonica. Una presenza in sessione da sola non dimostra che il PG abbia appreso il fatto. Se la skill è installata ma il client non la rileva, leggi direttamente il suo `SKILL.md`. Se manca, prosegui con il flusso ordinario.
+
 Questa skill guida la raccolta, strutturazione e formattazione dei verbali di sessione di gioco per qualsiasi campagna D&D, garantendo conformità al modello standard documentato in [template-verbale](./references/template-verbale.md). Per estrarre prima un resoconto notarile da registrazioni audio o trascrizioni lunghe tramite **NotebookLM** o un altro LLM, usa il prompt dedicato in [prompt-trascrizione-sessione](./references/prompt-trascrizione-sessione.md). Prima di avviare NotebookLM o un altro LLM, puoi anche generare dal repository l'elenco compatto di sola grafia dei nomi propri già noti con la skill `glossario-trascrizione` per ridurre i `[?]`.
 
 > **📌 Regola Nomi Propri Collegati**: ogni nome proprio di entità dell'ambientazione (PG, PNG, fazioni, casate, città, luoghi, oggetti magici, usanze, festival, eventi…) che compare nel testo prodotto deve essere un **collegamento Markdown** al file `.md` canonico dell'entità (es. `[Nome](percorso/relativo/file.md)`), mai semplice testo nudo. Eccezioni: intestazioni, nomi di file, frontmatter, blocchi di codice, nodi Mermaid e sorgenti `.mw`. Entità priva di scheda: non inventarla — usa `[DA_DEFINIRE_MASTER: scheda mancante per <Nome>]` e segnala la lacuna. Verifica e conversione: skill `collega-nomi-propri`.

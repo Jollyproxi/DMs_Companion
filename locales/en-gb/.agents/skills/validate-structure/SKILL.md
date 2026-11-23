@@ -8,6 +8,8 @@ disable-model-invocation: false
 
 # Skill: World Structure Validation (`validate-structure`)
 
+> **In-world knowledge** — Run **Validation** from `campaign-knowledge` on the files under review. Include any findings in the diagnostic report. If installed but undiscovered, read its `SKILL.md` directly. If absent, continue the regular workflow.
+
 This skill performs a thorough diagnostic audit of the repository's file tree, ensuring compliance with the standard D&D architecture and promptly identifying technical anomalies.
 
 > **📌 Linked Proper Names Rule**: every proper name of a setting entity (PCs, NPCs, factions, houses, cities, locations, magic items, customs, festivals, events…) appearing in produced text must be a **Markdown link** to the entity's canonical `.md` file (e.g. `[Name](relative/path/file.md)`), never plain text. Exceptions: headings, file names, frontmatter, code blocks, Mermaid nodes, and `.mw` sources. Entity without a sheet: never invent it — use `[TO_BE_DEFINED_BY_DM: missing sheet for <Name>]` and flag the gap. Checking and conversion: `link-proper-names` skill.

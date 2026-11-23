@@ -8,6 +8,8 @@ disable-model-invocation: false
 
 # Skill: Audit della Lore Passo-Passo
 
+> **Conoscenze nella fiction** — Per il fatto in esame, richiama **Consultazione** di `conoscenze-campagna`. Quando il Master conferma chi lo conosce, usa **Aggiornamento**. Se la skill è installata ma il client non la rileva, leggi direttamente il suo `SKILL.md`. Se manca, prosegui con il flusso ordinario.
+
 Questa skill guida una revisione interattiva, sistematica e priva di allucinazioni di file, schede, dossier o tomi dell'ambientazione di D&D, interrogando il Dungeon Master (DM) concetto per concetto.
 
 > **📌 Regola Nomi Propri Collegati**: ogni nome proprio di entità dell'ambientazione (PG, PNG, fazioni, casate, città, luoghi, oggetti magici, usanze, festival, eventi…) che compare nel testo prodotto deve essere un **collegamento Markdown** al file `.md` canonico dell'entità (es. `[Nome](percorso/relativo/file.md)`), mai semplice testo nudo. Eccezioni: intestazioni, nomi di file, frontmatter, blocchi di codice, nodi Mermaid e sorgenti `.mw`. Entità priva di scheda: non inventarla — usa `[DA_DEFINIRE_MASTER: scheda mancante per <Nome>]` e segnala la lacuna. Verifica e conversione: skill `collega-nomi-propri`.
