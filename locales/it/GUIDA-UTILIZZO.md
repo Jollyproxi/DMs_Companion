@@ -1,6 +1,6 @@
 # Archivista di Campagna — Guida di Utilizzo
 
-Tutto ciò che serve per mettere a lavoro l'**Archivista di Campagna** al tuo tavolo: installazione, primi passi, riferimento completo delle **13 skill**, flussi di lavoro tipici, risoluzione dei problemi e FAQ.
+Tutto ciò che serve per mettere a lavoro l'**Archivista di Campagna** al tuo tavolo: installazione, primi passi, riferimento completo delle **14 skill**, flussi di lavoro tipici, risoluzione dei problemi e FAQ.
 
 * Copie localizzate di questa guida: [British English](https://github.com/<owner>/DMs_Companion/blob/main/locales/en-gb/USAGE.md) · [Français](https://github.com/<owner>/DMs_Companion/blob/main/locales/fr/GUIDE-UTILISATION.md) · [Deutsch](https://github.com/<owner>/DMs_Companion/blob/main/locales/de/NUTZUNGSANLEITUNG.md) — vedi anche il [USAGE.md](https://github.com/<owner>/DMs_Companion/blob/main/USAGE.md) di progetto sul branch `main`.
 
@@ -40,7 +40,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/it/.ag
 | `CLAUDE.md` | Punto di ingresso per Claude Code. |
 | `.github/agents/archivista-di-campagna.agent.md` | La persona *Archivista di Campagna* (voce nella selezione agenti di VS Code). |
 | `.agents/agents/archivista-di-campagna.md` | La stessa persona in formato Antigravity: agente primario e subagent, con domande strutturate native. |
-| `.agents/skills/<skill>/SKILL.md` | Le 13 skill modulari (più i template in `references/`). |
+| `.agents/skills/<skill>/SKILL.md` | Le 14 skill modulari (più i template in `references/`). |
 | `GUIDA-UTILIZZO.md` | Questa guida. |
 
 ### Note per Harness
@@ -48,7 +48,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/it/.ag
 | Harness | Cosa Succede |
 | :--- | :--- |
 | **VS Code / GitHub Copilot** | L'agente compare nella selezione agenti della chat; le skill sono disponibili come comandi `/slash`; le domande di approfondimento arrivano come prompt strutturati (`vscode_askQuestions`). |
-| **Antigravity (App, IDE, CLI)** | L'agente viene scoperto da `.agents/agents/` e le 13 skill da `.agents/skills/`, senza copie. Le domande di approfondimento usano il tool nativo `ask_question`, con lo stesso comportamento a pulsanti e caselle di VS Code. |
+| **Antigravity (App, IDE, CLI)** | L'agente viene scoperto da `.agents/agents/` e le 14 skill da `.agents/skills/`, senza copie. Le domande di approfondimento usano il tool nativo `ask_question`, con lo stesso comportamento a pulsanti e caselle di VS Code. |
 | **Claude Code** | `CLAUDE.md` viene caricato automaticamente. Se le skill non vengono rilevate, copia o crea un symlink di `.agents/skills/*` in `.claude/skills/`. |
 | **OpenAI Codex** | Apri la cartella della campagna. Per una skill scrivi «Usa `$verbale-sessione` per intervistarmi». Per delegare un compito scrivi «Usa il subagente `archivista-di-campagna` per controllare il verbale». |
 | **Cursor / OpenCode / Gemini CLI** | `AGENTS.md` e `.agents/skills/` vengono scoperti automaticamente; basta chiedere in linguaggio naturale. |
@@ -127,6 +127,7 @@ Invoca le skill con il relativo comando slash dove disponibile (VS Code, Claude 
 | 11 | `timeline-markwhen` | Timeline grafiche Markwhen (`.mw`). |
 | 12 | `collega-nomi-propri` | Nomi propri sempre collegati alle schede canoniche. |
 | 13 | `glossario-trascrizione` | Glossario compatto (sola grafia) dei nomi propri per trascrizioni NotebookLM/LLM. |
+| 14 | `conoscenze-campagna` | Verificare, consultare e aggiornare chi conosce un fatto nella fiction. |
 
 ### 4.1 `init-mondo` — Scaffolding del Mondo
 
@@ -210,9 +211,9 @@ Invoca le skill con il relativo comando slash dove disponibile (VS Code, Claude 
 
 ## 5. Flussi di Lavoro Tipici
 
-### Tenere traccia di chi conosce un fatto
+### `conoscenze-campagna` — Conoscenze nella fiction
 
-Chiedi all’Archivista di segnare una singola informazione come **Sapere comune**, **Solo Master**, nota a un party o nota a PG specifici. L’Archivista aggiunge una riga **Conoscenza** sotto il fatto nella scheda Markdown. Sulla stessa riga puoi indicare un intero party e singoli PG di un altro party. Dopo una scoperta, indica il fatto e chi lo ha appreso per aggiornare quella riga.
+Chiedi «A chi è nota questa informazione?» oppure «Cosa sa questo PG?». Il sapere comune è implicito. Dopo una scoperta, indica il fatto e chi lo ha appreso per aggiornare la scheda.
 
 ### A. Impostare un Mondo Nuovo
 
@@ -253,7 +254,7 @@ PG/PNG → `dossier-personaggio` · Manufatto → `oggetto-magico` · Usanza/fes
 
 ## 7. FAQ
 
-* **Mi servono tutte e 13 le skill?** No. Installale tutte (sono autosufficienti) e usa solo ciò che ti serve.
+* **Mi servono tutte e 14 le skill?** No. Installale tutte (sono autosufficienti) e usa solo ciò che ti serve.
 * **Posso gestire più campagne in un mondo?** Sì — `09_cronache/campagne/<nome>/` mantiene separati i verbali di ogni campagna; la lore condivisa vive negli altri tomi.
 * **Posso usarlo per campagne a pagamento, stream o actual play?** Sì. La clausola non commerciale riguarda la vendita del toolkit stesso, mai i giochi che conduci con esso.
 * **Posso ripacchettizzare o vendere le skill?** No — CC BY-NC-SA 4.0 (vedi `LICENSE` sul branch `main`).

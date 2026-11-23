@@ -57,16 +57,7 @@ Chaque section ou fiche validée reçoit le badge standard :
 
 ### Connaissances dans la fiction
 
-À la demande du MJ ou lorsqu’il confirme qui connaît un fait, ajoutez une ligne Markdown `> **Connaissance :** …` juste sous le fait concerné. Dans une liste, indentez la citation dans le même élément. Si un paragraphe contient des faits connus de personnes différentes, séparez-les en conservant leur formulation.
-
-- **Savoir commun** pour un fait connu de la grande majorité des habitants du monde (environ 95 %, avec des exceptions).
-- **MJ seul** lorsqu’aucun PJ ne connaît le fait. Des PNJ peuvent le connaître.
-- **Groupe** suivi de son nom lorsque tous ses PJ connaissent le fait.
-- **PJ** suivi des noms des personnages qui connaissent le fait à titre individuel.
-
-Exemple d’attribution combinée : `> **Connaissance :** Groupe — [Nom du groupe](index-groupe.md) | PJ — [Nom du PJ](dossier-pj.md)`. Utilisez des liens relatifs vers les fiches ou index canoniques disponibles et clarifiez les homonymies avec le MJ. Utilisez **Savoir commun** et **MJ seul** séparément de toute autre attribution.
-
-L’étiquette décrit les connaissances dans la fiction au sein des archives du MJ. Laissez sans étiquette les faits dont la diffusion reste à confirmer, y compris dans les fiches existantes. Lorsque le MJ confirme une découverte, modifiez la ligne de connaissance du fait dans sa fiche canonique, en conservant les autres attributions confirmées et en respectant les règles de datation des modifications. Utilisez un compte rendu de séance comme source uniquement s’il indique explicitement qui a appris le fait. Conservez les étiquettes avec leurs faits lors des révisions, réorganisations et copies dans la Bible de l’univers.
+Utilisez `connaissances-campagne` pour répondre à « Qui connaît ce fait ? » et « Que sait ce PJ ou ce groupe ? », vérifier les étiquettes et les actualiser. Le savoir commun est implicite. Conservez les étiquettes avec leurs faits lors des révisions, déplacements et copies dans la Bible de l’univers.
 
 ---
 
@@ -87,6 +78,7 @@ Chaque procédure opérationnelle est décrite dans les compétences modulaires 
 11. **`timeline-markwhen`** : Cycle complet des sources Markwhen `.mw` (`creer-mw`, `mettre-a-jour-mw`, `valider-mw`, `exporter-mw`).
 12. **`lier-noms-propres`** : Analyse, vérification et conversion des noms propres en liens Markdown vers les fichiers canoniques des entités (règle des noms propres liés).
 13. **`glossaire-transcription`** : Extraction d'une liste compacte d'orthographe seule des noms propres déjà connus (sans faits ni divulgâchage) pour les transcriptions NotebookLM/LLM.
+14. **`connaissances-campagne`** — Consulter, vérifier et actualiser qui connaît un fait dans la fiction.
 
 ---
 

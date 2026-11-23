@@ -8,6 +8,8 @@ disable-model-invocation: false
 
 # Skill: Validierung der Weltstruktur (`struktur-validieren`)
 
+> **Wissen in der Spielwelt** — Wende **Prüfung** aus `kampagnenwissen` auf die untersuchten Dateien an. Nimm Auffälligkeiten in den Diagnosebericht auf. Falls installiert, aber nicht erkannt, lies ihre `SKILL.md` direkt. Fehlt sie, setze den normalen Ablauf fort.
+
 Dieser Skill führt ein gründliches Diagnose-Audit des Verzeichnisbaums im Repository durch, stellt die Konformität mit der standardisierten D&D-Architektur sicher und deckt technische Abweichungen frühzeitig auf.
 
 > **📌 Regel: Eigennamen als Verknüpfungen**: Jeder Eigenname einer Weltentität (SCs, NSCs, Fraktionen, Häuser, Städte, Orte, magische Gegenstände, Bräuche, Feste, Ereignisse …), der im erzeugten Text vorkommt, muss eine **Markdown-Verknüpfung** zur kanonischen `.md`-Datei der Entität sein (z. B. `[Name](relativer/pfad/datei.md)`), niemals bloßer Klartext. Ausnahmen: Überschriften, Dateinamen, Frontmatter, Codeblöcke, Mermaid-Knoten und `.mw`-Quellen. Entität ohne Bogen: niemals erfinden — `[VOM_SL_ZU_DEFINIEREN: Bogen fehlt für <Name>]` verwenden und die Lücke melden. Prüfung und Umwandlung: Skill `eigennamen-verlinken`.

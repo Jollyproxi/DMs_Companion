@@ -1,6 +1,6 @@
 # Archiviste de Campagne — Guide d'utilisation
 
-Tout ce qu'il faut pour mettre l'**Archiviste de Campagne** au travail à votre table : installation, premiers pas, référence complète des **13 compétences**, flux de travail typiques, dépannage et FAQ.
+Tout ce qu'il faut pour mettre l'**Archiviste de Campagne** au travail à votre table : installation, premiers pas, référence complète des **14 compétences**, flux de travail typiques, dépannage et FAQ.
 
 * Copies localisées de ce guide : [Italiano](https://github.com/<owner>/DMs_Companion/blob/main/locales/it/GUIDA-UTILIZZO.md) · [British English](https://github.com/<owner>/DMs_Companion/blob/main/locales/en-gb/USAGE.md) · [Deutsch](https://github.com/<owner>/DMs_Companion/blob/main/locales/de/NUTZUNGSANLEITUNG.md) — voir aussi le [USAGE.md](https://github.com/<owner>/DMs_Companion/blob/main/USAGE.md) du projet sur la branche `main`.
 
@@ -39,7 +39,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/fr/.ag
 | `CLAUDE.md` | Point d'entrée pour Claude Code. |
 | `.github/agents/archiviste-de-campagne.agent.md` | La persona *Archiviste de Campagne* (entrée dans le sélecteur d'agents de VS Code). |
 | `.agents/agents/archiviste-de-campagne.md` | La même persona au format Antigravity : agent principal et sous-agent, avec questions structurées natives. |
-| `.agents/skills/<competence>/SKILL.md` | Les 13 compétences modulaires (plus les modèles dans `references/`). |
+| `.agents/skills/<competence>/SKILL.md` | Les 14 compétences modulaires (plus les modèles dans `references/`). |
 | `GUIDE-UTILISATION.md` | Ce guide. |
 
 ### Notes par environnement
@@ -47,7 +47,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/fr/.ag
 | Environnement | Ce qui se passe |
 | :--- | :--- |
 | **VS Code / GitHub Copilot** | L'agent apparaît dans le sélecteur d'agents du chat ; les compétences sont disponibles en commandes `/slash` ; les questions de suivi arrivent sous forme de prompts structurés (`vscode_askQuestions`). |
-| **Antigravity (App, IDE, CLI)** | L'agent est découvert dans `.agents/agents/` et les 13 compétences dans `.agents/skills/`, sans aucune copie. Les questions de suivi utilisent l'outil natif `ask_question`, avec le même comportement à boutons et cases à cocher que VS Code. |
+| **Antigravity (App, IDE, CLI)** | L'agent est découvert dans `.agents/agents/` et les 14 compétences dans `.agents/skills/`, sans aucune copie. Les questions de suivi utilisent l'outil natif `ask_question`, avec le même comportement à boutons et cases à cocher que VS Code. |
 | **Claude Code** | `CLAUDE.md` est chargé automatiquement. Si les compétences ne sont pas détectées, copiez ou créez un lien symbolique de `.agents/skills/*` vers `.claude/skills/`. |
 | **OpenAI Codex CLI / Cursor / OpenCode / Gemini CLI** | `AGENTS.md` et `.agents/skills/` sont découverts automatiquement ; il suffit de poser vos questions en langage naturel. |
 | **Extensions optionnelles** | Graphify MCP (graphe des liens croisés) et la CLI/extension Markwhen (`@markwhen/mw`) pour le rendu des chronologies. Tout fonctionne sans elles. |
@@ -125,6 +125,7 @@ Invoquez les compétences avec leur commande slash quand elle est disponible (VS
 | 11 | `timeline-markwhen` | Chronologies graphiques Markwhen (`.mw`). |
 | 12 | `lier-noms-propres` | Noms propres toujours liés aux fiches canoniques. |
 | 13 | `glossaire-transcription` | Glossaire compact (orthographe seule) des noms propres pour transcriptions NotebookLM/LLM. |
+| 14 | `connaissances-campagne` | Consulter, vérifier et actualiser qui connaît un fait dans la fiction. |
 
 ### 4.1 `init-monde` — Arborescence de l'univers
 
@@ -208,9 +209,9 @@ Invoquez les compétences avec leur commande slash quand elle est disponible (VS
 
 ## 5. Flux de travail typiques
 
-### Suivre qui connaît un fait
+### `connaissances-campagne` — Connaissances dans la fiction
 
-Demandez à l’Archiviste d’indiquer si un fait relève du **Savoir commun**, est connu du **MJ seul**, d’un groupe nommé ou de PJ précis. L’Archiviste ajoute une ligne **Connaissance** sous ce fait dans la fiche Markdown. La même ligne peut mentionner un groupe entier et des PJ d’un autre groupe. Après une découverte, indiquez le fait concerné et les personnages qui l’ont appris pour mettre à jour la ligne.
+Consulter, vérifier et actualiser qui connaît un fait dans la fiction.
 
 ### A. Mettre en place un univers nouveau
 
@@ -251,7 +252,7 @@ PJ/PNJ → `dossier-personnage` · Artefact → `objet-magique` · Coutume/fête
 
 ## 7. FAQ
 
-* **Faut-il les 13 compétences ?** Non. Installez-les toutes (elles sont autonomes) et n'utilisez que ce dont vous avez besoin.
+* **Faut-il les 14 compétences ?** Non. Installez-les toutes (elles sont autonomes) et n'utilisez que ce dont vous avez besoin.
 * **Puis-je gérer plusieurs campagnes dans un univers ?** Oui — `09_chroniques/campagnes/<nom>/` garde les comptes rendus de chaque campagne séparés ; la lore partagée vit dans les autres tomes.
 * **Puis-je l'utiliser pour des campagnes payantes, des streams ou des actual plays ?** Oui. La clause non commerciale porte sur la vente de la boîte à outils elle-même, jamais sur les jeux que vous menez avec.
 * **Puis-je reconditionner ou vendre les compétences ?** Non — CC BY-NC-SA 4.0 (voir `LICENSE` sur la branche `main`).

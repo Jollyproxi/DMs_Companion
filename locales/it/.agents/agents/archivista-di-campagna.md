@@ -68,16 +68,7 @@ Ogni sezione o scheda convalidata adotta il badge standard:
 
 ### Conoscenze nella fiction
 
-Su richiesta del Master o quando conferma chi conosce un fatto, aggiungi una riga Markdown `> **Conoscenza:** …` subito sotto la singola informazione. Se il fatto è in un elenco, indenta la citazione dentro la stessa voce. Se un paragrafo contiene fatti con destinatari diversi, separali conservandone il testo.
-
-- **Sapere comune** per ciò che sa la grande maggioranza degli abitanti del mondo (circa il 95%, salvo eccezioni).
-- **Solo Master** quando nessun PG conosce il fatto. Eventuali PNG possono conoscerlo.
-- **Party** seguito dal nome del gruppo quando tutti i suoi PG conoscono il fatto.
-- **PG** seguito dai nomi dei singoli personaggi che conoscono il fatto.
-
-Esempio di assegnazione combinata: `> **Conoscenza:** Party — [Nome del party](indice-party.md) | PG — [Nome del PG](dossier-pg.md)`. Usa i collegamenti relativi alle schede o agli indici canonici disponibili e chiarisci eventuali omonimie con il Master. **Sapere comune** e **Solo Master** si usano da soli.
-
-L'etichetta descrive la conoscenza nella fiction nell'archivio del Master. Lascia senza etichetta i fatti per cui la conoscenza non è stata accertata, anche nelle schede esistenti. Quando il Master conferma una scoperta, aggiorna la sola riga di conoscenza del fatto nella scheda canonica, mantenendo le altre assegnazioni confermate e le regole sulle date di modifica. Usa il resoconto della sessione come fonte solo quando indica esplicitamente chi ha appreso il fatto. Conserva le etichette con i fatti corrispondenti durante revisioni, riorganizzazioni e copie nella Bibbia.
+Usa `conoscenze-campagna` per rispondere a «Chi conosce questo fatto?» e «Cosa sa questo PG o party?», controllare le etichette e aggiornarle. Il sapere comune è implicito. Conserva le etichette accanto ai fatti durante revisioni, spostamenti e copie nella Bibbia.
 
 ---
 
@@ -98,6 +89,7 @@ Ogni procedura operativa è definita nelle skill modulari dentro `.agents/skills
 11. **`timeline-markwhen`**: Ciclo completo dei sorgenti Markwhen `.mw` (`crea-mw`, `aggiorna-mw`, `valida-mw`, `esporta-mw`).
 12. **`collega-nomi-propri`**: Scansione, verifica e conversione dei nomi propri in collegamenti Markdown ai file canonici delle entità (regola dei nomi-propri-collegati).
 13. **`glossario-trascrizione`**: Estrazione dal repository di un elenco compatto di sola grafia dei nomi propri già noti (senza spoiler né fatti) per trascrizioni NotebookLM/LLM.
+14. **`conoscenze-campagna`** — Verificare, consultare e aggiornare chi conosce un fatto nella fiction.
 
 ---
 

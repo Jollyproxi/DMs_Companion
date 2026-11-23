@@ -1,6 +1,6 @@
 # DMs_Companion — Usage Guide
 
-Everything you need to install **DMs_Companion** and put the **Campaign Archivist** to work at your table: installation, first steps, a complete reference of all **13 skills**, typical workflows, troubleshooting, and FAQ.
+Everything you need to install **DMs_Companion** and put the **Campaign Archivist** to work at your table: installation, first steps, a complete reference of all **14 skills**, typical workflows, troubleshooting, and FAQ.
 
 * Project overview and licensing: [README.md](README.md)
 * How to contribute: [CONTRIBUTING.md](CONTRIBUTING.md)
@@ -65,7 +65,7 @@ Switch the branch selector on GitHub from `main` to `it`, `en-gb`, `fr`, or `de`
 | `CLAUDE.md` | Claude Code entry point. |
 | `.github/agents/*.agent.md` | The Archivist persona (agent picker entry in VS Code). |
 | `.agents/agents/*.md` | The same persona in Antigravity format (primary agent + subagent, native structured questions). |
-| `.agents/skills/<skill>/SKILL.md` | The 13 modular skills (plus `references/` templates). |
+| `.agents/skills/<skill>/SKILL.md` | The 14 modular skills (plus `references/` templates). |
 | `USAGE.md` | This guide. |
 
 ### Harness Notes
@@ -73,7 +73,7 @@ Switch the branch selector on GitHub from `main` to `it`, `en-gb`, `fr`, or `de`
 | Harness | What Happens |
 | :--- | :--- |
 | **VS Code / GitHub Copilot** | The agent appears in the chat agent picker; skills are available as `/slash` commands; follow-up questions come as structured prompts (`vscode_askQuestions`). |
-| **Antigravity (App, IDE, CLI)** | The agent is discovered from `.agents/agents/` and the 13 skills from `.agents/skills/`. Follow-up questions use the native `ask_question` tool, giving the same button and checkbox behaviour as VS Code. |
+| **Antigravity (App, IDE, CLI)** | The agent is discovered from `.agents/agents/` and the 14 skills from `.agents/skills/`. Follow-up questions use the native `ask_question` tool, giving the same button and checkbox behaviour as VS Code. |
 | **Claude Code** | `CLAUDE.md` is auto-loaded. If skills are not detected, copy or symlink `.agents/skills/*` into `.claude/skills/`. |
 | **OpenAI Codex CLI / Cursor / OpenCode / Gemini CLI** | `AGENTS.md` and `.agents/skills/` are auto-discovered; just ask in natural language. |
 | **Optional extras** | Graphify MCP (cross-link graphing) and the Markwhen CLI/extension (`@markwhen/mw`) for timeline rendering. Everything works without them. |
@@ -151,6 +151,7 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 | 11 | `timeline-markwhen` | Graphical Markwhen timelines (`.mw`). |
 | 12 | `link-proper-names` | Proper names always linked to canonical sheets. |
 | 13 | `transcription-glossary` | Spelling-only proper-name glossary for NotebookLM/LLM session transcription. |
+| 14 | `campaign-knowledge` | Consult, validate and update who knows a campaign fact in-world. |
 
 ### 5.1 `init-world` — World Scaffolding
 
@@ -234,9 +235,9 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 
 ## 6. Typical Workflows
 
-### Track who knows an individual fact
+### `campaign-knowledge` — In-world knowledge
 
-Ask the Archivist to mark a specific fact as **Common knowledge**, **GM only**, known by a named party or known by named PCs. It adds a **Knowledge** line below that fact on its Markdown sheet. A party and individual PCs from another party can appear on the same line. After a discovery, identify the fact and tell the Archivist who learnt it to update that line.
+Consult, validate and update who knows a campaign fact in-world.
 
 ### A. Setting Up a New World
 
@@ -277,7 +278,7 @@ PC/NPC → `character-dossier` · Artefact → `magic-item` · Custom/festival/e
 
 ## 8. FAQ
 
-* **Do I need all 13 skills?** No. Install them all (they are self-contained) and use only what you need.
+* **Do I need all 14 skills?** No. Install them all (they are self-contained) and use only what you need.
 * **Can I run several campaigns in one world?** Yes — `09_chronicles/campaigns/<name>/` keeps each campaign's minutes separate; shared lore lives in the other tomes.
 * **Can I use it for paid campaigns, streams, or actual plays?** Yes. The non-commercial clause applies to selling the toolkit itself, never to the games you run with it.
 * **Can I repackage or sell the skills?** No — CC BY-NC-SA 4.0 (see [LICENSE](LICENSE)).

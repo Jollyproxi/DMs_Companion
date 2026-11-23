@@ -68,16 +68,7 @@ Every validated section or sheet uses the standard badge:
 
 ### In-world knowledge
 
-When the GM asks or confirms who knows a fact, add a Markdown line `> **Knowledge:** …` immediately below that individual fact. Inside a list, indent the blockquote within the same item. If a paragraph contains facts known to different people, split them while preserving their wording.
-
-- **Common knowledge** for facts known to the vast majority of the world's inhabitants (roughly 95%, with exceptions).
-- **GM only** when no PC knows the fact. NPCs may know it.
-- **Party** followed by the group's name when all its PCs know the fact.
-- **PCs** followed by the names of individual characters who know the fact.
-
-Example of a combined assignment: `> **Knowledge:** Party — [Party name](party-index.md) | PCs — [PC name](pc-dossier.md)`. Use relative links to available canonical sheets or indexes and clarify ambiguous names with the GM. Use **Common knowledge** and **GM only** on their own.
-
-The label records in-world knowledge in the GM's archive. Leave facts with unconfirmed knowledge unlabelled, including on existing sheets. When the GM confirms a discovery, update the knowledge line for that fact on its canonical sheet, preserving other confirmed assignments and following the modification date rules. Use session records as a source only when they explicitly identify who learnt the fact. Keep labels attached to their facts during reviews, reorganisations and copies into the Setting Bible.
+Use `campaign-knowledge` to answer ‘Who knows this fact?’ and ‘What does this PC or party know?’, validate labels and update them. Common knowledge is implicit. Keep labels with their facts during reviews, moves and copies into the Setting Bible.
 
 ---
 
@@ -98,6 +89,7 @@ Every operational procedure is defined in the modular skills under `.agents/skil
 11. **`timeline-markwhen`**: Full lifecycle for Markwhen `.mw` sources (`create-mw`, `update-mw`, `validate-mw`, `export-mw`).
 12. **`link-proper-names`**: Scanning, verification, and conversion of proper names into Markdown links to entities' canonical files (linked proper names rule).
 13. **`transcription-glossary`**: Extraction of a compact, spelling-only list of already-known proper names (zero spoilers or facts) for NotebookLM/LLM session transcripts.
+14. **`campaign-knowledge`** — Consult, validate and update who knows a campaign fact in-world.
 
 ---
 

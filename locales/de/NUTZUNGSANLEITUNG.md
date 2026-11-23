@@ -1,6 +1,6 @@
 # Kampagnen-Archivar — Nutzungsanleitung
 
-Alles, was Sie brauchen, um den **Kampagnen-Archivar** an Ihrem Spieltisch arbeiten zu lassen: Installation, erste Schritte, vollständige Referenz aller **13 Fähigkeiten**, typische Arbeitsabläufe, Fehlerbehebung und FAQ.
+Alles, was Sie brauchen, um den **Kampagnen-Archivar** an Ihrem Spieltisch arbeiten zu lassen: Installation, erste Schritte, vollständige Referenz aller **14 Fähigkeiten**, typische Arbeitsabläufe, Fehlerbehebung und FAQ.
 
 * Lokalisierte Fassungen dieser Anleitung: [Italiano](https://github.com/<owner>/DMs_Companion/blob/main/locales/it/GUIDA-UTILIZZO.md) · [British English](https://github.com/<owner>/DMs_Companion/blob/main/locales/en-gb/USAGE.md) · [Français](https://github.com/<owner>/DMs_Companion/blob/main/locales/fr/GUIDE-UTILISATION.md) — siehe auch das projekteigene [USAGE.md](https://github.com/<owner>/DMs_Companion/blob/main/USAGE.md) auf dem `main`-Branch.
 
@@ -47,7 +47,7 @@ npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/de/.ag
 | Harness | Was passiert |
 | :--- | :--- |
 | **VS Code / GitHub Copilot** | Der Agent erscheint im Agenten-Auswahlmenü des Chats; die Fähigkeiten stehen als `/slash`-Befehle bereit; Rückfragen kommen als strukturierte Dialoge (`vscode_askQuestions`). |
-| **Antigravity (App, IDE, CLI)** | Der Agent wird aus `.agents/agents/` erkannt, die 13 Fähigkeiten aus `.agents/skills/` – ohne Kopien. Rückfragen nutzen das native Werkzeug `ask_question` und verhalten sich wie die Schaltflächen und Kontrollkästchen in VS Code. |
+| **Antigravity (App, IDE, CLI)** | Der Agent wird aus `.agents/agents/` erkannt, die 14 Fähigkeiten aus `.agents/skills/` – ohne Kopien. Rückfragen nutzen das native Werkzeug `ask_question` und verhalten sich wie die Schaltflächen und Kontrollkästchen in VS Code. |
 | **Claude Code** | `CLAUDE.md` wird automatisch geladen. Werden die Fähigkeiten nicht erkannt, kopieren Sie `.agents/skills/*` nach `.claude/skills/` oder erstellen Sie einen Symlink. |
 | **OpenAI Codex CLI / Cursor / OpenCode / Gemini CLI** | `AGENTS.md` und `.agents/skills/` werden automatisch erkannt; fragen Sie einfach in natürlicher Sprache. |
 | **Optionale Erweiterungen** | Graphify MCP (Querverlinkungs-Graph) und die Markwhen-CLI/-Erweiterung (`@markwhen/mw`) für den Timeline-Render. Alles funktioniert auch ohne sie. |
@@ -125,6 +125,7 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 | 11 | `timeline-markwhen` | Grafische Markwhen-Zeitlinien (`.mw`). |
 | 12 | `eigennamen-verlinken` | Eigennamen stets mit kanonischen Bögen verknüpft. |
 | 13 | `transkriptions-glossar` | Kompaktes Eigennamen-Glossar (nur Schreibweise) für NotebookLM-/LLM-Transkriptionen. |
+| 14 | `kampagnenwissen` | Wissen über einzelne Sachverhalte in der Spielwelt abfragen, prüfen und aktualisieren. |
 
 ### 4.1 `welt-initialisieren` — Weltgerüst
 
@@ -208,9 +209,9 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 
 ## 5. Typische Arbeitsabläufe
 
-### Festhalten, wer einen Sachverhalt kennt
+### `kampagnenwissen` — Wissen in der Spielwelt
 
-Bitte den Archivar, einen Sachverhalt als **Allgemeinwissen** oder **Nur SL** zu markieren oder ihn einer benannten Gruppe oder einzelnen SC zuzuordnen. Er ergänzt eine Zeile **Wissen** direkt unter dem Sachverhalt im Markdown-Dossier. Dieselbe Zeile kann eine ganze Gruppe und einzelne SC einer anderen Gruppe nennen. Gib nach einer Entdeckung an, um welchen Sachverhalt es geht und wer davon erfahren hat.
+Wissen über einzelne Sachverhalte in der Spielwelt abfragen, prüfen und aktualisieren.
 
 ### A. Eine neue Welt einrichten
 
@@ -251,7 +252,7 @@ SC/NSC → `charakter-dossier` · Artefakt → `magischer-gegenstand` · Brauch/
 
 ## 7. FAQ
 
-* **Brauche ich alle 13 Fähigkeiten?** Nein. Installieren Sie sie alle (sie sind eigenständig) und nutzen Sie nur, was Sie brauchen.
+* **Brauche ich alle 14 Fähigkeiten?** Nein. Installieren Sie sie alle (sie sind eigenständig) und nutzen Sie nur, was Sie brauchen.
 * **Kann ich mehrere Kampagnen in einer Welt führen?** Ja — `09_chroniken/kampagnen/<name>/` hält die Protokolle jeder Kampagne getrennt; gemeinsame Lore lebt in den übrigen Bänden.
 * **Kann ich es für bezahlte Kampagnen, Streams oder Actual Plays nutzen?** Ja. Die Nicht-Kommerz-Klausel betrifft den Verkauf der Werkzeugsammlung selbst, niemals die Spiele, die Sie damit leiten.
 * **Kann ich die Fähigkeiten umverpacken oder verkaufen?** Nein — CC BY-NC-SA 4.0 (siehe `LICENSE` auf dem `main`-Branch).
