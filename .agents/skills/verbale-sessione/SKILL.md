@@ -76,3 +76,7 @@ Il verbale viene compilato secondo le sezioni canoniche:
    - **Usi, costumi ed eventi**: se la sessione introduce o menziona una nuova usanza, un nuovo festival/occorrenza o un nuovo evento, **proponi sempre** la creazione della scheda relativa in `03_societa_e_politica/usi_costumi_ed_eventi/` con la skill `usanza-festa-evento`.
    - **Occorrenze di eventi già censiti e Timeline Markwhen**: se la sessione fa svolgere una ricorrenza nota (es. un torneo annuale o una festa stagionale) o introduce eventi datati, documentali nel verbale e registrali nella `10_timeline/` (registro occorrenze e sorgenti `.mw` tramite la skill `timeline-markwhen`), poi **chiedi al Master** se modificare la scheda canonica: le peculiarità proprie dell'occorrenza restano nella timeline e nei verbali, e la scheda si aggiorna solo se ne stravolgono la natura.
    - Mostra le modifiche e offriti di applicarle previa conferma.
+
+## Pettegolezzi e dicerie
+
+Registra chi ha sentito o diffuso quale versione solo se attestato dal verbale confermato. Conserva stato, attribuzione e link alla variante. Riporta il contenuto della voce solo come tale. Registra in cronologia un evento solo quando attestato indipendentemente.

@@ -62,7 +62,7 @@ Ogni procedura operativa è definita nelle skill modulari dentro `.agents/skills
 1. **`init-mondo`**: Intervista iniziale e scaffolding dell'architettura a dieci tomi.
 2. **`valida-struttura`**: Diagnostica cartelle, `README.md` mancanti, link rotti, nomi propri non collegati e file fuori posto.
 3. **`verbale-sessione`**: Intervista guidata, rielaborazione appunti o importazione di trascrizioni strutturate NotebookLM/LLM, verbale con diagramma Mermaid e aggiornamento indice campagna.
-4. **`dossier-personaggio`**: Creazione e manutenzione dei dossier PG a 5 moduli e delle schede PNG.
+4. **`dossier-personaggio`**: Creazione e manutenzione dei dossier PG a 6 moduli e delle schede PNG.
 5. **`oggetto-magico`**: Catalogazione di artefatti, reliquie, meccaniche e inquadramento normativo.
 6. **`audit-passo-passo`**: Fact-checking interattivo atomico (singola affermazione o sezione) con il DM.
 7. **`audit-file-intero`**: Audit organico di un intero file o cartella.
@@ -87,7 +87,7 @@ L'Archivista coordina il flusso di lavoro instradando le richieste verso le rela
 - Salvataggio del file in `09_cronache/campagne/<nome>/sessioni/XX_titolo.md` e aggiornamento della tabella nel `README.md` della campagna.
 
 ### Canale B: Gestione Schede & Dossier (Skill `dossier-personaggio` & `oggetto-magico`)
-- **Dossier PG a 5 moduli** (`01_anagrafica`, `02_backstory`, `03_relazioni`, `04_equipaggiamento`, `05_ganci_dm`).
+- **Dossier PG a 6 moduli** (`01_anagrafica`, `02_backstory`, `03_relazioni`, `04_equipaggiamento`, `05_dicerie_e_convinzioni`, `06_ganci_e_segreti_dm.md`).
 - **Schede PNG** con ruoli, fazioni e segreti del DM.
 - **Schede Oggetti Magici** con inquadramento tecnico, manifattura, meccaniche e statuto giuridico.
 
@@ -141,3 +141,7 @@ Per riferimenti incerti, segnala il dato da definire e conserva i livelli accert
 Prima di uno spostamento autorizzato, mappa origine e destinazione e controlla che la destinazione sia libera. Aggiorna gli indici precedenti e nuovi, tutti i riferimenti in entrata e i link relativi in uscita. Conserva i dati del primo incontro, rigenera i documenti derivati previsti dal progetto e verifica che tutti i link risolvano verso le destinazioni canoniche e che resti una sola scheda.
 
 Per Dante resta in uso `<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` sotto la radice PNG.
+
+## Pettegolezzi e dicerie
+
+Gestisci le voci del tomo 03 separatamente dai fatti, anche durante consultazione, verbalizzazione e sincronizzazione di Bibbia, JSON e timeline. `03_societa_e_politica/pettegolezzi_e_dicerie/` · `conoscenze-campagna`.

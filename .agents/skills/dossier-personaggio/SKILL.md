@@ -1,6 +1,6 @@
 ---
 name: dossier-personaggio
-description: "Use when: creare, aggiornare o modularizzare i dossier dei Personaggi Giocanti (PG) a cinque moduli o le schede dei Personaggi Non Giocanti (PNG) secondo gli standard canonici della campagna."
+description: "Use when: creare, aggiornare o modularizzare i dossier dei Personaggi Giocanti (PG) a sei moduli o le schede dei Personaggi Non Giocanti (PNG) secondo gli standard canonici della campagna."
 argument-hint: "Specifica il tipo (PG o PNG), il nome del personaggio e l'operazione (crea, aggiorna modulo, scheda)"
 user-invocable: true
 disable-model-invocation: false
@@ -27,7 +27,7 @@ I template completi sono consultabili in [template-dossier](./references/templat
 
 ---
 
-## 2. Creazione di un Dossier PG (5 Moduli)
+## 2. Creazione di un Dossier PG (6 Moduli)
 
 Quando il Master introduce o documenta un nuovo Personaggio Giocante:
 
@@ -35,12 +35,13 @@ Quando il Master introduce o documenta un nuovo Personaggio Giocante:
 2. **Creazione della Cartella**:
    `05_personaggi/<Giocanti>/<Campagna_o_Party>/<Nome_PG>/` *(default: `05_personaggi/Giocanti/<Campagna>/<Nome_PG>/`, rispettando eventuali nomi custom nel workspace)*
 3. **Generazione dei File Modulari**:
-   - `README.md`: Hub del personaggio con ruolo, tratti morali e indice dei 5 file.
+   - `README.md`: Hub del personaggio con ruolo, tratti morali e indice dei 6 file.
    - `01_anagrafica_e_tratti.md`: Dati anagrafici, classe, livello, tratti e aspetto.
    - `02_backstory_integrata.md`: Passato, eventi di svolta, radici nel mondo.
    - `03_relazioni_e_dinamiche.md`: Legami con compagni di gruppo, fazioni e PNG.
    - `04_equipaggiamento_e_capacita.md`: Oggetti caratteristici, armi, focus e capacità uniche.
-   - `05_ganci_e_segreti_dm.md`: Spunti riservati per il Master, enigmi e rivelazioni.
+   - `05_dicerie_e_convinzioni.md` — Dicerie e convinzioni.
+   - `06_ganci_e_segreti_dm.md`: Spunti riservati per il Master, enigmi e rivelazioni.
 4. **Struttura**:
    - Intestazione con ruolo, fazione (con link al Tomo VII `07_fazioni/`), residenza (link al Tomo VI `06_luoghi/`), allineamento e stato vitale.
    - Sezioni su Aspetto & Indole, Ruolo Narrativo e Segreti & Ganci DM.
@@ -70,6 +71,12 @@ Usa il [template](./references/template-dossier.md) e aggiorna gli indici previs
 ## 4. Aggiornamenti Incrociati Post-Sessione
 
 Quando una sessione introduce novità su un PG (es. nuovo gancio scoperto, legame mutato, ferita o oggetto ottenuto):
-1. Individua il modulo specifico da aggiornare (es. `03_relazioni_e_dinamiche.md` per un patto, `05_ganci_e_segreti_dm.md` per una pista svelata).
+1. Individua il modulo specifico da aggiornare (es. `03_relazioni_e_dinamiche.md` per un patto, `06_ganci_e_segreti_dm.md` per una pista svelata).
 2. Apporta la modifica preservando le informazioni precedenti.
 3. Avanza la data nel campo `Modificato: [DATA_ODIERNA]` lasciando inalterata la data `Verificato`.
+
+Nel dossier esistente conserva il contenuto dei ganci, rinomina il vecchio modulo 05 in 06, crea il nuovo 05 e aggiorna indice e link in entrata, incluse le ancore. Se il 06 esiste già, confronta i contenuti prima di spostare file. Verifica i link anche dopo una seconda esecuzione.
+
+## Pettegolezzi e dicerie
+
+Per ogni ruolo attestato inserisci un punto con una riga sulla versione e il link relativo alla variante. Annota la posizione del soggetto se documentata.

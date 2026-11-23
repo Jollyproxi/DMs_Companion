@@ -68,6 +68,8 @@ Usa questa procedura per rigenerare o creare ex-novo la Bibbia dell'Ambientazion
 
 ## 2. Procedura: `genera-struttura-json` (Mappatura Tassonomica Completa)
 
+In generazione e aggiornamento registra nel tomo 03 una voce per file nella raccolta dedicata. Mantieni testo e attribuzione insieme, separa la nota del Master e verifica i link dopo spostamenti o separazioni di varianti. Nella Bibbia conserva una sezione distinta per le dicerie. Nel JSON sostituisci per queste schede l’estrazione generica dei concetti con la rappresentazione dedicata. [dicerie](references/formato-struttura-json.md#dicerie).
+
 Usa questa procedura per scansionare tutti i file del workspace e produrre una mappa machine-readable completa e aggiornata in formato JSON.
 
 ### Passi Operativi:
@@ -118,6 +120,8 @@ Usa questa procedura quando uno o più moduli atomici sono stati modificati o ag
 
 ## 4. Procedura: `aggiorna-struttura-json` (Sincronizzazione Delta JSON)
 
+In generazione e aggiornamento registra nel tomo 03 una voce per file nella raccolta dedicata. Mantieni testo e attribuzione insieme, separa la nota del Master e verifica i link dopo spostamenti o separazioni di varianti. Nella Bibbia conserva una sezione distinta per le dicerie. Nel JSON sostituisci per queste schede l’estrazione generica dei concetti con la rappresentazione dedicata. [dicerie](references/formato-struttura-json.md#dicerie).
+
 Usa questa procedura per mantenere `struttura_ambientazione.json` sincronizzato quando vengono aggiunti nuovi file, ridenominati moduli o arricchiti i contenuti.
 
 ### Passi Operativi:
@@ -160,3 +164,7 @@ Al termine di ciascuna operazione:
 4. **Integrazione con Altre Skill**:
    - Dopo modifiche strutturali rilevanti, suggerire l'esecuzione di `valida-struttura`.
    - Dopo l'aggiornamento della Bibbia o dei moduli, ricordare l'aggiornamento della dashboard con `stato-revisione`.
+
+## Pettegolezzi e dicerie
+
+Conserva stato, attribuzione e link alla variante. Riporta il contenuto della voce solo come tale. Registra in cronologia un evento solo quando attestato indipendentemente.

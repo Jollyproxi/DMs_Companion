@@ -1,12 +1,16 @@
 ---
 name: conoscenze-campagna
-description: "Verificare, consultare e aggiornare chi conosce un fatto nella fiction."
+description: "Raccogliere e consultare pettegolezzi e dicerie oppure verificare e aggiornare chi conosce un fatto nella fiction."
 argument-hint: "Indica un fatto, un PG, un party o una scheda da controllare"
 user-invocable: true
 disable-model-invocation: false
 ---
 
 # Conoscenze nella fiction
+
+Crea e consulta le dicerie seguendo [Pettegolezzi e dicerie](references/pettegolezzi_e_dicerie.md). Gestisci le voci del tomo 03 separatamente dai fatti, anche durante consultazione, verbalizzazione e sincronizzazione di Bibbia, JSON e timeline.
+
+## Per i fatti canonici
 
 Lavora nell’archivio del Master e usa le schede canoniche. Il sapere comune è implicito e le righe di conoscenza registrano solo eccezioni.
 

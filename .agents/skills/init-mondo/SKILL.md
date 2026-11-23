@@ -67,3 +67,7 @@ Una volta ricevute le risposte del Master, genera la struttura modulare utilizza
 
 4. **Validazione Finale**:
    Al termine della creazione, invoca la skill `valida-struttura` per certificare che l'alberatura sia completa e priva di collegamenti rotti.
+
+## Pettegolezzi e dicerie
+
+Crea la raccolta con il suo README e collegala dall’indice del tomo 03. Crea le sottocartelle quando servono. `pettegolezzi_e_dicerie/`
