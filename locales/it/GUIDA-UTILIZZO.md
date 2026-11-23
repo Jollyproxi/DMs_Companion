@@ -210,6 +210,10 @@ Invoca le skill con il relativo comando slash dove disponibile (VS Code, Claude 
 
 ## 5. Flussi di Lavoro Tipici
 
+### Tenere traccia di chi conosce un fatto
+
+Chiedi all’Archivista di segnare una singola informazione come **Sapere comune**, **Solo Master**, nota a un party o nota a PG specifici. L’Archivista aggiunge una riga **Conoscenza** sotto il fatto nella scheda Markdown. Sulla stessa riga puoi indicare un intero party e singoli PG di un altro party. Dopo una scoperta, indica il fatto e chi lo ha appreso per aggiornare quella riga.
+
 ### A. Impostare un Mondo Nuovo
 
 `init-mondo` (intervista guidata) → `valida-struttura` (controllo di sanità) → aggiungi le prime schede di lore → `sincronizza-bibbia-struttura` (`genera-Bibbia`, `genera-struttura-json`) quando vuoi i documenti master.

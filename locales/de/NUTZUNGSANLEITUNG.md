@@ -208,6 +208,10 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 
 ## 5. Typische Arbeitsabläufe
 
+### Festhalten, wer einen Sachverhalt kennt
+
+Bitte den Archivar, einen Sachverhalt als **Allgemeinwissen** oder **Nur SL** zu markieren oder ihn einer benannten Gruppe oder einzelnen SC zuzuordnen. Er ergänzt eine Zeile **Wissen** direkt unter dem Sachverhalt im Markdown-Dossier. Dieselbe Zeile kann eine ganze Gruppe und einzelne SC einer anderen Gruppe nennen. Gib nach einer Entdeckung an, um welchen Sachverhalt es geht und wer davon erfahren hat.
+
 ### A. Eine neue Welt einrichten
 
 `welt-initialisieren` (geführtes Interview) → `struktur-validieren` (Konsistenzprüfung) → erste Lore-Bögen hinzufügen → `bibel-struktur-synchronisieren` (`Bibel-generieren`, `Struktur-JSON-generieren`), wann immer Sie die Masterdokumente wollen.

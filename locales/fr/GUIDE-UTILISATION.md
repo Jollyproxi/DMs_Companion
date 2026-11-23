@@ -208,6 +208,10 @@ Invoquez les compétences avec leur commande slash quand elle est disponible (VS
 
 ## 5. Flux de travail typiques
 
+### Suivre qui connaît un fait
+
+Demandez à l’Archiviste d’indiquer si un fait relève du **Savoir commun**, est connu du **MJ seul**, d’un groupe nommé ou de PJ précis. L’Archiviste ajoute une ligne **Connaissance** sous ce fait dans la fiche Markdown. La même ligne peut mentionner un groupe entier et des PJ d’un autre groupe. Après une découverte, indiquez le fait concerné et les personnages qui l’ont appris pour mettre à jour la ligne.
+
 ### A. Mettre en place un univers nouveau
 
 `init-monde` (entretien guidé) → `valider-structure` (contrôle de cohérence) → ajoutez vos premières fiches de lore → `synchroniser-bible-structure` (`generer-Bible`, `generer-structure-json`) quand vous voulez les documents maîtres.

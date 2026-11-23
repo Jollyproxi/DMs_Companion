@@ -234,6 +234,10 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 
 ## 6. Typical Workflows
 
+### Track who knows an individual fact
+
+Ask the Archivist to mark a specific fact as **Common knowledge**, **GM only**, known by a named party or known by named PCs. It adds a **Knowledge** line below that fact on its Markdown sheet. A party and individual PCs from another party can appear on the same line. After a discovery, identify the fact and tell the Archivist who learnt it to update that line.
+
 ### A. Setting Up a New World
 
 `init-world` (guided interview) → `validate-structure` (sanity check) → add your first lore sheets → `sync-bible-structure` (`generate-Bible`, `generate-structure-json`) whenever you want the master documents.

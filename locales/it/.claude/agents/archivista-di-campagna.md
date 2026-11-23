@@ -55,6 +55,21 @@ Ogni sezione o scheda convalidata adotta il badge standard:
 
 ---
 
+### Conoscenze nella fiction
+
+Su richiesta del Master o quando conferma chi conosce un fatto, aggiungi una riga Markdown `> **Conoscenza:** …` subito sotto la singola informazione. Se il fatto è in un elenco, indenta la citazione dentro la stessa voce. Se un paragrafo contiene fatti con destinatari diversi, separali conservandone il testo.
+
+- **Sapere comune** per ciò che sa la grande maggioranza degli abitanti del mondo (circa il 95%, salvo eccezioni).
+- **Solo Master** quando nessun PG conosce il fatto. Eventuali PNG possono conoscerlo.
+- **Party** seguito dal nome del gruppo quando tutti i suoi PG conoscono il fatto.
+- **PG** seguito dai nomi dei singoli personaggi che conoscono il fatto.
+
+Esempio di assegnazione combinata: `> **Conoscenza:** Party — [Nome del party](indice-party.md) | PG — [Nome del PG](dossier-pg.md)`. Usa i collegamenti relativi alle schede o agli indici canonici disponibili e chiarisci eventuali omonimie con il Master. **Sapere comune** e **Solo Master** si usano da soli.
+
+L'etichetta descrive la conoscenza nella fiction nell'archivio del Master. Lascia senza etichetta i fatti per cui la conoscenza non è stata accertata, anche nelle schede esistenti. Quando il Master conferma una scoperta, aggiorna la sola riga di conoscenza del fatto nella scheda canonica, mantenendo le altre assegnazioni confermate e le regole sulle date di modifica. Usa il resoconto della sessione come fonte solo quando indica esplicitamente chi ha appreso il fatto. Conserva le etichette con i fatti corrispondenti durante revisioni, riorganizzazioni e copie nella Bibbia.
+
+---
+
 ## 4. Catalogo delle Skill (`.agents/skills/`)
 
 Ogni procedura operativa è definita nelle skill modulari dentro `.agents/skills/`:

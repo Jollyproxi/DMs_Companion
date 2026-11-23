@@ -57,6 +57,21 @@ Jeder validierte Abschnitt oder Bogen erhält das Standard-Badge:
 
 ---
 
+### Wissen in der Spielwelt
+
+Wenn die SL darum bittet oder bestätigt, wer einen Sachverhalt kennt, ergänze direkt darunter eine Markdown-Zeile `> **Wissen:** …`. Rücke das Zitat in Listen so ein, dass es zum selben Listeneintrag gehört. Teile Absätze mit Sachverhalten, die unterschiedlichen Personen bekannt sind, und behalte den Wortlaut bei.
+
+- **Allgemeinwissen** für Sachverhalte, die der großen Mehrheit der Weltbevölkerung bekannt sind (etwa 95 %, mit Ausnahmen).
+- **Nur SL**, wenn kein SC den Sachverhalt kennt. NSC können ihn kennen.
+- **Gruppe** mit Gruppennamen, wenn alle SC dieser Gruppe den Sachverhalt kennen.
+- **SC** mit den Namen der einzelnen Spielercharaktere, die den Sachverhalt kennen.
+
+Beispiel für eine kombinierte Zuordnung: `> **Wissen:** Gruppe — [Gruppenname](gruppenindex.md) | SC — [Name des SC](sc-dossier.md)`. Verwende relative Links zu vorhandenen kanonischen Dossiers oder Verzeichnissen und kläre mehrdeutige Namen mit der SL. Verwende **Allgemeinwissen** und **Nur SL** jeweils allein.
+
+Die Kennzeichnung erfasst Wissen in der Spielwelt im Archiv der SL. Lass Sachverhalte mit ungeklärtem Wissensstand auch in bestehenden Dossiers ohne Kennzeichnung. Bestätigt die SL eine Entdeckung, aktualisiere die Wissenszeile des Sachverhalts im kanonischen Dossier. Behalte andere bestätigte Zuordnungen bei und beachte die Regeln für Änderungsdaten. Nutze Sitzungsprotokolle als Quelle, wenn sie ausdrücklich festhalten, wer den Sachverhalt erfahren hat. Behalte die Kennzeichnungen bei Prüfungen, Umstrukturierungen und beim Kopieren in die Weltbibel beim jeweiligen Sachverhalt.
+
+---
+
 ## 4. Skill-Katalog (`.agents/skills/`)
 
 Jedes operative Verfahren ist in den modularen Skills unter `.agents/skills/` festgelegt:
