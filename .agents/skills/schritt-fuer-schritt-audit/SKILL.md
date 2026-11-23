@@ -8,6 +8,8 @@ disable-model-invocation: false
 
 # Skill: Schritt-für-Schritt-Audit der Lore (`schritt-fuer-schritt-audit`)
 
+> **Wissen in der Spielwelt** — Nutze für den betreffenden Sachverhalt **Abfrage** aus `kampagnenwissen`. Sobald die SL bestätigt, wer ihn kennt, verwende **Aktualisierung**. Falls installiert, aber nicht erkannt, lies ihre `SKILL.md` direkt. Fehlt sie, setze den normalen Ablauf fort.
+
 Dieser Skill leitet eine interaktive, systematische und halluzinationsfreie Prüfung von D&D-Weltdateien, Bögen, Dossiers oder Bänden, indem der Spielleiter (SL) Konzept für Konzept befragt wird.
 
 > **📌 Regel: Eigennamen als Verknüpfungen**: Jeder Eigenname einer Weltentität (SCs, NSCs, Fraktionen, Häuser, Städte, Orte, magische Gegenstände, Bräuche, Feste, Ereignisse …), der im erzeugten Text vorkommt, muss eine **Markdown-Verknüpfung** zur kanonischen `.md`-Datei der Entität sein (z. B. `[Name](relativer/pfad/datei.md)`), niemals bloßer Klartext. Ausnahmen: Überschriften, Dateinamen, Frontmatter, Codeblöcke, Mermaid-Knoten und `.mw`-Quellen. Entität ohne Bogen: niemals erfinden — `[VOM_SL_ZU_DEFINIEREN: Bogen fehlt für <Name>]` verwenden und die Lücke melden. Prüfung und Umwandlung: Skill `eigennamen-verlinken`.
