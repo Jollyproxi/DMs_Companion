@@ -160,3 +160,7 @@ Nach Abschluss jeder Operation:
 4. **Zusammenspiel mit anderen Skills**:
    - Nach größeren Strukturänderungen `struktur-validieren` empfehlen.
    - Nach Bibel- oder Modulaktualisierungen an die Aktualisierung des Dashboards über `pruefungsstatus` erinnern.
+
+## Klatsch und Gerüchte
+
+Erhalte Status, Zuschreibung und Variantenlinks. Gib Aussagen als überliefert wieder. Trage ein Ereignis erst bei unabhängiger Bestätigung in die Chronik ein.

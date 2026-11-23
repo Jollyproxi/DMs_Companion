@@ -160,3 +160,7 @@ Si la compétence est invoquée sans préciser clairement l'opération ou si des
 4. **Intégration avec d'Autres Compétences** :
    - Après des changements structurels majeurs, suggérez d'exécuter `valider-structure`.
    - Après mise à jour de la Bible ou des modules, rappelez d'actualiser le tableau de bord via `statut-revision`.
+
+## Ragots et rumeurs
+
+Conservez le statut, l’attribution et les liens vers la variante. Présentez le propos comme rapporté. Inscrivez un événement dans la chronologie seulement s’il est attesté indépendamment.

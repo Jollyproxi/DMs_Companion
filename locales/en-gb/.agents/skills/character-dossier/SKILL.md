@@ -1,6 +1,6 @@
 ---
 name: character-dossier
-description: "Use when: creating, updating, or modularising five-module Player Character (PC) dossiers or Non-Player Character (NPC) sheets according to canonical campaign standards."
+description: "Use when: creating, updating, or modularising six-module Player Character (PC) dossiers or Non-Player Character (NPC) sheets according to canonical campaign standards."
 argument-hint: "Specify type (PC or NPC), character name, and operation (create, update module, sheet)"
 user-invocable: true
 disable-model-invocation: false
@@ -27,7 +27,7 @@ Full templates are available in [dossier-template](./references/dossier-template
 
 ---
 
-## 2. Creating a PC Dossier (5 Modules)
+## 2. Creating a PC Dossier (6 Modules)
 
 When the DM introduces or documents a new Player Character:
 
@@ -35,12 +35,13 @@ When the DM introduces or documents a new Player Character:
 2. **Create Directory**:
    `05_characters/<Player_Characters>/<Campaign_or_Party>/<PC_Name>/` *(default: `05_characters/Player_Characters/<Campaign>/<PC_Name>/`, respecting custom folder names in the workspace)*
 3. **Generate Modular Files**:
-   - `README.md`: Character hub with role, moral traits, and index of the 5 files.
+   - `README.md`: Character hub with role, moral traits, and index of the 6 files.
    - `01_profile_and_traits.md`: Biographical data, class, level, traits, and appearance.
    - `02_integrated_backstory.md`: Past, turning points, and roots in the world.
    - `03_relationships_and_dynamics.md`: Bonds with party companions, factions, and NPCs.
    - `04_equipment_and_abilities.md`: Signature items, weapons, focuses, and unique abilities.
-   - `05_dm_hooks_and_secrets.md`: Hooks reserved for the DM, mysteries, and revelations.
+   - `05_rumours_and_beliefs.md` — Rumours and beliefs.
+   - `06_dm_hooks_and_secrets.md`: Hooks reserved for the DM, mysteries, and revelations.
 4. **Structure**:
    - Header with role, faction (linked to Tome VII `07_factions/`), residence (linked to Tome VI `06_locations/`), alignment, and status.
    - Sections for Appearance & Temperament, Narrative Role, and DM Secrets & Hooks.
@@ -70,6 +71,12 @@ Use the [template](./references/dossier-template.md) and update the required ind
 ## 4. Post-Session Cross-Updates
 
 When a session introduces new developments for a PC (e.g. newly uncovered hook, shifted bond, wound, or item acquired):
-1. Locate the specific module to update (e.g. `03_relationships_and_dynamics.md` for a pact, `05_dm_hooks_and_secrets.md` for a revealed lead).
+1. Locate the specific module to update (e.g. `03_relationships_and_dynamics.md` for a pact, `06_dm_hooks_and_secrets.md` for a revealed lead).
 2. Apply the edit while preserving prior information.
 3. Advance the `Modified: [TODAY_DATE]` field while leaving `Verified` untouched.
+
+In an existing dossier preserve the hooks, rename the former module 05 to 06, create the new 05 and update the index and incoming links including fragments. If 06 already exists, compare contents before moving files. Check that links still resolve on repeat runs.
+
+## Gossip and rumours
+
+For each documented role add a bullet summarising the version with a relative link to it. Include the subject’s stance when documented.

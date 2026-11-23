@@ -76,3 +76,7 @@ Das Protokoll wird in den kanonischen Abschnitten erstellt:
    - **Bräuche, Feste und Ereignisse**: Führt die Sitzung einen neuen Brauch, ein neues Fest/Vorkommnis oder ein neues Ereignis ein bzw. erwähnt es, **schlage stets die Anlage des zugehörigen Bogens** in `03_gesellschaft_und_politik/braeuche_feste_und_ereignisse/` über `brauch-fest-ereignis` vor.
    - **Vorkommnisse bereits erfasster Ereignisse & Markwhen-Zeitlinie**: Spielt in der Sitzung eine bekannte Wiederkehr (z. B. ein jährliches Turnier oder ein saisonales Fest) oder treten datierte Ereignisse auf, dokumentiere sie im Protokoll und trage sie in `10_zeitlinie/` ein (Vorkommnisregister und `.mw`-Quellen über `timeline-markwhen`); **frage anschließend den SL**, ob der kanonische Bogen angepasst werden soll: Besonderheiten des einzelnen Vorkommnisses bleiben in Zeitlinie und Protokoll, der Bogen wird nur bei einer Wesensänderung angepasst.
    - Zeige die Änderungen an und biete an, sie nach Bestätigung anzuwenden.
+
+## Klatsch und Gerüchte
+
+Halte nur anhand des bestätigten Protokolls fest, wer welche Version gehört oder verbreitet hat. Erhalte Status, Zuschreibung und Variantenlinks. Gib Aussagen als überliefert wieder. Trage ein Ereignis erst bei unabhängiger Bestätigung in die Chronik ein.

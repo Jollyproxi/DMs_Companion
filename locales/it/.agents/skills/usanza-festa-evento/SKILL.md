@@ -201,3 +201,7 @@ Le voci interne a cronologia storica e registro occorrenze usano gli stessi tag 
 - **Indici**: aggiorna `README.md` della sottocartella, della cartella madre `usi_costumi_ed_eventi/` e, se pertinente, quello di `03_societa_e_politica/`.
 - **Codifiche canone** (Bibbia/JSON): usanze `3.5.x`, festival/occorrenze `3.6.x`, eventi `3.7.x`; tomo `10_timeline` codificato come tomo `10` (`10.1.x` cronologia storica, `10.2.x` registro occorrenze, `10.3.x` calendario). I sorgenti `.mw` e le esportazioni sono esclusi dalla Bibbia e indicizzati solo nel JSON.
 - **Zero allucinazioni**: come per ogni altro modulo, mai dettagli non approvati dal Master.
+
+## Pettegolezzi e dicerie
+
+In fondo alle schede pertinenti raccogli le dicerie in punti con link relativi alla variante e aggiungi il rimando di ritorno.

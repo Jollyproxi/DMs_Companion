@@ -2,7 +2,7 @@
 
 ## 1. Dossier Modulaire de Personnage Joueur (PJ)
 
-Chaque PJ possède un dossier dédié dans `05_personnages/<Joueurs>/<Campagne_ou_Groupe>/<Nom_PJ>/` (défaut : `05_personnages/Joueurs/<Campagne>/<Nom_PJ>/`) accompagné d'un `README.md` de liaison et de cinq modules thématiques :
+Chaque PJ possède un dossier dédié dans `05_personnages/<Joueurs>/<Campagne_ou_Groupe>/<Nom_PJ>/` (défaut : `05_personnages/Joueurs/<Campagne>/<Nom_PJ>/`) accompagné d'un `README.md` de liaison et de six modules thématiques :
 
 ### `README.md` (Portail du Personnage)
 ```markdown
@@ -19,7 +19,8 @@ Chaque PJ possède un dossier dédié dans `05_personnages/<Joueurs>/<Campagne_o
 2. [02. Historique Intégré](02_historique_integre.md)
 3. [03. Relations & Dynamiques de Groupe](03_relations_et_dynamiques.md)
 4. [04. Équipement & Capacités Singulières](04_equipement_et_capacites.md)
-5. [05. Accroches Narratives & Secrets du MJ](05_accroches_et_secrets_mj.md)
+5. [05. Rumeurs et convictions](05_rumeurs_et_convictions.md)
+6. [06. Accroches Narratives & Secrets du MJ](06_accroches_et_secrets_mj.md)
 ```
 
 ### `01_etat_civil_et_traits.md`
@@ -79,9 +80,29 @@ Chaque PJ possède un dossier dédié dans `05_personnages/<Joueurs>/<Campagne_o
 * **[Nom Capacité] :** [Description narrative et mécanique]
 ```
 
-### `05_accroches_et_secrets_mj.md`
+### `05_rumeurs_et_convictions.md`
+
+Pour chaque rôle attesté, résumez la version en une puce avec un lien relatif. Précisez la position du sujet si elle est documentée.
+
 ```markdown
-# 05. Accroches Narratives & Secrets du MJ
+# 05. Rumeurs et convictions
+
+> 🛡️ *Vérifié : NON_VALIDE | Modifié : [DATE_DU_JOUR]*
+
+## Rumeurs entendues
+
+## Rumeurs auxquelles le sujet croit
+
+## Rumeurs propagées
+
+## Rumeurs sur le sujet
+
+## Convictions personnelles
+```
+
+### `06_accroches_et_secrets_mj.md`
+```markdown
+# 06. Accroches Narratives & Secrets du MJ
 
 > 🛡️ *Vérifié : NON_VALIDE | Modifié : [DATE_DU_JOUR]*
 
@@ -128,4 +149,12 @@ Appliquez la convention PNJ du projet. Consultez les instructions du projet et l
 ## Secrets & Accroches pour le MJ
 * **[Secret / Motivation Cachée] :** [Ce qu'il poursuit réellement]
 * **[Accroche d'Aventure] :** [Comment l'impliquer dans les prochaines séances]
+
+## Rumeurs
+
+### Rumeurs auxquelles le sujet croit
+
+### Rumeurs propagées
+
+### Rumeurs sur le sujet
 ```

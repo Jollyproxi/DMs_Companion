@@ -56,7 +56,7 @@ Pour éviter d'encombrer le contexte de transcription avec des dizaines de noms 
    - Écartez les titres structurels génériques (ex. *Cadre général*, *Index*, *Synopsis*, *Séance 01*, *Statut de l'occurrence*) ainsi que les marqueurs `[A_DEFINIR_MJ: ...]`.
 4. **Normalisation et Déduplication** :
    - Pour chaque fiche canonique, extrayez le nom propre depuis le titre H1 (en retirant préfixes numériques comme `01_`, étiquettes telles que `Fiche PNJ :` / `Dossier PJ :` / `Objet Magique :`, badges `🛡️` ou sous-titres descriptifs après `—` ou `|`), ou à défaut depuis le nom du fichier nettoyé.
-   - Pour les dossiers PJ à 5 modules, n'extrayez l'identité qu'**une seule fois** à partir du dossier ou du module d'état civil (`01_etat_civil...`), sans répéter les noms des 5 sous-fichiers.
+   - Pour les dossiers PJ à 6 modules, n'extrayez l'identité qu'**une seule fois** à partir du dossier ou du module d'état civil (`01_etat_civil...`), sans répéter les noms des 6 sous-fichiers.
    - Ne recueillez les alias ou diminutifs que s'ils sont explicitement documentés dans la fiche (`Alias`, `Surnoms`, `Variantes`) ; n'ajoutez jamais d'explications entre parenthèses.
    - Supprimez les graphies strictement identiques et triez les entrées par ordre alphabétique au sein de chaque catégorie.
 

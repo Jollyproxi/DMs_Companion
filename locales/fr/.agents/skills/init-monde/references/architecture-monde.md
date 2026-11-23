@@ -32,6 +32,9 @@ Ce document définit l'arborescence standard de dossiers et de fichiers pour l'a
 │   ├── 03_classes_sociales_et_roles.md                     # Stratification civique, guildes et esthétique
 │   ├── 04_ordre_public_et_forces_de_l_ordre.md             # Gardes, milices, maintien de l'ordre et perception sociale (lois et procès dans le Tome IV)
 │   ├── [peuples/]                                          # Optionnel (défaut : peuples/ ; personnalisable en especes/, races/, lignees/, cultures/ — avec README.md)
+│   ├── ragots_et_rumeurs/
+│   │   ├── README.md
+│   │   └── <région>/<lieu>/<sujet>/
 │   └── coutumes_fetes_et_evenements/                       # Sous-série : coutumes, fêtes récurrentes et événements ponctuels
 │       ├── README.md                                       # Index de la sous-série par typologie
 │       ├── coutumes/                                       # Particularités du quotidien (structures et manières)
@@ -73,7 +76,8 @@ Ce document définit l'arborescence standard de dossiers et de fichiers pour l'a
 │   │           ├── 02_historique_integre.md                # Passé lié au lore du monde
 │   │           ├── 03_relations_et_dynamiques.md           # Liens avec les autres PJ et PNJ
 │   │           ├── 04_equipement_et_capacites.md           # Objets clés, dons et aptitudes
-│   │           └── 05_accroches_et_secrets_mj.md           # Pistes narratives réservées au MJ
+│   │           ├── 05_rumeurs_et_convictions.md
+│   │           └── 06_accroches_et_secrets_mj.md           # Pistes narratives réservées au MJ
 │   └── <Non_Joueurs>/                                      # Archive PNJ (défaut : Non_Joueurs/ ; personnalisable en PNJ/, Figurants/, etc.)
 │       ├── README.md
 │       └── <Zone_de_reference>/

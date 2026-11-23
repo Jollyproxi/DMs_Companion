@@ -160,3 +160,7 @@ Al termine di ciascuna operazione:
 4. **Integrazione con Altre Skill**:
    - Dopo modifiche strutturali rilevanti, suggerire l'esecuzione di `valida-struttura`.
    - Dopo l'aggiornamento della Bibbia o dei moduli, ricordare l'aggiornamento della dashboard con `stato-revisione`.
+
+## Pettegolezzi e dicerie
+
+Conserva stato, attribuzione e link alla variante. Riporta il contenuto della voce solo come tale. Registra in cronologia un evento solo quando attestato indipendentemente.

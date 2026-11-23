@@ -1,12 +1,16 @@
 ---
 name: connaissances-campagne
-description: "Consulter, vérifier et actualiser qui connaît un fait dans la fiction."
+description: "Recueillir et consulter les ragots et rumeurs, ou vérifier et actualiser qui connaît un fait dans la fiction."
 argument-hint: "Indiquez un fait, un PJ, un groupe ou une fiche à vérifier"
 user-invocable: true
 disable-model-invocation: false
 ---
 
 # Connaissances dans la fiction
+
+Pour recueillir ou consulter les rumeurs, suivez [Ragots et rumeurs](references/ragots_et_rumeurs.md). Distinguez les rumeurs du tome 03 des faits lors des consultations, des comptes rendus et des mises à jour de la Bible, du JSON et de la chronologie.
+
+## Pour les faits canoniques
 
 Travaillez dans les archives du MJ à partir des fiches canoniques. Le savoir commun est implicite. Les lignes de connaissance consignent uniquement les exceptions.
 

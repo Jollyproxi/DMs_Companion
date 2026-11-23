@@ -201,3 +201,7 @@ Entries inside historical chronology and occurrence register use the same tag ta
 - **Indices**: update `README.md` of the subfolder, parent `customs_festivals_and_events/`, and `03_society_and_politics/` if applicable.
 - **Canon Codes** (Bible/JSON): customs `3.5.x`, festivals/occurrences `3.6.x`, events `3.7.x`; Tome `10_timeline` coded as Tome `10` (`10.1.x` historical chronology, `10.2.x` occurrence register, `10.3.x` calendar). `.mw` sources and exports are excluded from the Bible and indexed solely in JSON.
 - **Zero Hallucinations**: as with every other module, never add details unapproved by the DM.
+
+## Gossip and rumours
+
+At the end of related sheets list relative links to relevant versions and add the return links.

@@ -32,6 +32,9 @@ This document defines the standard folder and file structure for encyclopaedic a
 │   ├── 03_social_classes_and_roles.md                      # Civic stratification, guilds, and aesthetics
 │   ├── 04_public_order_and_law_enforcement.md              # Town watch, militias, civic order, and social perception (laws and trials in Tome IV)
 │   ├── [peoples/]                                          # Optional (default: peoples/; customisable to species/, races/, lineages/, cultures/ — with README.md)
+│   ├── gossip_and_rumours/
+│   │   ├── README.md
+│   │   └── <region>/<place>/<topic>/
 │   └── customs_festivals_and_events/                       # Sub-series: customs, recurring festivals, and one-off events
 │       ├── README.md                                       # Sub-series index by type
 │       ├── customs/                                        # Everyday-life peculiarities (structures and manner)
@@ -73,7 +76,8 @@ This document defines the standard folder and file structure for encyclopaedic a
 │   │           ├── 02_integrated_backstory.md              # History tied to world lore
 │   │           ├── 03_relationships_and_dynamics.md        # Bonds with other PCs and NPCs
 │   │           ├── 04_equipment_and_abilities.md           # Key items, feats, and abilities
-│   │           └── 05_dm_hooks_and_secrets.md              # Narrative hooks reserved for the DM
+│   │           ├── 05_rumours_and_beliefs.md
+│   │           └── 06_dm_hooks_and_secrets.md              # Narrative hooks reserved for the DM
 │   └── <Non_Player_Characters>/                            # Setting NPC Archive (default: Non_Player_Characters/; customisable to NPCs/, Supporting/, etc.)
 │       ├── README.md
 │       └── <Reference_area>/

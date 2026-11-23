@@ -62,7 +62,7 @@ Jedes operative Verfahren ist in den modularen Skills unter `.agents/skills/` fe
 1. **`welt-initialisieren`**: Erstinterview und Erstellung des Zehn-Bände-Verzeichnisbaums.
 2. **`struktur-validieren`**: Diagnose für Ordner, fehlende `README.md`-Dateien, defekte Links, nicht verknüpfte Eigennamen und falsch platzierte Dateien.
 3. **`sitzungsprotokoll`**: Geführtes Interview, Strukturierung von Rohnotizen oder Import strukturierter NotebookLM-/LLM-Transkriptionen, Protokoll mit Mermaid-Diagramm und Aktualisierung des Kampagnenindex.
-4. **`charakter-dossier`**: Erstellung und Pflege der 5-teiligen SC-Dossiers und NSC-Bögen.
+4. **`charakter-dossier`**: Erstellung und Pflege der 6-teiligen SC-Dossiers und NSC-Bögen.
 5. **`magischer-gegenstand`**: Katalogisierung von Artefakten, Relikten, Spielmechaniken und Rechtsstatus.
 6. **`schritt-fuer-schritt-audit`**: Atomare interaktive Faktenprüfung (einzelne Aussage oder Abschnitt) mit dem SL.
 7. **`vollstaendiges-datei-audit`**: Ganzheitliche Prüfung einer kompletten Datei oder eines Ordners.
@@ -87,7 +87,7 @@ Der Archivar koordiniert die Arbeitsabläufe, indem er Anfragen an die jeweilige
 - Speicherung in `09_chroniken/kampagnen/<name>/sitzungen/XX_titel.md` und Aktualisierung der Tabelle in der `README.md` der Kampagne.
 
 ### Kanal B: Bögen & Dossiers (Skills `charakter-dossier` & `magischer-gegenstand`)
-- **5-modulige SC-Dossiers** (`01_stammdaten`, `02_hintergrund`, `03_beziehungen`, `04_ausruestung`, `05_sl_aufhaenger`).
+- **6-modulige SC-Dossiers** (`01_stammdaten`, `02_hintergrund`, `03_beziehungen`, `04_ausruestung`, `05_geruechte_und_ueberzeugungen`, `06_sl_aufhaenger`).
 - **NSC-Bögen** mit Rollen, Fraktionen und SL-Geheimnissen.
 - **Bögen für magische Gegenstände** mit technischer Einordnung, Handwerkskunst, Mechaniken und Rechtsstatus.
 
@@ -141,6 +141,10 @@ Markiere ungeklärte Angaben und erhalte bestätigte Ebenen. Verwende einen vorl
 Ordne vor einer genehmigten Verschiebung jedem Quellpfad einen Zielpfad zu und prüfe, ob das Ziel frei ist. Aktualisiere alte und neue Indizes, alle eingehenden Verweise und ausgehende relative Links. Erhalte die Historie der Erstbegegnung, aktualisiere die vorgesehenen abgeleiteten Dokumente und prüfe kanonische Linkziele sowie die Eindeutigkeit des Bogens.
 
 Dante behält `<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` unter seinem NSC-Stammordner.
+
+## Klatsch und Gerüchte
+
+Trenne Gerüchte in Band 03 bei Abfragen, Sitzungsprotokollen und der Synchronisation von Bibel, JSON und Zeitleiste von gesicherten Fakten. `03_gesellschaft_und_politik/klatsch_und_geruechte/` · `kampagnenwissen`.
 
 ## Clientspezifische Anweisungen
 

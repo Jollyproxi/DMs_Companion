@@ -56,7 +56,7 @@ Per evitare di sovraccaricare il contesto di trascrizione con decine di nomi irr
    - Scarta intestazioni strutturali generiche (es. *Quadro generale*, *Indice*, *Sinossi*, *Sessione 01*, *Stato dell'occorrenza*) e segnaposto `[DA_DEFINIRE_MASTER: ...]`.
 4. **Normalizzazione e Deduplicazione**:
    - Per ogni scheda estrai il nome proprio canonico dal titolo H1 (rimuovendo prefissi numerici come `01_`, etichette come `Scheda PNG:` / `Dossier PG:` / `Oggetto Magico:`, badge `🛡️` o sottotitoli descrittivi dopo `—` o `|`), oppure dal nome del file ripulito se manca un H1 nominale.
-   - Nei dossier PG a 5 moduli, estrai **una sola volta** l'identità dalla cartella o dal modulo anagrafico (`01_anagrafica...`), evitando di ripetere i nomi dei file di modulo.
+   - Nei dossier PG a 6 moduli, estrai **una sola volta** l'identità dalla cartella o dal modulo anagrafico (`01_anagrafica...`), evitando di ripetere i nomi dei file di modulo.
    - Raccogli gli alias o diminutivi solo se esplicitamente annotati nella scheda canonica (`Alias`, `Soprannomi`, `Varianti`); non riportare descrizioni tra parentesi.
    - Deduplica le grafie identiche e ordina alfabeticamente le voci all'interno di ogni categoria.
 

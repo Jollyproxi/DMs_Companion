@@ -76,3 +76,7 @@ Le compte rendu est structuré selon les sections canoniques :
    - **Coutumes, fêtes et événements** : si la séance introduit ou mentionne une nouvelle coutume, fête/occurrence récurrente ou événement ponctuel, **proposez systématiquement** la création de sa fiche dans `03_societe_et_politique/coutumes_fetes_et_evenements/` via `coutume-fete-evenement`.
    - **Occurrences d'événements déjà recensés & Frise Markwhen** : si la séance met en scène une récurrence connue (ex. un tournoi annuel ou une fête saisonnière) ou introduit des événements datés, documentez-les dans le compte rendu et consignez-les dans `10_chronologie/` (registre des occurrences et sources `.mw` via `timeline-markwhen`), puis **demandez au MJ** s'il faut modifier la fiche canonique : les particularités propres à cette occurrence restent dans la chronologie et le compte rendu, et la fiche n'est modifiée que si elles en changent la nature.
    - Affichez les modifications proposées et offrez de les appliquer après confirmation.
+
+## Ragots et rumeurs
+
+Consignez qui a entendu ou propagé chaque version si le compte rendu confirmé l’atteste. Conservez le statut, l’attribution et les liens vers la variante. Présentez le propos comme rapporté. Inscrivez un événement dans la chronologie seulement s’il est attesté indépendamment.

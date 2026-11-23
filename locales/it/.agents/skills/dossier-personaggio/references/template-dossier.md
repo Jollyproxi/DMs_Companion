@@ -2,7 +2,7 @@
 
 ## 1. Dossier Modulare Personaggio Giocante (PG)
 
-Ogni PG possiede una cartella dedicata in `05_personaggi/<Giocanti>/<Campagna_o_Party>/<Nome_PG>/` (default: `05_personaggi/Giocanti/<Campagna>/<Nome_PG>/`) con un `README.md` di raccordo e cinque moduli tematici:
+Ogni PG possiede una cartella dedicata in `05_personaggi/<Giocanti>/<Campagna_o_Party>/<Nome_PG>/` (default: `05_personaggi/Giocanti/<Campagna>/<Nome_PG>/`) con un `README.md` di raccordo e sei moduli tematici:
 
 ### `README.md` (Hub del Personaggio)
 ```markdown
@@ -19,7 +19,8 @@ Ogni PG possiede una cartella dedicata in `05_personaggi/<Giocanti>/<Campagna_o_
 2. [02. Backstory Integrata](02_backstory_integrata.md)
 3. [03. Relazioni & Dinamiche di Gruppo](03_relazioni_e_dinamiche.md)
 4. [04. Equipaggiamento & Capacità Peculiari](04_equipaggiamento_e_capacita.md)
-5. [05. Ganci Narrativi & Segreti del DM](05_ganci_e_segreti_dm.md)
+5. [05. Dicerie e convinzioni](05_dicerie_e_convinzioni.md)
+6. [06. Ganci Narrativi & Segreti del DM](06_ganci_e_segreti_dm.md)
 ```
 
 ### `01_anagrafica_e_tratti.md`
@@ -79,9 +80,29 @@ Ogni PG possiede una cartella dedicata in `05_personaggi/<Giocanti>/<Campagna_o_
 * **[Nome Capacità]:** [Descrizione narrativa e meccanica]
 ```
 
-### `05_ganci_e_segreti_dm.md`
+### `05_dicerie_e_convinzioni.md`
+
+Per ogni ruolo attestato inserisci un punto con una riga sulla versione e il link relativo alla variante. Annota la posizione del soggetto se documentata.
+
 ```markdown
-# 05. Ganci Narrativi & Segreti del DM
+# 05. Dicerie e convinzioni
+
+> 🛡️ *Verificato: NON_CONVALIDATO | Modificato: [DATA_ODIERNA]*
+
+## Dicerie conosciute
+
+## Dicerie a cui crede
+
+## Dicerie che diffonde
+
+## Dicerie sul suo conto
+
+## Convinzioni personali
+```
+
+### `06_ganci_e_segreti_dm.md`
+```markdown
+# 06. Ganci Narrativi & Segreti del DM
 
 > 🛡️ *Verificato: NON_CONVALIDATO | Modificato: [DATA_ODIERNA]*
 
@@ -128,4 +149,12 @@ Applica la convenzione PNG del progetto. Leggila nelle istruzioni del progetto e
 ## Segreti & Ganci per il DM
 * **[Segreto / Motivazione Nascosta]:** [Cosa persegue realmente]
 * **[Gancio d'Avventura]:** [Come coinvolgerlo nelle prossime sessioni]
+
+## Dicerie
+
+### Dicerie a cui crede
+
+### Dicerie che diffonde
+
+### Dicerie sul suo conto
 ```

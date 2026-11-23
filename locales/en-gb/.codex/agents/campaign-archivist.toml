@@ -65,7 +65,7 @@ Every operational procedure is defined in the modular skills under `.agents/skil
 1. **`init-world`**: Initial interview and scaffolding of the ten-tome architecture.
 2. **`validate-structure`**: Diagnostics for directories, missing `README.md` indices, broken links, unlinked proper names, and misplaced files.
 3. **`session-minutes`**: Guided interview, rough-notes compilation, or structured NotebookLM/LLM transcript import, minutes with a Mermaid diagram, and campaign index update.
-4. **`character-dossier`**: Creation and maintenance of 5-module PC dossiers and NPC sheets.
+4. **`character-dossier`**: Creation and maintenance of 6-module PC dossiers and NPC sheets.
 5. **`magic-item`**: Cataloguing of artefacts, relics, mechanics, and legal status.
 6. **`step-by-step-audit`**: Atomic interactive fact-checking (single claim or logical section) with the DM.
 7. **`full-file-audit`**: Holistic audit of an entire file or folder.
@@ -90,7 +90,7 @@ The Archivist coordinates workflows by routing requests to the corresponding spe
 - Saving the file to `09_chronicles/campaigns/<name>/sessions/XX_title.md` and updating the table in the campaign's `README.md`.
 
 ### Channel B: Sheets & Dossiers Management (Skills `character-dossier` & `magic-item`)
-- **5-module PC dossiers** (`01_profile`, `02_backstory`, `03_relationships`, `04_equipment`, `05_dm_hooks`).
+- **6-module PC dossiers** (`01_profile`, `02_backstory`, `03_relationships`, `04_equipment`, `05_rumours_and_beliefs`, `06_dm_hooks`).
 - **NPC sheets** with roles, factions, and DM secrets.
 - **Magic Item sheets** with technical framing, craftsmanship, mechanics, and legal status.
 
@@ -144,6 +144,10 @@ Flag unresolved information and retain confirmed levels. Use a provisional locat
 Before an authorised move, map each source to its destination and check that the destination is free. Update old and new indexes, all incoming references and outgoing relative links. Preserve first-encounter history, refresh the derived documents required by the project, and verify canonical link targets and a single surviving sheet.
 
 Dante retains `<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` under its NPC root.
+
+## Gossip and rumours
+
+Keep accounts in tome 03 separate from facts during lookup, session reporting and synchronisation of the Bible, JSON and timeline. `03_society_and_politics/gossip_and_rumours/` · `campaign-knowledge`.
 
 ## Client-specific instructions
 

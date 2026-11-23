@@ -71,3 +71,7 @@ Verifies that every proper name of a registered entity (PCs, NPCs, factions, hou
    - If anomalies are found, ask the DM (using the environment's structured question tool such as `vscode_askQuestions` / `AskUserQuestion` if available, otherwise in chat) how to proceed:
      - `Automatically repair anomalies (generate missing READMEs and fix paths)`
      - `Show report only without modifying files`
+
+## Gossip and rumours
+
+Check the index, record uniqueness, reciprocal links and variant fragments. Check PC modules 05 and 06 and that links resolve to the intended content.

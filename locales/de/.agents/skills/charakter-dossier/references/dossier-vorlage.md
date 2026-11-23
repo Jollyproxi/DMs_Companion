@@ -2,7 +2,7 @@
 
 ## 1. Modulares Spielercharakter-(SC-)Dossier
 
-Jeder SC besitzt einen eigenen Ordner unter `05_charaktere/<Spielercharaktere>/<Kampagne_oder_Gruppe>/<SC_Name>/` (Standard: `05_charaktere/Spielercharaktere/<Kampagne>/<SC_Name>/`) mit einer verbindenden `README.md` und fünf thematischen Modulen:
+Jeder SC besitzt einen eigenen Ordner unter `05_charaktere/<Spielercharaktere>/<Kampagne_oder_Gruppe>/<SC_Name>/` (Standard: `05_charaktere/Spielercharaktere/<Kampagne>/<SC_Name>/`) mit einer verbindenden `README.md` und sechs thematischen Modulen:
 
 ### `README.md` (Charakter-Hub)
 ```markdown
@@ -19,7 +19,8 @@ Jeder SC besitzt einen eigenen Ordner unter `05_charaktere/<Spielercharaktere>/<
 2. [02. Integrierter Hintergrund](02_integrierter_hintergrund.md)
 3. [03. Beziehungen & Gruppendynamik](03_beziehungen_und_dynamiken.md)
 4. [04. Ausrüstung & Besondere Fähigkeiten](04_ausruestung_und_faehigkeiten.md)
-5. [05. Erzählaufhänger & SL-Geheimnisse](05_sl_aufhaenger_und_geheimnisse.md)
+5. [05. Gerüchte und Überzeugungen](05_geruechte_und_ueberzeugungen.md)
+6. [06. Erzählaufhänger & SL-Geheimnisse](06_sl_aufhaenger_und_geheimnisse.md)
 ```
 
 ### `01_stammdaten_und_merkmale.md`
@@ -79,9 +80,29 @@ Jeder SC besitzt einen eigenen Ordner unter `05_charaktere/<Spielercharaktere>/<
 * **[Fähigkeitsname]:** [Narrative und regeltechnische Beschreibung]
 ```
 
-### `05_sl_aufhaenger_und_geheimnisse.md`
+### `05_geruechte_und_ueberzeugungen.md`
+
+Fasse für jede belegte Rolle die Version in einem Stichpunkt mit relativem Link zusammen. Ergänze die Haltung, soweit dokumentiert.
+
 ```markdown
-# 05. Erzählaufhänger & SL-Geheimnisse
+# 05. Gerüchte und Überzeugungen
+
+> 🛡️ *Geprüft: NICHT_GEPRUEFT | Geändert: [HEUTIGES_DATUM]*
+
+## Gehörte Gerüchte
+
+## Für wahr gehaltene Gerüchte
+
+## Verbreitete Gerüchte
+
+## Gerüchte über die Person oder Gruppe
+
+## Persönliche Überzeugungen
+```
+
+### `06_sl_aufhaenger_und_geheimnisse.md`
+```markdown
+# 06. Erzählaufhänger & SL-Geheimnisse
 
 > 🛡️ *Geprüft: NICHT_GEPRUEFT | Geändert: [HEUTIGES_DATUM]*
 
@@ -128,4 +149,12 @@ Wende die NSC-Ablagekonvention des Projekts an. Lies die Projektanweisungen und 
 ## Geheimnisse & Aufhänger für den SL
 * **[Geheimnis / Verborgenes Motiv]:** [Was der NSC wirklich verfolgt]
 * **[Abenteueraufhänger]:** [Wie er in künftigen Sitzungen eingebunden werden kann]
+
+## Gerüchte
+
+### Für wahr gehaltene Gerüchte
+
+### Verbreitete Gerüchte
+
+### Gerüchte über die Person oder Gruppe
 ```

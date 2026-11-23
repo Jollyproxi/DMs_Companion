@@ -2,7 +2,7 @@
 
 ## 1. Modular Player Character (PC) Dossier
 
-Each PC has a dedicated folder under `05_characters/<Player_Characters>/<Campaign_or_Party>/<PC_Name>/` (default: `05_characters/Player_Characters/<Campaign>/<PC_Name>/`) with a connecting `README.md` and five thematic modules:
+Each PC has a dedicated folder under `05_characters/<Player_Characters>/<Campaign_or_Party>/<PC_Name>/` (default: `05_characters/Player_Characters/<Campaign>/<PC_Name>/`) with a connecting `README.md` and six thematic modules:
 
 ### `README.md` (Character Hub)
 ```markdown
@@ -19,7 +19,8 @@ Each PC has a dedicated folder under `05_characters/<Player_Characters>/<Campaig
 2. [02. Integrated Backstory](02_integrated_backstory.md)
 3. [03. Relationships & Group Dynamics](03_relationships_and_dynamics.md)
 4. [04. Equipment & Signature Abilities](04_equipment_and_abilities.md)
-5. [05. Narrative Hooks & DM Secrets](05_dm_hooks_and_secrets.md)
+5. [05. Rumours and beliefs](05_rumours_and_beliefs.md)
+6. [06. Narrative Hooks & DM Secrets](06_dm_hooks_and_secrets.md)
 ```
 
 ### `01_profile_and_traits.md`
@@ -79,9 +80,29 @@ Each PC has a dedicated folder under `05_characters/<Player_Characters>/<Campaig
 * **[Ability Name]:** [Narrative and mechanical description]
 ```
 
-### `05_dm_hooks_and_secrets.md`
+### `05_rumours_and_beliefs.md`
+
+For each documented role add a bullet summarising the version with a relative link to it. Include the subject’s stance when documented.
+
 ```markdown
-# 05. Narrative Hooks & DM Secrets
+# 05. Rumours and beliefs
+
+> 🛡️ *Verified: UNVERIFIED | Modified: [TODAY_DATE]*
+
+## Rumours heard
+
+## Rumours believed
+
+## Rumours spread
+
+## Rumours about this subject
+
+## Personal beliefs
+```
+
+### `06_dm_hooks_and_secrets.md`
+```markdown
+# 06. Narrative Hooks & DM Secrets
 
 > 🛡️ *Verified: UNVERIFIED | Modified: [TODAY_DATE]*
 
@@ -128,4 +149,12 @@ Follow the project’s NPC archive convention. Read the project instructions and
 ## Secrets & DM Hooks
 * **[Secret / Hidden Motive]:** [What they truly pursue]
 * **[Adventure Hook]:** [How to involve them in upcoming sessions]
+
+## Rumours
+
+### Rumours believed
+
+### Rumours spread
+
+### Rumours about this subject
 ```

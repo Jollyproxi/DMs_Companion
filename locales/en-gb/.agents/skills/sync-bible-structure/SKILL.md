@@ -160,3 +160,7 @@ Upon completing each operation:
 4. **Integration with Other Skills**:
    - After major structural changes, suggest running `validate-structure`.
    - After updating the Bible or modules, remind the DM to refresh the dashboard with `review-status`.
+
+## Gossip and rumours
+
+Preserve status, attribution and variant links. Report the claim as attributed. Add an event to the chronology only with independent confirmation.

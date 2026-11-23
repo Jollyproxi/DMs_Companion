@@ -117,7 +117,7 @@ Invoca le skill con il relativo comando slash dove disponibile (VS Code, Claude 
 | 1 | `init-mondo` | Impostazione guidata e scaffolding di un mondo nuovo. |
 | 2 | `valida-struttura` | Controllo di salute strutturale dell'archivio. |
 | 3 | `verbale-sessione` | Verbali post-sessione da appunti grezzi, intervista o trascrizione NotebookLM/LLM. |
-| 4 | `dossier-personaggio` | Dossier PG a 5 moduli e schede PNG. |
+| 4 | `dossier-personaggio` | Dossier PG a 6 moduli e schede PNG. |
 | 5 | `oggetto-magico` | Registri a 4 sezioni per oggetti magici. |
 | 6 | `audit-passo-passo` | Fact-checking interattivo, affermazione per affermazione. |
 | 7 | `audit-file-intero` | Audit di un intero file o cartella. |
@@ -151,7 +151,7 @@ Invoca le skill con il relativo comando slash dove disponibile (VS Code, Claude 
 
 * **Quando**: un nuovo personaggio giocante entra in gioco, un PNG va definito, o un modulo di dossier va aggiornato.
 * **Come**: `/dossier-personaggio` — *“Specifica il tipo (PG o PNG), il nome del personaggio e l'operazione (crea, aggiorna modulo, scheda).”*
-* **Risultato**: un dossier PG a 5 moduli (`01_anagrafica_e_tratti`, `02_backstory_integrata`, `03_relazioni_e_dinamiche`, `04_equipaggiamento_e_capacita`, `05_ganci_e_segreti_dm`) in `05_personaggi/Giocanti/<Campagna>/<Nome_PG>/`, oppure una scheda PNG archiviata secondo la convenzione del progetto, entrambi registrati negli indici.
+* **Risultato**: un dossier PG a 6 moduli (`01_anagrafica_e_tratti`, `02_backstory_integrata`, `03_relazioni_e_dinamiche`, `04_equipaggiamento_e_capacita`, `05_dicerie_e_convinzioni`, `06_ganci_e_segreti_dm`) in `05_personaggi/Giocanti/<Campagna>/<Nome_PG>/`, oppure una scheda PNG archiviata secondo la convenzione del progetto, entrambi registrati negli indici.
 
 ### 4.5 `oggetto-magico` — Oggetti Magici Peculiari
 
@@ -224,6 +224,8 @@ Ogni riga di conoscenza va sotto il singolo fatto. Il sapere comune è implicito
 ```
 
 Per la sintassi completa, vedi [`conoscenze-campagna`](.agents/skills/conoscenze-campagna/SKILL.md).
+
+[Pettegolezzi e dicerie](.agents/skills/conoscenze-campagna/references/pettegolezzi_e_dicerie.md) — Gestisci le voci del tomo 03 separatamente dai fatti, anche durante consultazione, verbalizzazione e sincronizzazione di Bibbia, JSON e timeline.
 
 ---
 

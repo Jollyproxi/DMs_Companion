@@ -56,7 +56,7 @@ Um den Transkriptionskontext nicht mit Dutzenden fernen Namen zu überfrachten, 
    - Verwende keine generischen Strukturüberschriften (z. B. *Allgemeiner Rahmen*, *Index*, *Synopsis*, *Sitzung 01*, *Status des Vorkommnisses*) und keine Platzhalter `[VOM_SL_ZU_DEFINIEREN: ...]`.
 4. **Normalisierung und Deduplizierung**:
    - Extrahiere für jeden kanonischen Bogen den Eigennamen aus der H1-Überschrift (ohne Zahlenpräfixe wie `01_`, Typbezeichnungen wie `NSC-Bogen:` / `SC-Dossier:` / `Magischer Gegenstand:`, `🛡️`-Badges oder beschreibende Untertitel nach `—` oder `|`) bzw. ersatzweise aus dem bereinigten Dateinamen.
-   - Extrahiere bei 5-teiligen SC-Dossiers die Identität **genau einmal** aus dem SC-Ordnernamen oder Stammdaten-Modul (`01_stammdaten...`), ohne die 5 Moduldateinamen zu wiederholen.
+   - Extrahiere bei 6-teiligen SC-Dossiers die Identität **genau einmal** aus dem SC-Ordnernamen oder Stammdaten-Modul (`01_stammdaten...`), ohne die 6 Moduldateinamen zu wiederholen.
    - Übernimm Aliase oder Spitznamen nur, wenn sie ausdrücklich im kanonischen Bogen dokumentiert sind (`Aliase`, `Spitznamen`, `Varianten`); füge niemals erklärende Zusätze in Klammern hinzu.
    - Entferne doppelte Schreibweisen und sortiere innerhalb jeder Kategorie alphabetisch.
 

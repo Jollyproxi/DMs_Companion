@@ -201,3 +201,7 @@ Einträge in historischer Chronologie und Vorkommnisregister verwenden dieselbe 
 - **Indizes**: aktualisiere `README.md` des Unterordners, des Elternordners `braeuche_feste_und_ereignisse/` und ggf. `03_gesellschaft_und_politik/`.
 - **Kanoncodes** (Bibel/JSON): Bräuche `3.5.x`, Feste/Vorkommnisse `3.6.x`, Ereignisse `3.7.x`; Band `10_zeitlinie` als Band `10` (`10.1.x` historische Chronologie, `10.2.x` Vorkommnisregister, `10.3.x` Kalender). `.mw`-Quellen und Exporte sind von der Bibel ausgenommen und werden nur im JSON indiziert.
 - **Keine Halluzinationen**: wie in jedem Modul keinerlei vom SL nicht freigegebene Details.
+
+## Klatsch und Gerüchte
+
+Führe am Ende der zugehörigen Blätter relative Links zu den Varianten auf und ergänze Rückverweise.
