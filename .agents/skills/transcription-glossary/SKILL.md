@@ -56,7 +56,7 @@ To avoid flooding the transcription context with dozens of distant names that tr
    - Discard generic structural headings (e.g. *General Framework*, *Index*, *Synopsis*, *Session 01*, *Occurrence Status*) and `[TO_BE_DEFINED_BY_DM: ...]` placeholders.
 4. **Normalisation & Deduplication**:
    - For each canonical sheet, extract the proper name from the H1 heading (stripping numeric prefixes like `01_`, type prefixes such as `NPC Sheet:` / `PC Dossier:` / `Magic Item:`, `🛡️` status badges, or descriptive subtitles after `—` or `|`), or from the cleaned file name if no H1 proper name is present.
-   - For 5-module PC dossiers, extract the character identity **once** from the PC folder name or profile module (`01_profile...`) rather than repeating the 5 module file names.
+   - For 6-module PC dossiers, extract the character identity **once** from the PC folder name or profile module (`01_profile...`) rather than repeating the 6 module file names.
    - Collect aliases or diminutives only where explicitly documented in the sheet (`Aliases`, `Nicknames`, `Variants`); never include parenthetical lore explanations.
    - Deduplicate identical spellings and sort entries alphabetically within each category.
 

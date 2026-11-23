@@ -115,7 +115,7 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 | 1 | `init-world` | Guided setup and scaffolding of a new world. |
 | 2 | `validate-structure` | Structural health check of the archive. |
 | 3 | `session-minutes` | Post-session minutes from rough notes, interview, or NotebookLM/LLM transcript. |
-| 4 | `character-dossier` | 5-module PC dossiers and NPC sheets. |
+| 4 | `character-dossier` | 6-module PC dossiers and NPC sheets. |
 | 5 | `magic-item` | 4-section magic item records. |
 | 6 | `step-by-step-audit` | Interactive fact-check, claim by claim. |
 | 7 | `full-file-audit` | Audit of an entire file or folder. |
@@ -149,7 +149,7 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 
 * **When**: a new player character joins, an NPC is fleshed out, or a dossier module needs updating.
 * **How**: `/character-dossier` — *“Specify type (PC or NPC), character name, and operation (create, update module, sheet).”*
-* **Result**: a 5-module PC dossier (`01_profile_and_traits`, `02_integrated_backstory`, `03_relationships_and_dynamics`, `04_equipment_and_abilities`, `05_dm_hooks_and_secrets`) under `05_characters/Player_Characters/<Campaign>/<PC_Name>/`, or an NPC sheet filed according to the project convention, both registered in the indexes.
+* **Result**: a 6-module PC dossier (`01_profile_and_traits`, `02_integrated_backstory`, `03_relationships_and_dynamics`, `04_equipment_and_abilities`, `05_rumours_and_beliefs`, `06_dm_hooks_and_secrets`) under `05_characters/Player_Characters/<Campaign>/<PC_Name>/`, or an NPC sheet filed according to the project convention, both registered in the indexes.
 
 ### 4.5 `magic-item` — Unique Magic Items
 
@@ -222,6 +222,8 @@ Place each knowledge line below the individual fact. Common knowledge is implici
 ```
 
 For the complete format, see [`campaign-knowledge`](.agents/skills/campaign-knowledge/SKILL.md).
+
+[Gossip and rumours](.agents/skills/campaign-knowledge/references/gossip_and_rumours.md) — Keep accounts in tome 03 separate from facts during lookup, session reporting and synchronisation of the Bible, JSON and timeline.
 
 ---
 

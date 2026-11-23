@@ -67,3 +67,7 @@ Once the DM's answers are received, generate the modular structure using file-wr
 
 4. **Final Validation**:
    Once creation is complete, invoke the `validate-structure` skill to certify that the directory tree is complete and free of broken links.
+
+## Gossip and rumours
+
+Create the collection and its README, link it from the tome 03 index and add subfolders as needed. `gossip_and_rumours/`
