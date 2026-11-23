@@ -8,6 +8,8 @@ disable-model-invocation: false
 
 # Skill: Step-by-Step Lore Audit (`step-by-step-audit`)
 
+> **In-world knowledge** — For the fact under review, use **Consultation** from `campaign-knowledge`. When the GM confirms who knows it, use **Update**. If installed but undiscovered, read its `SKILL.md` directly. If absent, continue the regular workflow.
+
 This skill guides an interactive, systematic, hallucination-free review of D&D setting files, sheets, dossiers, or tomes by questioning the Dungeon Master (DM) concept by concept.
 
 > **📌 Linked Proper Names Rule**: every proper name of a setting entity (PCs, NPCs, factions, houses, cities, locations, magic items, customs, festivals, events…) appearing in produced text must be a **Markdown link** to the entity's canonical `.md` file (e.g. `[Name](relative/path/file.md)`), never plain text. Exceptions: headings, file names, frontmatter, code blocks, Mermaid nodes, and `.mw` sources. Entity without a sheet: never invent it — use `[TO_BE_DEFINED_BY_DM: missing sheet for <Name>]` and flag the gap. Checking and conversion: `link-proper-names` skill.
