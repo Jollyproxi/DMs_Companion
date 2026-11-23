@@ -71,3 +71,7 @@ Prüft, ob jeder Eigenname einer erfassten Entität (SCs, NSCs, Fraktionen, Häu
    - Werden Abweichungen entdeckt, frage den SL (über das strukturierte Fragewerkzeug der Umgebung wie `vscode_askQuestions` / `AskUserQuestion`, falls verfügbar; sonst im Chat), wie verfahren werden soll:
      - `Abweichungen automatisch beheben (fehlende READMEs erzeugen und Pfade korrigieren)`
      - `Nur Bericht anzeigen, keine Dateien ändern`
+
+## Klatsch und Gerüchte
+
+Prüfe Index, Eindeutigkeit der Blätter, Rückverweise und eigene Dateien je Fassung und das gemeinsame Tag verwandter Fassungen. Prüfe die SC-Module 05 und 06 und die Ziele ihrer Links.

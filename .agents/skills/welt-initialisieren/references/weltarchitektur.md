@@ -32,6 +32,9 @@ Dieses Dokument definiert die standardisierte Ordner- und Dateistruktur für die
 │   ├── 03_gesellschaftsschichten_und_rollen.md             # Bürgerliche Schichtung, Zünfte und Ästhetik
 │   ├── 04_oeffentliche_ordnung_und_sicherheitskraefte.md   # Stadtwachen, Milizen, öffentliche Ordnung und Wahrnehmung (Gesetze und Gerichte in Band IV)
 │   ├── [voelker/]                                          # Optional (Standard: voelker/; anpassbar zu spezies/, rassen/, abstammungen/, kulturen/ — mit README.md)
+│   ├── klatsch_und_geruechte/
+│   │   ├── README.md
+│   │   └── <Region>/<Ort>/<Thema>/
 │   └── braeuche_feste_und_ereignisse/                      # Unterserie: Bräuche, wiederkehrende Feste und einmalige Ereignisse
 │       ├── README.md                                       # Index der Unterserie nach Typologie
 │       ├── braeuche/                                       # Besonderheiten des Alltags (Struktur und Ablauf)
@@ -73,7 +76,8 @@ Dieses Dokument definiert die standardisierte Ordner- und Dateistruktur für die
 │   │           ├── 02_integrierter_hintergrund.md          # Mit der Weltlore verknüpfte Vorgeschichte
 │   │           ├── 03_beziehungen_und_dynamiken.md         # Bindungen zu anderen SCs und NSCs
 │   │           ├── 04_ausruestung_und_faehigkeiten.md      # Schlüsselgegenstände, Talente und Fähigkeiten
-│   │           └── 05_sl_aufhaenger_und_geheimnisse.md     # Dem SL vorbehaltene Erzählaufhänger
+│   │           ├── 05_geruechte_und_ueberzeugungen.md
+│   │           └── 06_sl_aufhaenger_und_geheimnisse.md     # Dem SL vorbehaltene Erzählaufhänger
 │   └── <Nichtspielercharaktere>/                           # NSC-Archiv (Standard: Nichtspielercharaktere/; anpassbar zu NSCs/, Nebenfiguren/, usw.)
 │       ├── README.md
 │       └── <Bezugsgebiet>/

@@ -68,6 +68,8 @@ Nutze dieses Verfahren, um `WELTENBIBEL.md` aus den Einzelmodulen komplett neu z
 
 ## 2. Verfahren: `Struktur-JSON-generieren` (Vollständige taxonomische Kartierung)
 
+Erfasse bei Erstellung und Aktualisierung jede Datei der Sammlung in Band 03. Bewahre Aussagen mit ihrer Zuschreibung, führe die SL-Notiz getrennt und prüfe Links nach Verschiebungen oder Aufteilungen. Gib Gerüchten in der Bibel einen eigenen Abschnitt. Verwende für diese Dateien im JSON die eigene Darstellung anstelle der allgemeinen Extraktion von Schlüsselbegriffen. [geruechte](references/struktur-json-format.md#geruechte).
+
 Nutze dieses Verfahren, um alle Workspace-Dateien zu scannen und eine vollständige maschinenlesbare Karte im JSON-Format zu erstellen.
 
 ### Arbeitsschritte:
@@ -118,6 +120,8 @@ Nutze dieses Verfahren, wenn ein oder mehrere atomare Module bearbeitet oder hin
 
 ## 4. Verfahren: `Struktur-JSON-aktualisieren` (JSON-Delta-Synchronisation)
 
+Erfasse bei Erstellung und Aktualisierung jede Datei der Sammlung in Band 03. Bewahre Aussagen mit ihrer Zuschreibung, führe die SL-Notiz getrennt und prüfe Links nach Verschiebungen oder Aufteilungen. Gib Gerüchten in der Bibel einen eigenen Abschnitt. Verwende für diese Dateien im JSON die eigene Darstellung anstelle der allgemeinen Extraktion von Schlüsselbegriffen. [geruechte](references/struktur-json-format.md#geruechte).
+
 Nutze dieses Verfahren, um `weltstruktur.json` beim Hinzufügen neuer Dateien, Umbenennen von Modulen oder Erweitern von Inhalten aktuell zu halten.
 
 ### Arbeitsschritte:
@@ -160,3 +164,7 @@ Nach Abschluss jeder Operation:
 4. **Zusammenspiel mit anderen Skills**:
    - Nach größeren Strukturänderungen `struktur-validieren` empfehlen.
    - Nach Bibel- oder Modulaktualisierungen an die Aktualisierung des Dashboards über `pruefungsstatus` erinnern.
+
+## Klatsch und Gerüchte
+
+Erhalte Status, Zuschreibung und Variantenlinks. Gib Aussagen als überliefert wieder. Trage ein Ereignis erst bei unabhängiger Bestätigung in die Chronik ein.

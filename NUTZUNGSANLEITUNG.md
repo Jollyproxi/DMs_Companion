@@ -115,7 +115,7 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 | 1 | `welt-initialisieren` | Geführte Einrichtung und Gerüst einer neuen Welt. |
 | 2 | `struktur-validieren` | Strukturelle Gesundheitsprüfung des Archivs. |
 | 3 | `sitzungsprotokoll` | Sitzungsprotokolle aus Rohnotizen, Interview oder NotebookLM-/LLM-Transkription. |
-| 4 | `charakter-dossier` | SC-Dossiers mit 5 Modulen und NSC-Bögen. |
+| 4 | `charakter-dossier` | SC-Dossiers mit 6 Modulen und NSC-Bögen. |
 | 5 | `magischer-gegenstand` | 4-Abschnitt-Register für magische Gegenstände. |
 | 6 | `schritt-fuer-schritt-audit` | Interaktive Faktenprüfung, Aussage für Aussage. |
 | 7 | `vollstaendiges-datei-audit` | Audit einer ganzen Datei oder eines Ordners. |
@@ -149,7 +149,7 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 
 * **Wann**: ein neuer Spielercharakter stößt dazu, ein NSC wird ausgearbeitet oder ein Dossiermodul muss aktualisiert werden.
 * **Wie**: `/charakter-dossier` — *„Gib Typ (SC oder NSC), Charakternamen und Vorgang (erstellen, modul aktualisieren, bogen) an.“*
-* **Ergebnis**: ein SC-Dossier mit 5 Modulen (`01_stammdaten_und_merkmale`, `02_integrierter_hintergrund`, `03_beziehungen_und_dynamiken`, `04_ausruestung_und_faehigkeiten`, `05_sl_aufhaenger_und_geheimnisse`) unter `05_charaktere/Spielercharaktere/<Kampagne>/<SC_Name>/`, oder ein NSC-Bogen gemäß Projektkonvention, beide in den Indizes eingetragen.
+* **Ergebnis**: ein SC-Dossier mit 6 Modulen (`01_stammdaten_und_merkmale`, `02_integrierter_hintergrund`, `03_beziehungen_und_dynamiken`, `04_ausruestung_und_faehigkeiten`, `05_geruechte_und_ueberzeugungen`, `06_sl_aufhaenger_und_geheimnisse`) unter `05_charaktere/Spielercharaktere/<Kampagne>/<SC_Name>/`, oder ein NSC-Bogen gemäß Projektkonvention, beide in den Indizes eingetragen.
 
 ### 4.5 `magischer-gegenstand` — Besondere magische Gegenstände
 
@@ -222,6 +222,8 @@ Jede Wissenszeile steht unter dem betreffenden Sachverhalt. Allgemeinwissen gilt
 ```
 
 Das vollständige Format steht in [`kampagnenwissen`](.agents/skills/kampagnenwissen/SKILL.md).
+
+[Klatsch und Gerüchte](.agents/skills/kampagnenwissen/references/klatsch_und_geruechte.md) — Trenne Gerüchte in Band 03 bei Abfragen, Sitzungsprotokollen und der Synchronisation von Bibel, JSON und Zeitleiste von gesicherten Fakten.
 
 ---
 
