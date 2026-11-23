@@ -302,3 +302,47 @@ When running `generate-structure-json` or `update-structure-json`:
 5. **Numerical Code**: If a file is named `03_flow_of_magic.md` inside `01_cosmology`, its code is `"1.3"`.
 6. **Sub-series Codes**: Sheets inside `customs_festivals_and_events/` use third-level codes per subfolder (`3.5.x` customs, `3.6.x` festivals/occurrences, `3.7.x` events; `3.8.x` for optional `peoples/` or custom-named folder). Branches inside `04_law_and_statutes/` use `4.1.x` … `4.10.x` (and `4.11.x+` for extra custom branches; `4.Y.1` for `01_general_framework.md`, `4.Y.2+` for individual acts `02_<entry_slug>.md`). Files in `10_timeline/` use `10.1.x` (historical chronology), `10.2.x` (occurrence register), `10.3.x` (calendar).
 7. **Typological Fields**: For festivals/occurrences extract `periodicity` and `trigger` from their template sections; for one-off events extract `occurrence_status`.
+
+## rumours
+
+`03_society_and_politics/gossip_and_rumours/`
+
+Paths are relative to the archive root. For each subject retain the file, role and documented stance. On update replace the affected file entry and remove obsolete paths after a move. On generation and update, verify the title, aliases, topic and context sheet paths against the Markdown sheet, including after a move.
+
+```json
+{
+  "rumours": [
+    {
+      "file": "03_society_and_politics/gossip_and_rumours/version-a.md",
+      "title": "…",
+      "aliases": [
+        "…"
+      ],
+      "topic": "…",
+      "context_sheets": [
+        "…/context.md"
+      ],
+      "tag": "#<slug>",
+      "status": "draft",
+      "attributed_claim": "…",
+      "subjects": [
+        {
+          "file": "…/subject.md",
+          "role": "…",
+          "stance": "…"
+        }
+      ],
+      "related_versions": [
+        "03_society_and_politics/gossip_and_rumours/version-b.md"
+      ],
+      "gm_note": "…",
+      "circulation": [
+        {
+          "place": "…",
+          "circle": "…"
+        }
+      ]
+    }
+  ]
+}
+```

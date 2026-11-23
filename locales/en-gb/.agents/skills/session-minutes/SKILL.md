@@ -76,3 +76,7 @@ The minutes are compiled across the canonical sections:
    - **Customs, festivals, and events**: if the session introduces or mentions a new custom, recurring festival/occurrence, or one-off event, **always propose** creating the corresponding sheet in `03_society_and_politics/customs_festivals_and_events/` via `custom-festival-event`.
    - **Occurrences of registered events & Markwhen Timeline**: if the session stages a known recurrence (e.g. an annual tournament or seasonal feast) or introduces dated events, document them in the minutes and record them in `10_timeline/` (occurrence register and `.mw` sources via `timeline-markwhen`), then **ask the DM** whether to amend the canonical sheet: particulars specific to that occurrence stay in the timeline and minutes, and the sheet is updated only if they alter its nature.
    - Show the proposed edits and offer to apply them upon confirmation.
+
+## Gossip and rumours
+
+Record who heard or spread each version only as documented in the confirmed minutes. Preserve status, attribution and variant links. Report the claim as attributed. Add an event to the chronology only with independent confirmation.

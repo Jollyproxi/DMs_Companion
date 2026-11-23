@@ -68,6 +68,8 @@ Utilisez cette procédure pour régénérer ou créer `BIBLE_DE_L_UNIVERS.md` à
 
 ## 2. Procédure : `generer-structure-json` (Cartographie Taxonomique Complète)
 
+À la génération et à la mise à jour, indexez chaque fichier du recueil dédié dans le tome 03. Conservez les propos avec leur attribution, séparez la note du MJ et vérifiez les liens après déplacement ou scission. Réservez aux rumeurs une section distincte de la Bible. Pour ces fichiers, utilisez la représentation JSON dédiée à la place de l’extraction générique des concepts clés. [rumeurs](references/format-structure-json.md#rumeurs).
+
 Utilisez cette procédure pour inspecter tous les fichiers de l'espace de travail et produire une carte complète lisible par machine au format JSON.
 
 ### Étapes Opératoires :
@@ -118,6 +120,8 @@ Utilisez cette procédure lorsqu'un ou plusieurs modules atomiques ont été mod
 
 ## 4. Procédure : `mettre-a-jour-structure-json` (Synchronisation Delta JSON)
 
+À la génération et à la mise à jour, indexez chaque fichier du recueil dédié dans le tome 03. Conservez les propos avec leur attribution, séparez la note du MJ et vérifiez les liens après déplacement ou scission. Réservez aux rumeurs une section distincte de la Bible. Pour ces fichiers, utilisez la représentation JSON dédiée à la place de l’extraction générique des concepts clés. [rumeurs](references/format-structure-json.md#rumeurs).
+
 Utilisez cette procédure pour garder `structure_univers.json` synchronisé lors de l'ajout, du renommage ou de l'enrichissement de fichiers.
 
 ### Étapes Opératoires :
@@ -160,3 +164,7 @@ Si la compétence est invoquée sans préciser clairement l'opération ou si des
 4. **Intégration avec d'Autres Compétences** :
    - Après des changements structurels majeurs, suggérez d'exécuter `valider-structure`.
    - Après mise à jour de la Bible ou des modules, rappelez d'actualiser le tableau de bord via `statut-revision`.
+
+## Ragots et rumeurs
+
+Conservez le statut, l’attribution et les liens vers la variante. Présentez le propos comme rapporté. Inscrivez un événement dans la chronologie seulement s’il est attesté indépendamment.

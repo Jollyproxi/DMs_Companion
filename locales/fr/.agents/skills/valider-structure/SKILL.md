@@ -71,3 +71,7 @@ Vérifie que tout nom propre d'entité recensée (PJ, PNJ, factions, maisons, ci
    - Si des anomalies sont détectées, demandez au MJ (à l'aide de l'outil de questions structurées de l'environnement comme `vscode_askQuestions` / `AskUserQuestion` si disponible, sinon dans le chat) la marche à suivre :
      - `Réparer automatiquement les anomalies (générer les README manquants et corriger les chemins)`
      - `Afficher uniquement le rapport sans modifier de fichiers`
+
+## Ragots et rumeurs
+
+Vérifiez l’index, l’unicité des fiches, les liens réciproques et les fichiers distincts par version et leur tag commun. Vérifiez les modules 05 et 06 des PJ et la destination de leurs liens.

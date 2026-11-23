@@ -302,3 +302,47 @@ Quando si esegue `genera-struttura-json` o `aggiorna-struttura-json`:
 5. **Codice Numerico**: Se il file si chiama `03_flusso_della_magia.md` dentro `01_cosmologia`, il codice è `"1.3"`.
 6. **Codici Sottoserie**: Le schede di `usi_costumi_ed_eventi/` usano codici di terzo livello per sottocartella (`3.5.x` usanze, `3.6.x` festival/occorrenze, `3.7.x` eventi; `3.8.x` eventuale cartella `popoli/` o nome custom). Le branche di `04_diritto_e_leggi/` usano `4.1.x` … `4.10.x` (e `4.11.x+` per eventuali branche custom; `4.Y.1` per `01_quadro_generale.md`, `4.Y.2+` per gli atti `02_<slug_atto>.md`). I file della `10_timeline/` usano `10.1.x` (cronologia storica), `10.2.x` (registro occorrenze), `10.3.x` (calendario).
 7. **Campi Tipologici**: Per i festival/occorrenze estrarre `periodicita` e `scaturiggine` dalle rispettive sezioni del template; per gli eventi una tantum estrarre `stato_occorrenza`.
+
+## dicerie
+
+`03_societa_e_politica/pettegolezzi_e_dicerie/`
+
+Percorsi relativi alla radice dell’archivio. Ogni soggetto conserva file, ruolo e posizione documentata. In aggiornamento sostituisci la voce del file interessato e rimuovi i vecchi percorsi dopo uno spostamento. In generazione e aggiornamento verifica titolo, alias, argomento e percorsi delle schede di contesto rispetto alla scheda Markdown, anche dopo uno spostamento.
+
+```json
+{
+  "dicerie": [
+    {
+      "file": "03_societa_e_politica/pettegolezzi_e_dicerie/version-a.md",
+      "titolo": "…",
+      "alias": [
+        "…"
+      ],
+      "argomento": "…",
+      "schede_di_contesto": [
+        "…/context.md"
+      ],
+      "tag": "#<slug>",
+      "stato": "bozza",
+      "testo_attribuito": "…",
+      "soggetti": [
+        {
+          "file": "…/subject.md",
+          "ruolo": "…",
+          "posizione": "…"
+        }
+      ],
+      "versioni_collegate": [
+        "03_societa_e_politica/pettegolezzi_e_dicerie/version-b.md"
+      ],
+      "nota_dm": "…",
+      "diffusione": [
+        {
+          "luogo": "…",
+          "cerchia": "…"
+        }
+      ]
+    }
+  ]
+}
+```

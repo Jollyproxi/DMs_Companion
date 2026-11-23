@@ -68,7 +68,7 @@ Chaque procédure opérationnelle est décrite dans les compétences modulaires 
 1. **`init-monde`** : Entretien initial et génération de l'arborescence en dix tomes.
 2. **`valider-structure`** : Diagnostic des dossiers, des `README.md` manquants, des liens brisés, des noms propres non liés et des fichiers mal placés.
 3. **`compte-rendu-session`** : Entretien guidé, mise en forme de notes brutes ou import de transcription structurée NotebookLM/LLM, compte rendu avec diagramme Mermaid et mise à jour de l'index de campagne.
-4. **`dossier-personnage`** : Création et maintenance des dossiers PJ en 5 modules et des fiches PNJ.
+4. **`dossier-personnage`** : Création et maintenance des dossiers PJ en 6 modules et des fiches PNJ.
 5. **`objet-magique`** : Catalogage d'artefacts, reliques, mécaniques et cadre juridique.
 6. **`audit-etape-par-etape`** : Vérification interactive atomique (affirmation unique ou section) avec le MJ.
 7. **`audit-fichier-complet`** : Audit global d'un fichier entier ou d'un dossier.
@@ -93,7 +93,7 @@ L'Archiviste coordonne le flux de travail en orientant les demandes vers les com
 - Enregistrement dans `09_chroniques/campagnes/<nom>/sessions/XX_titre.md` et mise à jour du tableau dans le `README.md` de la campagne.
 
 ### Canal B : Gestion des Fiches & Dossiers (Compétences `dossier-personnage` & `objet-magique`)
-- **Dossiers PJ en 5 modules** (`01_etat_civil`, `02_historique`, `03_relations`, `04_equipement`, `05_accroches_mj`).
+- **Dossiers PJ en 6 modules** (`01_etat_civil`, `02_historique`, `03_relations`, `04_equipement`, `05_rumeurs_et_convictions`, `06_accroches_et_secrets_mj.md`).
 - **Fiches PNJ** avec rôles, factions et secrets du MJ.
 - **Fiches Objets Magiques** avec fiche technique, facture, mécaniques et statut juridique.
 
@@ -147,6 +147,10 @@ Signalez les données à définir et conservez les niveaux confirmés. Utilisez 
 Avant un déplacement autorisé, associez chaque source à sa destination et vérifiez que celle-ci est libre. Actualisez les anciens et nouveaux index, toutes les références entrantes et les liens relatifs sortants. Préservez l’historique de la première rencontre, actualisez les documents dérivés prévus et vérifiez les cibles canoniques des liens et l’unicité de la fiche.
 
 Dante conserve `<Cornice>/<Luogo_riferimento>/<Nome_PNG>.md` sous sa racine PNJ.
+
+## Ragots et rumeurs
+
+Distinguez les rumeurs du tome 03 des faits lors des consultations, des comptes rendus et des mises à jour de la Bible, du JSON et de la chronologie. `03_societe_et_politique/ragots_et_rumeurs/` · `connaissances-campagne`.
 
 ## Consignes propres au client
 

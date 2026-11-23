@@ -67,3 +67,7 @@ Erzeuge nach Erhalt der Antworten des SL die modulare Struktur mithilfe der Schr
 
 4. **Abschließende Validierung**:
    Rufe nach Abschluss der Erstellung den Skill `struktur-validieren` auf, um sicherzustellen, dass der Verzeichnisbaum vollständig und frei von defekten Links ist.
+
+## Klatsch und Gerüchte
+
+Lege die Sammlung mit README an, verlinke sie im Index von Band 03 und ergänze Unterordner nach Bedarf. `klatsch_und_geruechte/`

@@ -1,6 +1,6 @@
 ---
 name: dossier-personnage
-description: "Use when: créer, mettre à jour ou modulariser les dossiers des Personnages Joueurs (PJ) en cinq modules ou les fiches des Personnages Non-Joueurs (PNJ) selon les standards canoniques de la campagne."
+description: "Use when: créer, mettre à jour ou modulariser les dossiers des Personnages Joueurs (PJ) en six modules ou les fiches des Personnages Non-Joueurs (PNJ) selon les standards canoniques de la campagne."
 argument-hint: "Précisez le type (PJ ou PNJ), le nom du personnage et l'opération (creer, mettre a jour module, fiche)"
 user-invocable: true
 disable-model-invocation: false
@@ -27,7 +27,7 @@ Les modèles complets sont consultables dans [modele-dossier](./references/model
 
 ---
 
-## 2. Création d'un Dossier PJ (5 Modules)
+## 2. Création d'un Dossier PJ (6 Modules)
 
 Lorsque le MJ introduit ou documente un nouveau Personnage Joueur :
 
@@ -35,12 +35,13 @@ Lorsque le MJ introduit ou documente un nouveau Personnage Joueur :
 2. **Création du Dossier** :
    `05_personnages/<Joueurs>/<Campagne_ou_Groupe>/<Nom_PJ>/` *(défaut : `05_personnages/Joueurs/<Campagne>/<Nom_PJ>/`, en respectant les noms personnalisés de l'espace de travail)*
 3. **Génération des Fichiers Modulaires** :
-   - `README.md` : Portail du personnage avec rôle, traits moraux et index des 5 fichiers.
+   - `README.md` : Portail du personnage avec rôle, traits moraux et index des 6 fichiers.
    - `01_etat_civil_et_traits.md` : Données d'identité, classe, niveau, traits et apparence.
    - `02_historique_integre.md` : Passé, événements fondateurs et racines dans l'univers.
    - `03_relations_et_dynamiques.md` : Liens avec les compagnons, factions et PNJ.
    - `04_equipement_et_capacites.md` : Objets marquants, armes, focaliseurs et capacités uniques.
-   - `05_accroches_et_secrets_mj.md` : Pistes réservées au MJ, mystères et révélations.
+   - `05_rumeurs_et_convictions.md` — Rumeurs et convictions.
+   - `06_accroches_et_secrets_mj.md` : Pistes réservées au MJ, mystères et révélations.
 4. **Structure** :
    - En-tête avec rôle, faction (lien vers le Tome VII `07_factions/`), résidence (lien vers le Tome VI `06_lieux/`), alignement et statut vital.
    - Sections Apparence & Tempérament, Rôle Narratif et Secrets & Accroches MJ.
@@ -70,6 +71,12 @@ Utilisez le [modèle](./references/modele-dossier.md) et actualisez les index pr
 ## 4. Mises à Jour Croisées Post-Séance
 
 Lorsqu'une séance apporte des nouveautés concernant un PJ (ex. nouvelle piste découverte, lien modifié, blessure ou objet obtenu) :
-1. Identifiez le module précis à actualiser (ex. `03_relations_et_dynamiques.md` pour un pacte, `05_accroches_et_secrets_mj.md` pour une piste révélée).
+1. Identifiez le module précis à actualiser (ex. `03_relations_et_dynamiques.md` pour un pacte, `06_accroches_et_secrets_mj.md` pour une piste révélée).
 2. Appliquez la modification en préservant les informations antérieures.
 3. Avancez la date dans `Modifié : [DATE_DU_JOUR]` tout en laissant `Vérifié` inchangé.
+
+Dans un dossier existant, préservez les accroches, renommez l’ancien module 05 en 06, créez le nouveau 05 et actualisez l’index et les liens entrants, ancres comprises. Si le 06 existe déjà, comparez les contenus avant tout déplacement. Vérifiez les liens après une nouvelle exécution.
+
+## Ragots et rumeurs
+
+Pour chaque rôle attesté, résumez la version en une puce avec un lien relatif. Précisez la position du sujet si elle est documentée.

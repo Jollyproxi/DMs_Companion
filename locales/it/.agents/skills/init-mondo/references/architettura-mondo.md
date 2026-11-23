@@ -32,6 +32,9 @@ Questo documento definisce la struttura a cartelle e file standard per l'archivi
 │   ├── 03_classi_sociali_e_ruoli.md                       # Stratificazione civica, corporazioni ed estetica
 │   ├── 04_ordine_pubblico_e_forze_dell_ordine.md          # Guardie, milizie, sicurezza urbana e percezione sociale (norme e processi nel Tomo IV)
 │   ├── [popoli/]                                          # Opzionale (default: popoli/; personalizzabile in specie/, razze/, stirpi/, lignaggi/, culture/ — con README.md)
+│   ├── pettegolezzi_e_dicerie/
+│   │   ├── README.md
+│   │   └── <regione>/<luogo>/<argomento>/
 │   └── usi_costumi_ed_eventi/                             # Sottoserie: usanze, festival ricorrenti ed eventi una tantum
 │       ├── README.md                                      # Indice della sottoserie per tipologia
 │       ├── usanze/                                        # Peculiarità della vita quotidiana (strutture e modi)
@@ -73,7 +76,8 @@ Questo documento definisce la struttura a cartelle e file standard per l'archivi
 │   │           ├── 02_backstory_integrata.md              # Storia legata alla lore del mondo
 │   │           ├── 03_relazioni_e_dinamiche.md            # Legami con gli altri PG e PNG
 │   │           ├── 04_equipaggiamento_e_capacita.md       # Oggetti chiave, talenti e capacità
-│   │           └── 05_ganci_e_segreti_dm.md               # Spunti narrativi riservati al Master
+│   │           ├── 05_dicerie_e_convinzioni.md
+│   │           └── 06_ganci_e_segreti_dm.md               # Spunti narrativi riservati al Master
 │   └── <Non-Giocanti>/                                    # Archivio PNG (default: Non-Giocanti/; personalizzabile in PNG/, Comprimari/, ecc.)
 │       ├── README.md
 │       └── <Area_di_riferimento>/

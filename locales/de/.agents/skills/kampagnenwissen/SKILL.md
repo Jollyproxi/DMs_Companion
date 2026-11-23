@@ -1,12 +1,16 @@
 ---
 name: kampagnenwissen
-description: "Wissen über einzelne Sachverhalte in der Spielwelt abfragen, prüfen und aktualisieren."
+description: "Klatsch und Gerüchte sammeln und nachschlagen oder prüfen und aktualisieren, wer in der Spielwelt einen Sachverhalt kennt."
 argument-hint: "Geben Sie einen Sachverhalt, einen SC, eine Gruppe oder ein Dossier an"
 user-invocable: true
 disable-model-invocation: false
 ---
 
 # Wissen in der Spielwelt
+
+Zum Sammeln und Nachschlagen von Gerüchten siehe [Klatsch und Gerüchte](references/klatsch_und_geruechte.md). Trenne Gerüchte in Band 03 bei Abfragen, Sitzungsprotokollen und der Synchronisation von Bibel, JSON und Zeitleiste von gesicherten Fakten.
+
+## Für gesicherte Fakten
 
 Arbeite im Archiv der SL mit den kanonischen Dossiers. Allgemeinwissen gilt implizit. Wissenszeilen halten nur Ausnahmen fest.
 

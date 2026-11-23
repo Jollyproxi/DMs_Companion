@@ -302,3 +302,47 @@ Bei Ausführung von `Struktur-JSON-generieren` oder `Struktur-JSON-aktualisieren
 5. **Zahlencode**: Heißt eine Datei `03_magiefluss.md` in `01_kosmologie`, lautet der Code `"1.3"`.
 6. **Unterseriencodes**: Bögen unter `braeuche_feste_und_ereignisse/` verwenden dreistufige Codes je Unterordner (`3.5.x` Bräuche, `3.6.x` Feste/Vorkommnisse, `3.7.x` Ereignisse; `3.8.x` für optionales `voelker/` oder eigenen Ordnernamen). Rechtsgebiete unter `04_recht_und_gesetze/` verwenden `4.1.x` … `4.10.x` (und `4.11.x+` für benutzerdefinierte Zusatzgebiete; `4.Y.1` für `01_allgemeiner_rahmen.md`, `4.Y.2+` für Einzelakte `02_<eintrag_slug>.md`). Dateien unter `10_zeitlinie/` verwenden `10.1.x` (historische Chronologie), `10.2.x` (Vorkommnisregister), `10.3.x` (Kalender).
 7. **Typologische Felder**: Für Feste/Vorkommnisse `periodizitaet` und `ausloeser` aus den jeweiligen Vorlagenabschnitten extrahieren; für einmalige Ereignisse `vorkommnis_status`.
+
+## geruechte
+
+`03_gesellschaft_und_politik/klatsch_und_geruechte/`
+
+Pfade sind relativ zur Archivwurzel. Erfasse je Beteiligtem Datei, Rolle und belegte Haltung. Ersetze bei Aktualisierungen den betroffenen Eintrag und entferne nach Verschiebungen veraltete Pfade. Prüfe beim Erstellen und Aktualisieren Titel, Aliasnamen, Thema und Pfade der Kontextblätter anhand des Markdown-Blatts, auch nach einer Verschiebung.
+
+```json
+{
+  "geruechte": [
+    {
+      "datei": "03_gesellschaft_und_politik/klatsch_und_geruechte/version-a.md",
+      "titel": "…",
+      "aliasnamen": [
+        "…"
+      ],
+      "thema": "…",
+      "kontextblaetter": [
+        "…/context.md"
+      ],
+      "tag": "#<slug>",
+      "status": "Entwurf",
+      "zugeschriebene_aussage": "…",
+      "beteiligte": [
+        {
+          "datei": "…/subject.md",
+          "rolle": "…",
+          "haltung": "…"
+        }
+      ],
+      "verwandte_fassungen": [
+        "03_gesellschaft_und_politik/klatsch_und_geruechte/version-b.md"
+      ],
+      "sl_notiz": "…",
+      "verbreitung": [
+        {
+          "ort": "…",
+          "kreis": "…"
+        }
+      ]
+    }
+  ]
+}
+```

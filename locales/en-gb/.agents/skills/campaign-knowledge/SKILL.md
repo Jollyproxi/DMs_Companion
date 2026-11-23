@@ -1,12 +1,16 @@
 ---
 name: campaign-knowledge
-description: "Consult, validate and update who knows a campaign fact in-world."
+description: "Collect and consult gossip and rumours, or check and update who knows a fact in the fiction."
 argument-hint: "Specify a fact, PC, party or sheet to check"
 user-invocable: true
 disable-model-invocation: false
 ---
 
 # In-world knowledge
+
+To collect or consult rumours, follow [Gossip and rumours](references/gossip_and_rumours.md). Keep accounts in tome 03 separate from facts during lookup, session reporting and synchronisation of the Bible, JSON and timeline.
+
+## For canonical facts
 
 Work in the GM’s archive and use canonical sheets. Common knowledge is implicit, and knowledge lines record exceptions only.
 

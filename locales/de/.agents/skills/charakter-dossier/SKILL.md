@@ -1,6 +1,6 @@
 ---
 name: charakter-dossier
-description: "Use when: fünfteilige Spielercharakter-(SC-)Dossiers oder Nichtspielercharakter-(NSC-)Bögen gemäß den kanonischen Kampagnenstandards erstellen, aktualisieren oder modularisieren."
+description: "Use when: sechsteilige Spielercharakter-(SC-)Dossiers oder Nichtspielercharakter-(NSC-)Bögen gemäß den kanonischen Kampagnenstandards erstellen, aktualisieren oder modularisieren."
 argument-hint: "Gib Typ (SC oder NSC), Charakternamen und Vorgang (erstellen, modul aktualisieren, bogen) an"
 user-invocable: true
 disable-model-invocation: false
@@ -27,7 +27,7 @@ Die vollständigen Vorlagen sind in [dossier-vorlage](./references/dossier-vorla
 
 ---
 
-## 2. Erstellung eines SC-Dossiers (5 Module)
+## 2. Erstellung eines SC-Dossiers (6 Module)
 
 Wenn der SL einen neuen Spielercharakter einführt oder dokumentiert:
 
@@ -35,12 +35,13 @@ Wenn der SL einen neuen Spielercharakter einführt oder dokumentiert:
 2. **Ordneranlage**:
    `05_charaktere/<Spielercharaktere>/<Kampagne_oder_Gruppe>/<SC_Name>/` *(Standard: `05_charaktere/Spielercharaktere/<Kampagne>/<SC_Name>/`, unter Wahrung benutzerdefinierter Ordnernamen im Workspace)*
 3. **Erzeugung der modularen Dateien**:
-   - `README.md`: Charakter-Hub mit Rolle, moralischen Zügen und Index der 5 Dateien.
+   - `README.md`: Charakter-Hub mit Rolle, moralischen Zügen und Index der 6 Dateien.
    - `01_stammdaten_und_merkmale.md`: Stammdaten, Klasse, Stufe, Merkmale und Erscheinungsbild.
    - `02_integrierter_hintergrund.md`: Vergangenheit, Wendepunkte und Verwurzelung in der Welt.
    - `03_beziehungen_und_dynamiken.md`: Bindungen zu Gefährten, Fraktionen und NSCs.
    - `04_ausruestung_und_faehigkeiten.md`: Charakteristische Gegenstände, Waffen, Fokusse und besondere Fähigkeiten.
-   - `05_sl_aufhaenger_und_geheimnisse.md`: Dem SL vorbehaltene Aufhänger, Rätsel und Enthüllungen.
+   - `05_geruechte_und_ueberzeugungen.md` — Gerüchte und Überzeugungen.
+   - `06_sl_aufhaenger_und_geheimnisse.md`: Dem SL vorbehaltene Aufhänger, Rätsel und Enthüllungen.
 4. **Aufbau**:
    - Kopfbereich mit Rolle, Fraktion (Link zu Band VII `07_fraktionen/`), Wohnort (Link zu Band VI `06_orte/`), Gesinnung und Lebensstatus.
    - Abschnitte zu Erscheinung & Wesen, Narrativer Rolle und Geheimnissen & SL-Aufhängern.
@@ -70,6 +71,12 @@ Nutze die [Vorlage](./references/dossier-vorlage.md) und aktualisiere die vorges
 ## 4. Querverknüpfte Aktualisierungen nach einer Sitzung
 
 Bringt eine Sitzung Neuigkeiten für einen SC (z. B. neu entdeckter Aufhänger, veränderte Bindung, Wunde oder erhaltener Gegenstand):
-1. Ermittle das konkret betroffene Modul (z. B. `03_beziehungen_und_dynamiken.md` für einen Pakt, `05_sl_aufhaenger_und_geheimnisse.md` für eine aufgedeckte Spur).
+1. Ermittle das konkret betroffene Modul (z. B. `03_beziehungen_und_dynamiken.md` für einen Pakt, `06_sl_aufhaenger_und_geheimnisse.md` für eine aufgedeckte Spur).
 2. Nimm die Ergänzung vor und bewahre bisherige Informationen.
 3. Setze `Geändert: [HEUTIGES_DATUM]` weiter, während `Geprüft` unverändert bleibt.
+
+Erhalte bei bestehenden Dossiers den Inhalt der Aufhänger, benenne das bisherige Modul 05 in 06 um, lege das neue Modul 05 an und aktualisiere Index und eingehende Links einschließlich Sprungmarken. Existiert 06 bereits, vergleiche vor dem Verschieben die Inhalte. Prüfe die Links auch bei wiederholter Ausführung.
+
+## Klatsch und Gerüchte
+
+Fasse für jede belegte Rolle die Version in einem Stichpunkt mit relativem Link zusammen. Ergänze die Haltung, soweit dokumentiert.

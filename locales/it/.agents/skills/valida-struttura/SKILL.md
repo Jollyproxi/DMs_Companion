@@ -71,3 +71,7 @@ Verifica che ogni nome proprio di entità censita (PG, PNG, fazioni, casate, cit
    - Se vengono rilevate anomalie, chiedi al Master (usando lo strumento di domande strutturate dell'ambiente come `vscode_askQuestions` / `AskUserQuestion` se disponibile, altrimenti in chat) come procedere:
      - `Ripara automaticamente le anomalie (genera README mancanti e correggi percorsi)`
      - `Mostra solo il report senza modificare file`
+
+## Pettegolezzi e dicerie
+
+Verifica indice, unicità della scheda, rimandi reciproci e file distinti per versione e tag condiviso tra versioni correlate. Controlla che i dossier PG abbiano entrambi i moduli 05 e 06 e che i link puntino al contenuto giusto.
