@@ -68,6 +68,8 @@ Use this procedure to regenerate or create `SETTING_BIBLE.md` from scratch by as
 
 ## 2. Procedure: `generate-structure-json` (Complete Taxonomic Mapping)
 
+On generation and update, index each file in the dedicated collection in tome 03. Keep claims with their attributions, separate the GM note and check links after moves or splits. Keep a distinct rumours section in the Bible. For these files use the dedicated JSON representation in place of generic key-concept extraction. [rumours](references/structure-json-format.md#rumours).
+
 Use this procedure to scan all workspace files and produce a complete, up-to-date machine-readable map in JSON format.
 
 ### Operational Steps:
@@ -117,6 +119,8 @@ Use this procedure when one or more atomic modules have been edited or added, to
 ---
 
 ## 4. Procedure: `update-structure-json` (JSON Delta Synchronisation)
+
+On generation and update, index each file in the dedicated collection in tome 03. Keep claims with their attributions, separate the GM note and check links after moves or splits. Keep a distinct rumours section in the Bible. For these files use the dedicated JSON representation in place of generic key-concept extraction. [rumours](references/structure-json-format.md#rumours).
 
 Use this procedure to keep `setting_structure.json` synchronised when new files are added, modules renamed, or contents enriched.
 

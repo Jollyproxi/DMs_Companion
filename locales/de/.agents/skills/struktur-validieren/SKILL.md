@@ -74,4 +74,4 @@ Prüft, ob jeder Eigenname einer erfassten Entität (SCs, NSCs, Fraktionen, Häu
 
 ## Klatsch und Gerüchte
 
-Prüfe Index, Eindeutigkeit der Blätter, Rückverweise und Sprungmarken der Varianten. Prüfe die SC-Module 05 und 06 und die Ziele ihrer Links.
+Prüfe Index, Eindeutigkeit der Blätter, Rückverweise und eigene Dateien je Fassung und das gemeinsame Tag verwandter Fassungen. Prüfe die SC-Module 05 und 06 und die Ziele ihrer Links.

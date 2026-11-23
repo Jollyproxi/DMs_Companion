@@ -152,6 +152,8 @@ Wende die NSC-Ablagekonvention des Projekts an. Lies die Projektanweisungen und 
 
 ## Gerüchte
 
+### Gehörte Gerüchte
+
 ### Für wahr gehaltene Gerüchte
 
 ### Verbreitete Gerüchte

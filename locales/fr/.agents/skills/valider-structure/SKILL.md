@@ -74,4 +74,4 @@ Vérifie que tout nom propre d'entité recensée (PJ, PNJ, factions, maisons, ci
 
 ## Ragots et rumeurs
 
-Vérifiez l’index, l’unicité des fiches, les liens réciproques et les ancres des variantes. Vérifiez les modules 05 et 06 des PJ et la destination de leurs liens.
+Vérifiez l’index, l’unicité des fiches, les liens réciproques et les fichiers distincts par version et leur tag commun. Vérifiez les modules 05 et 06 des PJ et la destination de leurs liens.

@@ -302,3 +302,39 @@ Lors de l'exécution de `generer-structure-json` ou `mettre-a-jour-structure-jso
 5. **Code Numérique** : Si le fichier se nomme `03_flux_de_la_magie.md` dans `01_cosmologie`, son code est `"1.3"`.
 6. **Codes des Sous-séries** : Les fiches de `coutumes_fetes_et_evenements/` utilisent des codes à trois niveaux par sous-dossier (`3.5.x` coutumes, `3.6.x` fêtes/occurrences, `3.7.x` événements ; `3.8.x` pour l'éventuel dossier `peuples/` ou nom personnalisé). Les branches de `04_droit_et_lois/` utilisent `4.1.x` … `4.10.x` (et `4.11.x+` pour d'éventuelles branches personnalisées ; `4.Y.1` pour `01_cadre_general.md`, `4.Y.2+` pour les actes `02_<slug_entree>.md`). Les fichiers de `10_chronologie/` utilisent `10.1.x` (chronologie historique), `10.2.x` (registre des occurrences), `10.3.x` (calendrier).
 7. **Champs Typologiques** : Pour les fêtes/occurrences extrayez `periodicite` et `declencheur` depuis leurs sections du modèle ; pour les événements ponctuels extrayez `statut_occurrence`.
+
+## rumeurs
+
+`03_societe_et_politique/ragots_et_rumeurs/`
+
+Chemins relatifs à la racine des archives. Conservez pour chaque sujet sa fiche, son rôle et sa position documentée. En mise à jour, remplacez l’entrée concernée et retirez les chemins périmés après déplacement.
+
+```json
+{
+  "rumeurs": [
+    {
+      "fichier": "03_societe_et_politique/ragots_et_rumeurs/version-a.md",
+      "tag": "#<slug>",
+      "statut": "brouillon",
+      "propos_attribue": "…",
+      "sujets": [
+        {
+          "fichier": "…/subject.md",
+          "role": "…",
+          "position": "…"
+        }
+      ],
+      "versions_liees": [
+        "03_societe_et_politique/ragots_et_rumeurs/version-b.md"
+      ],
+      "note_mj": "…",
+      "diffusion": [
+        {
+          "lieu": "…",
+          "cercle": "…"
+        }
+      ]
+    }
+  ]
+}
+```

@@ -152,6 +152,8 @@ Appliquez la convention PNJ du projet. Consultez les instructions du projet et l
 
 ## Rumeurs
 
+### Rumeurs entendues
+
 ### Rumeurs auxquelles le sujet croit
 
 ### Rumeurs propagées

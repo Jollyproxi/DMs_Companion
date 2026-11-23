@@ -90,7 +90,7 @@ The Archivist coordinates workflows by routing requests to the corresponding spe
 - Saving the file to `09_chronicles/campaigns/<name>/sessions/XX_title.md` and updating the table in the campaign's `README.md`.
 
 ### Channel B: Sheets & Dossiers Management (Skills `character-dossier` & `magic-item`)
-- **6-module PC dossiers** (`01_profile`, `02_backstory`, `03_relationships`, `04_equipment`, `05_rumours_and_beliefs`, `06_dm_hooks`).
+- **6-module PC dossiers** (`01_profile`, `02_backstory`, `03_relationships`, `04_equipment`, `05_rumours_and_beliefs`, `06_dm_hooks_and_secrets.md`).
 - **NPC sheets** with roles, factions, and DM secrets.
 - **Magic Item sheets** with technical framing, craftsmanship, mechanics, and legal status.
 

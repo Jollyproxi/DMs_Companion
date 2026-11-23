@@ -93,7 +93,7 @@ L'Archivista coordina il flusso di lavoro instradando le richieste verso le rela
 - Salvataggio del file in `09_cronache/campagne/<nome>/sessioni/XX_titolo.md` e aggiornamento della tabella nel `README.md` della campagna.
 
 ### Canale B: Gestione Schede & Dossier (Skill `dossier-personaggio` & `oggetto-magico`)
-- **Dossier PG a 6 moduli** (`01_anagrafica`, `02_backstory`, `03_relazioni`, `04_equipaggiamento`, `05_dicerie_e_convinzioni`, `06_ganci_dm`).
+- **Dossier PG a 6 moduli** (`01_anagrafica`, `02_backstory`, `03_relazioni`, `04_equipaggiamento`, `05_dicerie_e_convinzioni`, `06_ganci_e_segreti_dm.md`).
 - **Schede PNG** con ruoli, fazioni e segreti del DM.
 - **Schede Oggetti Magici** con inquadramento tecnico, manifattura, meccaniche e statuto giuridico.
 

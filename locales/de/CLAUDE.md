@@ -87,7 +87,7 @@ Der Archivar koordiniert die Arbeitsabläufe, indem er Anfragen an die jeweilige
 - Speicherung in `09_chroniken/kampagnen/<name>/sitzungen/XX_titel.md` und Aktualisierung der Tabelle in der `README.md` der Kampagne.
 
 ### Kanal B: Bögen & Dossiers (Skills `charakter-dossier` & `magischer-gegenstand`)
-- **6-modulige SC-Dossiers** (`01_stammdaten`, `02_hintergrund`, `03_beziehungen`, `04_ausruestung`, `05_geruechte_und_ueberzeugungen`, `06_sl_aufhaenger`).
+- **6-modulige SC-Dossiers** (`01_stammdaten`, `02_hintergrund`, `03_beziehungen`, `04_ausruestung`, `05_geruechte_und_ueberzeugungen`, `06_sl_aufhaenger_und_geheimnisse.md`).
 - **NSC-Bögen** mit Rollen, Fraktionen und SL-Geheimnissen.
 - **Bögen für magische Gegenstände** mit technischer Einordnung, Handwerkskunst, Mechaniken und Rechtsstatus.
 

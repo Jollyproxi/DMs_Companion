@@ -152,6 +152,8 @@ Follow the project’s NPC archive convention. Read the project instructions and
 
 ## Rumours
 
+### Rumours heard
+
 ### Rumours believed
 
 ### Rumours spread

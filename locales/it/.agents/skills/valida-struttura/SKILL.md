@@ -74,4 +74,4 @@ Verifica che ogni nome proprio di entità censita (PG, PNG, fazioni, casate, cit
 
 ## Pettegolezzi e dicerie
 
-Verifica indice, unicità della scheda, rimandi reciproci e ancore delle varianti. Controlla che i dossier PG abbiano entrambi i moduli 05 e 06 e che i link puntino al contenuto giusto.
+Verifica indice, unicità della scheda, rimandi reciproci e file distinti per versione e tag condiviso tra versioni correlate. Controlla che i dossier PG abbiano entrambi i moduli 05 e 06 e che i link puntino al contenuto giusto.

@@ -74,4 +74,4 @@ Verifies that every proper name of a registered entity (PCs, NPCs, factions, hou
 
 ## Gossip and rumours
 
-Check the index, record uniqueness, reciprocal links and variant fragments. Check PC modules 05 and 06 and that links resolve to the intended content.
+Check the index, record uniqueness, reciprocal links and distinct version files and their shared family tag. Check PC modules 05 and 06 and that links resolve to the intended content.

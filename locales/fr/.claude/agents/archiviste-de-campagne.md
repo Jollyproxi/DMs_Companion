@@ -93,7 +93,7 @@ L'Archiviste coordonne le flux de travail en orientant les demandes vers les com
 - Enregistrement dans `09_chroniques/campagnes/<nom>/sessions/XX_titre.md` et mise à jour du tableau dans le `README.md` de la campagne.
 
 ### Canal B : Gestion des Fiches & Dossiers (Compétences `dossier-personnage` & `objet-magique`)
-- **Dossiers PJ en 6 modules** (`01_etat_civil`, `02_historique`, `03_relations`, `04_equipement`, `05_rumeurs_et_convictions`, `06_accroches_mj`).
+- **Dossiers PJ en 6 modules** (`01_etat_civil`, `02_historique`, `03_relations`, `04_equipement`, `05_rumeurs_et_convictions`, `06_accroches_et_secrets_mj.md`).
 - **Fiches PNJ** avec rôles, factions et secrets du MJ.
 - **Fiches Objets Magiques** avec fiche technique, facture, mécaniques et statut juridique.
 
