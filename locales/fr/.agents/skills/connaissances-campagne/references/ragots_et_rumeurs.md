@@ -2,9 +2,13 @@
 
 `03_societe_et_politique/ragots_et_rumeurs/` · `région/lieu/sujet`
 
+Avant la première entrée, même à l’état de brouillon, complétez au besoin la structure du tome 03 avec le dossier du recueil, son README et le lien depuis l’index du tome.
+
 Recueillez idées du MJ, propos rapportés, croyances collectives, mensonges et demi-vérités. Indiquez **brouillon** ou **en circulation**. Indexez les brouillons même sans lieu connu. Pour savoir ce qui circule, consultez uniquement les fiches en circulation. Changez le statut lorsque la diffusion est attestée.
 
-Avant de créer une fiche, cherchez par titre, sujet, alias et tag. Réutilisez le fichier du même récit dans plusieurs lieux ou cercles. Créez un fichier distinct dès que la version modifie le propos rapporté. Reliez les versions apparentées dans les deux sens par des liens relatifs et donnez à la famille un tag stable commun. Indexez chaque version par lieu, cercle si attesté et lien au fichier. En scindant une ancienne fiche, conservez les attributions et les notes et actualisez les liens vers les anciennes ancres.
+Lorsque le MJ demande quoi raconter aux joueurs, résumez la version en circulation et le contexte perceptible par les PJ. Réservez les notes et les dessous de la rumeur au MJ.
+
+Avant de créer une fiche, cherchez par titre, sujet, alias et tag. Réutilisez le fichier du même récit dans plusieurs lieux ou cercles. Créez un fichier distinct dès que la version modifie le propos rapporté. Reliez les versions apparentées dans les deux sens par des liens relatifs et donnez à la famille un tag stable commun. Utilisez un titre neutre sur la fiche et dans les index. Pour chaque version, inscrivez une ligne par couple lieu–cercle attesté avec un lien vers le même fichier. Si seul le lieu est connu, laissez le cercle vide. En scindant une ancienne fiche, conservez les attributions et les notes et actualisez les liens vers les anciennes ancres.
 
 Classez selon le lieu de diffusion. Une rumeur partagée à l’échelle régionale se range dans le dossier régional avec les lieux attestés. Une rumeur mondiale se range à la racine. Pour une même version dans deux localités précises, même dans la même région, gardez une seule fiche et reliez la variante depuis l’index de l’autre localité. Actualisez les liens et les index si la portée change.
 

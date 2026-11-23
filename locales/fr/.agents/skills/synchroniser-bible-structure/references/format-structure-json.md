@@ -307,13 +307,21 @@ Lors de l'exécution de `generer-structure-json` ou `mettre-a-jour-structure-jso
 
 `03_societe_et_politique/ragots_et_rumeurs/`
 
-Chemins relatifs à la racine des archives. Conservez pour chaque sujet sa fiche, son rôle et sa position documentée. En mise à jour, remplacez l’entrée concernée et retirez les chemins périmés après déplacement.
+Chemins relatifs à la racine des archives. Conservez pour chaque sujet sa fiche, son rôle et sa position documentée. En mise à jour, remplacez l’entrée concernée et retirez les chemins périmés après déplacement. À la génération et à la mise à jour, vérifiez le titre, les alias, le sujet et les chemins des fiches de contexte à partir de la fiche Markdown, y compris après un déplacement.
 
 ```json
 {
   "rumeurs": [
     {
       "fichier": "03_societe_et_politique/ragots_et_rumeurs/version-a.md",
+      "titre": "…",
+      "alias": [
+        "…"
+      ],
+      "sujet": "…",
+      "fiches_de_contexte": [
+        "…/context.md"
+      ],
       "tag": "#<slug>",
       "statut": "brouillon",
       "propos_attribue": "…",

@@ -307,13 +307,21 @@ Bei Ausführung von `Struktur-JSON-generieren` oder `Struktur-JSON-aktualisieren
 
 `03_gesellschaft_und_politik/klatsch_und_geruechte/`
 
-Pfade sind relativ zur Archivwurzel. Erfasse je Beteiligtem Datei, Rolle und belegte Haltung. Ersetze bei Aktualisierungen den betroffenen Eintrag und entferne nach Verschiebungen veraltete Pfade.
+Pfade sind relativ zur Archivwurzel. Erfasse je Beteiligtem Datei, Rolle und belegte Haltung. Ersetze bei Aktualisierungen den betroffenen Eintrag und entferne nach Verschiebungen veraltete Pfade. Prüfe beim Erstellen und Aktualisieren Titel, Aliasnamen, Thema und Pfade der Kontextblätter anhand des Markdown-Blatts, auch nach einer Verschiebung.
 
 ```json
 {
   "geruechte": [
     {
       "datei": "03_gesellschaft_und_politik/klatsch_und_geruechte/version-a.md",
+      "titel": "…",
+      "aliasnamen": [
+        "…"
+      ],
+      "thema": "…",
+      "kontextblaetter": [
+        "…/context.md"
+      ],
       "tag": "#<slug>",
       "status": "Entwurf",
       "zugeschriebene_aussage": "…",

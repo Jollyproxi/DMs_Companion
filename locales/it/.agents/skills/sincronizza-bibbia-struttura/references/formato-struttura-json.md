@@ -307,13 +307,21 @@ Quando si esegue `genera-struttura-json` o `aggiorna-struttura-json`:
 
 `03_societa_e_politica/pettegolezzi_e_dicerie/`
 
-Percorsi relativi alla radice dell’archivio. Ogni soggetto conserva file, ruolo e posizione documentata. In aggiornamento sostituisci la voce del file interessato e rimuovi i vecchi percorsi dopo uno spostamento.
+Percorsi relativi alla radice dell’archivio. Ogni soggetto conserva file, ruolo e posizione documentata. In aggiornamento sostituisci la voce del file interessato e rimuovi i vecchi percorsi dopo uno spostamento. In generazione e aggiornamento verifica titolo, alias, argomento e percorsi delle schede di contesto rispetto alla scheda Markdown, anche dopo uno spostamento.
 
 ```json
 {
   "dicerie": [
     {
       "file": "03_societa_e_politica/pettegolezzi_e_dicerie/version-a.md",
+      "titolo": "…",
+      "alias": [
+        "…"
+      ],
+      "argomento": "…",
+      "schede_di_contesto": [
+        "…/context.md"
+      ],
       "tag": "#<slug>",
       "stato": "bozza",
       "testo_attribuito": "…",

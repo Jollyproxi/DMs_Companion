@@ -307,13 +307,21 @@ When running `generate-structure-json` or `update-structure-json`:
 
 `03_society_and_politics/gossip_and_rumours/`
 
-Paths are relative to the archive root. For each subject retain the file, role and documented stance. On update replace the affected file entry and remove obsolete paths after a move.
+Paths are relative to the archive root. For each subject retain the file, role and documented stance. On update replace the affected file entry and remove obsolete paths after a move. On generation and update, verify the title, aliases, topic and context sheet paths against the Markdown sheet, including after a move.
 
 ```json
 {
   "rumours": [
     {
       "file": "03_society_and_politics/gossip_and_rumours/version-a.md",
+      "title": "…",
+      "aliases": [
+        "…"
+      ],
+      "topic": "…",
+      "context_sheets": [
+        "…/context.md"
+      ],
       "tag": "#<slug>",
       "status": "draft",
       "attributed_claim": "…",

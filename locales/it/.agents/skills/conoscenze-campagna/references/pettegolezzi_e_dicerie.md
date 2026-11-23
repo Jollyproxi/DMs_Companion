@@ -2,9 +2,13 @@
 
 `03_societa_e_politica/pettegolezzi_e_dicerie/` · `regione/luogo/argomento`
 
+Prima della prima voce, anche in bozza, completa la struttura del tomo 03 dove serve: cartella della raccolta, README e link dall’indice del tomo.
+
 Raccogli idee del Master, affermazioni riferite, credenze collettive, bugie e mezze verità. Segna ogni voce come **bozza** o **in circolazione**. Una bozza può stare nell’indice della raccolta anche senza luogo. Nelle ricerche su ciò che circola mostra solo le voci in circolazione. Cambia lo stato quando la diffusione è attestata.
 
-Prima di creare una scheda cerca per titolo, soggetto, alias e tag. Riusa il file se il racconto coincide, anche quando cambiano luogo o cerchia. Per ogni versione che cambia ciò che viene raccontato crea un file distinto. Collega reciprocamente le versioni correlate con link relativi e assegna alla famiglia un tag stabile condiviso. Nell’indice registra per ogni versione luogo, cerchia se attestata e link al file. Per schede precedenti con più varianti, separa i testi conservando attribuzioni e note e aggiorna i rimandi alle vecchie ancore.
+Quando il Master chiede cosa riferire ai giocatori, restituisci in poche parole la versione in circolazione e il contesto percepibile dai PG. Riserva alla consultazione del Master le note e i retroscena.
+
+Prima di creare una scheda cerca per titolo, soggetto, alias e tag. Riusa il file se il racconto coincide, anche quando cambiano luogo o cerchia. Per ogni versione che cambia ciò che viene raccontato crea un file distinto. Collega reciprocamente le versioni correlate con link relativi e assegna alla famiglia un tag stabile condiviso. Usa un titolo neutro nella scheda e negli indici. Per ogni versione inserisci una riga per coppia luogo–cerchia attestata, sempre con un link allo stesso file. Se conosci soltanto il luogo, lascia vuota la cerchia. Per schede precedenti con più varianti, separa i testi conservando attribuzioni e note e aggiorna i rimandi alle vecchie ancore.
 
 Archivia per luogo di circolazione. Per una voce condivisa a livello regionale usa la cartella della regione ed elenca i luoghi attestati. Per una voce mondiale usa la radice. Se la stessa versione circola precisamente in due località, anche della stessa regione, conserva una sola scheda e collega la variante dall’indice dell’altra località. Quando cambia la portata aggiorna gli indici e i link.
 
