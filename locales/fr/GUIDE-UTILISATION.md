@@ -205,13 +205,27 @@ Invoquez les compétences avec leur commande slash quand elle est disponible (VS
 * **Comment** : `/glossaire-transcription` — *« Précisez campagne/séance (ex. 'campagne : Chroniques du Nord'), dossier/zone ou 'dépôt entier', d'éventuels noms prononcés en plus, et s'il faut aussi enregistrer un fichier .txt. »*
 * **Résultat** : une liste textuelle compacte d'orthographe seule prête à copier-coller (sans faits ni divulgâchage, enregistrable en `.txt` dans le dossier de campagne) à fournir comme source d'appui.
 
+### 4.14 `connaissances-campagne` — Connaissances dans la fiction
+
+Utilisez `/connaissances-campagne` si les commandes slash sont disponibles, ou nommez la compétence dans le chat. Précisez le fait, le PJ, le groupe ou la fiche.
+
+- **Consultation** — demandez « Qui connaît ce fait ? » ou « Que sait ce PJ ou ce groupe ? ».
+- **Vérification** — demandez « Vérifie les étiquettes de cette fiche » pour obtenir un rapport des anomalies.
+- **Mise à jour** — demandez « Note que ce PJ a aussi appris ce fait » pour actualiser la ligne dans la fiche canonique.
+
+Placez chaque ligne de connaissance sous le fait concerné. Le savoir commun est implicite. Voici trois exemples d’étiquettes correspondant à des faits différents.
+
+```markdown
+> **Connaissance :** MJ seul
+> **Connaissance :** Groupe — [Nom du groupe](party.md) | PJ — [Nom du PJ](pc.md)
+> **Connaissance :** Savoir commun sauf — [Nom du PJ](pc.md)
+```
+
+Pour le format complet, consultez [`connaissances-campagne`](.agents/skills/connaissances-campagne/SKILL.md).
+
 ---
 
 ## 5. Flux de travail typiques
-
-### `connaissances-campagne` — Connaissances dans la fiction
-
-Consulter, vérifier et actualiser qui connaît un fait dans la fiction.
 
 ### A. Mettre en place un univers nouveau
 

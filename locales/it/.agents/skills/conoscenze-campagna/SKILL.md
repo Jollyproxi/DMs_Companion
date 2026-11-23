@@ -1,6 +1,9 @@
 ---
 name: conoscenze-campagna
 description: "Verificare, consultare e aggiornare chi conosce un fatto nella fiction."
+argument-hint: "Indica un fatto, un PG, un party o una scheda da controllare"
+user-invocable: true
+disable-model-invocation: false
 ---
 
 # Conoscenze nella fiction

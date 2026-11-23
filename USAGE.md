@@ -231,13 +231,27 @@ Invoke skills with their slash command where available (VS Code, Claude Code), o
 * **How**: `/transcription-glossary` — *“Specify campaign/session (e.g. 'campaign: Chronicles of the North'), folder/area or 'full archive', any extra spoken names, and whether to also save a .txt file.”*
 * **Result**: a compact, copy-paste-ready plain-text spelling list (zero lore facts or spoilers, optionally saved as `.txt` inside the campaign folder) to upload as a helper source.
 
+### 5.14 `campaign-knowledge` — In-world knowledge
+
+Use `/campaign-knowledge` where slash commands are available, or name the skill in chat. Specify the fact, PC, party or sheet.
+
+- **Consultation** — ask ‘Who knows this fact?’ or ‘What does this PC or party know?’.
+- **Validation** — ask ‘Check the labels on this sheet’ to get a report of any issues.
+- **Update** — ask ‘Record that this PC also learnt the fact’ to update the knowledge line on its canonical sheet.
+
+Place each knowledge line below the individual fact. Common knowledge is implicit. These examples show labels for three different facts.
+
+```markdown
+> **Knowledge:** GM only
+> **Knowledge:** Party — [Party name](party.md) | PCs — [PC name](pc.md)
+> **Knowledge:** Common knowledge except — [PC name](pc.md)
+```
+
+For the complete format, see [`campaign-knowledge`](locales/en-gb/.agents/skills/campaign-knowledge/SKILL.md).
+
 ---
 
 ## 6. Typical Workflows
-
-### `campaign-knowledge` — In-world knowledge
-
-Consult, validate and update who knows a campaign fact in-world.
 
 ### A. Setting Up a New World
 

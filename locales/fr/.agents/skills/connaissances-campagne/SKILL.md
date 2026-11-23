@@ -1,6 +1,9 @@
 ---
 name: connaissances-campagne
 description: "Consulter, vérifier et actualiser qui connaît un fait dans la fiction."
+argument-hint: "Indiquez un fait, un PJ, un groupe ou une fiche à vérifier"
+user-invocable: true
+disable-model-invocation: false
 ---
 
 # Connaissances dans la fiction

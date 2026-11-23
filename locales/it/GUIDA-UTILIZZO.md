@@ -207,13 +207,27 @@ Invoca le skill con il relativo comando slash dove disponibile (VS Code, Claude 
 * **Come**: `/glossario-trascrizione` — *“Specifica campagna/sessione (es. 'campagna: Cronache del Nord'), cartella/area o 'archivio intero', eventuali nomi extra pronunciati e se salvare anche un file .txt.”*
 * **Risultato**: un elenco testuale compatto di sola grafia pronto per copia-incolla (senza fatti né spoiler, opzionalmente salvato come `.txt` nella cartella della campagna) da caricare come fonte di supporto.
 
+### 4.14 `conoscenze-campagna` — Conoscenze nella fiction
+
+Usa `/conoscenze-campagna` dove sono disponibili i comandi slash, oppure nomina la skill in chat. Indica il fatto, il PG, il party o la scheda.
+
+- **Consultazione** — «A chi è nota questa informazione?» oppure «Cosa sa questo PG o party?».
+- **Verifica** — «Controlla le etichette di questa scheda». Ricevi un rapporto sulle anomalie.
+- **Aggiornamento** — «Segna che anche questo PG ha appreso il fatto». L’Archivista aggiorna la riga nella scheda canonica.
+
+Ogni riga di conoscenza va sotto il singolo fatto. Il sapere comune è implicito. Ecco tre esempi di etichette per fatti diversi.
+
+```markdown
+> **Conoscenza:** Solo Master
+> **Conoscenza:** Party — [Nome del party](party.md) | PG — [Nome del PG](pc.md)
+> **Conoscenza:** Sapere comune salvo — [Nome del PG](pc.md)
+```
+
+Per la sintassi completa, vedi [`conoscenze-campagna`](.agents/skills/conoscenze-campagna/SKILL.md).
+
 ---
 
 ## 5. Flussi di Lavoro Tipici
-
-### `conoscenze-campagna` — Conoscenze nella fiction
-
-Chiedi «A chi è nota questa informazione?» oppure «Cosa sa questo PG?». Il sapere comune è implicito. Dopo una scoperta, indica il fatto e chi lo ha appreso per aggiornare la scheda.
 
 ### A. Impostare un Mondo Nuovo
 

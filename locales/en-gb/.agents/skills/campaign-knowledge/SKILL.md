@@ -1,6 +1,9 @@
 ---
 name: campaign-knowledge
 description: "Consult, validate and update who knows a campaign fact in-world."
+argument-hint: "Specify a fact, PC, party or sheet to check"
+user-invocable: true
+disable-model-invocation: false
 ---
 
 # In-world knowledge

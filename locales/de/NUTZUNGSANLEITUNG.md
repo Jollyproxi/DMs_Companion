@@ -205,13 +205,27 @@ Rufen Sie die Fähigkeiten über ihren Slash-Befehl auf, wo verfügbar (VS Code,
 * **Wie**: `/transkriptions-glossar` — *„Kampagne/Sitzung angeben (z. B. 'kampagne: Chroniken des Nordens'), Ordner/Gebiet oder 'ganzes Archiv', etwaige zusätzlich gesprochene Namen und ob eine .txt-Datei gespeichert werden soll.“*
 * **Ergebnis**: eine kompakte, direkt kopierbare reine Textliste der Schreibweisen (ohne Fakten oder Spoiler, optional als `.txt` im Kampagnenordner gespeichert) als Hilfsquelle.
 
+### 4.14 `kampagnenwissen` — Wissen in der Spielwelt
+
+Verwenden Sie `/kampagnenwissen`, wenn Slash-Befehle verfügbar sind, oder nennen Sie den Skill im Chat. Geben Sie den Sachverhalt, den SC, die Gruppe oder das Dossier an.
+
+- **Abfrage** — fragen Sie „Wer kennt diesen Sachverhalt?“ oder „Was weiß dieser SC oder diese Gruppe?“.
+- **Prüfung** — bitten Sie „Prüfe die Kennzeichnungen in diesem Dossier“, um einen Bericht über Auffälligkeiten zu erhalten.
+- **Aktualisierung** — bitten Sie „Halte fest, dass auch dieser SC davon erfahren hat“, um die Wissenszeile im kanonischen Dossier zu aktualisieren.
+
+Jede Wissenszeile steht unter dem betreffenden Sachverhalt. Allgemeinwissen gilt implizit. Die folgenden Kennzeichnungen beziehen sich auf drei verschiedene Sachverhalte.
+
+```markdown
+> **Wissen:** Nur SL
+> **Wissen:** Gruppe — [Gruppenname](party.md) | SC — [Name des SC](pc.md)
+> **Wissen:** Allgemeinwissen außer — [Name des SC](pc.md)
+```
+
+Das vollständige Format steht in [`kampagnenwissen`](.agents/skills/kampagnenwissen/SKILL.md).
+
 ---
 
 ## 5. Typische Arbeitsabläufe
-
-### `kampagnenwissen` — Wissen in der Spielwelt
-
-Wissen über einzelne Sachverhalte in der Spielwelt abfragen, prüfen und aktualisieren.
 
 ### A. Eine neue Welt einrichten
 

@@ -1,6 +1,9 @@
 ---
 name: kampagnenwissen
 description: "Wissen über einzelne Sachverhalte in der Spielwelt abfragen, prüfen und aktualisieren."
+argument-hint: "Geben Sie einen Sachverhalt, einen SC, eine Gruppe oder ein Dossier an"
+user-invocable: true
+disable-model-invocation: false
 ---
 
 # Wissen in der Spielwelt
