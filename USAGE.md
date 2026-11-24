@@ -10,7 +10,7 @@ Everything you need to install **DMs_Companion** and put the **Campaign Archivis
 
 ## 1. Choose Your Language Package
 
-Replace `<lang>` in the commands below with one of:
+The commands use British English. Choose the branch for your language from the table below.
 
 | Language | Branch | Agent Persona | Skills Path |
 | :--- | :--- | :--- | :--- |
@@ -30,7 +30,7 @@ Keep **one language per campaign repository** — mixing two packages would mix 
 ### Option 1 — Clone a language branch and copy (recommended)
 
 ```bash
-git clone --depth 1 -b <lang> https://github.com/<owner>/DMs_Companion.git dms-companion
+git clone --depth 1 -b en-gb https://github.com/Jollyproxi/DMs_Companion.git dms-companion
 ```
 
 Copy the contents of `dms-companion/` into the root of **your own campaign repository** (or into your user-level AI config directory to make the toolkit available in every project):
@@ -45,17 +45,19 @@ Copy the contents of `dms-companion/` into the root of **your own campaign repos
 
 ```bash
 # All skills from a language branch
-npx skills add https://github.com/<owner>/DMs_Companion/tree/<lang>
+npx skills add https://github.com/Jollyproxi/DMs_Companion/tree/en-gb
 
 # Or straight from the locale folder on main
-npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/<lang>/.agents/skills
+npx skills add https://github.com/Jollyproxi/DMs_Companion/tree/main/locales/en-gb/.agents/skills
 ```
 
 *(Remember to also copy `AGENTS.md` and/or `.github/agents/*.agent.md` if you want the full Archivist persona and workflow orchestration.)*
 
 ### Option 3 — Download ZIP from GitHub
 
-Switch the branch selector on GitHub from `main` to `it`, `en-gb`, `fr`, or `de`, click **Code → Download ZIP**, and extract the files into your campaign folder.
+From [GitHub Releases](https://github.com/Jollyproxi/DMs_Companion/releases), download `DMs_Companion-LANGUAGE-HARNESS.zip` for your setup (for example, `DMs_Companion-it-codex.zip`). Extract its contents, including hidden folders, at the root of your campaign repository. Merge any existing instruction files you want to keep.
+
+To download a full language branch, switch the branch selector on GitHub from `main` to `it`, `en-gb`, `fr`, or `de`, click **Code → Download ZIP**, and extract the files into your campaign folder.
 
 ### What the Installed Files Do
 

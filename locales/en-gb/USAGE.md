@@ -2,7 +2,7 @@
 
 Everything you need to put the **Campaign Archivist** to work at your table: installation, first steps, a complete reference of all **14 skills**, typical workflows, troubleshooting, and FAQ.
 
-* Localised copies of this guide: [Italiano](https://github.com/<owner>/DMs_Companion/blob/main/locales/it/GUIDA-UTILIZZO.md) · [Français](https://github.com/<owner>/DMs_Companion/blob/main/locales/fr/GUIDE-UTILISATION.md) · [Deutsch](https://github.com/<owner>/DMs_Companion/blob/main/locales/de/NUTZUNGSANLEITUNG.md) — see also the project-level [USAGE.md](https://github.com/<owner>/DMs_Companion/blob/main/USAGE.md) on the `main` branch.
+* Localised copies of this guide: [Italiano](https://github.com/Jollyproxi/DMs_Companion/blob/main/locales/it/GUIDA-UTILIZZO.md) · [Français](https://github.com/Jollyproxi/DMs_Companion/blob/main/locales/fr/GUIDE-UTILISATION.md) · [Deutsch](https://github.com/Jollyproxi/DMs_Companion/blob/main/locales/de/NUTZUNGSANLEITUNG.md) — see also the project-level [USAGE.md](https://github.com/Jollyproxi/DMs_Companion/blob/main/USAGE.md) on the `main` branch.
 
 ---
 
@@ -12,7 +12,7 @@ Everything you need to put the **Campaign Archivist** to work at your table: ins
 
 ### Option 1 — Copy this branch into your campaign (recommended)
 
-You are reading the `en-gb` package (either cloned with `git clone --depth 1 -b en-gb …` or downloaded as ZIP). Copy its contents into the root of **your own campaign repository** (or into your user-level AI config directory to make the toolkit available in every project):
+You are reading the `en-gb` package (either cloned with `git clone --depth 1 -b en-gb https://github.com/Jollyproxi/DMs_Companion.git` or downloaded as ZIP). Copy its contents into the root of **your own campaign repository** (or into your user-level AI config directory to make the toolkit available in every project):
 
 * `AGENTS.md`, `CLAUDE.md`
 * `.github/agents/`
@@ -23,10 +23,10 @@ You are reading the `en-gb` package (either cloned with `git clone --depth 1 -b 
 
 ```bash
 # All skills from this language branch
-npx skills add https://github.com/<owner>/DMs_Companion/tree/en-gb
+npx skills add https://github.com/Jollyproxi/DMs_Companion/tree/en-gb
 
 # Or straight from the locale folder on main
-npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/en-gb/.agents/skills
+npx skills add https://github.com/Jollyproxi/DMs_Companion/tree/main/locales/en-gb/.agents/skills
 ```
 
 *(Remember to also copy `AGENTS.md` and/or `.github/agents/*.agent.md` if you want the full Archivist persona and workflow orchestration.)*
