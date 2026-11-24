@@ -2,11 +2,7 @@ name: Build release packages
 
 on:
   pull_request:
-    paths:
-      - 'locales/**'
-      - 'scripts/build_packages.py'
-      - '.github/workflows/release-packages.yml'
-      - 'LICENSE'
+    branches: [main, release]
   workflow_dispatch:
   push:
     branches: [release]
@@ -17,8 +13,34 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.version.outputs.tag }}
     steps:
       - uses: actions/checkout@v4
+      - name: Validate release version
+        id: version
+        shell: python
+        run: |
+          import os
+          import re
+          from pathlib import Path
+
+          version = Path("VERSION").read_text(encoding="utf-8").removesuffix("\n")
+          number = r"(?:0|[1-9][0-9]*)"
+          if not re.fullmatch(rf"v{number}\.{number}\.{number}", version):
+              raise SystemExit("VERSION must contain one version such as v1.2.3")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              print(f"tag={version}", file=output)
+      - name: Check that the release tag is available
+        if: github.base_ref == 'release' || (github.event_name == 'push' && github.ref == 'refs/heads/release')
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          existing=$(git ls-remote --tags origin "refs/tags/$TAG")
+          if [[ -n "$existing" ]]; then
+            echo "::error::Tag $TAG already exists. Update VERSION before promoting main."
+            exit 1
+          fi
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -47,6 +69,6 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-          TAG: release-${{ github.run_number }}
+          TAG: ${{ needs.build.outputs.tag }}
           COMMIT: ${{ github.sha }}
-        run: gh release create "$TAG" --target "$COMMIT" --generate-notes dist/*.zip
+        run: gh release create "$TAG" --title "$TAG" --target "$COMMIT" --generate-notes dist/*.zip
