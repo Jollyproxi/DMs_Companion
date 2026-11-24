@@ -106,7 +106,7 @@ Run `python scripts/build_packages.py dist` to build the ZIPs locally, or run **
 
 Merge feature pull requests into `main`. When you are ready to publish, open a GitHub pull request with **base** `release` and **compare** `main`. Use **Create a merge commit** to keep the promoted commits in the release branch history.
 
-Merging the release pull request builds and checks the packages, then publishes them in a GitHub Release tagged `release-<run-number>` at the merged commit. Pull requests and manual workflow runs build preview packages.
+Before opening the promotion PR, set `VERSION` on `main` to the intended release tag. Use `vM.m.f` (major, minor, fix), for example `v1.2.3`. The promotion check rejects an existing tag. Merging the PR publishes the ZIPs in a GitHub Release with that tag and title at the merged commit. Pull requests and manual workflow runs build preview packages.
 
 ---
 
