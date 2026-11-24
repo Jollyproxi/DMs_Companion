@@ -1,0 +1,52 @@
+name: Build release packages
+
+on:
+  pull_request:
+    paths:
+      - 'locales/**'
+      - 'scripts/build_packages.py'
+      - '.github/workflows/release-packages.yml'
+      - 'LICENSE'
+  workflow_dispatch:
+  push:
+    branches: [release]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python scripts/sync_agents.py --check
+      - run: python scripts/build_packages.py dist
+      - run: |
+          for archive in dist/*.zip; do unzip -tq "$archive"; done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-packages
+          path: dist/*.zip
+          if-no-files-found: error
+
+  release:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/release'
+    needs: build
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-packages
+          path: dist
+      - name: Publish ZIP files for the promoted commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: release-${{ github.run_number }}
+          COMMIT: ${{ github.sha }}
+        run: gh release create "$TAG" --target "$COMMIT" --generate-notes dist/*.zip

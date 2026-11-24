@@ -2,7 +2,7 @@
 
 Alles, was Sie brauchen, um den **Kampagnen-Archivar** an Ihrem Spieltisch arbeiten zu lassen: Installation, erste Schritte, vollständige Referenz aller **14 Fähigkeiten**, typische Arbeitsabläufe, Fehlerbehebung und FAQ.
 
-* Lokalisierte Fassungen dieser Anleitung: [Italiano](https://github.com/<owner>/DMs_Companion/blob/main/locales/it/GUIDA-UTILIZZO.md) · [British English](https://github.com/<owner>/DMs_Companion/blob/main/locales/en-gb/USAGE.md) · [Français](https://github.com/<owner>/DMs_Companion/blob/main/locales/fr/GUIDE-UTILISATION.md) — siehe auch das projekteigene [USAGE.md](https://github.com/<owner>/DMs_Companion/blob/main/USAGE.md) auf dem `main`-Branch.
+* Lokalisierte Fassungen dieser Anleitung: [Italiano](https://github.com/Jollyproxi/DMs_Companion/blob/main/locales/it/GUIDA-UTILIZZO.md) · [British English](https://github.com/Jollyproxi/DMs_Companion/blob/main/locales/en-gb/USAGE.md) · [Français](https://github.com/Jollyproxi/DMs_Companion/blob/main/locales/fr/GUIDE-UTILISATION.md) — siehe auch das projekteigene [USAGE.md](https://github.com/Jollyproxi/DMs_Companion/blob/main/USAGE.md) auf dem `main`-Branch.
 
 ---
 
@@ -12,7 +12,11 @@ Alles, was Sie brauchen, um den **Kampagnen-Archivar** an Ihrem Spieltisch arbei
 
 ### Option 1 — Diesen Branch in Ihre Kampagne kopieren (empfohlen)
 
-Sie lesen das Sprachpaket `de` (geklont mit `git clone --depth 1 -b de …` oder als ZIP heruntergeladen). Kopieren Sie den Inhalt in das Wurzelverzeichnis **Ihres eigenen Kampagnen-Repositories** (oder in das nutzerspezifische KI-Konfigurationsverzeichnis, um die Werkzeugsammlung in jedem Projekt verfügbar zu machen):
+```bash
+dms_lang=de  # Sprache: it | en-gb | fr | de
+```
+
+Sie lesen das Sprachpaket `de` (geklont mit `git clone --depth 1 -b "$dms_lang" https://github.com/Jollyproxi/DMs_Companion.git` oder als ZIP heruntergeladen). Kopieren Sie den Inhalt in das Wurzelverzeichnis **Ihres eigenen Kampagnen-Repositories** (oder in das nutzerspezifische KI-Konfigurationsverzeichnis, um die Werkzeugsammlung in jedem Projekt verfügbar zu machen):
 
 * `AGENTS.md`, `CLAUDE.md`
 * `.github/agents/`
@@ -23,10 +27,10 @@ Sie lesen das Sprachpaket `de` (geklont mit `git clone --depth 1 -b de …` oder
 
 ```bash
 # Alle Fähigkeiten aus diesem Sprach-Branch
-npx skills add https://github.com/<owner>/DMs_Companion/tree/de
+npx skills add "https://github.com/Jollyproxi/DMs_Companion/tree/$dms_lang"
 
 # Oder direkt aus dem Sprachordner auf main
-npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/de/.agents/skills
+npx skills add "https://github.com/Jollyproxi/DMs_Companion/tree/main/locales/$dms_lang/.agents/skills"
 ```
 
 *(Kopieren Sie auch `AGENTS.md` und/oder `.github/agents/*.agent.md`, wenn Sie die vollständige Archivar-Persona und die Arbeitsablauf-Orchestrierung wünschen.)*

@@ -27,12 +27,16 @@ The `main` branch holds only this project overview, the source localisations und
 
 > **New here?** The [Usage Guide](USAGE.md) walks you through installation, first steps, every skill, typical workflows, and troubleshooting. Localised: [Italiano](locales/it/GUIDA-UTILIZZO.md) · [British English](locales/en-gb/USAGE.md) · [Français](locales/fr/GUIDE-UTILISATION.md) · [Deutsch](locales/de/NUTZUNGSANLEITUNG.md).
 
-Replace `<lang>` with `it`, `en-gb`, `fr`, or `de`, and `<owner>` with the repository owner.
+Choose your language once in the Bash shell where you will run the installation commands.
+
+```bash
+dms_lang=en-gb  # Language: it | en-gb | fr | de
+```
 
 ### Option 1 — Clone a single language branch and copy into your repo
 
 ```bash
-git clone --depth 1 -b <lang> https://github.com/<owner>/DMs_Companion.git dms-companion
+git clone --depth 1 -b "$dms_lang" https://github.com/Jollyproxi/DMs_Companion.git dms-companion
 ```
 
 Copy the contents of `dms-companion/` (`AGENTS.md`, `CLAUDE.md`, `.github/agents/`, `.agents/skills/`) into the root of your own campaign repository (or into your user-level AI config directory).
@@ -41,17 +45,19 @@ Copy the contents of `dms-companion/` (`AGENTS.md`, `CLAUDE.md`, `.github/agents
 
 ```bash
 # Install all skills from a language branch
-npx skills add https://github.com/<owner>/DMs_Companion/tree/<lang>
+npx skills add "https://github.com/Jollyproxi/DMs_Companion/tree/$dms_lang"
 
 # Or install directly from a locale skills folder on main
-npx skills add https://github.com/<owner>/DMs_Companion/tree/main/locales/<lang>/.agents/skills
+npx skills add "https://github.com/Jollyproxi/DMs_Companion/tree/main/locales/$dms_lang/.agents/skills"
 ```
 
 *(Remember to also copy `AGENTS.md` and/or `.github/agents/*.agent.md` if you want the full Archivist persona and workflow orchestration.)*
 
 ### Option 3 — Download ZIP from GitHub
 
-Switch the branch selector on GitHub from `main` to `it`, `en-gb`, `fr`, or `de`, click **Code → Download ZIP**, and extract the files into your campaign folder.
+From [GitHub Releases](https://github.com/Jollyproxi/DMs_Companion/releases), download `DMs_Companion-LANGUAGE-HARNESS.zip` for your setup (for example, `DMs_Companion-it-codex.zip`). Extract its contents, including hidden folders, at the root of your campaign repository. Merge any existing instruction files you want to keep.
+
+To download a full language branch, switch the branch selector on GitHub from `main` to `it`, `en-gb`, `fr`, or `de`, click **Code → Download ZIP**, and extract the files into your campaign folder.
 
 Each language package also ships its own usage guide at the branch root (`USAGE.md` / `GUIDA-UTILIZZO.md` / `GUIDE-UTILISATION.md` / `NUTZUNGSANLEITUNG.md`) — see the [Usage Guide](USAGE.md) on `main` for the full walkthrough.
 
@@ -93,6 +99,14 @@ Edit translations on `main` inside `locales/<lang>/`, then let the pipeline sync
 
 * **Automatic**: Pushing changes under `locales/**` to `main` triggers [`.github/workflows/sync-language-branches.yml`](.github/workflows/sync-language-branches.yml), which publishes each `locales/<lang>/` tree to the root of its `it`, `en-gb`, `fr`, or `de` branch.
 * **Manual**: Run the same workflow on demand from the **Actions** tab (*Sync Language Branches → Run workflow*).
+
+### Building a versioned release
+
+Run `python scripts/build_packages.py dist` to build the ZIPs locally, or run **Build release packages** from the Actions tab to download a preview. Each of the four languages has a separate ZIP for Copilot, Antigravity, Codex, Claude Code, Cursor, OpenCode and Gemini CLI. Each archive places the instructions and skills at the campaign root in the layout for that harness. The localised guide and licence are under `docs/DMs_Companion/`.
+
+Merge feature pull requests into `main`. When you are ready to publish, open a GitHub pull request with **base** `release` and **compare** `main`. Use **Create a merge commit** to keep the promoted commits in the release branch history.
+
+Merging the release pull request builds and checks the packages, then publishes them in a GitHub Release tagged `release-<run-number>` at the merged commit. Pull requests and manual workflow runs build preview packages.
 
 ---
 
