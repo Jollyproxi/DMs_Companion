@@ -104,13 +104,9 @@ Edit translations on `main` inside `locales/<lang>/`, then let the pipeline sync
 
 Run `python scripts/build_packages.py dist` to build the ZIPs locally, or run **Build release packages** from the Actions tab to download a preview. Each of the four languages has a separate ZIP for Copilot, Antigravity, Codex, Claude Code, Cursor, OpenCode and Gemini CLI. Each archive places the instructions and skills at the campaign root in the layout for that harness. The localised guide and licence are under `docs/DMs_Companion/`.
 
-To publish the current local `main`, update the dedicated `release` branch on GitHub:
+Merge feature pull requests into `main`. When you are ready to publish, open a GitHub pull request with **base** `release` and **compare** `main`. Use **Create a merge commit** to keep the promoted commits in the release branch history.
 
-```bash
-git push origin main:release
-```
-
-Each update to `release` builds and checks the packages, then publishes them in a GitHub Release tagged `release-<run-number>` at the promoted commit. Pull requests and manual workflow runs build preview packages.
+Merging the release pull request builds and checks the packages, then publishes them in a GitHub Release tagged `release-<run-number>` at the merged commit. Pull requests and manual workflow runs build preview packages.
 
 ---
 
