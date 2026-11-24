@@ -12,7 +12,11 @@ Tout ce qu'il faut pour mettre l'**Archiviste de Campagne** au travail à votre 
 
 ### Option 1 — Copier cette branche dans votre campagne (recommandé)
 
-Vous lisez le paquet `fr` (cloné avec `git clone --depth 1 -b fr https://github.com/Jollyproxi/DMs_Companion.git` ou téléchargé en ZIP). Copiez son contenu à la racine de **votre propre dépôt de campagne** (ou dans le répertoire de configuration utilisateur de votre assistant IA, pour rendre la boîte à outils disponible dans tous vos projets) :
+```bash
+dms_lang=fr  # Langue: it | en-gb | fr | de
+```
+
+Vous lisez le paquet `fr` (cloné avec `git clone --depth 1 -b "$dms_lang" https://github.com/Jollyproxi/DMs_Companion.git` ou téléchargé en ZIP). Copiez son contenu à la racine de **votre propre dépôt de campagne** (ou dans le répertoire de configuration utilisateur de votre assistant IA, pour rendre la boîte à outils disponible dans tous vos projets) :
 
 * `AGENTS.md`, `CLAUDE.md`
 * `.github/agents/`
@@ -23,10 +27,10 @@ Vous lisez le paquet `fr` (cloné avec `git clone --depth 1 -b fr https://github
 
 ```bash
 # Toutes les compétences depuis cette branche de langue
-npx skills add https://github.com/Jollyproxi/DMs_Companion/tree/fr
+npx skills add "https://github.com/Jollyproxi/DMs_Companion/tree/$dms_lang"
 
 # Ou directement depuis le dossier du locale sur main
-npx skills add https://github.com/Jollyproxi/DMs_Companion/tree/main/locales/fr/.agents/skills
+npx skills add "https://github.com/Jollyproxi/DMs_Companion/tree/main/locales/$dms_lang/.agents/skills"
 ```
 
 *(Pensez à copier aussi `AGENTS.md` et/ou `.github/agents/*.agent.md` si vous voulez la persona complète de l'Archiviste et l'orchestration des flux de travail.)*

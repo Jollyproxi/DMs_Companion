@@ -9,7 +9,7 @@ on:
       - 'LICENSE'
   workflow_dispatch:
   push:
-    tags: ['v[0-9]*']
+    branches: [release]
 
 permissions:
   contents: read
@@ -33,7 +33,7 @@ jobs:
           if-no-files-found: error
 
   release:
-    if: github.event_name == 'push' && github.ref_type == 'tag'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/release'
     needs: build
     permissions:
       contents: write
@@ -43,9 +43,10 @@ jobs:
         with:
           name: release-packages
           path: dist
-      - name: Publish ZIP files on the tagged release
+      - name: Publish ZIP files for the promoted commit
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-          TAG: ${{ github.ref_name }}
-        run: gh release create "$TAG" --verify-tag --generate-notes dist/*.zip
+          TAG: release-${{ github.run_number }}
+          COMMIT: ${{ github.sha }}
+        run: gh release create "$TAG" --target "$COMMIT" --generate-notes dist/*.zip

@@ -10,7 +10,11 @@ Everything you need to install **DMs_Companion** and put the **Campaign Archivis
 
 ## 1. Choose Your Language Package
 
-The commands use British English. Choose the branch for your language from the table below.
+Choose your language once in the Bash shell where you will run the installation commands.
+
+```bash
+dms_lang=en-gb  # Language: it | en-gb | fr | de
+```
 
 | Language | Branch | Agent Persona | Skills Path |
 | :--- | :--- | :--- | :--- |
@@ -30,7 +34,7 @@ Keep **one language per campaign repository** — mixing two packages would mix 
 ### Option 1 — Clone a language branch and copy (recommended)
 
 ```bash
-git clone --depth 1 -b en-gb https://github.com/Jollyproxi/DMs_Companion.git dms-companion
+git clone --depth 1 -b "$dms_lang" https://github.com/Jollyproxi/DMs_Companion.git dms-companion
 ```
 
 Copy the contents of `dms-companion/` into the root of **your own campaign repository** (or into your user-level AI config directory to make the toolkit available in every project):
@@ -45,10 +49,10 @@ Copy the contents of `dms-companion/` into the root of **your own campaign repos
 
 ```bash
 # All skills from a language branch
-npx skills add https://github.com/Jollyproxi/DMs_Companion/tree/en-gb
+npx skills add "https://github.com/Jollyproxi/DMs_Companion/tree/$dms_lang"
 
 # Or straight from the locale folder on main
-npx skills add https://github.com/Jollyproxi/DMs_Companion/tree/main/locales/en-gb/.agents/skills
+npx skills add "https://github.com/Jollyproxi/DMs_Companion/tree/main/locales/$dms_lang/.agents/skills"
 ```
 
 *(Remember to also copy `AGENTS.md` and/or `.github/agents/*.agent.md` if you want the full Archivist persona and workflow orchestration.)*

@@ -27,12 +27,16 @@ The `main` branch holds only this project overview, the source localisations und
 
 > **New here?** The [Usage Guide](USAGE.md) walks you through installation, first steps, every skill, typical workflows, and troubleshooting. Localised: [Italiano](locales/it/GUIDA-UTILIZZO.md) · [British English](locales/en-gb/USAGE.md) · [Français](locales/fr/GUIDE-UTILISATION.md) · [Deutsch](locales/de/NUTZUNGSANLEITUNG.md).
 
-The commands use British English. Replace `en-gb` with `it`, `fr`, or `de` for another language.
+Choose your language once in the Bash shell where you will run the installation commands.
+
+```bash
+dms_lang=en-gb  # Language: it | en-gb | fr | de
+```
 
 ### Option 1 — Clone a single language branch and copy into your repo
 
 ```bash
-git clone --depth 1 -b en-gb https://github.com/Jollyproxi/DMs_Companion.git dms-companion
+git clone --depth 1 -b "$dms_lang" https://github.com/Jollyproxi/DMs_Companion.git dms-companion
 ```
 
 Copy the contents of `dms-companion/` (`AGENTS.md`, `CLAUDE.md`, `.github/agents/`, `.agents/skills/`) into the root of your own campaign repository (or into your user-level AI config directory).
@@ -41,10 +45,10 @@ Copy the contents of `dms-companion/` (`AGENTS.md`, `CLAUDE.md`, `.github/agents
 
 ```bash
 # Install all skills from a language branch
-npx skills add https://github.com/Jollyproxi/DMs_Companion/tree/en-gb
+npx skills add "https://github.com/Jollyproxi/DMs_Companion/tree/$dms_lang"
 
 # Or install directly from a locale skills folder on main
-npx skills add https://github.com/Jollyproxi/DMs_Companion/tree/main/locales/en-gb/.agents/skills
+npx skills add "https://github.com/Jollyproxi/DMs_Companion/tree/main/locales/$dms_lang/.agents/skills"
 ```
 
 *(Remember to also copy `AGENTS.md` and/or `.github/agents/*.agent.md` if you want the full Archivist persona and workflow orchestration.)*
@@ -100,7 +104,13 @@ Edit translations on `main` inside `locales/<lang>/`, then let the pipeline sync
 
 Run `python scripts/build_packages.py dist` to build the ZIPs locally, or run **Build release packages** from the Actions tab to download a preview. Each of the four languages has a separate ZIP for Copilot, Antigravity, Codex, Claude Code, Cursor, OpenCode and Gemini CLI. Each archive places the instructions and skills at the campaign root in the layout for that harness. The localised guide and licence are under `docs/DMs_Companion/`.
 
-To publish, tag the desired commit with a version such as `v1.0.0` and push that tag. The workflow builds and checks all packages before attaching them to the GitHub Release for that version.
+To publish the current local `main`, update the dedicated `release` branch on GitHub:
+
+```bash
+git push origin main:release
+```
+
+Each update to `release` builds and checks the packages, then publishes them in a GitHub Release tagged `release-<run-number>` at the promoted commit. Pull requests and manual workflow runs build preview packages.
 
 ---
 
